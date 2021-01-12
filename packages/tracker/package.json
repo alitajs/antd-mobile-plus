@@ -1,0 +1,27 @@
+{
+  "name": "@alitajs/tracker",
+  "version": "0.0.1",
+  "description": "antd-mobile@3 中错误和事件上报",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alitajs/antd-mobile-plus"
+  },
+  "keywords": [
+    "alita"
+  ],
+  "authors": [
+    "xiaohuoni <448627663@qq.com> (https://github.com/xiaohuoni)"
+  ],
+  "license": "MIT",
+  "bugs": "http://github.com/alitajs/antd-mobile-plus/issues",
+  "homepage": "https://github.com/alitajs/antd-mobile-plus/tree/master/packages/tracker#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

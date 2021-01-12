@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start": "dumi dev",
+    "build": "father-build",
+    "ci": "npm run lint && npm run compile && npm run test",
+    "compile": "father-build",
+    "pub": "lerna publish --force-publish=*",
+    "lint": "prettier packages/**/*.{ts,tsx} --check && stylelint packages/**/*.less",
+    "format": "prettier packages/**/*.{ts,tsx} --write && stylelint packages/**/*.less --fix",
+    "test": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "npm run ci",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@testing-library/react": "^10.4.7",
+    "@types/babel__core": "7.1.12",
+    "@types/babel__traverse": "7.0.15",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.0.27",
+    "@umijs/test": "^3.2.25",
+    "@umijs/types": "^3.2.25",
+    "@umijs/utils": "^3.2.25",
+    "babel-plugin-version": "^0.2.3",
+    "cnpm": "6.1.1",
+    "dumi": "^1.1.0",
+    "dumi-theme-mobile": "^1.0.0",
+    "father-build": "^1.18.5",
+    "husky": "^3.1.0",
+    "lerna": "2.11.0",
+    "lint-staged": "^10.2.11",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "yorkie": "^2.0.0"
+  }
+}

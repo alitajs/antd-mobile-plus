@@ -1,0 +1,13 @@
+**/node_modules/**
+package.json
+
+# fixtures
+**/fixtures/**
+
+# templates
+**/templates/**
+
+/packages/*/lib
+/packages/*/dist
+/packages/*/es
+/packages/*/node_modules

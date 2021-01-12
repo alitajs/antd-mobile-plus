@@ -1,0 +1,30 @@
+{
+  "name": "@alitajs/theme",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alitajs/antd-mobile-plus"
+  },
+  "keywords": [
+    "alita"
+  ],
+  "authors": [
+    "xiaohuoni <448627663@qq.com> (https://github.com/xiaohuoni)"
+  ],
+  "license": "MIT",
+  "bugs": "http://github.com/alitajs/antd-mobile-plus/issues",
+  "homepage": "https://github.com/alitajs/antd-mobile-plus/tree/master/packages/theme#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "antd-mobile": "2.3.3"
+  }
+}
