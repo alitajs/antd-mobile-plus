@@ -1,15 +1,3 @@
----
-title: antd-mobile-plus - 基于 antd-mobile 的业务组件
-order: 1
-hero:
-  title: antd-mobile-plus
-  desc: 📖 基于 antd-mobile 的业务组件
-  actions:
-    - text: 快速上手
-      link: /components
-
-footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by xiaohuoni
----
 
 # antd-mobile-plus
 
@@ -138,7 +126,3 @@ export const Demo: React.FC = (props) => {
 复用我们的代码，所以可以在这里直接使用项目包名，这样的体验将和项目使用中一致。
 
 <code src="./demo/basic.tsx" />
-
-### 参数
-
-<API></API>

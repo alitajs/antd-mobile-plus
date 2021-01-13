@@ -6,7 +6,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "start": "dumi dev",
-    "build": "father-build",
+    "build": "dumi build",
     "ci": "npm run lint && npm run compile && npm run test",
     "compile": "father-build",
     "pub": "lerna publish --force-publish=*",
