@@ -6,7 +6,9 @@
   "module": "es/index.js",
   "types": "es/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "es",
+    "README.md"
   ],
   "repository": {
     "type": "git",

@@ -1,0 +1,18 @@
+{
+  "name": "@alitajs/languages",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alitajs/antd-mobile-plus"
+  },
+  "description": "@alitajs/languages",
+  "sideEffects": false,
+  "types": "es/index.d.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "lib",
+    "es",
+    "README.md"
+  ]
+}

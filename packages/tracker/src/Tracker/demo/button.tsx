@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { setTracker, withError, useTracker } from '..';
+import { setTracker, withError, useTracker } from '@alitajs/tracker';
 
 // Tracker.setTracker(amdTracker)
 

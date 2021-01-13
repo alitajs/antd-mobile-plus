@@ -5,6 +5,7 @@ export default {
   extraBabelPlugins: ['version'],
   pkgs: [
     'theme',
+    'languages',
     'tracker',
     'antd-mobile-plus',
   ],

@@ -6,7 +6,9 @@
   "module": "es/index.js",
   "types": "es/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "es",
+    "README.md"
   ],
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "dependencies": {
     "@alitajs/tracker": "0.0.1",
+    "@alitajs/languages": "0.0.1",
     "antd-mobile": "2.3.3",
     "classnames": "^2.2.6"
   }
