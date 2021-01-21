@@ -33,7 +33,7 @@ const prefixCls = 'alita-demo';
 
 样式编写的时候需要额外引入所有的 less 变量，在编写样式的时候，（暂时只要求颜色）必须使用系统带的系统变量，如果系统中没有适合的变量，需要在 `@alitajs/theme` 包中增加一个。
 
-一个最基础的 lees 文件组成为：
+一个最基础的 less 文件组成为：
 
 ```less
 @import '~@alitajs/theme/index';
