@@ -1,5 +1,5 @@
 {
-  "name": "@alitajs/antd-mobile-plus",
+  "name": "@alitajs/antd-mobile",
   "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
@@ -22,7 +22,7 @@
   ],
   "license": "MIT",
   "bugs": "http://github.com/alitajs/antd-mobile-plus/issues",
-  "homepage": "https://github.com/alitajs/antd-mobile-plus/tree/master/packages/antd-mobile-plus#readme",
+  "homepage": "https://github.com/alitajs/antd-mobile-plus/tree/master/packages/antd-mobile#readme",
   "publishConfig": {
     "access": "public"
   },
