@@ -23,9 +23,4 @@ export interface ActivityIndicatorPropsType extends ActivityIndicatorProps {
    * @description.en-US loading text behind the indicator
    */
   text?: ActivityIndicatorProps['text'];
-  /**
-   * @description       埋点自定义数据
-   * @description.en-US tracker
-   */
-  ext?: any;
 }

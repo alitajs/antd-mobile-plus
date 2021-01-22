@@ -5,14 +5,11 @@ import { ActivityIndicatorPropsType } from './PropsType';
 import './index.less';
 
 export const ActivityIndicator: React.FC<ActivityIndicatorPropsType> = (props) => {
-  const {ext, ...other } = props;
-
-  const log = useTracker(ActivityIndicator.displayName, {
-    ext,
-  });
-
+  const {...other } = props;
   return (
-    <AActivityIndicator>
+    <AActivityIndicator
+    {...other}
+    >
     </AActivityIndicator>
   );
 };
