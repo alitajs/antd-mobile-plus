@@ -13,7 +13,7 @@ export const Accordion: React.FC<AccordionPropsType> = (props) => {
 
   return (
     <AAccordion
-      {...other} 
+      {...other}
       onChange={(e) => {
         onChange && onChange(e);
         log('onChange');
