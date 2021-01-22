@@ -9,7 +9,8 @@ export interface AccordionPropsType extends AccordionProps {
   activeKey?: AccordionProps['activeKey'];
   /**
    * @description       初始化选中面板的 key
-   * @description.en-US 无
+   * @description.en-US default active key
+   * @default           null
    */
   defaultActiveKey?: AccordionProps['defaultActiveKey'];
   /**
