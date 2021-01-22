@@ -5,10 +5,9 @@ import { ActivityIndicatorPropsType } from './PropsType';
 import './index.less';
 
 export const ActivityIndicator: React.FC<ActivityIndicatorPropsType> = (props) => {
-  const {...other } = props;
   return (
     <AActivityIndicator
-    {...other}
+    {...props}
     >
     </AActivityIndicator>
   );
