@@ -26,7 +26,7 @@ export const Tag: React.FC<TagPropsType> = (props) => {
       afterClose={(e) => {
         afterClose && afterClose(e);
         log('afterClose');
-      }}
+      }} 
     >
     </ATag>
   );
