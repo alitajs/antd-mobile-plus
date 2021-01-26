@@ -54,7 +54,6 @@ export interface ImagePickerPropsType extends ImagePickerPropTypes {
   /**
    * @description       图片捕获设置, 具体请参考[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input)中关于capture的说明
    * @description.en-US Image capture setting, please refer to the description of capture in [MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input)
-   * @default           `hidden`
    * @default           false
    */
   capture?: ImagePickerPropTypes['capture'];
