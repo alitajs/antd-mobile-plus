@@ -7,14 +7,14 @@ nav:
 
 ### DEMO
 
-<code src="./demo/button.tsx" />
+<code src="./demos/button.tsx" />
 
 ### API
 
 Tracker.setTracker(selfTracker: ITracker)
 
 ```typescript | pure
-import { Tracker } from '@ant-design/mobile'
+import Tracker from '@alitajs/tracker'
 
 Tracker.setTracker({
   log(component, params, ext) {

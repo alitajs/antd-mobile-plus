@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { setTracker, withError, useTracker } from '@alitajs/tracker';
+import { setTracker, withError, useTracker } from '../../';
 
 // Tracker.setTracker(amdTracker)
 
 export const Demo: React.FC = (props) => {
   setTracker({
-    log(component, params, ext) {
+    log(component: any, params: any, ext: any) {
       console.log(component); // 组件名
       console.log(params.version); // antd-mobile 版本号
       console.log(params.reactVersion); // react 版本号

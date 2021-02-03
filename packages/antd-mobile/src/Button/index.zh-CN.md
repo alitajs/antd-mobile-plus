@@ -8,8 +8,8 @@ nav:
 点击后会触发一个操作。
 
 
-<code src="./demo/basic.tsx" />
+<code src="./demos/basic.tsx" />
 
-<code src="./demo/complex.tsx" />
+<code src="./demos/complex.tsx" />
 
 <API/>

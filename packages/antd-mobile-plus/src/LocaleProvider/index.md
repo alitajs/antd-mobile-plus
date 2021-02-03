@@ -7,7 +7,7 @@ nav:
 
 ### 展示
 
-<code src="./demo/NumericInput.tsx" />
+<code src="./demos/NumericInput.tsx" />
 
 ### 参数
 
