@@ -15,7 +15,7 @@ export const DemoComponent: React.FC<DemoPropsType> = (props) => {
     type,
   });
 
-  const lang = useCompleteLocale()
+  const lang = useCompleteLocale();
 
   const [cls, setCls] = React.useState({
     [`${prefixCls}`]: true,

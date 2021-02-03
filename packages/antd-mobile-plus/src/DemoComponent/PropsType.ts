@@ -14,5 +14,5 @@ export interface DemoPropsType extends ButtonProps {
    * @description.en-US button title
    * @default 你好,世界!
    */
-  title?:string;
+  title?: string;
 }

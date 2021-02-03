@@ -1,3 +1,3 @@
-import LocaleContext from './LocaleContext'
+import LocaleContext from './LocaleContext';
 
-export default LocaleContext.Provider
+export default LocaleContext.Provider;

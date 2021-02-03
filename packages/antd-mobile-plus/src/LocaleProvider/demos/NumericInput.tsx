@@ -1,13 +1,11 @@
-import * as React from 'react'
-import {
-  Button,
-} from 'antd-mobile'
-import { en_US, zh_CN } from '@alitajs/languages'
-import LocaleProvider from '..'
-import DemoComponent from '../../DemoComponent'
+import * as React from 'react';
+import { Button } from 'antd-mobile';
+import { en_US, zh_CN } from '@alitajs/languages';
+import LocaleProvider from '..';
+import DemoComponent from '../../DemoComponent';
 
 export default () => {
-  const [lang, setLang] = React.useState(zh_CN)
+  const [lang, setLang] = React.useState(zh_CN);
 
   return (
     <>
@@ -15,9 +13,9 @@ export default () => {
         type="primary"
         onClick={() => {
           if (lang === zh_CN) {
-            setLang(en_US)
+            setLang(en_US);
           } else {
-            setLang(zh_CN)
+            setLang(zh_CN);
           }
         }}
       >
@@ -28,5 +26,5 @@ export default () => {
         <DemoComponent />
       </LocaleProvider>
     </>
-  )
-}
+  );
+};

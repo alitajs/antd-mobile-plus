@@ -18,12 +18,10 @@ export const Button: React.FC<ButtonPropsType> = (props) => {
         onClick && onClick(e);
         log('onClick');
       }}
-    >
-    </AButton>
+    ></AButton>
   );
 };
 
 Button.displayName = 'Button';
-
 
 export default withError(Button);
