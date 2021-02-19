@@ -2,15 +2,19 @@
   "name": "ui",
   "scope": "alitajs",
   "version": 2,
-  "builds": [
-    {
-      "src": "build.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "doc_dist"
-      }
+  "builds": [{
+    "src": "build.sh",
+    "use": "@vercel/static-build",
+    "config": {
+      "distDir": "doc_dist"
     }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "/doc_dist/$1" }],
+  }],
+  "routes": [{
+    "src": "/(.*)",
+    "dest": "/doc_dist/$1"
+  }, {
+    "src": "/(.*)",
+    "dest": "/doc_dist/404.html"
+  }],
   "alias": ["ui.alitajs.com"]
 }
