@@ -12,8 +12,8 @@ import './index.less';
 const prefixCls = 'alita-star';
 
 const Star: FC<StarProps> = (props) => {
-  const { score = 0, maxScore = 5, onChange = () => { } } = props;
-  const log = useTracker(Star.displayName, {});
+  const { score = 0, maxScore = 5, onChange = () => { }, ext } = props;
+  const log = useTracker(Star.displayName, { ext });
   return <div className={prefixCls}>{
     [maxScore / 5, maxScore / 5 * 2, maxScore / 5 * 3, maxScore / 5 * 4, maxScore].map(i => <i
       key={i}
