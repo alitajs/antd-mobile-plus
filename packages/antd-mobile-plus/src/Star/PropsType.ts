@@ -10,7 +10,7 @@ export interface StarProps {
   maxScore: number;
 
   /**
-   * 星星变化实践
+   * 星星变化事件
    */
   onChange: (n: number) => void;
 }
