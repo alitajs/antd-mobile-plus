@@ -139,4 +139,4 @@ export const Demo: React.FC = (props) => {
 
 这里展示的是组件的用法，如果在 demo 中使用的是相对路径的方式引入，那相关文件将会被一起展示在页面上。为了更好的让用户可以复用我们的代码，所以可以在这里直接使用项目包名，这样的体验将和项目使用中一致。
 
-<code src="../packages/antd-mobile-plus/src/DemoComponent/demo/basic.tsx" />
+<code src="../packages/antd-mobile-plus/src/DemoComponent/demos/basic.tsx" />
