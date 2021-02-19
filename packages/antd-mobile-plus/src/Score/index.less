@@ -1,10 +1,26 @@
 @import '~@alitajs/theme/index';
 @import '~@alitajs/theme/mixins/icon';
 
-@prefixCls: alita-star;
+@prefixCls: antd-mobile-star;
 
 .@{prefixCls} {
-    width: 100px;
-    height: 100px;
-    .encoded-svg-background('star-half');
+    &-item {
+        display: inline-block;
+        width: 24 * @hd;
+        height: 24 * @hd;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &-light {
+        .encoded-svg-background('star-light');
+    }
+
+    &-half {
+        .encoded-svg-background('star-half');
+    }
+
+    &-default {
+        .encoded-svg-background('star-default');
+    }
 }
