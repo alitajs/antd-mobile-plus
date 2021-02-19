@@ -1,0 +1,1 @@
+action-sheet、card、checkbox、date-picker、date-picker-view、flex、icon、input-icon、list、list-view、locale-provider、menu、modal、notice-bar、picker、picker-view、popover、pull-to-refresh、radio、tab-bar、text、toast、view、
