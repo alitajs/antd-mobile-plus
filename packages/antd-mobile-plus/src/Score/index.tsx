@@ -8,7 +8,7 @@ import classnames from 'classnames';
 import { StarType } from './PropsType';
 import './index.less';
 
-const prefixCls = 'antd-mobile-star';
+const prefixCls = 'amp-score';
 
 const Score: FC<StarType> = (props) => {
   const { score } = props;

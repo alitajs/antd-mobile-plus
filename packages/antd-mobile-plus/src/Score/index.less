@@ -1,13 +1,14 @@
 @import '~@alitajs/theme/index';
 @import '~@alitajs/theme/mixins/icon';
 
-@prefixCls: antd-mobile-star;
+@prefixCls: amp-score;
+@starSize: 24 * @hd;
 
 .@{prefixCls} {
     &-item {
         display: inline-block;
-        width: 24 * @hd;
-        height: 24 * @hd;
+        width: @starSize;
+        height: @starSize;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
