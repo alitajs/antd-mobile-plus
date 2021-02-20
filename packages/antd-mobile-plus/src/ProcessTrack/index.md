@@ -1,3 +1,8 @@
+<!--
+ * @Descripttion:
+ * @Author: wll
+ * @Date: 2021-02-20 15:50:29
+-->
 ---
 title: 流程轨迹
 nav:
@@ -19,3 +24,4 @@ nav:
 | tNameKey | 每个流程节点标题的字段名     | string                            | traceName    |
 | down     | 每个流程节点标题的字段名     | boolean                           | true         |
 | empty    | 没有数据展示的样式           | React.ReactNode                   | 暂无流程数据 |
+| call    | 拨打电话，这里一般和原生交互           | ()=>void                 | ()=>{} |

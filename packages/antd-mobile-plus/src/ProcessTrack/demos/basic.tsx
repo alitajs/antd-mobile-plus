@@ -1,6 +1,11 @@
-import * as React from 'react';
-import { setTracker } from '@alitajs/tracker';
-import { ProcessTrack } from '@alitajs/antd-mobile-plus';
+/*
+ * @Descripttion:
+ * @Author: wll
+ * @Date: 2021-02-20 15:50:29
+ */
+import * as React from "react";
+import { setTracker } from "@alitajs/tracker";
+import { ProcessTrack } from "@alitajs/antd-mobile-plus";
 
 export default () => {
   // 这个方法应该统一添加
@@ -18,26 +23,45 @@ export default () => {
     },
   });
   return (
-    <div style={{ marginTop: '24px' }}>
+    <div style={{ marginTop: "24px" }}>
       <ProcessTrack
         data={[
-          { linkName: '协议起草', pepple: '张一', phone: '15989864522', startTime: '2020-04-02 12:30', endTime: '2021-01-01 12:30', remarks: '暂无' },
-          { linkName: '协议审批', pepple: '张一', phone: '15989864522', startTime: '2020-04-02 12:30', endTime: '2021-01-01 12:30', remarks: '暂无' },
-          { linkName: '协议稽核', pepple: '张一', phone: '15989864522', startTime: '2020-04-02 12:30', endTime: '2021-01-01 12:30', remarks: '暂无' },
-
+          {
+            linkName: "协议起草",
+            pepple: "张一",
+            phone: "15989864522",
+            startTime: "2020-04-02 12:30",
+            endTime: "2021-01-01 12:30",
+            remarks: "暂无",
+          },
+          {
+            linkName: "协议审批",
+            pepple: "张一",
+            phone: "15989864522",
+            startTime: "2020-04-02 12:30",
+            endTime: "2021-01-01 12:30",
+            remarks: "暂无",
+          },
+          {
+            linkName: "协议稽核",
+            pepple: "张一",
+            phone: "15989864522",
+            startTime: "2020-04-02 12:30",
+            endTime: "2021-01-01 12:30",
+            remarks: "暂无",
+          },
         ]}
-        tNameKey='linkName'
-        cTimeKey='startTime'
+        tNameKey="linkName"
+        cTimeKey="startTime"
         linkMap={[
-          { label: '处理人', key: 'pepple' },
-          { label: '联系电话', key: 'phone', isPhone: true },
-          { label: '环节开始时间', key: 'startTime' },
-          { label: '环节结束时间', key: 'endTime' },
-          { label: '备注', key: 'remarks' },
+          { label: "处理人", key: "pepple" },
+          { label: "联系电话", key: "phone", isPhone: true },
+          { label: "环节开始时间", key: "startTime" },
+          { label: "环节结束时间", key: "endTime" },
+          { label: "备注", key: "remarks" },
         ]}
         empty={<>无数据</>}
       />
     </div>
-
   );
 };

@@ -1,10 +1,15 @@
+/*
+ * @Descripttion:
+ * @Author: wll
+ * @Date: 2021-02-20 15:50:29
+ */
 /**
  * @description 每个流程块展示的字段内容
  */
 interface LinkMapProps {
   key: string; // 为服务端返回的字段名称
-  label: string;// 页面展示的字段名称
-  isPhone: boolean;// -是否是电话字段，需要拨号
+  label: string; // 页面展示的字段名称
+  isPhone: boolean; // -是否是电话字段，需要拨号
 }
 
 export interface ProTrackProps {
@@ -17,7 +22,6 @@ export interface ProTrackProps {
    * key--为服务端返回的字段名称，label--页面展示的字段名称 isPhone--是否是电话字段，需要拨号
    */
   linkMap: LinkMapProps[];
-
   /**
    * @description 流程轨迹头部的时间值的字段名
    * @default --- createTime
@@ -38,4 +42,8 @@ export interface ProTrackProps {
    * @default--暂无流程数据
    */
   empty?: React.ReactNode;
+  /**
+   *@description 拨打电话,这里一般调用的都是原生的
+   */
+  call?: () => void;
 }

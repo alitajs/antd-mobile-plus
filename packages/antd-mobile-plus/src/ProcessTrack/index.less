@@ -1,47 +1,25 @@
-@import '~@alitajs/theme/index';
-@import '~@alitajs/theme/mixins/icon';
+@import "~@alitajs/theme/index";
+@import "~@alitajs/theme/mixins/icon";
 
 @prefixCls: alita-track;
 
-
 .@{prefixCls} {
-  // &-item {
-  //   display: inline-block;
-  //   width: @starSize;
-  //   height: @starSize;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
-  // }
-
-  // &-light {
-  //   .encoded-svg-background('star-light');
-  // }
-
-  // &-half {
-  //   .encoded-svg-background('star-half');
-  // }
-
-  // &-default {
-  //   .encoded-svg-background('star-default');
-  // }
-
   &-node {
     position: relative;
-    margin: 0 20*@hd;
-    padding: 0 0 25*@hd 20*@hd;
+    margin: 0 20 * @hd;
+    padding: 0 0 25 * @hd 20 * @hd;
   }
 
   &-node-img {
     position: absolute;
-    width: 20*@hd;
-    margin-left: -30* @hd;
+    width: 20 * @hd;
+    margin-left: -30 * @hd;
   }
 
   &-node-time {
     display: flex;
     align-items: center;
-    padding: 0 0 10*@hd 0;
+    padding: 0 0 10 * @hd 0;
     color: @color-text-caption;
     font-size: @font-size-base;
   }
@@ -49,17 +27,17 @@
   &-child {
     background: @fill-base;
     border: @hd solid @border-color-base;
-    border-radius: 10*@hd;
+    border-radius: 10 * @hd;
   }
 
   &-child-block {
     display: flex;
     justify-content: space-between;
-    padding: 10*@hd;
+    padding: 10 * @hd;
     color: @brand-primary;
     font-weight: 600;
-    background: @fill-title;
-    border-radius: 10*@hd 10*@hd 0 0;
+    background:@fill-title-bg;
+    border-radius: 10 * @hd 10 * @hd 0 0;
   }
 
   &-child-title {
@@ -74,7 +52,7 @@
   &-child-content {
     display: flex;
     align-items: center;
-    padding: 10*@hd;
+    padding: 10 * @hd;
     color: @color-text-caption-md;
     font-size: @font-size-caption-sm;
   }
@@ -89,12 +67,12 @@
 
   &-node::before {
     position: absolute;
-    top: 20*@hd;
+    top: 20 * @hd;
     left: 0;
     width: @hd;
     height: 94%;
     background-color: @border-color-base-alita;
-    content: '';
+    content: "";
   }
 
   &-node:last-child::before {
@@ -107,11 +85,9 @@
     margin-left: @v-spacing-xs;
   }
 
-
   &-hide {
     display: none;
   }
-
 
   &-no-data {
     display: flex;
@@ -122,12 +98,12 @@
 
   &-last-icon {
     margin-left: @h-spacing-sm;
-    width: 44*@hd;
-    height: 20*@hd;
+    width: 44 * @hd;
+    height: 20 * @hd;
   }
 
   &-change-icon {
-    width: 16*@hd;
-    height: 16*@hd;
+    width: 16 * @hd;
+    height: 16 * @hd;
   }
 }
