@@ -9,10 +9,29 @@ import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
 
 interface HeadPanelProps {
+  /**
+   * @description 中间文字的标题
+   */
   title?: string;
+
+  /**
+   * @description 上一年点击时间回调
+   */
   onPreYear?: () => void;
+
+  /**
+   * @description 上一月点击时间回调
+   */
   onPreMonth?: () => void;
+
+  /**
+   * @description 下一月点击时间回调
+   */
   onNextMonth?: () => void;
+
+  /**
+   * @description 下一年点击时间回调
+   */
   onNextYear?: () => void;
 }
 

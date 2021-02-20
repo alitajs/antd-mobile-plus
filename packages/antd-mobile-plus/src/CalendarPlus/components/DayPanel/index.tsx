@@ -10,9 +10,21 @@ import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
 
 interface DayPanelProps {
+  /**
+   * @description 日期文字
+   */
   day: string | number;
+  /**
+   * @description 文字展示状态
+   */
   status: 'disable' | 'nomal' | 'selected';
+  /**
+   * @description 点击时间
+   */
   onClick: () => void;
+  /**
+   * @description 子标题
+   */
   subTitle?: string;
 }
 
