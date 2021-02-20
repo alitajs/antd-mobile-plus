@@ -23,7 +23,7 @@ const ChildItem: React.FC<ChildItem> = (props) => {
     item,
     down,
     log,
-    call = null,
+    call = () => {},
   } = props;
   const {
     lastIcon,
