@@ -9,7 +9,13 @@ import './index.less';
 const prefixCls = 'alita-map-header';
 
 interface MapHeaderType {
+  /**
+   * 标题
+   */
   title?: string;
+  /**
+   * 右侧组件
+   */
   rightExt?: () => React.ReactNode | React.ReactNode;
 }
 
