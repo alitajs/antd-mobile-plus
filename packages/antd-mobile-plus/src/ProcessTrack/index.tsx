@@ -20,6 +20,7 @@ export const ProcessTrack: React.FC<ProTrackProps> = (props) => {
     down = true,
     empty,
     call = () => {},
+    keyFieldName = "id",
   } = props;
 
   const log = useTracker(ProcessTrack.displayName, {});

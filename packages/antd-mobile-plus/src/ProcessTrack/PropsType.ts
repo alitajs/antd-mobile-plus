@@ -45,4 +45,10 @@ export interface ProTrackProps {
    *@description 拨打电话,这里一般调用的都是原生的
    */
   call?: () => void;
+
+  /**
+   * @description 流程轨迹每个item的key 的字段名称
+   * @default id
+   */
+  keyFieldName?: string;
 }

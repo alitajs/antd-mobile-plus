@@ -27,6 +27,7 @@ export default () => {
       <ProcessTrack
         data={[
           {
+            linkId: "1",
             linkName: "协议起草",
             pepple: "张一",
             phone: "15989864522",
@@ -35,6 +36,7 @@ export default () => {
             remarks: "暂无",
           },
           {
+            linkId: "2",
             linkName: "协议审批",
             pepple: "张一",
             phone: "15989864522",
@@ -43,6 +45,7 @@ export default () => {
             remarks: "暂无",
           },
           {
+            linkId: "3",
             linkName: "协议稽核",
             pepple: "张一",
             phone: "15989864522",
@@ -51,6 +54,7 @@ export default () => {
             remarks: "暂无",
           },
         ]}
+        keyFieldName="id"
         tNameKey="linkName"
         cTimeKey="startTime"
         linkMap={[

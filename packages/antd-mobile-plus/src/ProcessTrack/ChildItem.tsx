@@ -6,7 +6,7 @@ interface ChildItem {
   linkMap: any[]; // 对应要展示的字段数组
   cTimeKey?: string; // 表头的时间值的字段名
   tNameKey?: string; // 流程节点标题的字段名
-  index: number;
+  index: number; //数量标识，用来区分是否是最后流程，需要展示不同的图标
   item: any; // 流程数据
   down: boolean; // 默认是展开还是合并
   log: (ext: any) => void; // 埋点
