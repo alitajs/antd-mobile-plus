@@ -31,5 +31,20 @@ export interface ProTrackProps {
    * @description 公共栏的图标
    * @default null
    */
-  backIcon?: React.ReactElement<any> | null;
+  noticeIcon?: React.ReactElement<any> | null;
+  /**
+   * @description 自动切换的时间间隔
+   * @default 3000
+   */
+  autoplayInterval?: number;
+  /**
+   * @description 是否自动切换
+   * @default false
+   */
+  autoplay?: boolean;
+  /**
+   * @description 	是否循环播放
+   * @default false
+   */
+  infinite?: boolean;
 }

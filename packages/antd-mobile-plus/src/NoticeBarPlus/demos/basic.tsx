@@ -24,7 +24,19 @@ export default () => {
   });
   return (
     <div style={{ margin: "24px 12px" }}>
-      <NoticeBarPlus />
+      <NoticeBarPlus
+        data={[
+          { bulletinTitle: "公告通知1" },
+          { bulletinTitle: "公告通知2" },
+          {
+            bulletinTitle:
+              "公告通知3公告通知3公告通知3测试长度超过宽度显示隐藏",
+          },
+          { bulletinTitle: "公告通知4" },
+        ]}
+        autoplay={true}
+        infinite={true}
+      />
     </div>
   );
 };
