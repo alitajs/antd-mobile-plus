@@ -31,7 +31,7 @@ export const ProcessTrack: React.FC<ProTrackProps> = (props) => {
         ? data.map((item: any, index: number) => {
             return (
               <ChildItem
-                key={`a_${index}`}
+                key={item[keyFieldName]}
                 item={item}
                 index={index}
                 tNameKey={item[tNameKey]}
