@@ -62,7 +62,7 @@ export const NoticeBarPlus: React.FC<ProTrackProps> = (props) => {
           log("extraClick");
         }}
       >
-        {extraText}
+        <span>{extraText}</span>
         <i className={`${prefixCls}-right-icon`}></i>
       </div>
     </div>
