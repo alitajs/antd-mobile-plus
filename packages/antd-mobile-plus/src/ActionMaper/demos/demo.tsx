@@ -5,8 +5,8 @@
  */
 
 import React, { FC } from 'react';
-import Map, { MapApiLoaderHOC } from 'react-bmapgl/Map';
 import { ActionMaper } from '@alitajs/antd-mobile-plus';
+
 const Demo: FC = (props) => {
   return (
     <div style={{ padding: '20px' }}>
