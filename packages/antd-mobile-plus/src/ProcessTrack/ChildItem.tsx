@@ -3,16 +3,39 @@ import React, { useState } from "react";
 import { IMGSTR } from "./img/index";
 import "./index.less";
 interface ChildItem {
-  linkMap: any[]; // 对应要展示的字段数组
-  cTimeKey?: string; // 表头的时间值的字段名
-  tNameKey?: string; // 流程节点标题的字段名
-  index: number; //数量标识，用来区分是否是最后流程，需要展示不同的图标
-  item: any; // 流程数据
-  down: boolean; // 默认是展开还是合并
-  log: (ext: any) => void; // 埋点
-  call: () => void; // 拨打电话，和原生交互
+  /**
+   * @description 对应流程中要展示的字段数组
+   */
+  linkMap: any[];
+  /**
+   *@description 流程上展示时间节点的字段名
+   */
+  cTimeKey?: string;
+  /**
+   *@description 流程节点标题的字段名
+   */
+  tNameKey?: string;
+  /**
+   * @description  数量标识，用来区分是否是最后流程，需要展示不同的图标
+   */
+  index: number;
+  /**
+   * @description 每个流程节点数据
+   */
+  item: any;
+  /**
+   * @description 默认是展开还是合并,点击右侧箭头可切换
+   */
+  down: boolean;
+  /**
+   * @description 埋点
+   */
+  log: (ext: any) => void;
+  /**
+   *@description 拨打电话，和原生交互
+   */
+  call: () => void;
 }
-let phone = "";
 const prefixCls = "alita-track";
 const ChildItem: React.FC<ChildItem> = (props) => {
   const {
@@ -70,9 +93,6 @@ const ChildItem: React.FC<ChildItem> = (props) => {
           <>
             {linkMap.map((childItem: any) => {
               const { key, label, isPhone = false } = childItem;
-              if (isPhone) {
-                phone = item[key];
-              }
               return (
                 <div className={`${prefixCls}-child-content`} key={key}>
                   <div className={`${prefixCls}-child-label`}>{label}：</div>

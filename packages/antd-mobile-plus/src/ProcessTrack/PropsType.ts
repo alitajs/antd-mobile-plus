@@ -7,9 +7,19 @@
  * @description 每个流程块展示的字段内容
  */
 interface LinkMapProps {
-  key: string; // 为服务端返回的字段名称
-  label: string; // 页面展示的字段名称
-  isPhone: boolean; // -是否是电话字段，需要拨号
+  /**
+   * @description 为服务端返回的字段名称
+   */
+  key: string;
+  /**
+   * @description 页面展示的字段名称
+   */
+  label: string;
+  /**
+   * @description 是否是电话字段，需要拨号
+   * @default false
+   */
+  isPhone: boolean;
 }
 export interface ProTrackProps {
   /**
