@@ -13,24 +13,20 @@ interface HeadPanelProps {
    * @description 中间文字的标题
    */
   title?: string;
-
   /**
-   * @description 上一年点击时间回调
+   * @description 上一年点击事件回调
    */
   onPreYear?: () => void;
-
   /**
-   * @description 上一月点击时间回调
+   * @description 上一月点击事件回调
    */
   onPreMonth?: () => void;
-
   /**
-   * @description 下一月点击时间回调
+   * @description 下一月点击事件回调
    */
   onNextMonth?: () => void;
-
   /**
-   * @description 下一年点击时间回调
+   * @description 下一年点击事件回调
    */
   onNextYear?: () => void;
 }

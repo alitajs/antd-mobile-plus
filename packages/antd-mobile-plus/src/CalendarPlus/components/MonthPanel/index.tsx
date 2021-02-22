@@ -15,17 +15,14 @@ interface MonthPanelProps {
    * @description 当前显示的年月日期
    */
   date?: Date;
-
   /**
    * @description 点击某个日期的回调
    */
   onClick?: (e: Date) => void;
-
   /**
    * @description 选中的日期
    */
   currentDate?: Date;
-
   /**
    * @description 子标题数组
    */

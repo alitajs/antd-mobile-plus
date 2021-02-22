@@ -19,7 +19,7 @@ interface DayPanelProps {
    */
   status: 'disable' | 'nomal' | 'selected';
   /**
-   * @description 点击时间
+   * @description 点击事件
    */
   onClick: () => void;
   /**
