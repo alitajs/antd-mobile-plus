@@ -3,7 +3,7 @@
 @prefixCls: alita-action-maper;
 
 .@{prefixCls} {
-    padding: 0 @v-spacing-lg 16 * @hd;
+    padding: 0 @v-spacing-lg 16 * @hd;    
     background-color: @fill-base;
     border-radius: 6 * @hd;
     &-sub-title {
@@ -12,14 +12,17 @@
     }
 
     &-map-wrapper {
+        position: relative;
         margin-top: 10 * @hd;
         overflow: hidden;
-        > div {
+        > div:first-child {
             height: auto!important;
         }
     }
 
     &-map {
+        /*层级问题导致自定义zoomControl无法显示 暂时将地图组件position:relative修改为static  暂时没找到好的方法*/
+        position: static!important;
         height: 151 * @hd!important;
     }
 }

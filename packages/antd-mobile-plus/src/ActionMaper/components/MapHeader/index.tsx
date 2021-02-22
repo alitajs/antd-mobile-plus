@@ -5,6 +5,7 @@
  */
 import React, { FC } from 'react';
 import './index.less';
+import { withError } from '@alitajs/tracker';
 
 const prefixCls = 'alita-map-header';
 
@@ -19,7 +20,7 @@ interface MapHeaderType {
   rightExt?: () => React.ReactNode | React.ReactNode;
 }
 
-const ActionMaper: FC<MapHeaderType> = (props) => {
+const MapHeader: FC<MapHeaderType> = (props) => {
   const { title = '', rightExt = () => <></> } = props;
   return (
     <div className={prefixCls}>
@@ -29,4 +30,6 @@ const ActionMaper: FC<MapHeaderType> = (props) => {
   );
 };
 
-export default ActionMaper;
+MapHeader.displayName = 'MapHeader';
+
+export default withError(MapHeader);

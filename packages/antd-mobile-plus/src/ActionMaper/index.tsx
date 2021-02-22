@@ -5,11 +5,12 @@
  */
 import React, { FC, useRef, useState, useEffect } from 'react';
 import Map, { MapApiLoaderHOC } from 'react-bmapgl/Map';
-import { ZoomControl, Marker } from 'react-bmapgl';
+import { Marker } from 'react-bmapgl';
 import { withError, useTracker } from '@alitajs/tracker';
 import { ActionMaperType, ActionMaperCoordinateType } from './PropsType';
 import MapHeader from './components/MapHeader';
 import RightExt from './components/RightExt';
+import ZoomControl, { ZoomType } from './components/ZoomControl';
 import './index.less';
 
 const prefixCls = 'alita-action-maper';
@@ -26,6 +27,7 @@ const ActionMaper: FC<ActionMaperType> = (props) => {
   const mapRef = useRef(null);
   const [mapScale, setMapScale] = useState(1);
   const [address, setAddress] = useState(detailAddress);
+  const [zoom, setZoom] = useState(initialzeZoom);
   const [
     currentPosition,
     setCurrentPosition,
@@ -39,6 +41,18 @@ const ActionMaper: FC<ActionMaperType> = (props) => {
     }
     return coordinate;
   });
+
+  const onZoom = (type: ZoomType) => {
+    if (type === 'plus') {
+      if (zoom < 19) {
+        setZoom(zoom + 1);
+      }
+    } else if (type === 'minus') {
+      if (zoom > 3) {
+        setZoom(zoom - 1);
+      }
+    }
+  };
 
   const initialMapScale = () => {
     const ONE_REM =
@@ -102,7 +116,7 @@ const ActionMaper: FC<ActionMaperType> = (props) => {
           className={`${prefixCls}-map`}
           style={{ transform: `scale(${mapScale},${mapScale})` }}
           center={new (window as any).BMapGL.Point(currentPosition)}
-          zoom={initialzeZoom}
+          zoom={zoom}
         >
           <Marker
             position={{
@@ -113,8 +127,8 @@ const ActionMaper: FC<ActionMaperType> = (props) => {
             icon="loc_red"
             autoViewport
           />
-          <ZoomControl anchor={1} map={mapRef} />
         </Map>
+        <ZoomControl onZoom={onZoom} />
       </div>
     </div>
   );
@@ -123,4 +137,5 @@ const ActionMaper: FC<ActionMaperType> = (props) => {
 ActionMaper.displayName = 'ActionMaper';
 
 (ActionMaper as any).MapApiLoaderHOC = MapApiLoaderHOC;
+
 export default withError(ActionMaper);

@@ -16,18 +16,22 @@ export interface ActionMaperCoordinateType {
 }
 
 export interface ActionMaperType { 
+
     /**
      * 经纬度，当传递经纬度时，默认不会触发ip/浏览器定位，否则会触发浏览器定位
      */
     coordinate?: ActionMaperCoordinateType;
+
     /**
      * 标题
      */
     title: string;
+
     /**
      * 详细地址
      */
     detailAddress?: string;
+
     /**
      * 定位后的回调
      */
@@ -37,8 +41,16 @@ export interface ActionMaperType {
      * 右侧自定义组件
      */
     rightExt?: () => React.ReactNode;
+
     /**
-     * 初始化地图zoom
+     * @description 初始化地图zoom 
+     * @default 12
      */
     initialzeZoom?: number; 
+
+    /**
+     * @description 隐藏zoomControl组件
+     * @default false
+     */
+    hideZoomControl?: boolean; 
 }
