@@ -1,0 +1,25 @@
+@import '~@alitajs/theme/index';
+
+@prefixCls: alita-action-maper;
+
+.@{prefixCls} {
+    padding: 0 @v-spacing-lg 16 * @hd;
+    background-color: @fill-base;
+    border-radius: 6 * @hd;
+    &-sub-title {
+        color: @color-text-paragraph;
+        font-size: @font-size-base;
+    }
+
+    &-map-wrapper {
+        margin-top: 10 * @hd;
+        overflow: hidden;
+        > div {
+            height: auto!important;
+        }
+    }
+
+    &-map {
+        height: 151 * @hd!important;
+    }
+}

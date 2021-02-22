@@ -1,0 +1,24 @@
+@import '~@alitajs/theme/index';
+@import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-map-header;
+
+.@{prefixCls} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: @h-spacing-lg 0;
+    &-title {
+        flex: 1;
+        height: 22 * @hd;
+        font-size: @font-size-caption;
+        font-weight: 600;
+        color: @color-text-paragraph;
+        line-height: 22 * @hd;
+    }
+
+    &-right-ext {
+        height: 22 * @hd;
+    }
+}
