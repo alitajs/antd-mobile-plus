@@ -1,0 +1,50 @@
+@import '~@alitajs/theme/index';
+
+@prefixCls: alita-calendar-day;
+.@{prefixCls} {
+    flex-basis: 14%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 7.15% 0;
+    height: 0;
+    &-day {
+        position: relative;
+        width: 100%;
+        padding: 50% 0;
+        font-size: 18 * @hd;
+        &-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &-subtitle {
+            position: absolute;
+            bottom: 3 * @hd;
+            left: 50%;
+            width: 80%;
+            transform: translateX(-50%);
+            font-size: @font-size-icontext;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            font-weight: 400;
+        }
+    }
+    &-disable {
+        color: @color-text-disabled;
+    }
+    &-selected {
+        background-color: @color-active;
+        color: @color-text-base-inverse;
+        border-radius: 4 * @hd;
+        font-weight: 500;
+    }
+    &-nomal {
+        color: @color-text-paragraph;
+    }
+}

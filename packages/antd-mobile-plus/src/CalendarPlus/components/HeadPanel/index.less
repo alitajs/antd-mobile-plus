@@ -1,0 +1,53 @@
+@import '~@alitajs/theme/index';
+@import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-calendar-header;
+
+@btnSize: 22 * @hd;
+
+.@{prefixCls} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 44 * @hd;
+    padding: 0 16 * @hd;
+    &-items {
+        display: inherit;
+    }
+    &-btn {
+        width: @btnSize;
+        height: @btnSize;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &-year-pre {
+        .svg-double-left();
+        justify-items: flex-start;
+        margin-right: 16 * @hd;
+    }
+
+    &-month-pre {
+        .svg-single-left();
+        justify-content: flex-end;
+    }
+
+    &-month-next {
+        .svg-single-right();
+        justify-content: flex-end;
+        margin-right: 16 * @hd;
+    }
+
+    &-year-next {
+        .svg-double-right();
+        justify-items: flex-end;
+    }
+    &-title {
+        height: 22 * @hd;
+        justify-items: center;
+        color: @color-text-paragraph;
+        font-weight: 500;
+        font-size: 18 * @hd;
+    }
+}
