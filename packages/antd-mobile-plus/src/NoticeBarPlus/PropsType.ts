@@ -8,7 +8,7 @@ export interface ProTrackProps {
    * @description 公告数据，服务端返回数据(数组对象)
    * @default []
    */
-  data: any;
+  data: any[];
   /**
    * @description 获取公告内容的字段名，根据服务端返回来自定义
    * @default bulletinTitle
@@ -47,4 +47,9 @@ export interface ProTrackProps {
    * @default false
    */
   infinite?: boolean;
+  /**
+   * @description 每个item key值的字段名
+   * @default id
+   */
+  keyFieldName?: string;
 }

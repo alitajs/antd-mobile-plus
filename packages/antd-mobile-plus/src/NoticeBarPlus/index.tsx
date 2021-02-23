@@ -23,6 +23,7 @@ export const NoticeBarPlus: React.FC<ProTrackProps> = (props) => {
     noticeIcon = null,
     autoplay = true,
     infinite = true,
+    keyFieldName = "id",
   } = props;
 
   const log = useTracker(NoticeBarPlus.displayName, {});
@@ -41,10 +42,11 @@ export const NoticeBarPlus: React.FC<ProTrackProps> = (props) => {
           swiping={false}
           autoplayInterval={autoplayInterval}
           autoplay={autoplay}
-          infinite={autoplay}
+          infinite={infinite}
         >
           {data.map((item: any) => (
             <div
+              key={item[keyFieldName]}
               className={`${prefixCls}-v-item`}
               onClick={() => {
                 log("notice-bar-itemClick");

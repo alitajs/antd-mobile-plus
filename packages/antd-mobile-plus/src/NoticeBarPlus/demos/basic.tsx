@@ -26,13 +26,14 @@ export default () => {
     <div style={{ margin: "24px 12px" }}>
       <NoticeBarPlus
         data={[
-          { bulletinTitle: "公告通知1" },
-          { bulletinTitle: "公告通知2" },
+          { bulletinTitle: "公告通知1", id: "0" },
+          { bulletinTitle: "公告通知2", id: "1" },
           {
             bulletinTitle:
               "公告通知3公告通知3公告通知3测试长度超过宽度显示隐藏",
+            id: "2",
           },
-          { bulletinTitle: "公告通知4" },
+          { bulletinTitle: "公告通知4", id: "3" },
         ]}
         autoplay={true}
         infinite={true}
