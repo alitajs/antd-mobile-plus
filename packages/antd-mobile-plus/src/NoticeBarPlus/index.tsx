@@ -18,7 +18,7 @@ export const NoticeBarPlus: React.FC<ProTrackProps> = (props) => {
     valueKey = "bulletinTitle",
     onItemClick = () => {},
     extraText = "更多",
-    extraClick = () => {},
+    onExtraClick = () => {},
     autoplayInterval = 3000,
     noticeIcon = null,
     autoplay = true,
@@ -60,8 +60,8 @@ export const NoticeBarPlus: React.FC<ProTrackProps> = (props) => {
       </div>
       <div
         onClick={() => {
-          extraClick();
-          log("extraClick");
+          onExtraClick();
+          log("onExtraClick");
         }}
       >
         <span>{extraText}</span>

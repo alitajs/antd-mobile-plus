@@ -26,7 +26,7 @@ export interface ProTrackProps {
   /**
    * @description 右侧点击事件
    */
-  extraClick?: () => void;
+  onExtraClick?: () => void;
   /**
    * @description 公共栏的图标
    * @default null
