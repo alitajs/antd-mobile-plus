@@ -1,48 +1,13 @@
-@import '~@alitajs/theme/index';
-@import '~antd-mobile/lib/drawer/style/index';
-@import '~@alitajs/theme/mixins/icon';
+@import "~@alitajs/theme/index";
+@import "~antd-mobile/lib/drawer/style/index";
+@import "~@alitajs/theme/mixins/icon";
 
 @prefixCls: alita-filter;
-@iconSize: 16 * @hd;
 
 .@{prefixCls} {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 112 * @hd;
-    padding: 10 * @hd 12 * @hd;
-    background: #FFFFFF;
-    border-radius: 4 * @hd;
+  display: flex;
 
-    &-noraml-icon {
-        width: 16 * @hd;
-        height: 16 * @hd;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-
-    &-icon-up {
-
-        .svg-icon-up();
-    }
-
-    &-icon-down {
-        width: 16 * @hd;
-        height: 16 * @hd;
-        .svg-icon-down();
-    }
-
-    &-drawer {
-        height: auto;
-        max-height: 60vh;
-        padding: 20 * @hd @v-spacing-lg;
-        background: @fill-base;
-        z-index: 99;
-    }
-
-    &-drawer-item {
-        padding: 20 * @hd @v-spacing-lg;
-        font-size: @font-size-base;
-    }
+  &-single {
+    max-width: 112 * @hd;
+  }
 }

@@ -1,13 +1,12 @@
 /*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-18 16:50:07
+ * @Descripttion:
+ * @Author: wll
+ * @Date: 2021-02-23 15:07:51
  */
 
 import * as React from "react";
 import { setTracker } from "@alitajs/tracker";
 import { FilterItems } from "@alitajs/antd-mobile-plus";
-import "./basic.less";
 
 export default () => {
   // 这个方法应该统一添加
@@ -24,39 +23,50 @@ export default () => {
       console.log(ext);
     },
   });
-  return (
-    <div style={{ margin: "24px 0"}}>
-      <FilterItems
-        data={[
-          { id: "1", value: "排序-不限" },
-          { id: "2", value: "任务来源" },
-          { id: "3", value: "全部" },
-        ]}
-      />
 
-      {/* <div
-        style={{
-          display: "flex",
-          marginTop: "24px",
-          justifyContent: "space-between",
-        }}
-      >
-        <FilterItems
-          data={[
-            { id: "1", value: "排序-不限" },
-            { id: "2", value: "任务来源" },
-            { id: "3", value: "全部" },
-          ]}
-          className="myFilter"
-        />
-        <FilterItems
-          data={[
-            { id: "1", value: "排序-不限" },
-            { id: "2", value: "任务来源" },
-            { id: "3", value: "全部" },
-          ]}
-        />
-      </div> */}
+  const data = [
+    {
+      data: [
+        { id: "1", value: "排序不限" },
+        { id: "2", value: "任务来源" },
+        { id: "3", value: "全部" },
+      ],
+      filterId: "f_1",
+      valueFieldName: "value",
+      keyFieldName: "id",
+    },
+    {
+      data: [
+        { id: "1", value: "全部" },
+        { id: "2", value: "任务来源" },
+        { id: "3", value: "全部" },
+        { id: "4", value: "排序-不限" },
+        { id: "5", value: "任务来源" },
+        { id: "6", value: "全部" },
+        { id: "7", value: "排序-不限" },
+        { id: "8", value: "任务来源" },
+        { id: "9", value: "全部" },
+        { id: "16", value: "全部" },
+        { id: "17", value: "排序-不限" },
+        { id: "18", value: "任务来源" },
+        { id: "19", value: "全部" },
+      ],
+      filterId: "f_2",
+    },
+    {
+      data: [
+        { id: "1", value: "这个名字很长这个名字很长" },
+        { id: "2", value: "任务来源" },
+        { id: "3", value: "全部" },
+      ],
+      filterId: "f_3",
+    },
+  ];
+
+  return (
+    <div style={{ margin: "24px 0" }}>
+      <FilterItems data={data} />
+
     </div>
   );
 };
