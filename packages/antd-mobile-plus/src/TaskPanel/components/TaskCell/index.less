@@ -14,7 +14,7 @@
         text-align: center;
         color: @color-text-caption;
         font-size: @font-size-base;
-        border-right: 1PX solid@color-split-line;
+        border-right: @border-width-sm solid@color-split-line;
     }
     &-subtask {
         display: flex;
@@ -43,7 +43,7 @@
         right: 6 * @hd;
         bottom: 0;
         left: 6 * @hd;
-        height: 1PX;
+        height: @border-width-sm;
         background-color:@color-split-line;
         content: '';
         &:last-child {
