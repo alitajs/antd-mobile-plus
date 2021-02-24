@@ -3,7 +3,7 @@
  * @Author: wll
  * @Date: 2021-02-20 17:50:29
  */
-export interface ProTrackProps {
+export interface NoticeBarProps {
   /**
    * @description 公告数据，服务端返回数据(数组对象)
    * @default []

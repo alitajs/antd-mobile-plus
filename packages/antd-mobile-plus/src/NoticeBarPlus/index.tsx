@@ -5,14 +5,14 @@
  */
 import * as React from "react";
 import { withError, useTracker } from "@alitajs/tracker";
-import { ProTrackProps } from "./PropsType";
+import { NoticeBarProps } from "./PropsType";
 import { IMGSTR } from "./img/index";
 import Carousel from "antd-mobile/lib/carousel";
 import "./index.less";
 
 const prefixCls = "alita-notice-bar";
 
-export const NoticeBarPlus: React.FC<ProTrackProps> = (props) => {
+export const NoticeBarPlus: React.FC<NoticeBarProps> = (props) => {
   const {
     data = [],
     valueKey = "bulletinTitle",
