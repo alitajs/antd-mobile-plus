@@ -5,6 +5,7 @@
  */
 import React, { FC, useState } from 'react';
 import { SearchView } from '@alitajs/antd-mobile-plus';
+
 import './index.less';
 
 interface DemoProps {}
@@ -13,7 +14,7 @@ const Demo: FC<DemoProps> = (props) => {
   const [filterValue, setFilterValue] = useState('02');
   const [filterValue01, setFilterValue01] = useState();
   const [filterValue02, setFilterValue02] = useState('05');
-
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <SearchView
@@ -29,25 +30,6 @@ const Demo: FC<DemoProps> = (props) => {
           { label: '测试10', value: '08' },
         ]}
         filterValue={filterValue}
-        showLeft={true}
-        onFilterChange={(e: SearchFilterDataType) => {
-          setFilterValue(e.value);
-          console.log('onFilterChange：', e);
-        }}
-        onFilterSelected={(e) => {
-          console.log('onFilterSelected：', e);
-        }}
-        maxLength={10}
-        onSearch={(v: string) => {
-          console.log('onSearch:', v);
-        }}
-        initalzeValue="初始化数据"
-        onFocus={(v: string) => {
-          console.log('onFocus:', v);
-        }}
-        onBlur={(v: string) => {
-          console.log('onBlur:', v);
-        }}
       />
       <div className={'search-view-demo'}></div>
       <SearchView
@@ -64,7 +46,7 @@ const Demo: FC<DemoProps> = (props) => {
         ]}
         filterValue={filterValue01}
         showLeft={true}
-        onFilterChange={(e: SearchFilterDataType) => {
+        onFilterChange={(e) => {
           console.log('onFilterChange：', e);
           setFilterValue01(e.value);
         }}
@@ -83,6 +65,27 @@ const Demo: FC<DemoProps> = (props) => {
         type="number"
       />
 
+      <div className={'search-view-demo'}></div>
+      <SearchView
+        placeholder="自定义面板"
+        showLeft={true}
+        leftText={'可以修改text'}
+        open={open}
+        onRenderPanel={
+          <div
+            style={{ height: 400, backgroundColor: '#fff' }}
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
+            点击我关闭
+          </div>
+        }
+        onToggoleHandle={(on) => {
+          setOpen(on);
+          console.log('onToggoleHandle:', on);
+        }}
+      />
       <div className={'search-view-demo-fixed'}>
         <SearchView
           placeholder="请输入文字"
@@ -98,7 +101,7 @@ const Demo: FC<DemoProps> = (props) => {
           ]}
           filterValue={filterValue02}
           showLeft={true}
-          onFilterChange={(e: SearchFilterDataType) => {
+          onFilterChange={(e) => {
             setFilterValue02(e.value);
             console.log('onFilterChange：', e);
           }}

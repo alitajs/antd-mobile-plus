@@ -1,12 +1,20 @@
-
 /*
- * @Description: 
- * @Author: qclong
- * @Date: 2021-02-22 16:01:15
+ * @Author: your name
+ * @Date: 2021-02-24 14:42:24
+ * @LastEditTime: 2021-02-24 16:12:02
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /antd-mobile-plus/packages/antd-mobile-plus/src/SearchView/PropsType.ts
  */
 
 export interface SearchFilterDataType { 
+    /**
+     * @description 展示文字
+     */
     label: string;
+    /**
+     * @description 唯一标识符
+     */
     value: string;
 }
 
@@ -79,4 +87,24 @@ export interface SearchViewType {
      */
     type?: string;
 
+    /**
+     * @description 自定义下拉弹出面板
+     */
+    onRenderPanel?: React.ReactNode;
+
+    /**
+     * @description 展开选择面板
+     * @default false
+     */
+    open?: boolean;
+
+    /**
+     * @description 展开和关闭切换
+     */
+    onToggoleHandle: (e: boolean) => void;
+
+    /**
+     * @description leftText
+     */
+    leftText?: string;
 }

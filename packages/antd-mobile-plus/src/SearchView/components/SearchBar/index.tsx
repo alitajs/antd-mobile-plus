@@ -79,7 +79,7 @@ const SearchBar: FC<SearchBarProps> = ({
       <input
         ref={inputRef}
         type={type}
-        enterKeyHint="search"
+        enterkeyhint="search"
         className={`${prefixCls}-input`}
         value={value}
         onFocus={(e) => {
@@ -91,8 +91,8 @@ const SearchBar: FC<SearchBarProps> = ({
           onBlur(e.currentTarget.value);
         }}
         onKeyPress={(e) => {
-          log(`onKeyPress:${e.which}`);
-          if (e.which === 13) {
+          log(`onKeyPress:${e.key}`);
+          if (e.key === 'Enter') {
             onSearch(value);
             const inputDOM: HTMLInputElement = inputRef.current!;
             if (inputDOM) {

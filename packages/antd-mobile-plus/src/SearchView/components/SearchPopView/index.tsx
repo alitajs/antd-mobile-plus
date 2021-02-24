@@ -35,6 +35,11 @@ interface SearchPopViewProps {
    * @description 筛选条件选中时调用
    */
   onFilterSelect?: (e: SearchFilterDataType) => void;
+
+  /**
+   * @description 自定义下拉弹出面板
+   */
+  onRenderPanel?: React.ReactNode;
 }
 
 const prefixCls = 'alita-search-pop-view';
@@ -47,27 +52,15 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
     onHide = () => {},
     onChange = () => {},
     onFilterSelect = () => {},
+    onRenderPanel,
   } = props;
   const flagRef = useRef(null);
-  const [top, setTop] = useState(0);
 
-  const initialzeTop = () => {
-    if (flagRef.current) {
-      const flagDiv: HTMLDivElement = flagRef.current!;
-      setTop(flagDiv.getBoundingClientRect().top);
-    }
-  };
-
-  useEffect(() => {
-    initialzeTop();
-    return () => {};
-  }, []);
   return (
     <>
       <div className={`${prefixCls}-flag`} ref={flagRef}></div>
       <div
         className={`${prefixCls}-mask`}
-        style={{ top }}
         hidden={!visiable}
         onClick={() => {
           onHide();
@@ -77,27 +70,27 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
         className={classnames(`${prefixCls}`, {
           [`${prefixCls}-wrapper`]: visiable,
         })}
-        style={{ top }}
       >
         <div
           className={classnames(`${prefixCls}-animation`, {
             [`${prefixCls}-show`]: visiable,
           })}
         >
-          {data.map((item) => (
-            <FilterCell
-              key={item.value}
-              text={item.label}
-              selected={item.value === filterValue}
-              onClick={() => {
-                onChange(item);
-                onHide();
-              }}
-              onSelected={() => {
-                onFilterSelect(item);
-              }}
-            />
-          ))}
+          {onRenderPanel ??
+            data.map((item) => (
+              <FilterCell
+                key={item.value}
+                text={item.label}
+                selected={item.value === filterValue}
+                onClick={() => {
+                  onChange(item);
+                  onHide();
+                }}
+                onSelected={() => {
+                  onFilterSelect(item);
+                }}
+              />
+            ))}
         </div>
       </div>
     </>

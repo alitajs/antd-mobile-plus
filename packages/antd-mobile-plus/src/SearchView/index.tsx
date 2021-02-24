@@ -20,12 +20,20 @@ const SearchView: FC<SearchViewType> = (props) => {
     filterValue = '',
     onFilterChange = () => {},
     onFilterSelected = () => {},
+    onToggoleHandle = () => {},
+    onRenderPanel,
+    open = false,
+    leftText,
     ...searchBarProps
   } = props;
-  const [visiable, setVisiable] = useState(false);
+  const [visiable, setVisiable] = useState(open);
   const [selectItem, setSelectItem] = useState<SearchFilterDataType>(
     filterItemWithValue(filterData, filterValue),
   );
+
+  useEffect(() => {
+    setVisiable(open);
+  }, [open]);
 
   useEffect(() => {
     setSelectItem(filterItemWithValue(filterData, filterValue));
@@ -37,9 +45,10 @@ const SearchView: FC<SearchViewType> = (props) => {
       <div className={`${prefixCls}-search`}>
         <SearchLeftItem
           hidden={!showLeft}
-          text={selectItem.label}
+          text={leftText ?? selectItem.label}
           isOpen={visiable}
           onClick={() => {
+            onToggoleHandle(!visiable);
             setVisiable(!visiable);
           }}
         />
@@ -49,9 +58,11 @@ const SearchView: FC<SearchViewType> = (props) => {
         data={filterData}
         filterValue={selectItem.value}
         visiable={visiable}
+        onRenderPanel={onRenderPanel}
         onHide={() => {
           log('onHide');
           setVisiable(false);
+          onToggoleHandle(false);
         }}
         onChange={(e) => {
           log('SearchPopView: onChange');

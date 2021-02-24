@@ -1,12 +1,15 @@
 /*
- * @Description: 
- * @Author: qclong
- * @Date: 2021-02-23 13:01:40
+ * @Author: your name
+ * @Date: 2021-02-24 14:42:24
+ * @LastEditTime: 2021-02-24 16:13:45
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /antd-mobile-plus/packages/antd-mobile-plus/src/SearchView/utils/searchBarUtils.ts
  */
 import { SearchFilterDataType } from '../PropsType';
 
  /**
-  * 通过id值获取数组内的某个对象
+  * @description 通过id值获取数组内的某个对象
   * @param data 原数组
   * @param value id值
   */
