@@ -1,0 +1,53 @@
+@import '~@alitajs/theme/index';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-task-cell;
+
+.@{prefixCls} {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    &-taskname {
+        box-sizing: border-box;
+        width: 111 * @hd;
+        padding: 20 * @hd 10 * @hd;
+        text-align: center;
+        color: @color-text-caption;
+        font-size: @font-size-base;
+        border-right: 1PX solid@color-split-line;
+    }
+    &-subtask {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        flex: 1;
+        padding: 14 * @hd 30 * @hd;
+    }
+
+    &-item {
+        flex: 1;
+        flex-basis: 50%;
+        height: 32 * @hd;
+        color: @color-text-paragraph;
+        font-size: @font-size-base;
+    }
+
+    &-active {
+        color: @color-active;
+    }
+
+    &::after {
+        position: absolute;
+        right: 6 * @hd;
+        bottom: 0;
+        left: 6 * @hd;
+        height: 1PX;
+        background-color:@color-split-line;
+        content: '';
+        &:last-child {
+            height: 0;
+        }
+    }
+}
