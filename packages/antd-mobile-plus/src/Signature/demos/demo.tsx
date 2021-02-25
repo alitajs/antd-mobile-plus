@@ -1,16 +1,20 @@
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 import { Signature } from "@alitajs/antd-mobile-plus";
 
 interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
+  let myRef = useRef(null);
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <Signature
-        getSigin={(imgStr: string, sinRef) => {
+        getSigin={(imgStr: string) => {
           console.log("获取签名:" + imgStr);
         }}
         penColor="green"
+        getCanvasRef={(ref: React.MutableRefObject<null>) => {
+          myRef = ref;
+        }}
       />
     </div>
   );

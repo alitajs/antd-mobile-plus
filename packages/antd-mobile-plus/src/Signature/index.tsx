@@ -10,7 +10,7 @@ const Signature: FC<SignatureType> = (props) => {
   const {
     footerNode,
     canvasProps,
-    velocityFilterWeight = 0.1,
+    velocityFilterWeight,
     penColor,
     maxWidth = 2,
     minWidth,
@@ -18,6 +18,7 @@ const Signature: FC<SignatureType> = (props) => {
     type = "image/png",
     encoderOptions = 0.92,
     getSigin,
+    getCanvasRef,
   } = props;
   const log = useTracker(Signature.displayName, {});
   let sinRef = useRef(null);
@@ -41,6 +42,9 @@ const Signature: FC<SignatureType> = (props) => {
         minWidth={minWidth}
         ref={(ref: React.MutableRefObject<null>) => {
           sinRef = ref;
+          if (getCanvasRef) {
+            getCanvasRef(ref);
+          }
         }}
       />
       {footerNode || (
@@ -48,7 +52,7 @@ const Signature: FC<SignatureType> = (props) => {
           <div
             className={`${prefixCls}-btn`}
             onClick={() => {
-              log('getSigin')
+              log("getSigin");
               getSigin((sinRef as any).toDataURL(type, encoderOptions), sinRef);
             }}
           >

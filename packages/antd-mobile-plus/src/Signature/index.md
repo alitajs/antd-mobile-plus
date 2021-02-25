@@ -13,7 +13,7 @@ nav:
 
 <API />
 
-### siginRef 可以使用的方法
+### signRef 可以使用的方法
 | 方法名 | 说明 | 返回类型 |
 | --- | --- | --- |
 | isEmpty() |  | boolean| |
@@ -26,3 +26,4 @@ nav:
 | getCanvas() | 返回基础画布引用。允许您根据需要修改画布或调用诸如toDataURL() | canvas |
 | getTrimmedCanvas() | 创建画布的副本并返回其修剪版本，并删除所有空白 | canvas |
 | getSignaturePad() | 返回基础SignaturePad引用 | SignaturePad |
+| toDataURL() | 返回图片的Base64字符 | base64string |

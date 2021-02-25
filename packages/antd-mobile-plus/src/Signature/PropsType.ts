@@ -10,7 +10,7 @@ export interface SignatureType {
     footerNode?: React.ReactNode;
     /**
      * @description 用于根据先前的速度修改新速度的重量
-     * @default 0.1
+     * @default 0.7
      */
     velocityFilterWeight?: number;
     /**
@@ -48,4 +48,8 @@ export interface SignatureType {
      * @default 0.92
      */
     encoderOptions?: number;
+    /**
+     * @description 获取当前的ref，当底部自定义时可以使用
+     */
+    getCanvasRef?: (ref: React.MutableRefObject<null>) => void;
 }
