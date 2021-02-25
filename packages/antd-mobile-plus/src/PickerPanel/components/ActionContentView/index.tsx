@@ -12,11 +12,30 @@ import classnames from 'classnames';
 import './index.less';
 
 interface ActionContentViewProps {
+  /**
+   * @description 控制展示和隐藏
+   * @default false
+   */
   isOpen?: boolean;
+  /**
+   * @description 数据源
+   */
   data: any[];
+  /**
+   * @description 别名
+   */
   alias?: AliasPickerType;
+  /**
+   * @description 删除回调事件
+   */
   onDelete?: (item: any, index: number) => void;
+  /**
+   * @description cell点击事件
+   */
   onItemClick?: (item: any, index: number) => void;
+  /**
+   * @description 点击删除按钮
+   */
   onRenderItem?: (item: any, index: number) => React.ReactNode;
 }
 
