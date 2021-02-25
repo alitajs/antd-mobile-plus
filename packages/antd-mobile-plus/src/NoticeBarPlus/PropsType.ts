@@ -31,7 +31,7 @@ export interface NoticeBarProps {
    * @description 公共栏的图标
    * @default null
    */
-  noticeIcon?: React.ReactElement<any> | null;
+  noticeIcon?: React.ReactElement<any>;
   /**
    * @description 自动切换的时间间隔
    * @default 3000

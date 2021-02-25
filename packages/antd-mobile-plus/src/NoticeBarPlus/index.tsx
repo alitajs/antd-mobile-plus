@@ -20,7 +20,7 @@ export const NoticeBarPlus: React.FC<NoticeBarProps> = (props) => {
     extraText = "更多",
     onExtraClick = () => {},
     autoplayInterval = 3000,
-    noticeIcon = null,
+    noticeIcon,
     autoplay = true,
     infinite = true,
     keyFieldName = "id",
