@@ -1,0 +1,31 @@
+@import '~@alitajs/theme/index';
+@import '~@alitajs/theme/mixins/icon';
+
+
+@prefixCls: alita-pickerpanel-cell;
+
+.@{prefixCls} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12 * @hd;
+    &-label {
+        flex: 1;
+        overflow: hidden;
+        color: @color-text-paragraph;
+        font-size: 16 * @hd;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+    }
+    &-delete {
+        margin-left: 12 * @hd;
+        width: 16 * @hd;
+        height: 16 * @hd;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .svg-close-icon();
+    }
+}

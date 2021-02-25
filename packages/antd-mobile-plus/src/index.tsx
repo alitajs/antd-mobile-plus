@@ -8,4 +8,5 @@ export { default as LocaleProvider } from './LocaleProvider';
 export { default as Star } from './Star';
 export { default as ProcessTrack } from './ProcessTrack';
 export { default as CalendarPlus } from './CalendarPlus';
+export { default as PickerPanel } from './PickerPanel';
 export { default as SearchView } from './SearchView';
