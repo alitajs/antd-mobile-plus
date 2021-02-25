@@ -1,0 +1,26 @@
+@import '~@alitajs/theme/index';
+
+
+@prefixCls:alita-action-popview;
+
+.@{prefixCls}-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @popup-zindex;
+    background-color: @fill-mask;
+}
+
+.@{prefixCls} {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @popup-zindex;
+    overflow: hidden;
+    background-color: @fill-base;
+    border-radius: 8 * @hd 8 * @hd 0 0;
+}
+     
