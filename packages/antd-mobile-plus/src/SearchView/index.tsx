@@ -1,7 +1,10 @@
 /*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-22 16:00:20
+ * @Author: your name
+ * @Date: 2021-02-24 18:00:19
+ * @LastEditTime: 2021-02-24 18:03:44
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /antd-mobile-plus/packages/antd-mobile-plus/src/SearchView/index.tsx
  */
 import React, { FC, useState, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
@@ -21,7 +24,7 @@ const SearchView: FC<SearchViewType> = (props) => {
     onFilterChange = () => {},
     onFilterSelected = () => {},
     onToggoleHandle = () => {},
-    onRenderPanel,
+    PopViewPanel,
     open = false,
     leftText,
     ...searchBarProps
@@ -58,7 +61,7 @@ const SearchView: FC<SearchViewType> = (props) => {
         data={filterData}
         filterValue={selectItem.value}
         visiable={visiable}
-        onRenderPanel={onRenderPanel}
+        onRenderPanel={PopViewPanel}
         onHide={() => {
           log('onHide');
           setVisiable(false);

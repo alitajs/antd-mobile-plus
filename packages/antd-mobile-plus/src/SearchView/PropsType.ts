@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-24 14:42:24
- * @LastEditTime: 2021-02-24 16:12:02
+ * @LastEditTime: 2021-02-24 18:00:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /antd-mobile-plus/packages/antd-mobile-plus/src/SearchView/PropsType.ts
@@ -90,7 +90,7 @@ export interface SearchViewType {
     /**
      * @description 自定义下拉弹出面板
      */
-    onRenderPanel?: React.ReactNode;
+    PopViewPanel?: React.ReactNode;
 
     /**
      * @description 展开选择面板

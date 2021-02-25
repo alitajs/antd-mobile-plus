@@ -71,7 +71,7 @@ const Demo: FC<DemoProps> = (props) => {
         showLeft={true}
         leftText={'可以修改text'}
         open={open}
-        onRenderPanel={
+        PopViewPanel={
           <div
             style={{ height: 400, backgroundColor: '#fff' }}
             onClick={() => {
