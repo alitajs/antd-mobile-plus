@@ -1,0 +1,32 @@
+@import '~@alitajs/theme/index';
+// @import '~@alitajs/theme/mixins/icon';
+
+
+@prefixCls: alita-signature;
+
+.@{prefixCls} {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &-cavans {
+        flex: 1;
+        background: @fill-base;
+        border-radius: @radius-md;
+        margin: @h-spacing-lg @h-spacing-lg 0 @h-spacing-lg;
+    }
+
+    &-foot {
+        display: flex;
+        justify-content: space-around;
+        margin: @h-spacing-lg 0;
+    }
+
+    &-btn {
+        padding: 12 * @hd 28* @hd;
+        background: @brand-primary;
+        color: @color-text-base-inverse;
+        font-size: @font-size-base;
+        border-radius: @radius-md;
+    }
+}

@@ -31,6 +31,7 @@
     "@alitajs/theme": "0.0.3",
     "@alitajs/tracker": "0.0.3",
     "antd-mobile": "2.3.3",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "react-signature-canvas": "^1.0.3"
   }
 }
