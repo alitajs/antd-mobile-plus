@@ -83,7 +83,7 @@ const ChildItem: React.FC<ChildItem> = (props) => {
             alt=""
             onClick={() => {
               updateFlag(!openFlag);
-              log("ProcessTrack");
+              log(openFlag);
             }}
             className={`${prefixCls}-change-icon`}
           />
