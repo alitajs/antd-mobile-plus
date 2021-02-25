@@ -68,12 +68,13 @@ const SearchView: FC<SearchViewType> = (props) => {
           onToggoleHandle(false);
         }}
         onChange={(e) => {
-          log('SearchPopView: onChange');
+          log('onChange');
           onFilterChange(e);
         }}
         onFilterSelect={(e) => {
           setSelectItem(e);
           onFilterSelected(e);
+          log('onFilterSelect');
         }}
       />
     </div>
