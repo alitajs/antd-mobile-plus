@@ -102,7 +102,7 @@ const ChildItem: React.FC<ChildItem> = (props) => {
                         ? `${prefixCls}-child-value`
                         : `${prefixCls}-hide`
                     }
-                    onClick={isPhone && call}
+                    onClick={isPhone ? call : () => {}}
                   >
                     {item[key]}
                     <img

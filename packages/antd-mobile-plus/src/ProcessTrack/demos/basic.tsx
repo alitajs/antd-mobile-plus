@@ -54,7 +54,7 @@ export default () => {
             remarks: "暂无",
           },
         ]}
-        keyFieldName="id"
+        keyFieldName="linkId"
         tNameKey="linkName"
         cTimeKey="startTime"
         linkMap={[
