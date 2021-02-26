@@ -18,6 +18,13 @@ nav:
 
 <API/>
 
+#### ActionMaperCoordinateType
+
+| 属性名 | 描述 | 类型 | 默认值
+| ----- |----- |----- |----- |
+| lat   | 纬度 | number |  \- |
+| lng   | 精度 | number | \- |
+
 ### 使用说明
 
 > 在页面使用时，请注意导出`ActionMaper.MapApiLoaderHOC({ ak: '百度ak',})(Demo);` 。具体可参考页面示例
