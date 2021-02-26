@@ -15,7 +15,11 @@ import './index.less';
 
 const prefixCls = 'alita-action-maper';
 
-const ActionMaper: FC<ActionMaperType> = (props) => {
+export interface FCMap<T = {}> extends FC {
+  MapApiLoaderHOC?: React.ReactNode;
+}
+
+const ActionMaper: FCMap<ActionMaperType> = (props) => {
   const {
     title = '',
     detailAddress = '',
@@ -136,6 +140,5 @@ const ActionMaper: FC<ActionMaperType> = (props) => {
 
 ActionMaper.displayName = 'ActionMaper';
 
-(ActionMaper as any).MapApiLoaderHOC = MapApiLoaderHOC;
-
+ActionMaper.MapApiLoaderHOC = MapApiLoaderHOC;
 export default withError(ActionMaper);
