@@ -1,6 +1,6 @@
 import React, { FC, useRef } from "react";
 import { withError, useTracker } from "@alitajs/tracker";
-import SignatureCanvas from "react-signature-canvas";
+import CanvasDraw from "react-canvas-draw";
 import { SignatureType } from "./PropsType";
 import "./index.less";
 
@@ -9,11 +9,10 @@ const prefixCls = "alita-signature";
 const Signature: FC<SignatureType> = (props) => {
   const {
     footerNode,
-    canvasProps,
-    velocityFilterWeight,
-    penColor,
-    maxWidth = 2,
-    minWidth,
+    penColor = "#000",
+    brushRadius = 3,
+    canvasWidth = "100%",
+    canvasHeight = "100%",
     clear = () => {},
     type = "image/png",
     encoderOptions = 0.92,
@@ -31,15 +30,15 @@ const Signature: FC<SignatureType> = (props) => {
   };
   return (
     <div className={prefixCls}>
-      <SignatureCanvas
-        canvasProps={{
-          ...canvasProps,
-          className: `${prefixCls}-cavans`,
-        }}
-        velocityFilterWeight={velocityFilterWeight}
-        penColor={penColor}
-        maxWidth={maxWidth}
-        minWidth={minWidth}
+      <CanvasDraw
+        loadTimeOffset={0}
+        hideGrid={true}
+        lazyRadius={0}
+        brushRadius={brushRadius}
+        canvasWidth={canvasWidth}
+        canvasHeight={canvasHeight}
+        brushColor={penColor}
+        hideInterface={true}
         ref={(ref: React.MutableRefObject<null>) => {
           sinRef = ref;
           if (getCanvasRef) {
@@ -53,7 +52,9 @@ const Signature: FC<SignatureType> = (props) => {
             className={`${prefixCls}-btn`}
             onClick={() => {
               log("getSigin");
-              getSigin((sinRef as any).toDataURL(type, encoderOptions), sinRef);
+              getSigin(
+                (sinRef as any).canvas.drawing.toDataURL(type, encoderOptions)
+              );
             }}
           >
             确定

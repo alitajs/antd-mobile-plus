@@ -1,31 +1,18 @@
 
 export interface SignatureType {
     /**
-     * @description 直接传递给基础<canvas />元素
-     */
-    canvasProps?: Object;
-    /**
      * @description 底部的按钮区域可以自定义
      */
     footerNode?: React.ReactNode;
-    /**
-     * @description 用于根据先前的速度修改新速度的重量
-     * @default 0.7
-     */
-    velocityFilterWeight?: number;
-    /**
-     * @description 画笔的笔锋
-     * @default 0.5
-     */
-    minWidth?: number;
+
     /**
      * @description 画笔的粗细
-     * @default 2
+     * @default 3
      */
-    maxWidth?: number;
+    brushRadius?: number;
     /**
      * @description  画笔颜色
-     * @default 'black'
+     * @default '#000'
      */
     penColor?: string;
     /**
@@ -37,7 +24,7 @@ export interface SignatureType {
      * sinRef 可以根据需要，使用其提供的方法
      *
      */
-    getSigin: (imgStr: any, siginRef: React.MutableRefObject<null>) => void;
+    getSigin: (imgStr: any) => void;
     /**
      * @description 图片格式
      * @default image/png
@@ -50,6 +37,20 @@ export interface SignatureType {
     encoderOptions?: number;
     /**
      * @description 获取当前的ref，当底部自定义时可以使用
+     * sinRef.canvas.drawing.toDataURL(type, encoderOptions) 获取画布生成的图片
+     *
      */
     getCanvasRef?: (ref: React.MutableRefObject<null>) => void;
+    /**
+     * @description 画布宽度
+     * @default '100%'
+     */
+    canvasWidth?: number | string;
+    /**
+     * @description 画布高度
+     * @default '100%'
+     */
+    canvasHeight?: number | string;
+
+
 }

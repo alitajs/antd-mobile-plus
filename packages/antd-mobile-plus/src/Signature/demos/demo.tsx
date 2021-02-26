@@ -5,6 +5,13 @@ interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
   let myRef = useRef(null);
+  const getImg = () => {
+    if(myRef){
+ // 获取签名图片
+ console.log('图片：'+(myRef as any).canvas.drawing.toDataURL())
+    }
+
+  };
   return (
     <div style={{ height: "100vh" }}>
       <Signature
