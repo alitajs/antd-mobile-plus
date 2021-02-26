@@ -1,8 +1,4 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-02-22 17:29:10
- */
+
 import * as React from "react";
 import { withError, useTracker } from "@alitajs/tracker";
 import classnames from "classnames";

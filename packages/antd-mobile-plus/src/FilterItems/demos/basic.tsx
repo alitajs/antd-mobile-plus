@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-02-23 15:07:51
- */
 
 import * as React from "react";
 import { setTracker } from "@alitajs/tracker";
