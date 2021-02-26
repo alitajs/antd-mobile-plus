@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-02-22 17:29:44
- */
 export interface FilterItemProps {
   /**
    * @description 筛选的数据
@@ -10,31 +5,35 @@ export interface FilterItemProps {
    */
   data: any[];
   /**
-   * @description 默认选择项
-   * @default 0
-   */
-  defalutSelect?: number;
-  /**
-   * @description 枚举值字段名称
-   * @default value
-   */
-  valueFieldName?: string;
-  /**
-   * @description 面板当中每个item的key的字段名称
-   * @default id
-   */
-  keyFieldName?: string;
-  /**
-   * @description 每个数据项的点击事件
-   */
-  onItemClick?: (data: any) => void;
-  /**
    * @description 每个Filter的id
    */
   filterId: string;
 }
-
-export interface FilterItemsProps {
+export interface AliasProps {
+  /**
+    * @description 枚举值字段名称
+    * @default value
+    */
+  label?: string;
+  /**
+   * @description 面板当中每个item的key的字段名称
+   * @default id
+   */
+  id?: string;
+}
+export interface CommonPros {
+  defalutSelect?: number;
+  /**
+   * @description 字段别名
+   * @default {id：'id',label:'label'}
+   */
+  alias?: AliasProps;
+  /**
+   * @description 每个数据项的点击事件
+   */
+  onItemChange: (data: any) => void;
+}
+export interface FilterItemsProps extends CommonPros{
   /**
  * @description 每个筛选项数据
  */
@@ -50,7 +49,8 @@ export interface FilterItemsProps {
   onClick: (status: string) => void;
 }
 
-export interface ProTrackProps {
+
+export interface FilterProps extends CommonPros {
   /**
    * @description 筛选项的所有数据
    */

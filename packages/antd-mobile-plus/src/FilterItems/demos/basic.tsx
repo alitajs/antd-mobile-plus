@@ -32,8 +32,6 @@ export default () => {
         { id: "3", value: "全部" },
       ],
       filterId: "f_1",
-      valueFieldName: "value",
-      keyFieldName: "id",
     },
     {
       data: [
@@ -64,9 +62,14 @@ export default () => {
   ];
 
   return (
-    <div style={{ margin: "24px 0" }}>
-      <FilterItems data={data} />
-
+    <div style={{ margin: "24px 0", height: "2000px" }}>
+      <FilterItems
+        data={data}
+        onItemChange={(data: FilterItemProps) => {
+          console.log(data);
+        }}
+        alias={{ label: "value" }}
+      />
     </div>
   );
 };

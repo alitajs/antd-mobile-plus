@@ -7,13 +7,13 @@ import * as React from "react";
 import { withError, useTracker } from "@alitajs/tracker";
 import classnames from "classnames";
 import FilterItem from "./component/FilterItem";
-import { ProTrackProps, FilterItemProps } from "./PropsType";
+import { FilterProps, FilterItemProps } from "./PropsType";
 import "./index.less";
 
 const prefixCls = "alita-filter";
 
-export const FilterItems: React.FC<ProTrackProps> = (props) => {
-  const { data = [] } = props;
+export const FilterItems: React.FC<FilterProps> = (props) => {
+  const { data = [], defalutSelect = 0, alias, onItemChange } = props;
   const [activeIndex, updateActiveIndex] = React.useState(-1);
 
   const log = useTracker(FilterItems.displayName, {});
@@ -27,6 +27,9 @@ export const FilterItems: React.FC<ProTrackProps> = (props) => {
         const { filterId } = item;
         return (
           <FilterItem
+            defalutSelect={defalutSelect}
+            alias={alias}
+            onItemChange={onItemChange}
             key={filterId}
             item={item}
             openFlag={index === activeIndex ? "down" : "up"}

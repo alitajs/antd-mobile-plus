@@ -12,24 +12,27 @@ import "./index.less";
 const prefixCls = "alita-filter-item";
 
 export const FilterItem: React.FC<FilterItemsProps> = (props) => {
-  const { item,openFlag='up',onClick } = props;
   const {
+    item,
+    openFlag = "up",
+    onClick,
     defalutSelect = 0,
-    data = [],
-    valueFieldName = "value",
-    keyFieldName = "id",
-    onItemClick = () => {},
-  } = item as FilterItemProps;
+    alias = { label: "label", id: "id" },
+    onItemChange,
+  } = props;
+  const { data = [], filterId } = item as FilterItemProps;
   const [status, updateStatus] = React.useState(openFlag);
   const [active, updateActive] = React.useState(defalutSelect);
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     updateStatus(openFlag);
-
-  },[openFlag]);
+  }, [openFlag]);
 
   const log = useTracker(FilterItem.displayName, {});
-
+  const aliasObj = { label: "label", id: "id" };
+  Object.keys(alias).forEach((aliasItem) => {
+    aliasObj[aliasItem] = alias[aliasItem];
+  });
   return (
     <div className={`${prefixCls}`}>
       <div
@@ -37,15 +40,15 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
         onClick={() => {
           if (status === "up") {
             updateStatus("down");
-            onClick('down');
+            onClick("down");
           } else {
             updateStatus("up");
-            onClick('up');
+            onClick("up");
           }
         }}
       >
         <div className={`${prefixCls}-active-text `}>
-          {data[active][valueFieldName]}
+          {data[active][aliasObj.label]}
         </div>
         <i
           className={classnames({
@@ -60,19 +63,19 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
           {data.map((item: any, index: number) => {
             return (
               <div
-                key={item[keyFieldName]}
+                key={item[aliasObj.id]}
                 className={classnames({
                   [`${prefixCls}-drawer-item`]: true,
                   [`${prefixCls}-active-item`]: active === index,
                 })}
                 onClick={() => {
-                  log("filter-item-click");
+                  log("onItemChange");
                   updateActive(index);
-                  onItemClick(item);
+                  onItemChange({ ...item, filterId });
                   updateStatus("up");
                 }}
               >
-                {item[valueFieldName]}
+                {item[aliasObj.label]}
               </div>
             );
           })}
