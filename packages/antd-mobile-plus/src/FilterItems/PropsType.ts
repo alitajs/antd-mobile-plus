@@ -31,7 +31,7 @@ export interface CommonPros {
   /**
    * @description 每个数据项的点击事件
    */
-  onItemChange: (data: any) => void;
+  onItemChange: (data: FilterItemProps) => void;
 }
 export interface FilterItemsProps extends CommonPros{
   /**
