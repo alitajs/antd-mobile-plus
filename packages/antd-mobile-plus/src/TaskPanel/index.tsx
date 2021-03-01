@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import TaskCell from './components/TaskCell';
 import { withError, useTracker } from '@alitajs/tracker';
+import { TaskPanelType, TaskPanelItemType } from './PropsType';
 import './index.less';
-import { TaskPanelType } from './PropsType';
 
 const prefixCls = 'alita-task-panel';
 
@@ -16,7 +16,7 @@ const TaskPanel: FC<TaskPanelType> = (props) => {
           <TaskCell
             {...item}
             key={item.id}
-            onSelected={(e) => {
+            onSelected={(e: TaskPanelItemType) => {
               log('onSelected');
               onSelected(e);
             }}
