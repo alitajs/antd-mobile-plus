@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-20 15:43:38
- */
 import React, { FC, useRef, useState, useEffect } from 'react';
 import Map, { MapApiLoaderHOC } from 'react-bmapgl/Map';
 import { Marker } from 'react-bmapgl';

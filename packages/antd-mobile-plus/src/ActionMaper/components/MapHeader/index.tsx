@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-20 16:05:04
- */
 import React, { FC } from 'react';
 import './index.less';
 import { withError } from '@alitajs/tracker';

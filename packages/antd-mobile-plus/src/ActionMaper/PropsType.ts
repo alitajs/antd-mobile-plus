@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Author: qclong
- * @Date: 2021-02-20 15:44:07
- */
 
 export interface ActionMaperCoordinateType { 
     /**

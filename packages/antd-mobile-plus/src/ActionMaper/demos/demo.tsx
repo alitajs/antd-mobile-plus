@@ -1,9 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-20 15:44:21
- */
-
 import React, { FC } from 'react';
 import { ActionMaper } from '@alitajs/antd-mobile-plus';
 import { setTracker } from '@alitajs/tracker';
