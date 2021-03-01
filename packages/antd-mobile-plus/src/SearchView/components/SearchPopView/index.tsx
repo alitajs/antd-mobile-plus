@@ -79,7 +79,7 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
         })}
       >
         <div
-          // style={{ maxHeight }}
+          style={{ maxHeight }}
           className={classnames(`${prefixCls}-animation`, {
             [`${prefixCls}-show`]: visiable,
           })}

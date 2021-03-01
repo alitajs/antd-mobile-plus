@@ -8,20 +8,22 @@
     right: 0;
     left: 0;
     z-index: @popup-zindex;
+    max-height: 0;
     overflow: hidden;
     animation-play-state: paused;
     @keyframes openAnimation {
         0% {
-            max-height: 0;
+            max-height: 0!important;
         }
         100% {
-            max-height: 999999 * @hd;
+            max-height: 999999 * @hd!important;
             background-color: @fill-base;
         }
     }
 
     animation: openAnimation 0.3s  ease-out;
     &-wrapper {
+        max-height: 999999 * @hd!important;
         animation-play-state: running;
     }
     &-animation {

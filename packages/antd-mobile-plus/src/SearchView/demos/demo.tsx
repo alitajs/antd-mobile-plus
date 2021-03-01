@@ -33,6 +33,7 @@ const Demo: FC<DemoProps> = (props) => {
       />
       <div className={'search-view-demo'}></div>
       <SearchView
+        maxHeight="80vh"
         placeholder="请输入文字"
         filterData={[
           { label: '竣工', value: '01' },
@@ -43,6 +44,9 @@ const Demo: FC<DemoProps> = (props) => {
           { label: '测试06', value: '06' },
           { label: '测试08', value: '07' },
           { label: '测试10', value: '08' },
+          { label: '测试11', value: '09' },
+          { label: '测试12', value: '010' },
+          { label: '测试13', value: '011' },
         ]}
         filterValue={filterValue01}
         showLeft={true}
