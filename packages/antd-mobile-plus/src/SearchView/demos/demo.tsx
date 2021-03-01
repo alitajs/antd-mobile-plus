@@ -5,12 +5,18 @@
  */
 import React, { FC, useState } from 'react';
 import { SearchView } from '@alitajs/antd-mobile-plus';
+import { setTracker } from '@alitajs/tracker';
 
 import './index.less';
 
 interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
+  setTracker({
+    log: (a, b, c) => {
+      console.log(a, b, c);
+    },
+  });
   const [filterValue, setFilterValue] = useState('02');
   const [filterValue01, setFilterValue01] = useState();
   const [filterValue02, setFilterValue02] = useState('05');
@@ -85,6 +91,9 @@ const Demo: FC<DemoProps> = (props) => {
             点击我关闭
           </div>
         }
+        onSearch={(v: string) => {
+          console.log('onSearch:', v);
+        }}
         onToggoleHandle={(on) => {
           setOpen(on);
           console.log('onToggoleHandle:', on);

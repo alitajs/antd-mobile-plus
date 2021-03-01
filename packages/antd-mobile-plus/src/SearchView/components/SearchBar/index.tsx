@@ -91,8 +91,8 @@ const SearchBar: FC<SearchBarProps> = ({
           onBlur(e.currentTarget.value);
         }}
         onKeyPress={(e) => {
-          log(`onKeyPress:${e.key}`);
           if (e.key === 'Enter') {
+            log(`onSearch`);
             onSearch(value);
             const inputDOM: HTMLInputElement = inputRef.current!;
             if (inputDOM) {
