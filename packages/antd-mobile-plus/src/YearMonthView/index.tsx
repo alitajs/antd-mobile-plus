@@ -37,7 +37,6 @@ const YearMonthView: FC<YearMonthViewType> = ({
   return (
     <div className={prefixCls} ref={wrapperRef}>
       {new Array(yearCount).fill(0).map((item, index) => {
-        console.log('tminDate.getMonth()', tminDate.getMonth());
         const minMonth = index === 0 ? tminDate.getMonth() : 0;
         const maxMonth = index === yearCount - 1 ? tmaxDate.getMonth() : 11;
         const year = tminDate.getFullYear() + index;
