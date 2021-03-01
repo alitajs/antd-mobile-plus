@@ -6,8 +6,14 @@
 
 import React, { FC } from 'react';
 import { ActionMaper } from '@alitajs/antd-mobile-plus';
+import { setTracker } from '@alitajs/tracker';
 
 const Demo: FC = (props) => {
+  setTracker({
+    log(component, params, ext) {
+      console.log(component, params, ext); // 组件名
+    },
+  });
   return (
     <div style={{ padding: '20px' }}>
       <ActionMaper
