@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import Button from './components/Button';
-import { ToolBarType } from './PropsType';
+import { FooterBarType } from './PropsType';
 import './index.less';
 
 const prefixCls = 'alita-tool-bar';
 
-const ToolBar: FC<ToolBarType> = ({ data = [] }) => {
-  const log = useTracker(ToolBar.displayName, {});
+const FooterBar: FC<FooterBarType> = ({ data = [] }) => {
+  const log = useTracker(FooterBar.displayName, {});
   return (
     <div className={prefixCls}>
       {data.map((item) => {
@@ -21,5 +21,5 @@ const ToolBar: FC<ToolBarType> = ({ data = [] }) => {
   );
 };
 
-ToolBar.displayName = 'ToolBar';
-export default withError(ToolBar);
+FooterBar.displayName = 'FooterBar';
+export default withError(FooterBar);

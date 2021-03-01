@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { ToolBar } from '@alitajs/antd-mobile-plus';
+import { FooterBar } from '@alitajs/antd-mobile-plus';
 
 interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
   return (
     <div style={{ marginTop: 20 }}>
-      <ToolBar
+      <FooterBar
         data={[
           {
             text: '辅助操作',

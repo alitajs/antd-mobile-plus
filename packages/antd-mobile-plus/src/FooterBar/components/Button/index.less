@@ -11,7 +11,7 @@
     font-size: 18 * @hd;
     overflow: hidden;
     &-disable {
-        opacity: 0.5;
+        opacity: @opacity-disabled;
         background-color: @color-active;
         color: @fill-base;
     }
@@ -20,15 +20,15 @@
         background-color: @color-active;
         color: @fill-base;
         &:active {
-            opacity: 0.7;
+            opacity: @opacity-active;
         }
     }
 
     &-default {
-        border: 1px solid @border-color-base-alita;
+        border: @border-width-sm solid @border-color-base-alita;
         background-color: @fill-base;
         &:active {
-            opacity: 0.7;
+            opacity: @opacity-active;
         }
     }
 

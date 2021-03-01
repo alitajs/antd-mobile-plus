@@ -11,14 +11,14 @@ export interface ToolButtonItemType {
     /**
      * @description 按钮点击事件
      */
-    onPress?: (e) => void;
+    onPress?: (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
     /**
      * @description 唯一标识
      */
     id: string;
 }
 
-export interface ToolBarType {
+export interface FooterBarType {
     /**
      * @description 按钮数组
      * @default []
