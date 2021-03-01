@@ -1,0 +1,24 @@
+@import '~@alitajs/theme/index';
+@import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-right-ext;
+
+
+.@{prefixCls} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    &-icon {
+        width: 16 * @hd;
+        height: 16 * @hd;
+        .svg-location();
+        background-size: contain;
+
+    }
+    &-title {
+        margin-left: 5 * @hd;
+        font-size: 12 * @hd;
+        color: @brand-blue;
+    }
+}

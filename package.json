@@ -8,12 +8,12 @@
     "start": "dumi dev",
     "build": "dumi build",
     "ci": "npm run lint && npm run compile && npm run test",
+    "entry":"node ./scripts/entry.js",
     "compile": "father-build",
     "pub": "lerna publish --force-publish=*",
     "lint": "prettier packages/**/*.{ts,tsx} --check && stylelint packages/**/*.less",
     "format": "prettier packages/**/*.{ts,tsx} --write && stylelint packages/**/*.less --fix",
-    "test": "umi-test --coverage",
-    "newc": "node ./scripts/createPlusTemplate.js"
+    "test": "umi-test --coverage"
   },
   "gitHooks": {
     "pre-commit": "npm run ci",
