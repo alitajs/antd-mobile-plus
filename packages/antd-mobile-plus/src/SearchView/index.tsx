@@ -27,6 +27,7 @@ const SearchView: FC<SearchViewType> = (props) => {
     PopViewPanel,
     open = false,
     leftText,
+    maxHeight = '50vh',
     ...searchBarProps
   } = props;
   const [visiable, setVisiable] = useState(open);
@@ -62,6 +63,7 @@ const SearchView: FC<SearchViewType> = (props) => {
         filterValue={selectItem.value}
         visiable={visiable}
         onRenderPanel={PopViewPanel}
+        maxHeight={maxHeight}
         onHide={() => {
           log('onHide');
           setVisiable(false);
