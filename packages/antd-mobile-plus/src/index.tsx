@@ -4,6 +4,7 @@ export { default as Star } from './Star';
 export { default as ActionMaper } from './ActionMaper';
 export { default as NoticeBarPlus } from './NoticeBarPlus';
 export { default as CalendarPlus } from './CalendarPlus';
+export { default as TaskPanel } from './TaskPanel';
 export { default as Signature } from './Signature';
 export { default as ProcessTrack } from './ProcessTrack';
 export { default as PickerPanel } from './PickerPanel';
