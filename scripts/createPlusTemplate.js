@@ -1,20 +1,14 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-23 16:06:03
- */
 const fs = require('fs');
+const { join } = require('path');
 const path = require('path');
 
 class TemplateEngine {
-  constructor(componentsName) {
-    this.componentsPath = path.join(
-      __dirname,
-      '../antd-mobile-plus-template/index',
-    );
-    this.demoPath = path.join(__dirname, '../antd-mobile-plus-template/demos');
+  constructor(componentsName, subName) {
+    this.componentsPath = path.join(__dirname, './template/index');
+    this.demoPath = path.join(__dirname, './template/demos');
     this.targetPath = path.join(__dirname, '../packages/antd-mobile-plus/src');
     this.componentsName = componentsName;
+    this.subName = subName;
   }
 
   transformString(componentName) {
@@ -93,6 +87,7 @@ export interface ${this.componentsName}Type {
       fs.writeFileSync(toFile, text);
     });
   }
+
   createDir() {
     this.targetPath = path.join(this.targetPath, this.componentsName);
     if (fs.existsSync(this.targetPath)) {
@@ -103,7 +98,8 @@ export interface ${this.componentsName}Type {
   }
 
   addComponentNameToIndex() {
-    const addText = `export { default as ${this.componentsName} } from './${this.componentsName}';`;
+    const addText = `export { default as ${this.componentsName} } from './${this.componentsName}';
+`;
     const targetFilePath = path.join(
       __dirname,
       '../packages/antd-mobile-plus/src/index.tsx',
@@ -114,11 +110,53 @@ export interface ${this.componentsName}Type {
   }
 
   generateComponent() {
+    if (!this.subName) {
+      this.generateCom();
+      return;
+    }
+    this.generateSubCom();
+    console.log(`${this.componentsName}-${this.subName}：组件添加完成`);
+  }
+
+  generateCom() {
     this.createDir();
     this.createComponents();
     this.createDemos();
     this.addComponentNameToIndex();
     console.log(`${this.componentsName}：组件添加完成`);
+  }
+
+  generateSubCom() {
+    const comPath = path.join(this.targetPath, this.componentsName);
+    if (!fs.existsSync(comPath)) {
+      console.error('请先创建组件，再创建子组件');
+      process.exit(1);
+    }
+    const subPath = path.join(comPath, './components');
+    if (!fs.existsSync(subPath)) {
+      fs.mkdirSync(subPath);
+    }
+    fs.mkdirSync(path.join(subPath, this.subName));
+
+    let tsx = fs
+      .readFileSync(path.join(__dirname, './template/sub/index.tsx'))
+      .toString();
+    tsx = tsx.replace(/__componentProps__/g, `${this.subName}Type`);
+    tsx = tsx.replace(/__ComponentName__/g, this.subName);
+    tsx = tsx.replace(
+      /Y__Template__/g,
+      `const prefixCls = 'alita-${this.transformString(this.subName)}'`,
+    );
+    fs.writeFileSync(path.join(subPath, `${this.subName}/index.tsx`), tsx);
+
+    let less = fs
+      .readFileSync(path.join(__dirname, './template/sub/index.less'))
+      .toString();
+    less = less.replace(
+      /@__prefixcls__;/g,
+      `@prefixCls: alita-${this.transformString(this.subName)}`,
+    );
+    fs.writeFileSync(path.join(subPath, `${this.subName}/index.less`), less);
   }
 }
 
@@ -128,9 +166,15 @@ const main = () => {
     console.error('请输入组件名称');
     return;
   }
-  const componentsName = args[2];
-
-  const engine = new TemplateEngine(componentsName);
+  let componentsName = '';
+  let subName = '';
+  if (args.length == 3) {
+    componentsName = args[2];
+  } else if (args.length == 4) {
+    componentsName = args[2];
+    subName = args[3];
+  }
+  const engine = new TemplateEngine(componentsName, subName);
   engine.generateComponent();
 };
 

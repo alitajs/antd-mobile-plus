@@ -1,0 +1,12 @@
+@import '~@alitajs/theme/index';
+
+@prefixCls: alita-picker-panel-contentview;
+
+.@{prefixCls} {
+    max-height: 0;
+    overflow: scroll;
+    transition: max-height 0.3s ease-out;
+    &-open {
+        max-height: 50vh;
+    }
+}

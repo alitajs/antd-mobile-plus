@@ -1,0 +1,21 @@
+@import '~@alitajs/theme/index';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-month;
+
+.@{prefixCls} {
+    padding: 10 * @hd 0;
+    font-size: 16 * @hd;
+    color: @color-text-paragraph;
+    font-weight: 500;
+    text-align: center;
+    line-height: 17 * @hd;
+    cursor: pointer;
+    span {
+        font-size: 10 * @hd;
+        font-weight: 400;
+    }
+    &-active {
+        color: @brand-primary;
+    }
+}
