@@ -16,7 +16,7 @@ const Demo: FC<DemoProps> = (props) => {
   const [filterValue02, setFilterValue02] = useState('05');
   const [open, setOpen] = useState(false);
   return (
-    <div>
+    <div style={{ height: '120vh' }}>
       <SearchView
         placeholder="请输入文字"
         filterData={[
@@ -33,7 +33,7 @@ const Demo: FC<DemoProps> = (props) => {
       />
       <div className={'search-view-demo'}></div>
       <SearchView
-        maxHeight="80vh"
+        maxHeight="70vh"
         placeholder="请输入文字"
         filterData={[
           { label: '竣工', value: '01' },
@@ -90,39 +90,6 @@ const Demo: FC<DemoProps> = (props) => {
           console.log('onToggoleHandle:', on);
         }}
       />
-      <div className={'search-view-demo-fixed'}>
-        <SearchView
-          placeholder="请输入文字"
-          filterData={[
-            { label: '竣工', value: '01' },
-            { label: '测试02测试02', value: '02' },
-            { label: '测试03', value: '03' },
-            { label: '测试04', value: '04' },
-            { label: '测试05', value: '05' },
-            { label: '测试06', value: '06' },
-            { label: '测试08', value: '07' },
-            { label: '测试10', value: '08' },
-          ]}
-          filterValue={filterValue02}
-          showLeft={true}
-          onFilterChange={(e) => {
-            setFilterValue02(e.value);
-            console.log('onFilterChange：', e);
-          }}
-          onFilterSelected={(e) => {
-            console.log('onFilterSelected：', e);
-          }}
-          onSearch={(v: string) => {
-            console.log('onSearch:', v);
-          }}
-          onFocus={(v: string) => {
-            console.log('onFocus:', v);
-          }}
-          onBlur={(v: string) => {
-            console.log('onBlur:', v);
-          }}
-        />
-      </div>
     </div>
   );
 };

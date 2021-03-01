@@ -46,18 +46,6 @@ const SearchView: FC<SearchViewType> = (props) => {
   const log = useTracker(SearchView.displayName, {});
   return (
     <div className={prefixCls}>
-      <div className={`${prefixCls}-search`}>
-        <SearchLeftItem
-          hidden={!showLeft}
-          text={leftText ?? selectItem.label}
-          isOpen={visiable}
-          onClick={() => {
-            onToggoleHandle(!visiable);
-            setVisiable(!visiable);
-          }}
-        />
-        <SearchBar {...searchBarProps} />
-      </div>
       <SearchPopView
         data={filterData}
         filterValue={selectItem.value}
@@ -78,7 +66,23 @@ const SearchView: FC<SearchViewType> = (props) => {
           onFilterSelected(e);
           log('onFilterSelect');
         }}
-      />
+      >
+        <>
+          <div className={`${prefixCls}-placeholder`}></div>
+          <div className={`${prefixCls}-search`}>
+            <SearchLeftItem
+              hidden={!showLeft}
+              text={leftText ?? selectItem.label}
+              isOpen={visiable}
+              onClick={() => {
+                onToggoleHandle(!visiable);
+                setVisiable(!visiable);
+              }}
+            />
+            <SearchBar {...searchBarProps} />
+          </div>
+        </>
+      </SearchPopView>
     </div>
   );
 };

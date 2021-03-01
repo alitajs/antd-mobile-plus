@@ -60,11 +60,13 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
     onFilterSelect = () => {},
     onRenderPanel,
     maxHeight,
+    children,
   } = props;
   const flagRef = useRef(null);
 
   return (
     <>
+      {children}
       <div className={`${prefixCls}-flag`} ref={flagRef}></div>
       <div
         className={`${prefixCls}-mask`}
