@@ -34,16 +34,15 @@ const Demo: FC<DemoProps> = (props) => {
       >
         <YearMonthView
           date={date}
-          maxDate={new Date(2030, 12, 1)}
+          maxDate={new Date('2030/12/1')}
           minDate={new Date(2017, 6, 30)}
           onChange={(e) => {
-            console.log(e);
             setDate(e);
           }}
         />
       </div>
 
-      {/* <div
+      <div
         style={{
           width: '8vh',
           height: '100%',
@@ -60,7 +59,6 @@ const Demo: FC<DemoProps> = (props) => {
           }}
         />
       </div>
-     */}
     </div>
   );
 };
