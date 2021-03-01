@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-22 17:14:49
- */
 import React, { FC, useRef, useState, useEffect } from 'react';
 import FilterCell from '../FilterCell';
 import classnames from 'classnames';

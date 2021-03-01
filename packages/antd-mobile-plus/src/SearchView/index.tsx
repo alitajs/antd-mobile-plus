@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2021-02-24 18:00:19
- * @LastEditTime: 2021-02-24 18:03:44
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: /antd-mobile-plus/packages/antd-mobile-plus/src/SearchView/index.tsx
- */
 import React, { FC, useState, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import { SearchViewType, SearchFilterDataType } from './PropsType';

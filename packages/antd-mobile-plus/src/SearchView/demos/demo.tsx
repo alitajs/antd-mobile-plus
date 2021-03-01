@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-22 16:00:51
- */
 import React, { FC, useState } from 'react';
 import { SearchView } from '@alitajs/antd-mobile-plus';
 import { setTracker } from '@alitajs/tracker';
