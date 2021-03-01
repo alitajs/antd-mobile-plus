@@ -6,8 +6,19 @@ import Month from '../Month';
 import './index.less';
 
 interface YearPanelType {
+  /**
+   * @description 年份
+   */
   year: number;
+  /**
+   * @description 最小月 1~12
+   * @default 1
+   *
+   */
   minMonth?: number;
+  /**
+   * @description 最大月 1~12
+   */
   maxMonth?: number;
   date: Date;
   onChange?: (date: Date) => void;
@@ -25,21 +36,17 @@ const YearPanel: FC<YearPanelType> = ({
   onScrollInitialY = () => {},
 }) => {
   const MonthView = () => {
-    let monthList = [];
-    for (let index = minMonth; index <= maxMonth; index++) {
-      monthList.push(index);
-    }
     return (
       <>
         {new Array(maxMonth - minMonth + 1).fill(0).map((item, index) => {
           return (
             <Month
-              text={`${minMonth + index}`}
-              key={index}
+              text={`${minMonth + index + 1}`}
+              key={`${year}-${minMonth + index + 1}`}
               onActiveY={onScrollInitialY}
               active={
                 date.getFullYear() === year &&
-                date.getMonth() + 1 === minMonth + index
+                date.getMonth() === minMonth + index
               }
               onClick={() => {
                 const tDate = new Date();

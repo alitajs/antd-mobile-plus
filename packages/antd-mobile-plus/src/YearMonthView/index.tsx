@@ -13,15 +13,23 @@ const YearMonthView: FC<YearMonthViewType> = ({
   onChange = () => {},
 }) => {
   const [isLoadedFn, setIsLoadedFn] = useState(false);
-  const [tminDate, setSMinDate] = useState(() => {
+  const [tminDate] = useState(() => {
+    if (minDate) {
+      return minDate;
+    }
     const preYearDate = new Date(date.valueOf());
     preYearDate.setFullYear(date.getFullYear() - 1);
-    return minDate ?? preYearDate;
+    preYearDate.setMonth(0);
+    return preYearDate;
   });
-  const [tmaxDate, setTMaxDate] = useState(() => {
+  const [tmaxDate] = useState(() => {
+    if (maxDate) {
+      return maxDate;
+    }
     const nextYearDate = new Date(date.valueOf());
     nextYearDate.setFullYear(date.getFullYear() + 1);
-    return maxDate ?? nextYearDate;
+    nextYearDate.setMonth(11);
+    return nextYearDate;
   });
   const wrapperRef = useRef(null);
   const log = useTracker(YearMonthView.displayName, {});
@@ -29,8 +37,9 @@ const YearMonthView: FC<YearMonthViewType> = ({
   return (
     <div className={prefixCls} ref={wrapperRef}>
       {new Array(yearCount).fill(0).map((item, index) => {
-        const minMonth = index === 0 ? tminDate.getMonth() : 1;
-        const maxMonth = index === yearCount - 1 ? tmaxDate.getMonth() : 12;
+        console.log('tminDate.getMonth()', tminDate.getMonth());
+        const minMonth = index === 0 ? tminDate.getMonth() : 0;
+        const maxMonth = index === yearCount - 1 ? tmaxDate.getMonth() : 11;
         const year = tminDate.getFullYear() + index;
         return (
           <YearPanel
