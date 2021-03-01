@@ -1,0 +1,53 @@
+@import "~@alitajs/theme/index";
+@import "~antd-mobile/lib/carousel/style/index";
+@import "~@alitajs/theme/mixins/icon";
+
+@prefixCls: alita-notice-bar;
+
+.@{prefixCls} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20 * @hd 12 * @hd;
+    font-size: font-size-caption-sm;
+    background: @fill-base;
+    border-radius: 6 * @hd;
+
+    &-bar-icon {
+        width: 46 * @hd;
+        height: 16 * @hd;
+    }
+
+    &-v-item {
+        height: 36 * @hd;
+        line-height: 36 * @hd;
+        padding-left: 10 * @hd;
+        margin-right: 5 * @hd;
+        color: @color-text-caption-xs;
+        overflow: hidden;
+        word-break: keep-all;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &-bar-content {
+        display: flex;
+        flex: 1;
+        align-items: center;
+    }
+
+    &-extra-text {
+        color: @color-text-sharp;
+    }
+
+    &-right-icon {
+        display: inline-block;
+        width: 5 * @hd;
+        height: 8 * @hd;
+        margin-left: 5 * @hd;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .encoded-svg-more-icon();
+    }
+}

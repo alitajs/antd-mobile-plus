@@ -13,8 +13,7 @@
     "pub": "lerna publish --force-publish=*",
     "lint": "prettier packages/**/*.{ts,tsx} --check && stylelint packages/**/*.less",
     "format": "prettier packages/**/*.{ts,tsx} --write && stylelint packages/**/*.less --fix",
-    "test": "umi-test --coverage",
-    "newC": "node ./scripts/createTemplate.js"
+    "test": "umi-test --coverage"
   },
   "gitHooks": {
     "pre-commit": "npm run ci",
