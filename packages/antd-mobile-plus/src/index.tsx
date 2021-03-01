@@ -10,3 +10,4 @@ export { default as ProcessTrack } from './ProcessTrack';
 export { default as PickerPanel } from './PickerPanel';
 export { default as SearchView } from './SearchView';
 export { default as YearMonthView } from './YearMonthView';
+export { default as ToolBar } from './ToolBar';
