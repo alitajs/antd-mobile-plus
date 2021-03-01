@@ -1,11 +1,6 @@
-/*
- * @Description: 
- * @Author: qclong
- * @Date: 2021-02-19 11:13:42
- */
 
 /**
- * 类型蒂尼
+ * 类型定义
  */
 export interface CalendarPlusSubTitleType { 
   /**
