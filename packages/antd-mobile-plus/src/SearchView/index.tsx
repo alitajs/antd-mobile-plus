@@ -75,6 +75,7 @@ const SearchView: FC<SearchViewType> = (props) => {
               text={leftText ?? selectItem.label}
               isOpen={visiable}
               onClick={() => {
+                log('onSearchLeftItem');
                 onToggoleHandle(!visiable);
                 setVisiable(!visiable);
               }}
