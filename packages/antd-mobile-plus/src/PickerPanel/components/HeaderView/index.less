@@ -1,0 +1,27 @@
+@import '~@alitajs/theme/index';
+
+@prefixCls: alita-picker-headerview;
+
+.@{prefixCls} {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 46 * @hd;
+    padding: 12 * @hd;
+    color: @color-text-paragraph;
+    font-size: @font-size-subhead;
+    border-bottom: 1PX solid @color-split-line;
+    &-right {
+        color: @color-active;
+    }
+}
+
+@leftItemPrefixCls: alita-pickerpanel-left;
+.@{leftItemPrefixCls} {
+    &-count {
+        margin-right: 6 * @hd;
+        color: @color-active;
+    }
+}
