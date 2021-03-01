@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-22 17:14:49
- */
 import React, { FC, useRef, useState, useEffect } from 'react';
 import FilterCell from '../FilterCell';
 import classnames from 'classnames';
@@ -40,6 +35,12 @@ interface SearchPopViewProps {
    * @description 自定义下拉弹出面板
    */
   onRenderPanel?: React.ReactNode;
+
+  /**
+   * @description 最大面板高度
+   * @default 50vh
+   */
+  maxHeight?: string;
 }
 
 const prefixCls = 'alita-search-pop-view';
@@ -53,11 +54,14 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
     onChange = () => {},
     onFilterSelect = () => {},
     onRenderPanel,
+    maxHeight,
+    children,
   } = props;
   const flagRef = useRef(null);
 
   return (
     <>
+      {children}
       <div className={`${prefixCls}-flag`} ref={flagRef}></div>
       <div
         className={`${prefixCls}-mask`}
@@ -72,6 +76,7 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
         })}
       >
         <div
+          style={{ maxHeight }}
           className={classnames(`${prefixCls}-animation`, {
             [`${prefixCls}-show`]: visiable,
           })}

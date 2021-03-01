@@ -9,8 +9,9 @@
     align-items: center;
     justify-content: center;
     width: 80 * @hd;
-    padding-right: 10 * @hd;
+    padding: 0 10 * @hd;
     &-text {
+        flex: 1;
         overflow: hidden;
         color: @color-active;
         text-overflow: ellipsis;
@@ -24,7 +25,7 @@
     &-icon {
         width: 18 * @hd;
         height: 18 * @hd;
-        margin-left: 6 * @hd;
+        margin-left: 3 * @hd;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -34,6 +35,5 @@
         &-open {
             transform: rotate(0);
         }
-
     }
 }

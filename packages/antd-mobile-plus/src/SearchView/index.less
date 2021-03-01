@@ -3,13 +3,22 @@
 @prefixCls: alita-search-view;
 
 .@{prefixCls} {
+    position: relative;
     padding: 7 * @hd 12 * @hd;
     background-color: @fill-base;
     &-search {
+        position: absolute;
+        top: 7 * @hd;
+        left: 0;
+        right: 0;
+        z-index: 99;
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
-        
+    }
+    &-placeholder {
+        height: 36 * @hd;
+        background-color: transparent;
     }
 }
