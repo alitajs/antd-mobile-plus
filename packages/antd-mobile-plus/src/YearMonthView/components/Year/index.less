@@ -1,0 +1,15 @@
+@import '~@alitajs/theme/index';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-year;
+
+.@{prefixCls} {
+    padding: 10 * @hd 0;
+    font-size: 12 * @hd;
+    color: @color-text-paragraph;
+    text-align: center;
+    line-height: 17 * @hd;
+    &-active {
+        color: @brand-primary;
+    }
+}
