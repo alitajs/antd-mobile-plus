@@ -13,15 +13,24 @@ interface YearPanelType {
   /**
    * @description 最小月 1~12
    * @default 1
-   *
    */
   minMonth?: number;
   /**
    * @description 最大月 1~12
+   * @default 12
    */
   maxMonth?: number;
+  /**
+   * @description 选中日期
+   */
   date: Date;
+  /**
+   * @description 点击回调
+   */
   onChange?: (date: Date) => void;
+  /**
+   * @description Y轴初始化滚动的坐标
+   */
   onScrollInitialY?: (d: number) => void;
 }
 
