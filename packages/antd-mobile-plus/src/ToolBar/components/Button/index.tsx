@@ -10,12 +10,16 @@ const Button: FC<ButtonType> = ({
   type = 'default',
   text,
   onPress = () => {},
+  id,
 }) => {
+  const log = useTracker(Button.displayName, {});
+
   return (
     <div
       onClick={(e) => {
         if (type !== 'disable') {
           onPress(e);
+          log(`onPress:${id}`);
         }
       }}
       className={classnames(prefixCls, {
