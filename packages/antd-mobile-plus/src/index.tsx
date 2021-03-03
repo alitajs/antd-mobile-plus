@@ -1,3 +1,4 @@
+
 export { default as DemoComponent } from './DemoComponent';
 export { default as LocaleProvider } from './LocaleProvider';
 export { default as Star } from './Star';
@@ -11,3 +12,4 @@ export { default as PickerPanel } from './PickerPanel';
 export { default as SearchView } from './SearchView';
 export { default as YearMonthView } from './YearMonthView';
 export { default as FooterBar } from './FooterBar';
+export { default as FilterItems } from "./FilterItems";

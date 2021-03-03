@@ -1,9 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-22 17:40:18
- */
-
 import React, { FC, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import classnames from 'classnames';

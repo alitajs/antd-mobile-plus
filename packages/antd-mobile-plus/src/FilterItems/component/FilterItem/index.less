@@ -1,0 +1,72 @@
+@import "~@alitajs/theme/index";
+@import "~antd-mobile/lib/drawer/style/index";
+@import "~@alitajs/theme/mixins/icon";
+
+@prefixCls: alita-filter-item;
+@iconSize: 16 * @hd;
+
+.@{prefixCls} {
+  position: relative;
+  flex: 1;
+  margin: 0 @h-spacing-sm;
+  width: 0;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10 * @hd 12 * @hd;
+    font-size: @font-size-base;
+    background: @fill-base;
+    border-radius: 4 * @hd;
+  }
+
+  &-active-text {
+    flex: 1;
+    overflow: hidden;
+    color: @color-active;
+    width: auto;
+    max-width: 100 * @hd;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-noraml-icon {
+    width: 16 * @hd;
+    height: 16 * @hd;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-icon-up {
+    .svg-icon-up();
+  }
+
+  &-icon-down {
+    width: 16 * @hd;
+    height: 16 * @hd;
+    .svg-icon-down();
+  }
+
+  &-drawer {
+    position: fixed;
+    width: 100vh;
+    left: 0;
+    height: auto;
+    overflow-y: scroll;
+    max-height: 60vh;
+    background: @fill-base;
+    z-index: 99;
+  }
+
+  &-drawer-item {
+    padding: 20 * @hd @v-spacing-lg;
+    font-size: @font-size-base;
+  }
+
+  &-active-item {
+    color: @color-active;
+  }
+}

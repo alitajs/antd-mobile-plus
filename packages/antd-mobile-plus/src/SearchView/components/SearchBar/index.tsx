@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-22 17:11:20
- */
 import React, { FC, useState, useRef } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
@@ -91,8 +86,8 @@ const SearchBar: FC<SearchBarProps> = ({
           onBlur(e.currentTarget.value);
         }}
         onKeyPress={(e) => {
-          log(`onKeyPress:${e.key}`);
           if (e.key === 'Enter') {
+            log(`onSearch`);
             onSearch(value);
             const inputDOM: HTMLInputElement = inputRef.current!;
             if (inputDOM) {
