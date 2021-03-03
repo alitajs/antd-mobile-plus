@@ -11,9 +11,9 @@ export interface FilterItemProps {
 }
 export interface AliasProps {
   /**
-    * @description 枚举值字段名称
-    * @default value
-    */
+   * @description 枚举值字段名称
+   * @default value
+   */
   label?: string;
   /**
    * @description 面板当中每个item的key的字段名称
@@ -33,15 +33,15 @@ export interface CommonPros {
    */
   onItemChange: (data: FilterItemProps) => void;
 }
-export interface FilterItemsProps extends CommonPros{
+export interface FilterItemsProps extends CommonPros {
   /**
- * @description 每个筛选项数据
- */
+   * @description 每个筛选项数据
+   */
   item: FilterItemProps;
   /**
- * @description 当前点击的Filter的状态
- * @default 'up'
- */
+   * @description 当前点击的Filter的状态
+   * @default 'up'
+   */
   openFlag?: string;
   /**
    * @description 点击当前filter进行up和down切换，关闭其他的filter
@@ -49,12 +49,9 @@ export interface FilterItemsProps extends CommonPros{
   onClick: (status: string) => void;
 }
 
-
 export interface FilterProps extends CommonPros {
   /**
    * @description 筛选项的所有数据
    */
   data: FilterItemProps[];
-
 }
-

@@ -12,8 +12,8 @@ export interface StarProps {
    */
   onChange: (n: number) => void;
   /**
-  * @description       埋点自定义数据
-  * @description.en-US tracker
-  */
+   * @description       埋点自定义数据
+   * @description.en-US tracker
+   */
   ext?: any;
 }

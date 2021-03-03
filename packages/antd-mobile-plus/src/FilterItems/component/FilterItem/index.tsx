@@ -3,21 +3,21 @@
  * @Author: wll
  * @Date: 2021-02-23 16:04:39
  */
-import * as React from "react";
-import { withError, useTracker } from "@alitajs/tracker";
-import classnames from "classnames";
-import { FilterItemProps, FilterItemsProps } from "../../PropsType";
-import "./index.less";
+import * as React from 'react';
+import { withError, useTracker } from '@alitajs/tracker';
+import classnames from 'classnames';
+import { FilterItemProps, FilterItemsProps } from '../../PropsType';
+import './index.less';
 
-const prefixCls = "alita-filter-item";
+const prefixCls = 'alita-filter-item';
 
 export const FilterItem: React.FC<FilterItemsProps> = (props) => {
   const {
     item,
-    openFlag = "up",
+    openFlag = 'up',
     onClick,
     defalutSelect = 0,
-    alias = { label: "label", id: "id" },
+    alias = { label: 'label', id: 'id' },
     onItemChange,
   } = props;
   const { data = [], filterId } = item as FilterItemProps;
@@ -29,7 +29,7 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
   }, [openFlag]);
 
   const log = useTracker(FilterItem.displayName, {});
-  const aliasObj = { label: "label", id: "id" };
+  const aliasObj = { label: 'label', id: 'id' };
   Object.keys(alias).forEach((aliasItem) => {
     aliasObj[aliasItem] = alias[aliasItem];
   });
@@ -38,12 +38,12 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
       <div
         className={`${prefixCls}-content`}
         onClick={() => {
-          if (status === "up") {
-            updateStatus("down");
-            onClick("down");
+          if (status === 'up') {
+            updateStatus('down');
+            onClick('down');
           } else {
-            updateStatus("up");
-            onClick("up");
+            updateStatus('up');
+            onClick('up');
           }
         }}
       >
@@ -52,13 +52,13 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
         </div>
         <i
           className={classnames({
-            [`${prefixCls}-icon-down`]: status === "down",
-            [`${prefixCls}-icon-up`]: status === "up",
+            [`${prefixCls}-icon-down`]: status === 'down',
+            [`${prefixCls}-icon-up`]: status === 'up',
             [`${prefixCls}-noraml-icon`]: true,
           })}
         ></i>
       </div>
-      {status === "down" ? (
+      {status === 'down' ? (
         <div className={`${prefixCls}-drawer`}>
           {data.map((item: any, index: number) => {
             return (
@@ -69,10 +69,10 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
                   [`${prefixCls}-active-item`]: active === index,
                 })}
                 onClick={() => {
-                  log("onItemChange");
+                  log('onItemChange');
                   updateActive(index);
                   onItemChange({ ...item, filterId });
-                  updateStatus("up");
+                  updateStatus('up');
                 }}
               >
                 {item[aliasObj.label]}
@@ -81,11 +81,11 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
           })}
         </div>
       ) : (
-        ""
+        ''
       )}
     </div>
   );
 };
 
-FilterItem.displayName = "FilterItem";
+FilterItem.displayName = 'FilterItem';
 export default withError(FilterItem);

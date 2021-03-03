@@ -3,32 +3,35 @@
  * @Author: wll
  * @Date: 2021-02-20 17:04:29
  */
-import * as React from "react";
-import { withError, useTracker } from "@alitajs/tracker";
-import { NoticeBarProps } from "./PropsType";
-import { IMGSTR } from "./img/index";
-import Carousel from "antd-mobile/lib/carousel";
-import "./index.less";
+import * as React from 'react';
+import { withError, useTracker } from '@alitajs/tracker';
+import { NoticeBarProps } from './PropsType';
+import { IMGSTR } from './img/index';
+import Carousel from 'antd-mobile/lib/carousel';
+import './index.less';
 
-const prefixCls = "alita-notice-bar";
+const prefixCls = 'alita-notice-bar';
 
 export const NoticeBarPlus: React.FC<NoticeBarProps> = (props) => {
   const {
     data = [],
-    valueKey = "bulletinTitle",
+    valueKey = 'bulletinTitle',
     onItemClick = () => {},
-    extraText = "更多",
+    extraText = '更多',
     onExtraClick = () => {},
     autoplayInterval = 3000,
     noticeIcon,
     autoplay = true,
     infinite = true,
-    keyFieldName = "id",
+    keyFieldName = 'id',
   } = props;
 
   const log = useTracker(NoticeBarPlus.displayName, {});
   const { barIcon } = IMGSTR;
-
+  const other = {
+    dragging: false,
+    swiping: false,
+  };
   return (
     <div className={`${prefixCls}`}>
       <div className={`${prefixCls}-bar-content`}>
@@ -38,8 +41,7 @@ export const NoticeBarPlus: React.FC<NoticeBarProps> = (props) => {
         <Carousel
           vertical
           dots={false}
-          dragging={false}
-          swiping={false}
+          {...other}
           autoplayInterval={autoplayInterval}
           autoplay={autoplay}
           infinite={infinite}
@@ -49,7 +51,7 @@ export const NoticeBarPlus: React.FC<NoticeBarProps> = (props) => {
               key={item[keyFieldName]}
               className={`${prefixCls}-v-item`}
               onClick={() => {
-                log("notice-bar-itemClick");
+                log('notice-bar-itemClick');
                 onItemClick(item);
               }}
             >
@@ -61,7 +63,7 @@ export const NoticeBarPlus: React.FC<NoticeBarProps> = (props) => {
       <div
         onClick={() => {
           onExtraClick();
-          log("onExtraClick");
+          log('onExtraClick');
         }}
       >
         <span>{extraText}</span>
@@ -71,5 +73,5 @@ export const NoticeBarPlus: React.FC<NoticeBarProps> = (props) => {
   );
 };
 
-NoticeBarPlus.displayName = "NoticeBarPlus";
+NoticeBarPlus.displayName = 'NoticeBarPlus';
 export default withError(NoticeBarPlus);

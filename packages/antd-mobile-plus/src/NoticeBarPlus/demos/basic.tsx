@@ -3,9 +3,9 @@
  * @Author: wll
  * @Date: 2021-02-20 15:50:29
  */
-import * as React from "react";
-import { setTracker } from "@alitajs/tracker";
-import { NoticeBarPlus } from "@alitajs/antd-mobile-plus";
+import * as React from 'react';
+import { setTracker } from '@alitajs/tracker';
+import { NoticeBarPlus } from '@alitajs/antd-mobile-plus';
 
 export default () => {
   // 这个方法应该统一添加
@@ -23,17 +23,17 @@ export default () => {
     },
   });
   return (
-    <div style={{ margin: "24px 12px" }}>
+    <div style={{ margin: '24px 12px' }}>
       <NoticeBarPlus
         data={[
-          { bulletinTitle: "公告通知1", id: "0" },
-          { bulletinTitle: "公告通知2", id: "1" },
+          { bulletinTitle: '公告通知1', id: '0' },
+          { bulletinTitle: '公告通知2', id: '1' },
           {
             bulletinTitle:
-              "公告通知3公告通知3公告通知3测试长度超过宽度显示隐藏",
-            id: "2",
+              '公告通知3公告通知3公告通知3测试长度超过宽度显示隐藏',
+            id: '2',
           },
-          { bulletinTitle: "公告通知4", id: "3" },
+          { bulletinTitle: '公告通知4', id: '3' },
         ]}
         autoplay={true}
         infinite={true}

@@ -1,12 +1,11 @@
+import * as React from 'react';
+import { withError, useTracker } from '@alitajs/tracker';
+import classnames from 'classnames';
+import FilterItem from './component/FilterItem';
+import { FilterProps, FilterItemProps } from './PropsType';
+import './index.less';
 
-import * as React from "react";
-import { withError, useTracker } from "@alitajs/tracker";
-import classnames from "classnames";
-import FilterItem from "./component/FilterItem";
-import { FilterProps, FilterItemProps } from "./PropsType";
-import "./index.less";
-
-const prefixCls = "alita-filter";
+const prefixCls = 'alita-filter';
 
 export const FilterItems: React.FC<FilterProps> = (props) => {
   const { data = [], defalutSelect = 0, alias, onItemChange } = props;
@@ -28,10 +27,10 @@ export const FilterItems: React.FC<FilterProps> = (props) => {
             onItemChange={onItemChange}
             key={filterId}
             item={item}
-            openFlag={index === activeIndex ? "down" : "up"}
+            openFlag={index === activeIndex ? 'down' : 'up'}
             onClick={(options: string) => {
               log(options);
-              if (options === "down") {
+              if (options === 'down') {
                 updateActiveIndex(index);
               } else {
                 updateActiveIndex(-1);
@@ -44,5 +43,5 @@ export const FilterItems: React.FC<FilterProps> = (props) => {
   );
 };
 
-FilterItems.displayName = "FilterItems";
+FilterItems.displayName = 'FilterItems';
 export default withError(FilterItems);
