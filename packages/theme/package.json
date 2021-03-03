@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/theme",
-  "version": "0.0.5-0",
+  "version": "0.0.5",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
