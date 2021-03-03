@@ -3,27 +3,36 @@
 @prefixCls: alita-search-pop-view;
 
 .@{prefixCls} {
-    position: fixed;
-    // top: 0;
+    position: absolute;
     right: 0;
     left: 0;
     z-index: @popup-zindex;
-    overflow: hidden;
     max-height: 0;
-    background-color: @fill-base;
+    overflow: hidden;
+    animation-play-state: paused;
+    @keyframes openAnimation {
+        0% {
+            max-height: 0;
+        }
+        100% {
+            max-height: 999999 * @hd;
+            background-color: @fill-base;
+        }
+    }
+
+    animation: openAnimation 0.3s  ease-out;
     &-wrapper {
         max-height: 999999 * @hd;
+        animation-play-state: running;
     }
     &-animation {
         overflow: auto;
         max-height: 50vh;
-        visibility: hidden;
         transform: translateY(-100%);
-        transition: transform 0.3s cubic-bezier(1, 0, 1, 1), visibility 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
     &-show {
         transform: translateY(0);
-        visibility: visible;
     }
 }
 

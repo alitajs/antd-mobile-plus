@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2021-02-24 14:42:24
- * @LastEditTime: 2021-02-24 16:13:45
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /antd-mobile-plus/packages/antd-mobile-plus/src/SearchView/utils/searchBarUtils.ts
- */
 import { SearchFilterDataType } from '../PropsType';
 
  /**

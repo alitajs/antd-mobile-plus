@@ -1,0 +1,23 @@
+@import '~@alitajs/theme/index';
+// @import '~@alitajs/theme/mixins/icon';
+
+
+@prefixCls:alita-tool-bar;
+
+.@{prefixCls} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12 * @hd 11 * @hd;
+    border-top: @border-width-sm solid @border-color-base-alita;
+    background-color: @fill-base;
+    &-item {
+        flex: 1;
+        margin-right: 12 * @hd;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+      

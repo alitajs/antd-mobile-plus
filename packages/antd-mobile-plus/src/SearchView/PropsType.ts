@@ -99,4 +99,10 @@ export interface SearchViewType {
      * @description leftText
      */
     leftText?: string;
+
+    /**
+     * @description 最大高度
+     * @default 50vh
+     */
+    maxHeight?: string;
 }

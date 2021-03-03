@@ -1,0 +1,43 @@
+@import '~@alitajs/theme/index';
+
+@prefixCls: alita-button;
+
+.active() {
+    opacity: @opacity-active;
+}
+
+
+.@{prefixCls} {
+    width: 100%;
+    height: 49 * @hd;
+    border-radius: 4 * @hd;
+    line-height: 49 * @hd;
+    text-align: center;
+    font-size: 18 * @hd;
+    overflow: hidden;
+    &-disable {
+        opacity: @opacity-disabled;
+        background-color: @color-active;
+        color: @fill-base;
+        &:active {
+            .active();
+        }
+    }
+
+    &-primary {
+        background-color: @color-active;
+        color: @fill-base;
+        &:active {
+            .active();
+        }
+    }
+    
+    &-active {
+        .active();
+    }
+
+    &-default {
+        border: @border-width-sm solid @border-color-base-alita;
+        background-color: @fill-base;
+    }
+}
