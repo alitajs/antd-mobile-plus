@@ -1,4 +1,4 @@
-import { NavBarProps } from 'antd-mobile/es/nav-bar';
+import { NavBarProps } from 'antd-mobile/es/nav-bar/PropsType';
 
 export interface NavBarPropsType extends NavBarProps {
   /**
@@ -32,4 +32,9 @@ export interface NavBarPropsType extends NavBarProps {
    * @description.en-US tracker
    */
   ext?: any;
+
+  /**
+   * @description 转发
+   */
+  ref?: any;
 }

@@ -1,4 +1,4 @@
-import { CalendarProps } from 'antd-mobile/es/calendar';
+import { CalendarProps } from 'antd-mobile/es/calendar/PropsType.d';
 
 export interface CalendarPropsType extends CalendarProps {
   /**

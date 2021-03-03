@@ -21,8 +21,8 @@ export const Calendar: React.FC<CalendarPropsType> = (props) => {
   return (
     <ACalendar
       {...other}
-      onCancel={(e) => {
-        onCancel && onCancel(e);
+      onCancel={() => {
+        onCancel && onCancel();
         log('onCancel');
       }}
       onConfirm={(e) => {

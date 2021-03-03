@@ -18,12 +18,12 @@ export const Tag: React.FC<TagPropsType> = (props) => {
         onChange && onChange(e);
         log('onChange');
       }}
-      onClose={(e) => {
-        onClose && onClose(e);
+      onClose={() => {
+        onClose && onClose();
         log('onClose');
       }}
-      afterClose={(e) => {
-        afterClose && afterClose(e);
+      afterClose={() => {
+        afterClose && afterClose();
         log('afterClose');
       }}
     ></ATag>

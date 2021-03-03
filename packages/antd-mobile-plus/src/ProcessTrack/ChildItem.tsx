@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
-import React, { useState } from "react";
-import { IMGSTR } from "./img/index";
-import "./index.less";
+import React, { useState } from 'react';
+import { IMGSTR } from './img/index';
+import './index.less';
 interface ChildItem {
   /**
    * @description 对应流程中要展示的字段数组
@@ -36,13 +36,13 @@ interface ChildItem {
    */
   call: () => void;
 }
-const prefixCls = "alita-track";
+const prefixCls = 'alita-track';
 const ChildItem: React.FC<ChildItem> = (props) => {
   const {
     index,
     linkMap,
-    cTimeKey = "createTime",
-    tNameKey = "traceName",
+    cTimeKey = 'createTime',
+    tNameKey = 'traceName',
     item,
     down,
     log,
@@ -117,7 +117,7 @@ const ChildItem: React.FC<ChildItem> = (props) => {
             })}
           </>
         ) : (
-          ""
+          ''
         )}
       </div>
     </div>

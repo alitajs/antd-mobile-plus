@@ -21,8 +21,8 @@ export const ImagePicker: React.FC<ImagePickerPropsType> = (props) => {
   return (
     <AImagePicker
       {...other}
-      onChange={(e) => {
-        onChange && onChange(e);
+      onChange={(e, b, c) => {
+        onChange && onChange(e, b, c);
         log('onChange');
       }}
       onImageClick={(e) => {

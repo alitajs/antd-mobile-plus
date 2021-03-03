@@ -1,8 +1,7 @@
-
 /**
  * 类型定义
  */
-export interface CalendarPlusSubTitleType { 
+export interface CalendarPlusSubTitleType {
   /**
    * 日期
    */
@@ -12,7 +11,6 @@ export interface CalendarPlusSubTitleType {
    */
   content: string;
 }
-
 
 export interface CalendarPlusType {
   /**

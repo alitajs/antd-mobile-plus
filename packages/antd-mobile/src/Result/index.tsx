@@ -14,8 +14,8 @@ export const Result: React.FC<ResultPropsType> = (props) => {
   return (
     <AResult
       {...other}
-      onButtonClick={(e) => {
-        onButtonClick && onButtonClick(e);
+      onButtonClick={() => {
+        onButtonClick && onButtonClick();
         log('onButtonClick');
       }}
     ></AResult>

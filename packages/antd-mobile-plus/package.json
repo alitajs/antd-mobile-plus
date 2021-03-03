@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/antd-mobile-plus",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -27,12 +27,15 @@
     "access": "public"
   },
   "dependencies": {
-    "@alitajs/languages": "0.0.3",
-    "@alitajs/theme": "0.0.3",
-    "@alitajs/tracker": "0.0.3",
+    "@alitajs/languages": "0.0.5-0",
+    "@alitajs/theme": "0.0.5-0",
+    "@alitajs/tracker": "0.0.5-0",
     "antd-mobile": "2.3.3",
     "classnames": "^2.2.6",
     "react-bmapgl": "^0.1.4",
     "react-canvas-draw": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/react-canvas-draw": "^1.1.0"
   }
 }

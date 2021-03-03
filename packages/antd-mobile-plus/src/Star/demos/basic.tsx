@@ -7,7 +7,7 @@
 import React, { FC, useState } from 'react';
 import { Star } from '@alitajs/antd-mobile-plus';
 
-interface StarDemoProps { }
+interface StarDemoProps {}
 
 const StarDemo: FC<StarDemoProps> = (props) => {
   const [score, setScore] = useState(6);

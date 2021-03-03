@@ -68,13 +68,16 @@ const SearchBar: FC<SearchBarProps> = ({
   });
 
   const log = useTracker(SearchBar.displayName, {});
+  const otherProps = {
+    enterkeyhint: 'search',
+  };
   return (
     <div className={prefixCls}>
       <i className={`${prefixCls}-search`}></i>
       <input
         ref={inputRef}
         type={type}
-        enterkeyhint="search"
+        {...otherProps}
         className={`${prefixCls}-input`}
         value={value}
         onFocus={(e) => {
