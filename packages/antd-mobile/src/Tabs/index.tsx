@@ -21,22 +21,30 @@ export const Tabs: React.FC<TabsPropsType> = (props) => {
   return (
     <ATabs
       {...other}
-      onChange={(e) => {
-        onChange && onChange(e);
+      onChange={(e, v) => {
+        onChange && onChange(e, v);
         log('onChange');
       }}
-      onTabClick={(e) => {
-        onTabClick && onTabClick(e);
+      onTabClick={(e, v) => {
+        onTabClick && onTabClick(e, v);
         log('onTabClick');
       }}
-      renderTab={(e) => {
-        renderTab && renderTab(e);
-        log('renderTab');
-      }}
-      renderTabBar={(e) => {
-        renderTabBar && renderTabBar(e);
-        log('renderTabBar');
-      }}
+      renderTab={
+        renderTab
+          ? (e) => {
+              log('renderTab');
+              return renderTab(e);
+            }
+          : undefined
+      }
+      renderTabBar={
+        renderTabBar
+          ? (e) => {
+              log('renderTabBar');
+              return renderTabBar(e);
+            }
+          : undefined
+      }
     ></ATabs>
   );
 };

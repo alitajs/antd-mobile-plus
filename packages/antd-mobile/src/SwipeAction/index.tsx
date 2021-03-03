@@ -14,12 +14,12 @@ export const SwipeAction: React.FC<SwipeActionPropsType> = (props) => {
   return (
     <ASwipeAction
       {...other}
-      onOpen={(e) => {
-        onOpen && onOpen(e);
+      onOpen={() => {
+        onOpen && onOpen();
         log('onOpen');
       }}
-      onClose={(e) => {
-        onClose && onClose(e);
+      onClose={() => {
+        onClose && onClose();
         log('onClose');
       }}
     ></ASwipeAction>

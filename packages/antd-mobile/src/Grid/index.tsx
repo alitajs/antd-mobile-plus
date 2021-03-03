@@ -14,14 +14,18 @@ export const Grid: React.FC<GridPropsType> = (props) => {
   return (
     <AGrid
       {...other}
-      onClick={(e) => {
-        onClick && onClick(e);
+      onClick={(e, itemIndex) => {
+        onClick && onClick(e, itemIndex);
         log('onClick');
       }}
-      renderItem={(e) => {
-        renderItem && renderItem(e);
-        log('renderItem');
-      }}
+      renderItem={
+        renderItem
+          ? (e, index) => {
+              log('renderItem');
+              return renderItem ? renderItem(e, index) : <></>;
+            }
+          : undefined
+      }
     ></AGrid>
   );
 };

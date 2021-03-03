@@ -31,8 +31,8 @@ export const SearchBar: React.FC<SearchBarPropsType> = (props) => {
         onSubmit && onSubmit(e);
         log('onSubmit');
       }}
-      onBlur={(e) => {
-        onBlur && onBlur(e);
+      onBlur={() => {
+        onBlur && onBlur();
         log('onBlur');
       }}
       onCancel={(e) => {
@@ -43,8 +43,8 @@ export const SearchBar: React.FC<SearchBarPropsType> = (props) => {
         onClear && onClear(e);
         log('onClear');
       }}
-      onFocus={(e) => {
-        onFocus && onFocus(e);
+      onFocus={() => {
+        onFocus && onFocus();
         log('onFocus');
       }}
     ></ASearchBar>

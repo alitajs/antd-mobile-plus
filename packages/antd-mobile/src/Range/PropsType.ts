@@ -53,37 +53,37 @@ export interface RangePropsType extends RangeProps {
    * @description.en-US Tick mark of Range, type of key must be number, and must in closed interval [min, max].
    * @default           {}
    */
-  marks?: RangeProps['marks'];
+  marks?: {Number:string};
   /**
    * @description       是否只能拖拽到刻度上
    * @description.en-US Whether the thumb can be dragged over tick only.
    * @default           false
    */
-  dots?: RangeProps['dots'];
+  dots?: Boolean;
   /**
    * @description       `marks` 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列
    * @description.en-US Make effect when `marks` not null，`true` means containment and `false` means coordinative
    * @default           true
    */
-  included?: RangeProps['included'];
+  included?: Boolean;
   /**
    * @description       确定要渲染的范围数，并将渲染多个控柄 (数字+1)
    * @description.en-US Determine how many ranges to render, and multiple handles will be rendered (number + 1).
    * @default           `1`
    */
-  count?: RangeProps['count'];
+  count?: number;
   /**
    * @description       可以将`allowCross`设置为`true`，以允许这些句柄交叉
    * @description.en-US `allowCross` could be set as `true` to allow those handles to cross.
    * @default           `true`
    */
-  allowCross?: RangeProps['allowCross'];
+  allowCross?: boolean;
   /**
    * @description       可以将`pushable`设置为`true`，以在移动手柄时推动周围的手柄。设置为数字时，数字将是手柄之间的最小保证距离 示例: ![](http://i.giphy.com/l46Cs36c9HrHMExoc.gif)
    * @description.en-US `pushable` could be set as `true` to allow pushing of surrounding handles when moving an handle. When set to a number, the number will be the minimum ensured distance between handles. Example: ![](http://i.giphy.com/l46Cs36c9HrHMExoc.gif)
    * @default           `true`
    */
-  pushable?: RangeProps['pushable'];
+  pushable?: boolean | number;
   /**
    * @description       滑块的样式，按数组顺序应用到多滑块
    * @description.en-US style of handle，will be applied to mutli handle follow the array elemetns order

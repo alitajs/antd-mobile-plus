@@ -26,8 +26,8 @@ export const TextareaItem: React.FC<TextareaItemPropsType> = (props) => {
         onFocus && onFocus(e);
         log('onFocus');
       }}
-      onErrorClick={(e) => {
-        onErrorClick && onErrorClick(e);
+      onErrorClick={() => {
+        onErrorClick && onErrorClick();
         log('onErrorClick');
       }}
     ></ATextareaItem>

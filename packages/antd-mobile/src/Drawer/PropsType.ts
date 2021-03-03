@@ -1,4 +1,4 @@
-import { DrawerProps } from 'antd-mobile/es/drawer';
+import { DrawerWebProps as  DrawerProps } from 'antd-mobile/es/drawer/PropsType';
 
 export interface DrawerPropsType extends DrawerProps {
   /**

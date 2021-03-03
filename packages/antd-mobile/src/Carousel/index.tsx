@@ -18,12 +18,12 @@ export const Carousel: React.FC<CarouselPropsType> = (props) => {
         afterChange && afterChange(e);
         log('afterChange');
       }}
-      easing={(e) => {
-        easing && easing(e);
+      easing={() => {
+        easing && easing();
         log('easing');
       }}
-      beforeChange={(e) => {
-        beforeChange && beforeChange(e);
+      beforeChange={(a, b) => {
+        beforeChange && beforeChange(a, b);
         log('beforeChange');
       }}
     ></ACarousel>

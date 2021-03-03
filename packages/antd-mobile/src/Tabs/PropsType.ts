@@ -1,4 +1,4 @@
-import { TabsProps } from 'antd-mobile/es/tabs';
+import TabsProps from 'antd-mobile/es/tabs/PropsType';
 
 export interface TabsPropsType extends TabsProps {
   /**
@@ -6,12 +6,12 @@ export interface TabsPropsType extends TabsProps {
    * @description.en-US prefix class
    * @default           rmc-tabs
    */
-  prefixCls?: TabsProps['prefixCls'];
+  prefixCls?: string;
   /**
    * @description       tab数据
    * @description.en-US tabs data
    */
-  tabs?: TabsProps['tabs'];
+  tabs: TabsProps['tabs'];
   /**
    * @description       TabBar位置
    * @description.en-US TabBar's position

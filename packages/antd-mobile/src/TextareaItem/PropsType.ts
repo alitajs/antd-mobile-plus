@@ -1,4 +1,4 @@
-import { TextareaItemProps } from 'antd-mobile/es/textarea-item';
+import { TextareaItemProps,HTMLTextAreaProps } from 'antd-mobile/es/textarea-item';
 
 export interface TextareaItemPropsType extends TextareaItemProps {
   /**
@@ -107,4 +107,9 @@ export interface TextareaItemPropsType extends TextareaItemProps {
    * @default           ''
    */
   ext?: any;
+
+  /**
+   * @description 转发
+   */
+  ref?: (instance: any) => void;
 }

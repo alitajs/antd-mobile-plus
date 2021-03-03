@@ -25,4 +25,28 @@ export { default as Tag } from './Tag';
 export { default as TextareaItem } from './TextareaItem';
 export { default as WhiteSpace } from './WhiteSpace';
 export { default as WingBlank } from './WingBlank';
-export { ActionSheet, Card, Checkbox, DatePicker, DatePickerView, Flex, Icon, InputItem, List, ListView, LocaleProvider, Menu, Modal, NoticeBar, Picker, PickerView, Popover, PullToRefresh, Radio, TabBar, Text, Toast, View } from 'antd-mobile';
+export {
+  ActionSheet,
+  Card,
+  Checkbox,
+  DatePicker,
+  DatePickerView,
+  Flex,
+  Icon,
+  InputItem,
+  List,
+  ListView,
+  LocaleProvider,
+  Menu,
+  Modal,
+  NoticeBar,
+  Picker,
+  PickerView,
+  Popover,
+  PullToRefresh,
+  Radio,
+  TabBar,
+  Text,
+  Toast,
+  View,
+} from 'antd-mobile';

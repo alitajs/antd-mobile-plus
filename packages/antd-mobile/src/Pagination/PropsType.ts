@@ -1,4 +1,4 @@
-import { PaginationProps } from 'antd-mobile/es/pagination';
+import { PaginationPropsType as PaginationProps} from 'antd-mobile/es/pagination/PropsType';
 
 export interface PaginationPropsType extends PaginationProps {
   /**
@@ -12,13 +12,13 @@ export interface PaginationPropsType extends PaginationProps {
    * @description.en-US current page index
    * @default           1
    */
-  current?: PaginationProps['current'];
+  current: PaginationProps['current'];
   /**
    * @description       数据总数
    * @description.en-US total number of data
    * @default           0
    */
-  total?: PaginationProps['total'];
+  total: PaginationProps['total'];
   /**
    * @description       是否隐藏数值
    * @description.en-US whether to hide number
@@ -30,12 +30,12 @@ export interface PaginationPropsType extends PaginationProps {
    * @description.en-US whether is disabled
    * @default           false
    */
-  disabled?: PaginationProps['disabled'];
+  disabled?: boolean;
   /**
    * @description       国际化, 可以覆盖全局`LocaleProvider`的配置
    * @description.en-US [i18n](/components/locale-provider/) setting, you can override the configuration of the global `LocaleProvider
    */
-  locale?: PaginationProps['locale'];
+  locale?: {prevText:string, nextText:string}
   /**
    * @description       change 事件触发的回调函数
    * @description.en-US invoked with the new index when the value changes.
