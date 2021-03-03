@@ -3,7 +3,7 @@ import AGrid from 'antd-mobile/lib/grid';
 import { withError, useTracker } from '@alitajs/tracker';
 import { GridPropsType } from './PropsType';
 import './index.less';
-
+//
 export const Grid: React.FC<GridPropsType> = (props) => {
   const { onClick, renderItem, ext, ...other } = props;
 
