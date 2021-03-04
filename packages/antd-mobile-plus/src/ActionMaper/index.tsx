@@ -11,7 +11,7 @@ import './index.less';
 const prefixCls = 'alita-action-maper';
 
 export interface FCMap<T = {}> extends FC<T> {
-  MapApiLoaderHOC?: React.ReactNode;
+  MapApiLoaderHOC: ({ ak }: { ak: string }) => FC<FC<{}>>;
 }
 
 const ActionMaper: FCMap<ActionMaperType> = (props) => {
