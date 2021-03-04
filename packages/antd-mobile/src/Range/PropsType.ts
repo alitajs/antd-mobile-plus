@@ -53,7 +53,7 @@ export interface RangePropsType extends RangeProps {
    * @description.en-US Tick mark of Range, type of key must be number, and must in closed interval [min, max].
    * @default           {}
    */
-  marks?: {Number:string};
+  marks?: { Number: string };
   /**
    * @description       是否只能拖拽到刻度上
    * @description.en-US Whether the thumb can be dragged over tick only.

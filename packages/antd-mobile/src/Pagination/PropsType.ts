@@ -1,4 +1,4 @@
-import { PaginationPropsType as PaginationProps} from 'antd-mobile/es/pagination/PropsType';
+import { PaginationPropsType as PaginationProps } from 'antd-mobile/es/pagination/PropsType';
 
 export interface PaginationPropsType extends PaginationProps {
   /**
@@ -35,7 +35,7 @@ export interface PaginationPropsType extends PaginationProps {
    * @description       国际化, 可以覆盖全局`LocaleProvider`的配置
    * @description.en-US [i18n](/components/locale-provider/) setting, you can override the configuration of the global `LocaleProvider
    */
-  locale?: {prevText:string, nextText:string}
+  locale?: { prevText: string; nextText: string };
   /**
    * @description       change 事件触发的回调函数
    * @description.en-US invoked with the new index when the value changes.

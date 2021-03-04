@@ -1,4 +1,7 @@
-import { TextareaItemProps,HTMLTextAreaProps } from 'antd-mobile/es/textarea-item';
+import {
+  TextareaItemProps,
+  HTMLTextAreaProps,
+} from 'antd-mobile/es/textarea-item';
 
 export interface TextareaItemPropsType extends TextareaItemProps {
   /**
