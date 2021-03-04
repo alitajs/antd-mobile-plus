@@ -12,5 +12,5 @@
 .umi-test
 **/fixtures/**/dist
 /demo
-doc_dist
+dist
 *.lock
