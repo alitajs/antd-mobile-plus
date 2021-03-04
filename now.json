@@ -18,14 +18,14 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/$1"
+      "dest": "/doc_dist/$1"
     },
     {
       "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/404.html"
+      "dest": "/doc_dist/404.html"
     }
   ],
   "github": {
