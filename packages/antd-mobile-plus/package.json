@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@alitajs/languages": "0.1.0",
-    "@alitajs/theme": "0.0.5-0",
+    "@alitajs/theme": "0.1.0",
     "@alitajs/tracker": "0.1.0",
     "antd-mobile": "2.3.3",
     "classnames": "^2.2.6",
