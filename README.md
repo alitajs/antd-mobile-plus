@@ -22,7 +22,7 @@ const prefixCls = 'alita-demo';
 一个最基础的 lees 文件组成为：
 
 ```less
-@import '~@alitajs/theme/index';
+@import '~@alitajs/theme/es/index.less';
 
 @prefixCls: alita-demo;
 
