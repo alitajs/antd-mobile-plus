@@ -19,7 +19,7 @@ interface LinkMapProps {
    * @description 是否是电话字段，需要拨号
    * @default false
    */
-  isPhone: boolean;
+  isPhone?: boolean;
 }
 export interface ProTrackProps {
   /**
