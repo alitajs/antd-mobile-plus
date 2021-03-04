@@ -2,7 +2,6 @@ export default {
   title: 'Antd Mobile Plus',
   mode: 'site',
   exportStatic: {},
-  outputPath: 'doc-dist',
   hash: true,
   locales: [['zh-CN', '中文'], ['en-US', '英文']],
   favicon: 'https://alitajs.com/assets/img/meta/apple-touch-icon-114x114.png',
