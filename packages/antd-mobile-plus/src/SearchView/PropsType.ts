@@ -92,7 +92,7 @@ export interface SearchViewType {
   /**
    * @description 展开和关闭切换
    */
-  onToggoleHandle: (e: boolean) => void;
+  onToggoleHandle?: (e: boolean) => void;
 
   /**
    * @description leftText
