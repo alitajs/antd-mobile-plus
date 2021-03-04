@@ -27,7 +27,7 @@ export enum LogType {
 
 export const baseData = {
   // @ts-ignore
-  version: __VERSION__,
+  // version: __VERSION__,
   reactVersion: version,
 };
 
