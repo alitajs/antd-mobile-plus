@@ -10,11 +10,26 @@
     }
   }],
   "routes": [{
-    "src": "/(.*)",
-    "dest": "/doc_dist/$1"
-  }, {
-    "src": "/(.*)",
-    "dest": "/doc_dist/404.html"
-  }],
+      "src": "/(.*[.js|.css])",
+      "headers": {
+        "Cache-Control": "max-age=63072000"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/404.html"
+    }
+  ],
+  "github": {
+    "enable": false
+  },
   "alias": ["ui.alitajs.com"]
 }
