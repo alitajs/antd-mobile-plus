@@ -21,7 +21,44 @@ export interface AliasProps {
    */
   id?: string;
 }
-export interface CommonPros {
+export interface FilterItemsProps {
+  openFlag?: string;
+  /**
+   * @description 点击当前filter进行up和down切换，关闭其他的filter
+   */
+  onClick: (status: string,selectObj:Object) => void;
+  /**
+   * @description 当前选中的对象
+   */
+  selectObj: Object;
+  /**
+   * @description 当前点击的筛选filterId
+   */
+  activeFilterId: string;
+  /**
+   * @description 每个筛选项的filterId
+   */
+  filterId: string;
+  /**
+ * @description 每个筛选项选中的初始值
+ */
+  initObj: Object;
+  /**
+ * @description 字段别名
+ * @default {id：'id',label:'label'}
+ */
+  aliasObj: AliasProps;
+}
+
+export interface FilterProps {
+  /**
+   * @description 筛选项的所有数据
+   */
+  data: FilterItemProps[];
+  /**
+   * @description 默认选择下标
+   * @default 0
+   */
   defalutSelect?: number;
   /**
    * @description 字段别名
@@ -31,27 +68,5 @@ export interface CommonPros {
   /**
    * @description 每个数据项的点击事件
    */
-  onItemChange: (data: FilterItemProps) => void;
-}
-export interface FilterItemsProps extends CommonPros {
-  /**
-   * @description 每个筛选项数据
-   */
-  item: FilterItemProps;
-  /**
-   * @description 当前点击的Filter的状态
-   * @default 'up'
-   */
-  openFlag?: string;
-  /**
-   * @description 点击当前filter进行up和down切换，关闭其他的filter
-   */
-  onClick: (status: string) => void;
-}
-
-export interface FilterProps extends CommonPros {
-  /**
-   * @description 筛选项的所有数据
-   */
-  data: FilterItemProps[];
+  onItemChange: (data: any) => void;
 }

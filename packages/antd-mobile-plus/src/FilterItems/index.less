@@ -25,12 +25,18 @@
 
     &-content {
       max-height: 50vh;
-      overflow:auto;
+      overflow: auto;
       background: @fill-base;
     }
   }
+
   &-drawer-item {
     padding: 20 * @hd @v-spacing-lg;
     font-size: @font-size-base;
+
+    &-active {
+      color: @color-active;
+    }
   }
+
 }

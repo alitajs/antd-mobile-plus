@@ -3,6 +3,7 @@ import { withError, useTracker } from "@alitajs/tracker";
 import classnames from "classnames";
 import FilterItem from "./component/FilterItem";
 import { FilterProps, FilterItemProps } from "./PropsType";
+import { useClickAway } from "ahooks";
 import "./index.less";
 
 const prefixCls = "alita-filter";
@@ -18,7 +19,6 @@ export const FilterItems: FC<FilterProps> = (props) => {
   const [drawOpen, updateDrawOpen] = useState("up");
   const [drawData, updateDrawDate] = useState([{}]);
   const [maskTop, updateTop] = useState(0);
-
   const log = useTracker(FilterItems.displayName, {});
   const myFilter = classnames({
     [`${prefixCls}`]: true,
@@ -29,10 +29,18 @@ export const FilterItems: FC<FilterProps> = (props) => {
     aliasObj[aliasItem] = alias[aliasItem];
   });
   const filterRef = useRef(null);
+  const [activeObj, updateActiveObj] = useState({});
+  const [acFilterId, updateAcFilterId] = useState("");
+  const [selectObj, updateSelectObj] = useState({});
   useEffect(() => {
     const { offsetTop, clientHeight } = filterRef.current as any;
     updateTop(offsetTop + clientHeight);
   }, []);
+
+  useClickAway(() => {
+    updateDrawOpen("up");
+    updateActiveIndex(-1);
+  }, filterRef);
   return (
     <div className={myFilter}>
       <div className={`${prefixCls}-content`} ref={filterRef}>
@@ -40,13 +48,14 @@ export const FilterItems: FC<FilterProps> = (props) => {
           const { filterId } = item;
           return (
             <FilterItem
-              defalutSelect={defalutSelect}
-              alias={alias}
-              onItemChange={onItemChange}
               key={filterId}
-              item={item}
+              activeFilterId={acFilterId}
+              filterId={filterId}
+              aliasObj={aliasObj}
+              selectObj={activeObj}
+              initObj={item.data[defalutSelect]}
               openFlag={index === activeIndex ? "down" : "up"}
-              onClick={(options: string) => {
+              onClick={(options: string, selectObj) => {
                 log(options);
                 if (options === "down") {
                   updateActiveIndex(index);
@@ -55,6 +64,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
                 }
                 updateDrawOpen(options);
                 updateDrawDate(item.data);
+                updateSelectObj(selectObj);
               }}
             />
           );
@@ -66,7 +76,25 @@ export const FilterItems: FC<FilterProps> = (props) => {
           <div className={`${prefixCls}-mask-content`}>
             {drawData.map((child) => {
               return (
-                <div key={child[aliasObj.id]} className={`${prefixCls}-drawer-item`}> {child[aliasObj.label]}</div>
+                <div
+                  key={child[aliasObj.id]}
+                  className={classnames({
+                    [`${prefixCls}-drawer-item`]: true,
+                    [`${prefixCls}-drawer-item-active`]:
+                      selectObj[aliasObj.id] === child[aliasObj.id],
+                  })}
+                  onClick={() => {
+                    updateAcFilterId(data[activeIndex].filterId);
+                    updateActiveObj(child);
+                    onItemChange({
+                      data: child,
+                      filterId: data[activeIndex].filterId,
+                    });
+                    log("onItemChange");
+                  }}
+                >
+                  {child[aliasObj.label]}
+                </div>
               );
             })}
           </div>

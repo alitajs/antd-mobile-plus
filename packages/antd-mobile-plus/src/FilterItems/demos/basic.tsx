@@ -21,35 +21,26 @@ export default () => {
   const data = [
     {
       data: [
-        { id: "1", value: "排序不限" },
-        { id: "2", value: "任务来源" },
-        { id: "3", value: "全部" },
+        { id: "1", value: "排序不限1" },
+        { id: "2", value: "任务来源2" },
+        { id: "3", value: "全部3" },
       ],
       filterId: "f_1",
     },
     {
       data: [
-        { id: "1", value: "全部" },
-        { id: "2", value: "任务来源" },
-        { id: "3", value: "全部" },
-        { id: "4", value: "排序-不限" },
-        { id: "5", value: "任务来源" },
-        { id: "6", value: "全部" },
-        { id: "7", value: "排序-不限" },
-        { id: "8", value: "任务来源" },
-        { id: "9", value: "全部" },
-        { id: "16", value: "全部" },
-        { id: "17", value: "排序-不限" },
-        { id: "18", value: "任务来源" },
-        { id: "19", value: "全部" },
+        { id: "21", value: "全部2" },
+        { id: "22", value: "任务来源2" },
+        { id: "23", value: "全部" },
+        { id: "24", value: "排序-不限2" },
       ],
       filterId: "f_2",
     },
     {
       data: [
-        { id: "1", value: "这个名字很长这个名字很长" },
-        { id: "2", value: "任务来源" },
-        { id: "3", value: "全部" },
+        { id: "31", value: "这个名字很长这个名字很长3" },
+        { id: "32", value: "任务来源3" },
+        { id: "33", value: "全部3" },
       ],
       filterId: "f_3",
     },
@@ -61,16 +52,15 @@ export default () => {
         1
       </div>
 
-      <div style={{display: "flex"}}>
+      <div style={{ display: "flex" }}>
         <FilterItems
           data={data}
-          onItemChange={(data: FilterItemProps) => {
+          onItemChange={(data: any) => {
             console.log(data);
           }}
           alias={{ label: "value" }}
         />
       </div>
-
     </div>
   );
 };
