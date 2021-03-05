@@ -9,19 +9,10 @@
       "distDir": "dist"
     }
   }],
-  "routes": [{
-      "src": "/(.*[.js|.css])",
-      "headers": {
-        "Cache-Control": "max-age=63072000"
-      },
-      "continue": true
-    },
+  "routes": [
     {
       "src": "/(.*)",
       "dest": "/dist/$1"
-    },
-    {
-      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
