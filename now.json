@@ -10,7 +10,6 @@
     }
   }],
   "routes": [
-    { "handle": "filesystem" },
     { "src": "/.*", "dest": "/dist/index.html" }
   ],
   "alias": ["ui.alitajs.com"]
