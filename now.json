@@ -5,19 +5,10 @@
   "builds": [{
     "src": "build.sh",
     "use": "@vercel/static-build",
-    "config": {
-      "distDir": "dist"
-    }
   }],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/dist/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/404.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ],
   "github": {
     "enable": false
