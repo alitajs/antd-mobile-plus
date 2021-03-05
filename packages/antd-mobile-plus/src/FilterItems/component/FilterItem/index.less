@@ -6,7 +6,6 @@
 @iconSize: 16 * @hd;
 
 .@{prefixCls} {
-  position: relative;
   flex: 1;
   margin: 0 @h-spacing-sm;
   width: 0;
@@ -51,8 +50,8 @@
   }
 
   &-drawer {
-    position: fixed;
-    width: 100vh;
+    position: absolute;
+    width: 100%;
     left: 0;
     height: auto;
     overflow-y: scroll;
