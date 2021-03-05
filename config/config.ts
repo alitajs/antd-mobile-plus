@@ -16,6 +16,7 @@ export default {
     hostname: 'https://ui.alitajs.com',
   },
   // 用于替换 __VERSION__ pkg.version
+  extraBabelPlugins: ['version'],
   styles: [
     `.__dumi-default-mobile-demo-layout {
       min-height: 100vh;
