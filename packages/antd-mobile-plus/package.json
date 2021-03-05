@@ -30,6 +30,7 @@
     "@alitajs/languages": "0.1.1",
     "@alitajs/theme": "0.1.1",
     "@alitajs/tracker": "0.1.1",
+    "ahooks": "^2.9.6",
     "antd-mobile": "2.3.3",
     "classnames": "^2.2.6",
     "react-bmapgl": "^0.1.4",
