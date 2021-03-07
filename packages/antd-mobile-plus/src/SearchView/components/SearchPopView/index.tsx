@@ -1,8 +1,9 @@
-import React, { FC, useRef, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect, useRef } from 'react';
 import FilterCell from '../FilterCell';
 import classnames from 'classnames';
 import { withError, useTracker } from '@alitajs/tracker';
 import { SearchFilterDataType } from '../../PropsType';
+import Popup from '../../../Popup';
 import './index.less';
 
 interface SearchPopViewProps {
@@ -41,9 +42,18 @@ interface SearchPopViewProps {
    * @default 50vh
    */
   maxHeight?: string;
-}
 
-const prefixCls = 'alita-search-pop-view';
+  /**
+   * 去除目标元素，只响应目标元素之外的节点
+   */
+  awayRef?: any;
+
+  /**
+   * @description 遮罩层所在区域滚动节点
+   * @default document.documentElement
+   */
+  scrollElement?: HTMLElement;
+}
 
 const SearchPopView: FC<SearchPopViewProps> = (props) => {
   const {
@@ -56,48 +66,40 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
     onRenderPanel,
     maxHeight,
     children,
+    awayRef,
+    scrollElement,
   } = props;
-  const flagRef = useRef(null);
 
   return (
     <>
       {children}
-      <div className={`${prefixCls}-flag`} ref={flagRef}></div>
-      <div
-        className={`${prefixCls}-mask`}
-        hidden={!visiable}
-        onClick={() => {
+      <Popup
+        awayRef={awayRef}
+        show={visiable}
+        scrollElement={scrollElement}
+        style={{
+          maxHeight,
+        }}
+        onClose={() => {
           onHide();
         }}
-      ></div>
-      <div
-        className={classnames(`${prefixCls}`, {
-          [`${prefixCls}-wrapper`]: visiable,
-        })}
       >
-        <div
-          style={{ maxHeight }}
-          className={classnames(`${prefixCls}-animation`, {
-            [`${prefixCls}-show`]: visiable,
-          })}
-        >
-          {onRenderPanel ??
-            data.map((item) => (
-              <FilterCell
-                key={item.value}
-                text={item.label}
-                selected={item.value === filterValue}
-                onClick={() => {
-                  onChange(item);
-                  onHide();
-                }}
-                onSelected={() => {
-                  onFilterSelect(item);
-                }}
-              />
-            ))}
-        </div>
-      </div>
+        {onRenderPanel ??
+          data.map((item) => (
+            <FilterCell
+              key={item.value}
+              text={item.label}
+              selected={item.value === filterValue}
+              onClick={() => {
+                onChange(item);
+                onHide();
+              }}
+              onSelected={() => {
+                onFilterSelect(item);
+              }}
+            />
+          ))}
+      </Popup>
     </>
   );
 };

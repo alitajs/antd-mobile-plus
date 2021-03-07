@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect, useRef } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import { SearchViewType, SearchFilterDataType } from './PropsType';
 import SearchBar from './components/SearchBar';
@@ -20,8 +20,10 @@ const SearchView: FC<SearchViewType> = (props) => {
     open = false,
     leftText,
     maxHeight = '50vh',
+    scrollElement,
     ...searchBarProps
   } = props;
+  const awayRef = useRef(null);
   const [visiable, setVisiable] = useState(open);
   const [selectItem, setSelectItem] = useState<SearchFilterDataType>(
     filterItemWithValue(filterData, filterValue),
@@ -39,11 +41,13 @@ const SearchView: FC<SearchViewType> = (props) => {
   return (
     <div className={prefixCls}>
       <SearchPopView
+        awayRef={awayRef}
         data={filterData}
         filterValue={selectItem.value}
         visiable={visiable}
         onRenderPanel={PopViewPanel}
         maxHeight={maxHeight}
+        scrollElement={scrollElement}
         onHide={() => {
           log('onHide');
           setVisiable(false);
@@ -61,7 +65,7 @@ const SearchView: FC<SearchViewType> = (props) => {
       >
         <>
           <div className={`${prefixCls}-placeholder`}></div>
-          <div className={`${prefixCls}-search`}>
+          <div className={`${prefixCls}-search`} ref={awayRef}>
             <SearchLeftItem
               hidden={!showLeft}
               text={leftText ?? selectItem.label}
