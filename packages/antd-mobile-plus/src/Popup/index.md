@@ -1,5 +1,5 @@
 ---
-title: 组件
+title: 弹出视图
 nav:
   title: 组件
   path: /components
