@@ -18,7 +18,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
   const [drawOpen, updateDrawOpen] = useState('up');
-  const [drawData, updateDrawDate] = useState([]);
+  const [drawData, updateDrawDate] = useState<any[]>([]);
   const [maskTop, updateTop] = useState(0);
   const log = useTracker(FilterItems.displayName, {});
   const myFilter = classnames({
