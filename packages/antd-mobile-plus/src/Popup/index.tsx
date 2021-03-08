@@ -47,9 +47,7 @@ const Popup: FC<PopupType> = ({
     onClose();
   };
   // 点击awayRef之外的区域关闭弹出框
-  console.log('awayRef', awayRef);
   useClickAway((e) => {
-    console.log(e);
     const isOverlay = e.target === overlayRef.current;
     if (
       (closeOnClickOutside && closeOnClickOverlay) ||
