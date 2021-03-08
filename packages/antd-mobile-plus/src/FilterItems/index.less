@@ -5,11 +5,38 @@
 @prefixCls: alita-filter;
 
 .@{prefixCls} {
-  position: fixed;
-  width:100%;
-  display: flex;
+  width: 100%;
+
+
+  &-content {
+    display: flex;
+  }
 
   &-single {
     max-width: 112 * @hd;
   }
+
+  &-mask {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: @fill-mask;
+
+    &-content {
+      max-height: 50vh;
+      overflow: auto;
+      background: @fill-base;
+    }
+  }
+
+  &-drawer-item {
+    padding: 20 * @hd @v-spacing-lg;
+    font-size: @font-size-base;
+
+    &-active {
+      color: @color-active;
+    }
+  }
+
 }
