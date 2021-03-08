@@ -1,5 +1,5 @@
 ---
-title: 组件
+title: 动画
 nav:
   title: 组件
   path: /components
@@ -8,4 +8,5 @@ nav:
 ### 展示
 
 <code src="./demos/demo.tsx" />
+
 <API/>

@@ -62,10 +62,10 @@ export interface PopupType {
     offset?: number;
 
     /**
-     * @description 弹出模式， full:全屏  relative: 相对当前控件位置弹出
+     * @description 弹出模式， fullscreen:全屏  relative: 相对当前控件位置弹出
      * @default  relative
      */
-    popMode?: 'full' | 'relative';
+    popMode?: 'fullscreen' | 'relative';
 
     /**
      * @description 弹出层的容器样式
