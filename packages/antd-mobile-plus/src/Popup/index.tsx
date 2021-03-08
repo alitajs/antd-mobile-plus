@@ -20,6 +20,7 @@ const Popup: FC<PopupType> = ({
   closeOnClickOutside = true,
   closeOnClickOverlay = true,
   offset = 0,
+  popMode = 'relative',
   ...transitionProps
 }) => {
   const log = useTracker(Popup.displayName, {});
@@ -35,7 +36,7 @@ const Popup: FC<PopupType> = ({
       const topEle: HTMLElement | null = topRef.current;
       if (topEle) {
         setAOverlayStyle(
-          overlayOrigin(scrollElement, topEle, direction, offset || 0),
+          overlayOrigin(scrollElement, topEle, direction, offset || 0, popMode),
         );
       }
     }
@@ -75,8 +76,9 @@ const Popup: FC<PopupType> = ({
       >
         <div
           ref={overlayRef}
+          hidden={!overlayShow}
           className={classnames(`${prefixCls}-overlay`, {
-            [`${prefixCls}-overlay-show`]: overlayShow,
+            [`${prefixCls}-overlay-show`]: show,
           })}
           onClick={(e) => e.stopPropagation()}
         ></div>
