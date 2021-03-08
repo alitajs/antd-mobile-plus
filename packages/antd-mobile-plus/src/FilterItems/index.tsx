@@ -4,6 +4,7 @@ import classnames from "classnames";
 import FilterItem from "./component/FilterItem";
 import { FilterProps, FilterItemProps } from "./PropsType";
 import { useClickAway } from "ahooks";
+import Popup from "../Popup/index";
 import "./index.less";
 
 const prefixCls = "alita-filter";
@@ -29,6 +30,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
     aliasObj[aliasItem] = alias[aliasItem];
   });
   const filterRef = useRef(null);
+  const awayRef = useRef(null);
   const [activeObj, updateActiveObj] = useState({});
   const [acFilterId, updateAcFilterId] = useState("");
   const [selectObj, updateSelectObj] = useState({});
@@ -71,37 +73,40 @@ export const FilterItems: FC<FilterProps> = (props) => {
         })}
       </div>
 
-      {drawOpen === "down" ? (
-        <div className={`${prefixCls}-mask`} style={{ top: maskTop }}>
-          <div className={`${prefixCls}-mask-content`}>
-            {drawData.map((child) => {
-              return (
-                <div
-                  key={child[aliasObj.id]}
-                  className={classnames({
-                    [`${prefixCls}-drawer-item`]: true,
-                    [`${prefixCls}-drawer-item-active`]:
-                      selectObj[aliasObj.id] === child[aliasObj.id],
-                  })}
-                  onClick={() => {
-                    updateAcFilterId(data[activeIndex].filterId);
-                    updateActiveObj(child);
-                    onItemChange({
-                      data: child,
-                      filterId: data[activeIndex].filterId,
-                    });
-                    log("onItemChange");
-                  }}
-                >
-                  {child[aliasObj.label]}
-                </div>
-              );
-            })}
-          </div>
+      <Popup
+        awayRef={awayRef}
+        show={drawOpen === "down"}
+        onClose={() => {
+          updateDrawOpen("up");
+          log("close");
+        }}
+      >
+        <div className={`${prefixCls}-mask-content`}>
+          {drawData.map((child) => {
+            return (
+              <div
+                key={child[aliasObj.id]}
+                className={classnames({
+                  [`${prefixCls}-drawer-item`]: true,
+                  [`${prefixCls}-drawer-item-active`]:
+                    selectObj[aliasObj.id] === child[aliasObj.id],
+                })}
+                onClick={() => {
+                  updateAcFilterId(data[activeIndex].filterId);
+                  updateActiveObj(child);
+                  onItemChange({
+                    data: child,
+                    filterId: data[activeIndex].filterId,
+                  });
+                  log("onItemChange");
+                }}
+              >
+                {child[aliasObj.label]}
+              </div>
+            );
+          })}
         </div>
-      ) : (
-        ""
-      )}
+      </Popup>
     </div>
   );
 };
