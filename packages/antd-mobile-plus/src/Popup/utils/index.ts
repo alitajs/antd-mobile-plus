@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { PopupType } from '../PropsType'
 
 
-export const overlayOrigin = (scrollElement: HTMLElement, topEle: HTMLElement, direction?: 'up' | 'down', offset = 0, popMode: PopupType['popMode'] ): { top: number, bottom: number } => { 
+export const overlayOrigin = (scrollElement: HTMLElement, topEle: HTMLElement, direction?: 'up' | 'down', offset = 0, popMode?: PopupType['popMode'] ): { top: number, bottom: number } => { 
     let px = 0;
     if (popMode === 'relative') {
         px = topEle.getBoundingClientRect().y
