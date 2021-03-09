@@ -28,7 +28,6 @@ export const FilterItems: FC<FilterProps> = (props) => {
   Object.keys(alias).forEach((aliasItem) => {
     aliasObj[aliasItem] = alias[aliasItem];
   });
-  const filterRef = useRef(null);
   const awayRef = useRef(null);
   const [activeObj, updateActiveObj] = useState({});
   const [acFilterId, updateAcFilterId] = useState("");
