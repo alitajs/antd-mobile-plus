@@ -1,9 +1,8 @@
-import React, { useState, FC, useRef, useEffect } from 'react';
+import React, { useState, FC, useRef } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import classnames from 'classnames';
 import FilterItem from './component/FilterItem';
 import { FilterProps, FilterItemProps } from './PropsType';
-import { useClickAway } from 'ahooks';
 import Popup from '../Popup/index';
 import './index.less';
 
@@ -34,8 +33,8 @@ export const FilterItems: FC<FilterProps> = (props) => {
   const [selectObj, updateSelectObj] = useState({});;
 
   return (
-    <div className={myFilter} ref={awayRef}>
-      <div className={`${prefixCls}-content`}>
+    <div className={myFilter} >
+      <div className={`${prefixCls}-content`} ref={awayRef}>
         {data.map((item: FilterItemProps, index: number) => {
           const { filterId } = item;
           return (
@@ -68,6 +67,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
         show={drawOpen === 'down'}
         onClose={() => {
           updateDrawOpen('up');
+          updateActiveIndex(-1);
           log('close');
         }}
       >
@@ -91,6 +91,8 @@ export const FilterItems: FC<FilterProps> = (props) => {
                   updateDrawOpen("up");
                   updateActiveIndex(-1);
                   log("onItemChange");
+                  awayRef.current;
+                  console.log('22');
                 }}
               >
                 {child[aliasObj.label]}
