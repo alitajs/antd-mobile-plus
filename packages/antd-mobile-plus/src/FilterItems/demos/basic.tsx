@@ -48,19 +48,13 @@ export default () => {
 
   return (
     <div style={{ margin: "24px 0", height: "100vh" }}>
-      <div style={{ height: "10vh", background: "#fff", margin: "24px" }}>
-        1
-      </div>
-
-      <div style={{ display: "flex" }}>
-        <FilterItems
-          data={data}
-          onItemChange={(data: any) => {
-            console.log(data);
-          }}
-          alias={{ label: "value" }}
-        />
-      </div>
+      <FilterItems
+        data={data}
+        onItemChange={(data: any) => {
+          console.log(data);
+        }}
+        alias={{ label: "value" }}
+      />
     </div>
   );
 };
