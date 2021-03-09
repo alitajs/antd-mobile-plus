@@ -17,9 +17,8 @@ export const FilterItems: FC<FilterProps> = (props) => {
     onItemChange,
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
-  const [drawOpen, updateDrawOpen] = useState('up');
-  const [drawData, updateDrawDate] = useState<any[]>([]);
-  const [maskTop, updateTop] = useState(0);
+  const [drawOpen, updateDrawOpen] = useState("up");
+  const [drawData, updateDrawDate] = useState([]);
   const log = useTracker(FilterItems.displayName, {});
   const myFilter = classnames({
     [`${prefixCls}`]: true,
@@ -32,20 +31,12 @@ export const FilterItems: FC<FilterProps> = (props) => {
   const filterRef = useRef(null);
   const awayRef = useRef(null);
   const [activeObj, updateActiveObj] = useState({});
-  const [acFilterId, updateAcFilterId] = useState('');
-  const [selectObj, updateSelectObj] = useState({});
-  useEffect(() => {
-    const { offsetTop, clientHeight } = filterRef.current as any;
-    updateTop(offsetTop + clientHeight);
-  }, []);
+  const [acFilterId, updateAcFilterId] = useState("");
+  const [selectObj, updateSelectObj] = useState({});;
 
-  useClickAway(() => {
-    updateDrawOpen('up');
-    updateActiveIndex(-1);
-  }, filterRef);
   return (
-    <div className={myFilter}>
-      <div className={`${prefixCls}-content`} ref={filterRef}>
+    <div className={myFilter} ref={awayRef}>
+      <div className={`${prefixCls}-content`}>
         {data.map((item: FilterItemProps, index: number) => {
           const { filterId } = item;
           return (
@@ -65,7 +56,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
                   updateActiveIndex(-1);
                 }
                 updateDrawOpen(options);
-                updateDrawDate(item.data);
+                updateDrawDate((item as any).data);
                 updateSelectObj(selectObj);
               }}
             />
@@ -81,7 +72,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
           log('close');
         }}
       >
-        <div className={`${prefixCls}-mask-content`}>
+        <div>
           {drawData.map((child) => {
             return (
               <div
@@ -98,7 +89,9 @@ export const FilterItems: FC<FilterProps> = (props) => {
                     data: child,
                     filterId: data[activeIndex].filterId,
                   });
-                  log('onItemChange');
+                  updateDrawOpen("up");
+                  updateActiveIndex(-1);
+                  log("onItemChange");
                 }}
               >
                 {child[aliasObj.label]}
