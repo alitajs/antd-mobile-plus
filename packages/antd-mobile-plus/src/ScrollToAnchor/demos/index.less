@@ -1,0 +1,34 @@
+.scrollToAnchor-wrapper {
+    height: 90vh;
+    padding-top: 20vw;
+    overflow: scroll;
+}
+.scrollToAnchor {
+    height: 100%;
+    &-nav {
+        position: fixed;
+        left: 0;
+        top: 0; 
+        width: 20vw;
+        height: 100%;
+    }
+    &-view {
+        margin-left: 20vw;
+    }
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    &-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &-view {
+        flex: 1;
+        height: 0;
+        overflow: scroll;
+    }
+}
