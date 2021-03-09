@@ -1,7 +1,7 @@
 import React, { FC, useRef, useState, useEffect } from 'react';
 import Map, { MapApiLoaderHOC } from 'react-bmapgl/Map';
 import { Marker } from 'react-bmapgl';
-import { withError, useTracker } from '@alitajs/tracker';
+import { withError } from '@alitajs/tracker';
 import { ActionMaperType, ActionMaperCoordinateType } from './PropsType';
 import MapHeader from './components/MapHeader';
 import RightExt from './components/RightExt';
@@ -9,9 +9,8 @@ import ZoomControl, { ZoomType } from './components/ZoomControl';
 import './index.less';
 
 const prefixCls = 'alita-action-maper';
-
 export interface FCMap<T = {}> extends FC<T> {
-  MapApiLoaderHOC: ({ ak }: { ak: string }) => FC<FC<{}>>;
+  MapApiLoaderHOC: ({ ak }: { ak: string }) => (a: any) => FC;
 }
 
 const ActionMaper: FCMap<ActionMaperType> = (props) => {
@@ -135,5 +134,5 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
 
 ActionMaper.displayName = 'ActionMaper';
 
-ActionMaper.MapApiLoaderHOC = MapApiLoaderHOC;
+ActionMaper.MapApiLoaderHOC = MapApiLoaderHOC as any;
 export default withError(ActionMaper);

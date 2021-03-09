@@ -1,19 +1,19 @@
-import React, { useState, FC, useRef, useEffect } from "react";
-import { withError, useTracker } from "@alitajs/tracker";
-import classnames from "classnames";
-import FilterItem from "./component/FilterItem";
-import { FilterProps, FilterItemProps } from "./PropsType";
-import { useClickAway } from "ahooks";
-import Popup from "../Popup/index";
-import "./index.less";
+import React, { useState, FC, useRef, useEffect } from 'react';
+import { withError, useTracker } from '@alitajs/tracker';
+import classnames from 'classnames';
+import FilterItem from './component/FilterItem';
+import { FilterProps, FilterItemProps } from './PropsType';
+import { useClickAway } from 'ahooks';
+import Popup from '../Popup/index';
+import './index.less';
 
-const prefixCls = "alita-filter";
+const prefixCls = 'alita-filter';
 
 export const FilterItems: FC<FilterProps> = (props) => {
   const {
     data = [],
     defalutSelect = 0,
-    alias = { label: "label", id: "id" },
+    alias = { label: 'label', id: 'id' },
     onItemChange,
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
@@ -24,7 +24,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
     [`${prefixCls}`]: true,
     [`${prefixCls}-single`]: data.length === 1,
   });
-  const aliasObj = { label: "label", id: "id" };
+  const aliasObj = { label: 'label', id: 'id' };
   Object.keys(alias).forEach((aliasItem) => {
     aliasObj[aliasItem] = alias[aliasItem];
   });
@@ -47,10 +47,10 @@ export const FilterItems: FC<FilterProps> = (props) => {
               aliasObj={aliasObj}
               selectObj={activeObj}
               initObj={item.data[defalutSelect]}
-              openFlag={index === activeIndex ? "down" : "up"}
+              openFlag={index === activeIndex ? 'down' : 'up'}
               onClick={(options: string, selectObj) => {
                 log(options);
-                if (options === "down") {
+                if (options === 'down') {
                   updateActiveIndex(index);
                 } else {
                   updateActiveIndex(-1);
@@ -66,10 +66,10 @@ export const FilterItems: FC<FilterProps> = (props) => {
 
       <Popup
         awayRef={awayRef}
-        show={drawOpen === "down"}
+        show={drawOpen === 'down'}
         onClose={() => {
-          updateDrawOpen("up");
-          log("close");
+          updateDrawOpen('up');
+          log('close');
         }}
       >
         <div>
@@ -104,5 +104,5 @@ export const FilterItems: FC<FilterProps> = (props) => {
   );
 };
 
-FilterItems.displayName = "FilterItems";
+FilterItems.displayName = 'FilterItems';
 export default withError(FilterItems);

@@ -1,9 +1,12 @@
 import { useMemo } from 'react'
+import { PopupType } from '../PropsType'
 
 
-export const overlayOrigin = (scrollElement: HTMLElement, topEle: HTMLElement, direction?: 'up' | 'down', offset = 0): { top: number, bottom: number } => { 
-    const px = topEle.getBoundingClientRect().y;
-    // const px = offsetTop - scrollElement.scrollTop;
+export const overlayOrigin = (scrollElement: HTMLElement, topEle: HTMLElement, direction?: 'up' | 'down', offset = 0, popMode?: PopupType['popMode'] ): { top: number, bottom: number } => { 
+    let px = 0;
+    if (popMode === 'relative') {
+        px = topEle.getBoundingClientRect().y
+    }
     if (direction === 'down') {
         return {
             bottom: 0,
@@ -11,9 +14,13 @@ export const overlayOrigin = (scrollElement: HTMLElement, topEle: HTMLElement, d
         }
     } 
     if (direction === 'up') {
+        let bottom = 0;
+        if (popMode === 'relative') {
+            bottom = (document.documentElement || document.body).clientHeight - px;
+        } 
         return {
             top: 0,
-            bottom: (document.documentElement || document.body).clientHeight - px +  offset
+            bottom: bottom +  offset
         }
     }
     return {

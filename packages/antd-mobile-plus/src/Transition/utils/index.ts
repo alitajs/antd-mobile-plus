@@ -110,7 +110,6 @@ export const getTransition =
         property: string) => { 
     const dura = Array.isArray(duration) ? (show ? duration[1] : duration[0]) : duration;
     const del = Array.isArray(delay) ? (show ? delay[1] : delay[0]) : delay;
-
     const webCores = ['transition', 'MozTransition', 'WebkitTransition', 'OTransition'];
     const webTransition = {};
     webCores.forEach(core => {

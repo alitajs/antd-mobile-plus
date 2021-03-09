@@ -9,8 +9,8 @@ const Demo: FC<DemoProps> = (props) => {
   const ref = useRef(null);
   return (
     <div style={{ height: '100vh', overflow: 'auto' }} ref={ref}>
+      <div style={{ height: '30vh' }}></div>
       <div style={{ height: '150vh' }}>
-        <div style={{ height: '50vh' }}>asdjflaksjd;fakjs;dkfja;sdj</div>
         <div
           ref={awayRef}
           style={{
@@ -20,30 +20,30 @@ const Demo: FC<DemoProps> = (props) => {
             lineHeight: '0.8rem',
             color: 'white',
             position: 'relative',
-            zIndex: 1000,
           }}
           onClick={() => {
             setShow(!show);
           }}
         >
-          展示|隐藏
+          打开动画
         </div>
         <Popup
+          // popMode=""
           awayRef={awayRef}
           show={show}
           onClose={() => {
             setShow(false);
           }}
           scrollElement={ref.current}
-          direction="up"
+          direction="down"
         >
           <div
             onClick={() => {
               setShow(false);
             }}
-            style={{ height: '50vh' }}
+            style={{ height: '50vh', textAlign: 'center', lineHeight: '50vh' }}
           >
-            asdjflaksjd;fakjs;dkfja;sdj
+            弹出内容区域(滚动页面，再点击试试？)
           </div>
         </Popup>
       </div>
