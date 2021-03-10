@@ -3,6 +3,7 @@ import { withError, useTracker } from '@alitajs/tracker';
 import { ScrollToAnchorType } from '../../PropsType';
 import { useScroll, useDebounceEffect, useLockFn } from 'ahooks';
 import './index.less';
+import { useScrollEnd } from '../../Utils/Scroll';
 
 interface AnchorViewItemType {
   /**
@@ -29,7 +30,7 @@ interface AnchorViewItemType {
    * @description 滚动区域
    * @default document.documentElement | document.body
    */
-  scrollElement?: ScrollToAnchorType['scrollElement'];
+  scrollElement: ScrollToAnchorType['scrollElement'];
 
   /**
    * @description 数据id前缀, 同时有多个组件是使用,防止id重复
@@ -49,7 +50,6 @@ const AnchorViewItem: FC<AnchorViewItemType> = ({
   scrollElement,
   idPrefix,
 }) => {
-  const position = useScroll(scrollElement);
   const ref = useRef(null);
 
   const didScrollToIndex = (scIndex?: number) => {
@@ -86,9 +86,8 @@ const AnchorViewItem: FC<AnchorViewItemType> = ({
       didScrollToIndex(0);
     }
   };
-  useDebounceEffect(binaryIndex, [`${position.top}`], {
-    wait: 50,
-  });
+
+  useScrollEnd(binaryIndex, scrollElement);
 
   return (
     <div className={prefixCls} id={`${idPrefix}${id}`} ref={ref}>

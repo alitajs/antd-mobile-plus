@@ -1,31 +1,13 @@
-import {usePersistFn, useScroll, useUnmount } from 'ahooks';
+import {useDebounceEffect, useUnmount, useScroll, usePersistFn } from 'ahooks';
 import { useRef } from 'react'
-export const useScrollEnd = (
-    fn: (p: { top: number, left: number }) => void,
-    target?: HTMLElement) => {
-    const callback = usePersistFn(fn);
-    const timerRef = useRef<NodeJS.Timer>();
-    const targetEle = target ?? (document.documentElement || document.body);
-    const scrollDuration = useRef<number>(targetEle.scrollTop);
-    const position = useScroll(targetEle);
 
-    function clearTimerFn(){ 
-        if (timerRef.current) {
-            clearTimeout(timerRef.current);
-        }
-    };
 
-    if (Math.abs(scrollDuration.current - position.top) > 0) {
-        scrollDuration.current = position.top;
-        // 表示正在滚动
-        // clearTimerFn();
-        timerRef.current = setTimeout(() => { 
-            //如果50ms还没有移动判定已经滚动结束
-            clearTimerFn();
-            callback(position);
-        }, 50);
-    }
+export const useScrollEnd = function (fn: (p: {top: number, left: number}) => void, target?: HTMLElement, options?: any) { 
+    const position = useScroll(target);
+    const persistFn = usePersistFn(fn);
+    useDebounceEffect(() => { persistFn(position)}, [`${position.top}`], options ?? { wait: 50 });
 }
+
 
 export const useScrollTo = function (){
     const _timeout = useRef<NodeJS.Timer | null>(null);
