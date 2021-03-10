@@ -88,7 +88,6 @@ const AnchorViewItem: FC<AnchorViewItemType> = ({
   };
 
   useScrollEnd(binaryIndex, scrollElement);
-
   return (
     <div className={prefixCls} id={`${idPrefix}${id}`} ref={ref}>
       {children}

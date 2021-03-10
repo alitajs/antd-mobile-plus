@@ -77,7 +77,7 @@ const AnchorView: FC<AnchorViewType> = ({
             index={index}
             data={data}
             scrollElement={scrollElement}
-            onScrollIndex={(index, item) => {
+            onScrollIndex={() => {
               onScrollIndex && onScrollIndex(index, item);
             }}
           >
