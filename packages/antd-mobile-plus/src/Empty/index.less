@@ -1,0 +1,33 @@
+@import '~@alitajs/theme/es/index.less';;
+// @import '~@alitajs/theme/mixins/icon';
+
+
+@prefixCls:alita-empty;
+
+@icon-width: 180 * @hd;
+.@{prefixCls} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: @color-text-paragraph;
+    background-color: @fill-base;
+    &-icon {
+        width: @icon-width;
+        height: 155 * @hd;
+    }
+    &-i {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    &-text {
+        width: @icon-width;
+        margin-top: 11 * @hd;
+        text-align: center;
+        font-size: 14 * @hd;
+    }
+}
+      
