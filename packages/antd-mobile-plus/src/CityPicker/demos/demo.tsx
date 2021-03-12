@@ -34,6 +34,7 @@ const Demo: FC<DemoProps> = (props) => {
         onClose={() => {
           setOpen(false);
         }}
+        title="标题"
         onChange={(item: { id: string | undefined }) => {
           if (!item) {
             setData(getData());

@@ -20,7 +20,7 @@ export interface CityPickerNavType {
     /**
      * @description 初始值 id数组
      */
-    initialValues?: string[] | string;
+    initialValues?: object[] | object;
 }
 
 
