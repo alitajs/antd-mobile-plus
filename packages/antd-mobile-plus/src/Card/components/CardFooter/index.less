@@ -1,0 +1,40 @@
+@import '~@alitajs/theme/es/index.less';
+;
+@import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-card-footer;
+
+.@{prefixCls} {
+    &-details {
+        display: flex;
+        height: 30 * @hd;
+        justify-content: center;
+        align-items: center;
+        background: @fill-grey;
+        color: @color-text-secondary;
+        font-size: @font-size-caption-sm;
+    }
+
+    &-icon-right {
+        width: 12 * @hd;
+        height: 12 * @hd;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 2 * @hd;
+        .svg-grey-right();
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &-text {
+            font-size: @font-size-subhead;
+            padding: 4 * @hd 12 * @hd;
+            color: @color-link;
+            border: @border-width-sm solid @brand-primary;
+            border-radius: 17 * @hd;
+        }
+    }
+}

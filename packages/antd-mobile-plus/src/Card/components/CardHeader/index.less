@@ -1,0 +1,17 @@
+@import '~@alitajs/theme/es/index.less';
+;
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-card-header;
+
+.@{prefixCls} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+        font-size: 17 * @hd;
+        font-weight: 600;
+        color: @color-text-base;
+    }
+}
