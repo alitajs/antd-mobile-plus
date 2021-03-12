@@ -20,11 +20,6 @@ export interface EmptyType {
     title?: string;
 
     /**
-     * @description 渲染图片上部信息
-     */
-    renderHeader?: React.ReactNode;
-
-    /**
      * @description 渲染文字下部文字
      */
     renderFooter?: React.ReactNode;
@@ -39,8 +34,4 @@ export interface EmptyType {
      */
     style?: CSSProperties
 
-    /**
-     * @description 点击事件
-     */
-    onClick?: () => void;
 }

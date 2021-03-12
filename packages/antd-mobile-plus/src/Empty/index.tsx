@@ -10,11 +10,9 @@ const Empty: FC<EmptyType> = ({
   type = 'nomal',
   icon,
   title,
-  renderHeader,
   renderFooter,
   className,
   style,
-  onClick,
 }) => {
   const log = useTracker(Empty.displayName, {});
   const IconView = () => {
@@ -34,7 +32,7 @@ const Empty: FC<EmptyType> = ({
       ></i>
     );
   };
-  const TitlView = ({ text }: { text: string }) => {
+  const TitleView = ({ text }: { text: string }) => {
     return <div className={`${prefixCls}-text`}>{text}</div>;
   };
   return (
@@ -42,17 +40,10 @@ const Empty: FC<EmptyType> = ({
       className={classnames(prefixCls, {
         [`${className}`]: !!className,
       })}
-      onClick={() => {
-        if (onClick) {
-          log('onClick');
-          onClick();
-        }
-      }}
       style={style}
     >
-      {renderHeader}
       <IconView />
-      <TitlView text={title ?? TypeList[type].text} />
+      <TitleView text={title ?? TypeList[type].text} />
       {renderFooter}
     </div>
   );
