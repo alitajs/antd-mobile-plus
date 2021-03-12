@@ -1,0 +1,44 @@
+@import '~@alitajs/theme/es/index.less';;
+@import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-table-view;
+
+.@{prefixCls} {
+    flex: 1;
+    height: 0;
+    overflow: scroll;
+    &-item {
+        position: relative;
+        height: 44 * @hd;
+        padding: 0 16 * @hd;
+        line-height: 44 * @hd;
+        color: @color-text-base;
+        font-size: 14 * @hd;
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 16 * @hd;
+            height: @border-width-sm;
+            background-color: @border-color-base;
+            content: '';
+        }
+        &-select {
+            position: relative;
+            color: @brand-primary;
+            &::after {
+                position: absolute;
+                right: 16 * @hd;
+                top: 50%;
+                width: 16 * @hd;
+                height: 16 * @hd;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                transform: translateY(-50%);
+                .svg-check-mark();
+                content: '';
+            }
+        }
+    }
+}

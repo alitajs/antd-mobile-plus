@@ -1,0 +1,73 @@
+@import '~@alitajs/theme/es/index.less';;
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-nav-view;
+
+
+.circleCls() {
+    &::before {
+        box-sizing: border-box;
+        width: 6 * @hd;
+        height: 6 * @hd;
+        margin-right: 4 * @hd;
+        border-radius: 50%;
+        content: '';
+    }
+}
+
+.@{prefixCls} {
+    padding: 8 * @hd 16 * @hd;
+    max-height: 100 * @hd;
+    overflow: scroll;
+    color: @brand-primary;
+    &-placeholder,&-step {
+        position: relative;
+        padding: 8 * @hd 0;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            top: 0;
+            bottom: 50%;
+            left: 3 * @hd;
+            transform: translateY(-4 * @hd);
+            width: @border-width-sm;
+            background-color: @brand-primary;
+            content: '';
+        }
+        &-hiddenline {
+            &::before {
+                width: 0;
+            }
+        }
+        span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .circleCls();
+            &::before {
+                border: @border-width-sm solid @brand-primary;
+            }
+        }
+    }
+
+    &-step {
+        &::before {
+            top: 0;
+            bottom: 0;
+            transform: translateY(0);
+        }
+        span {
+            .circleCls();
+            &::before {
+                background-color: @brand-primary;
+            }
+        }
+    }
+    &-first {
+        &::before {
+            top: 50%;
+            bottom: 0;
+            transform: translateY(4 * @hd);
+        }
+    }
+}

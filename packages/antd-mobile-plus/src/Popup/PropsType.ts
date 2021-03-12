@@ -70,5 +70,10 @@ export interface PopupType {
     /**
      * @description 弹出层的容器样式
      */
-    style?: TransitionType['style']
+    style?: TransitionType['style'];
+
+    /**
+     * @description 已经关闭事件
+     */
+    onClosed?: () => void;
 }
