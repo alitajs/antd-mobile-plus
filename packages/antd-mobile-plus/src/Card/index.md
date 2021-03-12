@@ -24,4 +24,4 @@ nav:
 | --- | --- | --- | --- |
 | type | 底部类型，查看详情或者是右侧按钮 | "details" | "btn"| |
 | onClick | 底部点击事件 | () => void| |
-| btnText |  右侧按钮文字 | string| |
+| btnText |  右侧按钮文字 | string|查看详情 |

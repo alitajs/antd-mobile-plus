@@ -26,7 +26,7 @@ const Demo: FC<DemoProps> = (props) => {
           </div>
         </CardBody>
         <CardFooter
-          type="details"
+          type="fill"
           onClick={() => {
             console.log("click");
           }}
@@ -49,7 +49,7 @@ const Demo: FC<DemoProps> = (props) => {
             </div>
           </CardBody>
           <CardFooter
-            type="btn"
+            type="single"
             btnText="完成任务"
             onClick={() => {
               console.log("btnclick");

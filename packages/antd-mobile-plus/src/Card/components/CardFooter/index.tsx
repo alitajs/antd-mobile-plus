@@ -6,11 +6,11 @@ import "./index.less";
 const prefixCls = "alita-card-footer";
 
 const CardFooter: FC<CardFooterType> = (props) => {
-  const { type, onClick, children, btnText } = props;
+  const { type, onClick, children, btnText = "查看详情" } = props;
   const log = useTracker(CardFooter.displayName, {});
   return (
     <div className={prefixCls}>
-      {type && type === "details" ? (
+      {type && type === "fill" ? (
         <div
           className={`${prefixCls}-details`}
           onClick={() => {
@@ -20,12 +20,9 @@ const CardFooter: FC<CardFooterType> = (props) => {
             }
           }}
         >
-          查看更多 <i className={`${prefixCls}-icon-right`}></i>
+          {btnText} <i className={`${prefixCls}-icon-right`}></i>
         </div>
       ) : (
-        ""
-      )}
-      {type && type === "btn" ? (
         <div
           className={`${prefixCls}-btn`}
           onClick={() => {
@@ -37,9 +34,8 @@ const CardFooter: FC<CardFooterType> = (props) => {
         >
           <span className={`${prefixCls}-btn-text`}>{btnText}</span>
         </div>
-      ) : (
-        ""
       )}
+
       {children}
     </div>
   );

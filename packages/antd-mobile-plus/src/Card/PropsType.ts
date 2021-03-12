@@ -18,14 +18,14 @@ export interface CardFooterType {
      * @description 卡片底部内容
      * @default 为空
      */
-    type?: "details" | "btn";
+    type?: "fill" | "single";
     /**
      * @description 底部的点击事件
      */
     onClick?: () => void;
     /**
-     *@description 按钮字体
-
+     * @description 按钮字体
+     * @default 查看详情
      */
     btnText?: string;
 }
