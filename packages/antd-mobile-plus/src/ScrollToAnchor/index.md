@@ -1,5 +1,5 @@
 ---
-title: 组件
+title: 锚点
 nav:
   title: 锚点
   path: /components
