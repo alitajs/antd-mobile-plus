@@ -1,10 +1,13 @@
 ---
 title: 卡片
+group:
+  title: 卡片
 nav:
   title: 组件
   path: /components
 ---
 
+# Card
 ### 展示
 
 <code src="./demos/demo.tsx" />

@@ -1,10 +1,13 @@
 ---
 title: 底部按钮栏
+group: 
+  title: 底部按钮栏
 nav:
   title: 组件
   path: /components
 ---
 
+# FooterBar
 ### 展示
 
 <code src="./demos/demo.tsx" />

@@ -1,10 +1,13 @@
 ---
 title: 多语言
+group: 
+  title: 多语言
 nav:
   title: 组件
   path: /components
 ---
 
+# LocaleProvider
 ### 展示
 
 <code src="./demos/NumericInput.tsx" />
