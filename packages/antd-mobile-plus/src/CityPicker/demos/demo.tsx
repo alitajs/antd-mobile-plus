@@ -7,7 +7,6 @@ interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
   const [open, setOpen] = useState(false);
-  const [selectId, setSelectId] = useState();
   const [data, setData] = useState<any[]>([]);
   return (
     <div>

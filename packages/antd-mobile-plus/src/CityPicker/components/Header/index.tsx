@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
+import { withError } from '@alitajs/tracker';
 import { CityPickerHeaderType } from '../../PropsType';
 import './index.less';
 

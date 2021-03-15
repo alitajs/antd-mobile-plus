@@ -1,6 +1,6 @@
 import React, { FC, useState, useMemo } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
-import { useMount, useSetState } from 'ahooks';
+import { useSetState } from 'ahooks';
 import { PickerView } from './components';
 import { CityPickerType } from './PropsType';
 import Popup from '../Popup';
@@ -16,9 +16,6 @@ const CityPicker: FC<CityPickerType> = ({
 }) => {
   const log = useTracker(CityPicker.displayName, {});
   const [visiable, setVisiable] = useState(false);
-  const [state, setState] = useSetState({
-    initial: true,
-  });
 
   useMemo(() => {
     if (show) {

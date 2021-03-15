@@ -1,7 +1,7 @@
 ---
-title: 城市选择器
+title: 选择器
 nav:
-  title: 组件
+  title: 选择器
   path: /components
 ---
 
