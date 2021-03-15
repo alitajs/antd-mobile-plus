@@ -4,13 +4,28 @@ import { ScrollToAnchorType, AnchorItemType } from '../../PropsType';
 import classnames from 'classnames';
 
 interface AnchorNavProps {
+  /**
+   * @description 数据源
+   */
   data: ScrollToAnchorType['data'];
+  /**
+   * @description 事件点击
+   */
   onClick?: (item: AnchorItemType, index: number) => void;
 }
 
 export interface AnchorNavType extends AnchorNavProps {
+  /**
+   * @description 锚点容器className
+   */
   className?: string;
+  /**
+   * @description 锚点容器style样式
+   */
   style?: CSSProperties;
+  /**
+   * @description 渲染item
+   */
   onRenderItem: (item: AnchorItemType) => React.ReactNode;
 }
 
