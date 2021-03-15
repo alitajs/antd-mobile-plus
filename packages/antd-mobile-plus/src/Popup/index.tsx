@@ -21,6 +21,7 @@ const Popup: FC<PopupType> = ({
   closeOnClickOverlay = true,
   offset = 0,
   popMode = 'relative',
+  onClosed = () => {},
   ...transitionProps
 }) => {
   const log = useTracker(Popup.displayName, {});
@@ -92,6 +93,7 @@ const Popup: FC<PopupType> = ({
           }}
           onClosed={() => {
             setOverlayShow(false);
+            onClosed();
           }}
         >
           {children}

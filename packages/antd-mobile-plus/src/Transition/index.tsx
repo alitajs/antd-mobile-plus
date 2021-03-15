@@ -128,7 +128,7 @@ const Transition: FC<TransitionType> = ({
     <div
       style={aStyle}
       className={classnames(prefixCls, {
-        className: !!className,
+        [`${className}`]: !!className,
       })}
     >
       {children}
