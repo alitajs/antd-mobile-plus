@@ -23,7 +23,7 @@ export default () => {
     },
   });
   return (
-    <div style={{ marginTop: '24px' }}>
+    <div style={{ marginTop: '24px' ,display: 'flex'}}>
       <ProcessTrack
         data={[
           {
