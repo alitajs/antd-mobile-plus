@@ -1,9 +1,13 @@
 ---
-title: 搜索组件
+title: 搜索
+group: 
+  title: 搜索
 nav:
   title: 组件
   path: /components
 ---
+
+# SearchView
 
 ### 展示
 

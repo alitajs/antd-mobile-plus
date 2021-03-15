@@ -1,10 +1,13 @@
 ---
 title: 选择面板
+group: 
+  title: 选择面板
 nav:
   title: 选择面板
   path: /components
 ---
 
+# PickerPanel
 ### 展示
 
 #### 基础用法

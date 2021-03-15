@@ -1,10 +1,13 @@
 ---
 title: 定位地图块
+group:
+  title: 定位地图块
 nav:
   title: 组件
   path: /components
 ---
 
+# ActionMaper
 ### 使用说明
  <font color='red'>**注意**</font>：使用组件内置定位，请确保网页部署在`https`上，否则在版本`iOS10`以后将无法正常定位。
 

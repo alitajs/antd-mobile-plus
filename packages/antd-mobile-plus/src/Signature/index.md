@@ -1,10 +1,13 @@
 ---
-title: 手写签名
+title: 电子签名
+group: 
+  title: 电子签名
 nav:
   title: 组件
   path: /components
 ---
 
+# Signature
 ### 展示
 
 <code src="./demos/demo.tsx" />

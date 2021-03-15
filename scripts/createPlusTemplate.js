@@ -47,6 +47,7 @@ const prefixCls = 'alita-${this.transformString(this.componentsName)}';`;
 
   modifyMD(filePath, fileName) {
     let mdText = fs.readFileSync(filePath).toString();
+    mdText = mdText.replace(/{__componentName___}/g, this.componentsName);
     fs.writeFileSync(path.join(this.targetPath, fileName), mdText);
   }
 

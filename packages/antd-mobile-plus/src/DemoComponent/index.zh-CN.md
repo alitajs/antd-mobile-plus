@@ -1,5 +1,7 @@
 ---
 title: 演示组件
+group: 
+  title: 演示组件
 nav:
   title: 组件
   path: /components

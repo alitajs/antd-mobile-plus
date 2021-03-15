@@ -1,9 +1,13 @@
 ---
 title: 锚点
+group: 
+  title: 锚点
 nav:
   title: 锚点
   path: /components
 ---
+
+# ScrollToAnchor
 
 ### 基础用法
 <code src="./demos/basic.tsx" />
