@@ -25,7 +25,7 @@ export interface CardFooterType {
     onClick?: () => void;
     /**
      * @description 按钮字体
-     * @default 查看详情
+     * @default 
      */
     btnText?: string;
 }

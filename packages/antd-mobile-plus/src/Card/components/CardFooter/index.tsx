@@ -1,45 +1,49 @@
-import React, { FC } from "react";
-import { withError, useTracker } from "@alitajs/tracker";
-import { CardFooterType } from "../../PropsType";
-import "./index.less";
+import React, { FC } from 'react';
+import { withError, useTracker } from '@alitajs/tracker';
+import { CardFooterType } from '../../PropsType';
+import './index.less';
 
-const prefixCls = "alita-card-footer";
+const prefixCls = 'alita-card-footer';
 
 const CardFooter: FC<CardFooterType> = (props) => {
-  const { type, onClick, children, btnText = "查看详情" } = props;
+  const { type = 'fill', onClick, children, btnText } = props;
   const log = useTracker(CardFooter.displayName, {});
-  return (
-    <div className={prefixCls}>
-      {type && type === "fill" ? (
-        <div
-          className={`${prefixCls}-details`}
-          onClick={() => {
-            log("footer-click");
-            if (onClick) {
-              onClick();
-            }
-          }}
-        >
-          {btnText} <i className={`${prefixCls}-icon-right`}></i>
-        </div>
-      ) : (
-        <div
-          className={`${prefixCls}-btn`}
-          onClick={() => {
-            log("footer-btnClick");
-            if (onClick) {
-              onClick();
-            }
-          }}
-        >
-          <span className={`${prefixCls}-btn-text`}>{btnText}</span>
-        </div>
-      )}
 
-      {children}
-    </div>
-  );
+  const FooterView = () => {
+    switch (type) {
+      case 'fill':
+        return (
+          <div
+            className={`${prefixCls}-details`}
+            onClick={() => {
+              log('footer-click');
+              if (onClick) {
+                onClick();
+              }
+            }}
+          >
+            {btnText} <i className={`${prefixCls}-icon-right`}></i>
+          </div>
+        );
+      case 'single':
+        return (
+          <div
+            className={`${prefixCls}-btn`}
+            onClick={() => {
+              log('footer-btnClick');
+              if (onClick) {
+                onClick();
+              }
+            }}
+          >
+            <span className={`${prefixCls}-btn-text`}>{btnText}</span>
+          </div>
+        );
+    }
+  };
+
+  return <div className={prefixCls}>{children ?? <FooterView />}</div>;
 };
 
-CardFooter.displayName = "CardFooter";
+CardFooter.displayName = 'CardFooter';
 export default withError(CardFooter);
