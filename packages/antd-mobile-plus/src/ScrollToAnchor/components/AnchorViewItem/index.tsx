@@ -1,8 +1,6 @@
 import React, { FC, useRef } from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
+import { withError } from '@alitajs/tracker';
 import { ScrollToAnchorType } from '../../PropsType';
-import { useScroll, useDebounceEffect, useLockFn } from 'ahooks';
-import './index.less';
 import { useScrollEnd } from '../../Utils/Scroll';
 
 interface AnchorViewItemType {

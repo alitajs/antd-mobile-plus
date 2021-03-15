@@ -1,11 +1,10 @@
-import React, { FC, useState, useEffect, useRef } from 'react';
+import React, { FC, useRef } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import AnchorView, { AnchorViewType } from './components/AnchorView';
 import AnchorNav, { AnchorNavType } from './components/AnchorNav';
 import { ScrollToAnchorType, AnchorItemType } from './PropsType';
 import { useScrollTo } from './Utils/Scroll';
 import classnames from 'classnames';
-import './index.less';
 
 const prefixCls = 'alita-scroll-to-anchor';
 const TIME_OUT = 500;

@@ -1,9 +1,7 @@
 import React, { FC, CSSProperties, useMemo } from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
+import { withError } from '@alitajs/tracker';
 import { ScrollToAnchorType, AnchorItemType } from '../../PropsType';
 import classnames from 'classnames';
-
-import './index.less';
 
 interface AnchorNavProps {
   data: ScrollToAnchorType['data'];

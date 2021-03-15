@@ -3,7 +3,6 @@ import { withError } from '@alitajs/tracker';
 import classnames from 'classnames';
 import AnchorViewItem from '../AnchorViewItem';
 import { ScrollToAnchorType, AnchorItemType } from '../../PropsType';
-import './index.less';
 
 interface AnchorViewBasicProps {
   /**

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
+import { withError } from '@alitajs/tracker';
 import classnames from 'classnames';
 import { EmptyType } from './PropsType';
 import { TypeList } from './assets/type';
@@ -14,7 +14,6 @@ const Empty: FC<EmptyType> = ({
   className,
   style,
 }) => {
-  const log = useTracker(Empty.displayName, {});
   const IconView = () => {
     return icon ? (
       <img className={`${prefixCls}-icon`} src={icon} alt="" />
