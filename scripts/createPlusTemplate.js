@@ -153,7 +153,7 @@ export interface ${this.componentsName}Type {
       .readFileSync(path.join(__dirname, './template/sub/index.less'))
       .toString();
     less = less.replace(
-      /@__prefixcls__;/g,
+      /@__prefixcls__/g,
       `@prefixCls: alita-${this.transformString(this.subName)}`,
     );
     fs.writeFileSync(path.join(subPath, `${this.subName}/index.less`), less);
