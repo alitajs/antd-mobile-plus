@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Card } from '@alitajs/antd-mobile-plus';
-const { CardHeader, CardBody, CardFooter } = Card;
+const { Header, Body, Footer } = Card;
 
 interface DemoProps {}
 
@@ -8,12 +8,12 @@ const Demo: FC<DemoProps> = (props) => {
   return (
     <div style={{ padding: '0.24rem' }}>
       <Card>
-        <CardHeader
+        <Header
           title="执行任务"
           // thumb={<span>图标</span>}
           extra={<span>右侧自定义</span>}
         />
-        <CardBody>
+        <Body>
           <div
             style={{
               height: '30vh',
@@ -24,8 +24,8 @@ const Demo: FC<DemoProps> = (props) => {
           >
             body
           </div>
-        </CardBody>
-        <CardFooter
+        </Body>
+        <Footer
           type="fill"
           btnText="查看详情"
           onClick={() => {
@@ -36,8 +36,8 @@ const Demo: FC<DemoProps> = (props) => {
 
       <div style={{ padding: '24px 0' }}>
         <Card>
-          <CardHeader title="执行任务" thumb={<span>图标</span>} />
-          <CardBody>
+          <Header title="执行任务" thumb={<span>图标</span>} />
+          <Body>
             <div
               style={{
                 height: '30vh',
@@ -48,8 +48,8 @@ const Demo: FC<DemoProps> = (props) => {
             >
               body
             </div>
-          </CardBody>
-          <CardFooter
+          </Body>
+          <Footer
             type="single"
             btnText="完成任务"
             onClick={() => {
@@ -61,8 +61,8 @@ const Demo: FC<DemoProps> = (props) => {
 
       <div style={{ padding: '24px 0' }}>
         <Card>
-          <CardHeader title="自定义底部" />
-          <CardBody>
+          <Header title="自定义底部" />
+          <Body>
             <div
               style={{
                 height: '30vh',
@@ -73,10 +73,10 @@ const Demo: FC<DemoProps> = (props) => {
             >
               body
             </div>
-          </CardBody>
-          <CardFooter>
+          </Body>
+          <Footer>
             <div style={{ textAlign: 'center' }}>我是自定义的底部</div>
-          </CardFooter>
+          </Footer>
         </Card>
       </div>
     </div>
