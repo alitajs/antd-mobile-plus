@@ -1,5 +1,10 @@
-import { ActivityIndicator, WingBlank, WhiteSpace, Button } from 'antd-mobile';
-
+import {
+  ActivityIndicator,
+  WingBlank,
+  WhiteSpace,
+  Button,
+} from '@alitajs/antd-mobile';
+import './index.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
