@@ -1,5 +1,5 @@
-import { Accordion, List } from 'antd-mobile';
-
+import { List } from 'antd-mobile';
+import { Accordion } from '@alitajs/antd-mobile';
 class AccordionExmple extends React.Component {
   onChange = (key) => {
     console.log(key);
