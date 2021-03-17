@@ -1,6 +1,7 @@
-import React, { FC, useImperativeHandle, forwardRef, memo } from 'react';
+import React, { FC, useImperativeHandle, forwardRef } from 'react';
 import SwipeAction from 'antd-mobile/lib/swipe-action';
 import { withError, useTracker } from '@alitajs/tracker';
+import useCompleteLocale from '../LocaleProvider/useCompleteLocale';
 import classnames from 'classnames';
 import { getTypeWithFileName } from './utils';
 import {
@@ -23,7 +24,7 @@ const UploadFile: FC<UploadEditType | UploadFileDisabelType> = forwardRef(
       disable = false,
       accept = '*/*',
       multiple = true,
-      title = '附件上传',
+      title,
       onRenderTips,
     } = props as any;
     const [state, setState] = useSetState<{
@@ -31,6 +32,7 @@ const UploadFile: FC<UploadEditType | UploadFileDisabelType> = forwardRef(
     }>({
       data: initialData,
     });
+    const lang = useCompleteLocale();
     const log = useTracker(UploadFile.displayName, {});
     useImperativeHandle(ref, () => {
       return {
@@ -140,7 +142,9 @@ const UploadFile: FC<UploadEditType | UploadFileDisabelType> = forwardRef(
       <div className={prefixCls}>
         <div className={`${prefixCls}-card`}>
           <div className={`${prefixCls}-header`}>
-            <div className={`${prefixCls}-title`}>{title}</div>
+            <div className={`${prefixCls}-title`}>
+              {title ?? lang.UploadFile.title}
+            </div>
             <UploadLoadButton />
           </div>
           <div hidden={state.data.length === 0} className={`${prefixCls}-body`}>
