@@ -31,6 +31,7 @@ const Card: CarrdFC<CardType> = (props) => {
     </div>
   );
 };
+
 Card.Header = CardHeader;
 Card.Body = CardBody;
 Card.Footer = CardFooter;

@@ -1,9 +1,9 @@
 ---
-title: 上传附件
+title: 附件上传
 group: 
-  title: 上传附件
+  title: 附件上传
 nav:
-  title: 上传附件
+  title: 附件上传
   path: /components
 ---
 

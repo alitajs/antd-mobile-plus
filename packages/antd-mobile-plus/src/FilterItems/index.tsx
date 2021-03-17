@@ -16,7 +16,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
     onItemChange,
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
-  const [drawOpen, updateDrawOpen] = useState("up");
+  const [drawOpen, updateDrawOpen] = useState('up');
   const [drawData, updateDrawDate] = useState([]);
   const log = useTracker(FilterItems.displayName, {});
   const myFilter = classnames({
@@ -29,11 +29,11 @@ export const FilterItems: FC<FilterProps> = (props) => {
   });
   const awayRef = useRef(null);
   const [activeObj, updateActiveObj] = useState({});
-  const [acFilterId, updateAcFilterId] = useState("");
-  const [selectObj, updateSelectObj] = useState({});;
+  const [acFilterId, updateAcFilterId] = useState('');
+  const [selectObj, updateSelectObj] = useState({});
 
   return (
-    <div className={myFilter} >
+    <div className={myFilter}>
       <div className={`${prefixCls}-content`} ref={awayRef}>
         {data.map((item: FilterItemProps, index: number) => {
           const { filterId } = item;
@@ -88,9 +88,9 @@ export const FilterItems: FC<FilterProps> = (props) => {
                     data: child,
                     filterId: data[activeIndex].filterId,
                   });
-                  updateDrawOpen("up");
+                  updateDrawOpen('up');
                   updateActiveIndex(-1);
-                  log("onItemChange");
+                  log('onItemChange');
                   awayRef.current;
                   console.log('22');
                 }}

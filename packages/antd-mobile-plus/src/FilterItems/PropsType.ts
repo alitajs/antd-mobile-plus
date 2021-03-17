@@ -26,7 +26,7 @@ export interface FilterItemsProps {
   /**
    * @description 点击当前filter进行up和down切换，关闭其他的filter
    */
-  onClick: (status: string,selectObj:Object) => void;
+  onClick: (status: string, selectObj: Object) => void;
   /**
    * @description 当前选中的对象
    */
@@ -40,13 +40,13 @@ export interface FilterItemsProps {
    */
   filterId: string;
   /**
- * @description 每个筛选项选中的初始值
- */
+   * @description 每个筛选项选中的初始值
+   */
   initObj: Object;
   /**
- * @description 字段别名
- * @default {id：'id',label:'label'}
- */
+   * @description 字段别名
+   * @default {id：'id',label:'label'}
+   */
   aliasObj: AliasProps;
 }
 

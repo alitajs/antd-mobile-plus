@@ -1,11 +1,11 @@
-@import '~@alitajs/theme/es/index.less';;
-@import '~@alitajs/theme/es/mixins/icon';
+@import '~@alitajs/theme/es/index.less';
 @import '~antd-mobile/lib/swipe-action/style/index';
-
+@import './assets/svg';
 
 @prefixCls:alita-upload-file;
 
 .@{prefixCls} {
+    overflow: hidden;
     border-radius: 6 * @hd;
     background-color: @fill-base;
     &-header {
@@ -18,7 +18,7 @@
         font-weight: 500;
     }
     &-body {
-        padding-bottom: 16 * @hd;
+        // padding-left: 16 * @hd;
     }
     &-extra {
         position: relative;
@@ -34,9 +34,62 @@
             opacity: 0;
         }
     } 
+    
 
     &-fileitem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        min-height: 73 * @hd;
         padding: 16 * @hd;
+        border-bottom: @border-width-sm solid @border-color-base;
+    }
+    &-icon {
+        width: 40 * @hd;
+        height: 40 * @hd;
+        margin-right: 12 * @hd;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &-ppt {
+            .svg-ppt-icon();
+        }
+        &-docx {
+            .svg-docx-icon();
+        }
+        &-xlsx {
+            .svg-xlsx-icon();
+        }
+        &-other {
+            .svg-other-icon();
+        }
+        &-img {
+            .svg-img-icon();
+        }
+        &-pdf {
+            .svg-pdf-icon();
+        }
+    }
+
+    &-text {
+        flex: 1;
+        word-break: break-all;
+        color: @color-text-base;
+        font-size: @font-size-base;
+    }
+    // 解决 SwiperAction 右侧按钮边线的bug   
+    .am-swipe-actions-right {
+        border: @border-width-lg solid @fill-base;        
+    }
+
+    &-action-delete {
+        background-color: @brand-error;
+        color: @color-text-base-inverse;
+    }
+    &-action-preview {
+        background-color: @brand-important;
+        color: @color-text-base-inverse;
     }
 }
       
