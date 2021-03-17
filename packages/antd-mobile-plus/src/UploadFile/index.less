@@ -1,0 +1,42 @@
+@import '~@alitajs/theme/es/index.less';;
+@import '~@alitajs/theme/es/mixins/icon';
+@import '~antd-mobile/lib/swipe-action/style/index';
+
+
+@prefixCls:alita-upload-file;
+
+.@{prefixCls} {
+    border-radius: 6 * @hd;
+    background-color: @fill-base;
+    &-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16 * @hd 16 * @hd 10 * @hd;
+        font-size: 17 * @hd;
+        font-weight: 500;
+    }
+    &-body {
+        padding-bottom: 16 * @hd;
+    }
+    &-extra {
+        position: relative;
+        width: 18 * @hd;
+        height: 18 * @hd;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .svg-upload-icon();
+        input {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+    } 
+
+    &-fileitem {
+        padding: 16 * @hd;
+    }
+}
+      
