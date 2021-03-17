@@ -1,4 +1,4 @@
-import React, { FC, useImperativeHandle, forwardRef, Ref } from 'react';
+import React, { FC, useImperativeHandle, forwardRef } from 'react';
 import SwipeAction from 'antd-mobile/lib/swipe-action';
 import { withError, useTracker } from '@alitajs/tracker';
 import classnames from 'classnames';
@@ -8,7 +8,7 @@ import {
   UploadFileDataType,
   UploadFileDisabelType,
 } from './PropsType';
-import { useSetState, useMount } from 'ahooks';
+import { useSetState } from 'ahooks';
 import './index.less';
 
 const prefixCls = 'alita-upload-file';
