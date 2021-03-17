@@ -55,6 +55,7 @@ const UploadFile: FC<UploadEditType | UploadFileDisabelType> = forwardRef(
           text: '删除',
           className: `${prefixCls}-action-delete`,
           onPress: () => {
+            log('onDeletePress');
             onDeletePress(file, index);
           },
         },
@@ -62,6 +63,7 @@ const UploadFile: FC<UploadEditType | UploadFileDisabelType> = forwardRef(
           text: '预览',
           className: `${prefixCls}-action-preview`,
           onPress: () => {
+            log('onPreview');
             onPreview && onPreview(index, file);
           },
         },
