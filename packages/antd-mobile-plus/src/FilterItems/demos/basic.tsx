@@ -1,6 +1,6 @@
-import * as React from "react";
-import { setTracker } from "@alitajs/tracker";
-import { FilterItems } from "@alitajs/antd-mobile-plus";
+import * as React from 'react';
+import { setTracker } from '@alitajs/tracker';
+import { FilterItems } from '@alitajs/antd-mobile-plus';
 
 export default () => {
   // 这个方法应该统一添加
@@ -21,39 +21,39 @@ export default () => {
   const data = [
     {
       data: [
-        { id: "1", value: "排序不限1" },
-        { id: "2", value: "任务来源2" },
-        { id: "3", value: "全部3" },
+        { id: '1', value: '排序不限1' },
+        { id: '2', value: '任务来源2' },
+        { id: '3', value: '全部3' },
       ],
-      filterId: "f_1",
+      filterId: 'f_1',
     },
     {
       data: [
-        { id: "21", value: "全部2" },
-        { id: "22", value: "任务来源2" },
-        { id: "23", value: "全部" },
-        { id: "24", value: "排序-不限2" },
+        { id: '21', value: '全部2' },
+        { id: '22', value: '任务来源2' },
+        { id: '23', value: '全部' },
+        { id: '24', value: '排序-不限2' },
       ],
-      filterId: "f_2",
+      filterId: 'f_2',
     },
     {
       data: [
-        { id: "31", value: "这个名字很长这个名字很长3" },
-        { id: "32", value: "任务来源3" },
-        { id: "33", value: "全部3" },
+        { id: '31', value: '这个名字很长这个名字很长3' },
+        { id: '32', value: '任务来源3' },
+        { id: '33', value: '全部3' },
       ],
-      filterId: "f_3",
+      filterId: 'f_3',
     },
   ];
 
   return (
-    <div style={{ margin: "24px 0", height: "100vh" }}>
+    <div style={{ margin: '24px 0', height: '100vh' }}>
       <FilterItems
         data={data}
         onItemChange={(data: any) => {
           console.log(data);
         }}
-        alias={{ label: "value" }}
+        alias={{ label: 'value' }}
       />
     </div>
   );

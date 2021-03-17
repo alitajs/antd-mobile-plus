@@ -19,9 +19,6 @@
         opacity: @opacity-disabled;
         background-color: @color-active;
         color: @fill-base;
-        &:active {
-            .active();
-        }
     }
 
     &-primary {
@@ -39,5 +36,8 @@
     &-default {
         border: @border-width-sm solid @border-color-base-alita;
         background-color: @fill-base;
+        &:active {
+            .active();
+        }
     }
 }

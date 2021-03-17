@@ -10,8 +10,8 @@ const prefixCls = 'alita-scroll-to-anchor';
 const TIME_OUT = 500;
 
 export interface AnchorFC<T> extends FC<T> {
-  Nav?: FC<AnchorNavType>;
-  Container?: FC<AnchorViewType>;
+  Nav: FC<AnchorNavType>;
+  Container: FC<AnchorViewType>;
 }
 
 const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
