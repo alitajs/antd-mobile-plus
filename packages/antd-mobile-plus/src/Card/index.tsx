@@ -8,9 +8,9 @@ import './index.less';
 import { CardType, CardHeaderType, CardFooterType } from './PropsType';
 
 export interface CarrdFC<T> extends FC<T> {
-  CardHeader?: FC<CardHeaderType>;
-  CardBody?: FC<T>;
-  CardFooter?: FC<CardFooterType>;
+  Header: FC<CardHeaderType>;
+  Body: FC<T>;
+  Footer: FC<CardFooterType>;
 }
 
 const prefixCls = 'alita-card';
@@ -31,8 +31,9 @@ const Card: CarrdFC<CardType> = (props) => {
     </div>
   );
 };
-Card.CardHeader = CardHeader;
-Card.CardBody = CardBody;
-Card.CardFooter = CardFooter;
+
+Card.Header = CardHeader;
+Card.Body = CardBody;
+Card.Footer = CardFooter;
 Card.displayName = 'Card';
 export default withError(Card);
