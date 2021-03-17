@@ -1,6 +1,7 @@
 import React, { FC, useRef } from 'react';
 import { Button } from 'antd-mobile';
-import { UploadFile } from '@alitajs/antd-mobile-plus';
+// import { UploadFile } from '@alitajs/antd-mobile-plus';
+import UploadFile from '../index';
 
 interface DemoProps {}
 
@@ -11,7 +12,10 @@ const Demo: FC<DemoProps> = (props) => {
       <Button
         type="primary"
         onClick={() => {
-          console.log(ref.current.data());
+          console.log(ref);
+          if (ref.current) {
+            console.log(ref.current!.data());
+          }
         }}
       >
         获取附件列表

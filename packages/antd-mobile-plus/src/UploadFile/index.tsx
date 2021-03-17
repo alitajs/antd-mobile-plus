@@ -1,4 +1,4 @@
-import React, { FC, useImperativeHandle, forwardRef } from 'react';
+import React, { FC, useImperativeHandle, forwardRef, memo } from 'react';
 import SwipeAction from 'antd-mobile/lib/swipe-action';
 import { withError, useTracker } from '@alitajs/tracker';
 import classnames from 'classnames';
@@ -137,7 +137,7 @@ const UploadFile: FC<UploadEditType | UploadFileDisabelType> = forwardRef(
     };
 
     return (
-      <div className={prefixCls} ref={ref}>
+      <div className={prefixCls}>
         <div className={`${prefixCls}-card`}>
           <div className={`${prefixCls}-header`}>
             <div className={`${prefixCls}-title`}>{title}</div>
@@ -155,6 +155,8 @@ const UploadFile: FC<UploadEditType | UploadFileDisabelType> = forwardRef(
 );
 
 UploadFile.displayName = 'UploadFile';
-export default withError(UploadFile, {
-  forwardRef: true,
-});
+// export default withError(UploadFile, {
+//   forwardRef: true,
+// });
+
+export default UploadFile;
