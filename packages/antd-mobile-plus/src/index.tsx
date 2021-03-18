@@ -19,3 +19,4 @@ export { default as ScrollToAnchor } from './ScrollToAnchor';
 export { default as Empty } from './Empty';
 export { default as Card } from './Card';
 export { default as UploadFile } from './UploadFile';
+export { default as ApprovalFlow } from './ApprovalFlow';
