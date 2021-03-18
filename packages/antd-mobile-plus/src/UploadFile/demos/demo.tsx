@@ -59,6 +59,8 @@ const Demo: FC<DemoProps> = (props) => {
       <UploadFile
         disable
         title="附件列表"
+        accept=""
+        onDelete={() => {}}
         initialData={[
           {
             name: '附件1',
