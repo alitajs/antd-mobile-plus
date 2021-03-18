@@ -1,0 +1,44 @@
+@import '~@alitajs/theme/es/index.less';;
+
+@prefixCls: alita-capsule;
+
+.size(@height) {
+    height: @height * @hd;
+    border-radius: @height / 2 * @hd;
+    line-height: @height * @hd;
+}
+
+.@{prefixCls} {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 12 * @hd;
+    font-size: 15 * @hd;
+    text-align: center;
+    &-sm {
+        .size(24);
+    }
+    &-md {
+        .size(26);
+    }
+    &-lg {
+        .size(30);
+    }
+
+    &-primary {
+        color: @color-text-base-inverse;
+        background-color: @brand-primary;
+    }
+    &-ghost {
+        color: @brand-primary;
+        background-color: @fill-base;
+        border: @border-width-sm solid @brand-primary;
+    }
+    &-default {
+        color: @brand-primary;
+        background-color: @color-capsule-default;
+    }
+
+    &-disable {
+        opacity: 0.4;
+    }
+}
