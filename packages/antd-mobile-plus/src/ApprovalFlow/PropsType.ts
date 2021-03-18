@@ -29,5 +29,5 @@ export interface ApprovalFlowType {
     /**
      * @description 标题
      */
-    title: string;
+    title?: string;
 }

@@ -79,6 +79,7 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
         scrollElement={scrollElement}
         style={{
           maxHeight,
+          top: 0,
         }}
         onClose={() => {
           onHide();

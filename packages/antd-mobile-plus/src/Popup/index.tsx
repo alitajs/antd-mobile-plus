@@ -67,7 +67,7 @@ const Popup: FC<PopupType> = ({
   // 历史浏览器前进或者后退操作时关闭
   useEventListener('popstate', aClose);
   return (
-    <>
+    <div style={{ transform: 'scale(1)' }}>
       <div ref={topRef} className="topref"></div>
       <div
         style={{ ...aOverlayStyle }}
@@ -99,7 +99,7 @@ const Popup: FC<PopupType> = ({
           {children}
         </Transition>
       </div>
-    </>
+    </div>
   );
 };
 
