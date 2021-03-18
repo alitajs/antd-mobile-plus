@@ -15,7 +15,7 @@ const Demo: FC<DemoProps> = (props) => {
           justifyContent: 'space-around',
         }}
       >
-        <Capsule text="胶囊按钮" size="sm"></Capsule>
+        <Capsule text="胶囊按钮" size="sm" onPress={() => {}} disable></Capsule>
         <Capsule text="胶囊按钮" size="md"></Capsule>
         <Capsule text="胶囊按钮" size="lg"></Capsule>
       </div>
@@ -27,7 +27,7 @@ const Demo: FC<DemoProps> = (props) => {
           justifyContent: 'space-around',
         }}
       >
-        <Capsule text="胶囊按钮" size="sm" type="default"></Capsule>
+        <Capsule disable text="胶囊按钮" size="sm" type="default"></Capsule>
         <Capsule text="胶囊按钮" size="md" type="default"></Capsule>
         <Capsule text="胶囊按钮" size="lg" type="default"></Capsule>
       </div>
@@ -39,7 +39,7 @@ const Demo: FC<DemoProps> = (props) => {
           justifyContent: 'space-around',
         }}
       >
-        <Capsule text="胶囊按钮" size="sm" type="primary"></Capsule>
+        <Capsule disable text="胶囊按钮" size="sm" type="primary"></Capsule>
         <Capsule text="胶囊按钮" size="md" type="primary"></Capsule>
         <Capsule text="胶囊按钮" size="lg" type="primary"></Capsule>
       </div>

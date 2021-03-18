@@ -27,6 +27,7 @@ const Capsule: FC<CapsuleType> = ({
       )}
       onClick={() => {
         if (!disable) {
+          log('onPress');
           onPress && onPress();
         }
       }}
