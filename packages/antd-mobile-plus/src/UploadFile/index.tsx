@@ -1,20 +1,27 @@
 import React, { FC, useImperativeHandle, forwardRef } from 'react';
 import SwipeAction from 'antd-mobile/lib/swipe-action';
 import { withError, useTracker } from '@alitajs/tracker';
-import useCompleteLocale from '../LocaleProvider/useCompleteLocale';
 import classnames from 'classnames';
+import { useSetState } from 'ahooks';
+import useCompleteLocale from '../LocaleProvider/useCompleteLocale';
 import { getTypeWithFileName } from './utils';
 import {
   UploadEditType,
   UploadFileDataType,
   UploadFileDisabelType,
+  UploadFileType,
 } from './PropsType';
-import { useSetState } from 'ahooks';
 import './index.less';
 
 const prefixCls = 'alita-upload-file';
 
-const UploadFile: FC<UploadEditType | UploadFileDisabelType> = (props) => {
+type UploadType<T> = T extends true
+  ? UploadFileDisabelType
+  : T extends false
+  ? UploadEditType
+  : never;
+
+const UploadFile: FC<UploadType<UploadFileType['disable']>> = (props) => {
   const {
     initialData = [],
     onDelete,
