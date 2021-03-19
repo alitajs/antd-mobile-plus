@@ -19,3 +19,6 @@ export { default as ScrollToAnchor } from './ScrollToAnchor';
 export { default as Empty } from './Empty';
 export { default as Card } from './Card';
 export { default as UploadFile } from './UploadFile';
+export { default as SimpleCard } from './SimpleCard';
+export { default as QRCode } from './QRCode';
+export { default as Watermark } from './Watermark';
