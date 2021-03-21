@@ -1,5 +1,7 @@
 export type FileType = 'excel' | 'doc' | 'ppt' | 'pdf' | 'image' | 'other';
 export type FileClickFn = (index: number, file: UploadFileDataType) => void;
+
+
 export interface UploadFileDataType {
   /**
    * @description 文件类型
@@ -21,8 +23,12 @@ export interface UploadFileDataType {
   file?: File;
   [key: string]: any;
 }
-
-interface UploadFileType {
+export interface UploadFileType {  
+  /**
+   * @description 是否不可编辑
+   * @default false
+   */
+   disable?: boolean;
   /**
    * @description 模块标题
    * @default 附件上传
@@ -37,17 +43,18 @@ interface UploadFileType {
 }
 
 export interface UploadFileDisabelType extends UploadFileType {
+  
   /**
    * @description 是否不可编辑
    * @default false
    */
-  disable: boolean;
+  disable: true;
 
   /**
    * @description 数据源
    * @default []
    */
-  initialData?: UploadFileDataType[];
+  initialData: UploadFileDataType[];
 
   /**
    * @description 点击事件回调
@@ -57,6 +64,12 @@ export interface UploadFileDisabelType extends UploadFileType {
 }
 
 export interface UploadEditType extends UploadFileType {
+  /**
+   * @description 是否不可编辑
+   * @default false
+   */
+  disable?: false;
+  
   /**
    * @description 文件类型
    * @default 默认接受所有类型

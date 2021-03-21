@@ -22,3 +22,4 @@ export { default as UploadFile } from './UploadFile';
 export { default as SimpleCard } from './SimpleCard';
 export { default as QRCode } from './QRCode';
 export { default as Watermark } from './Watermark';
+export { default as Capsule } from './Capsule';
