@@ -1,37 +1,30 @@
 import { useMemo } from 'react';
 import { PopupType } from '../PropsType';
+import { TransitionProps } from '../components/Transition'
 
 export const overlayOrigin = (
-  scrollElement: HTMLElement,
   topEle: HTMLElement,
-  direction?: 'up' | 'down',
+  mode?: PopupType['mode'],
   offset = 0,
-  popMode?: PopupType['popMode'],
-): { top: number; bottom: number } => {
-  let px = 0;
-  if (popMode === 'relative') {
-    px = topEle.getBoundingClientRect().y;
+  popMode?: PopupType['type'],
+): TransitionProps['overlayStyle']|undefined => {
+  if (mode === 'alert' || mode === 'sliderLeft' || mode === 'sliderRight') {
+    return;
   }
-  if (direction === 'down') {
-    return {
-      bottom: 0,
-      top: px + offset,
-    };
+  if (popMode === 'fullscreen') {
+    return;
   }
-  if (direction === 'up') {
-    let bottom = 0;
-    if (popMode === 'relative') {
-      bottom = (document.documentElement || document.body).clientHeight - px;
-    }
-    return {
-      top: 0,
-      bottom: bottom + offset,
-    };
+  switch (mode) {
+    case 'popup':
+      return {
+        bottom: document.documentElement.clientHeight - topEle.getBoundingClientRect().y - offset
+      }
+    case 'dropdown':
+      return {
+        top: topEle.getBoundingClientRect().y + offset
+      }
   }
-  return {
-    top: 0,
-    bottom: 0,
-  };
+  return;
 };
 
 export const useLockScroll = (

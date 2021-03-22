@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { BasicTarget } from 'ahooks/es/utils/dom';
-import { TransitionType } from '../Transition/PropsType';
+import { TransitionProps } from './components/Transition';
 
 export interface PopupType {
   /**
@@ -20,32 +20,26 @@ export interface PopupType {
   onClose?: () => void;
 
   /**
-   * @description 遮罩层所在区域滚动节点
+   * @description 页面区域滚动节点，一般用于`type`为relative时使用
    * @default document.documentElement
    */
   scrollElement?: HTMLElement;
 
   /**
-   * @description 遮罩层样式
-   * @default -
-   */
-  overlayStyle?: CSSProperties;
-
-  /**
    * @description 弹出框方向
-   * @default down
+   * @default popup
    */
-  direction?: 'up' | 'down';
+   mode?: TransitionProps['mode'];
 
   /**
-   * @description 是否在点击遮罩层后关闭菜单
+   * @description 是否在点击遮罩层后关闭视图
    * @default true
    */
   closeOnClickOverlay?: boolean;
 
   /**
-   * @description 是否在点击遮罩层后关闭菜单
-   * @default true
+   * @description 是否在点击其他区域关闭视图
+   * @default false
    */
   closeOnClickOutside?: boolean;
 
@@ -62,17 +56,33 @@ export interface PopupType {
 
   /**
    * @description 弹出模式， fullscreen:全屏  relative: 相对当前控件位置弹出
-   * @default  relative
+   * @default  fullscreen
    */
-  popMode?: 'fullscreen' | 'relative';
+  type?: 'fullscreen' | 'relative';
 
   /**
-   * @description 弹出层的容器样式
+   * @description 容器区域的尺寸 
+   * @default 80%
    */
-  style?: TransitionType['style'];
+  contentSize?: CSSProperties['maxWidth'];
 
   /**
-   * @description 已经关闭事件
+   * @description 动画即将进入
    */
-  onClosed?: () => void;
+   onEnter?: () => void;
+
+   /**
+    * @description 动画已经进入
+    */
+   onEntered?: () => void;
+ 
+   /**
+    * @description 动画即将退出
+    */
+   onExit?: () => void;
+ 
+   /**
+    * @description 动画已经退出
+    */
+   onExited?: () => void;
 }

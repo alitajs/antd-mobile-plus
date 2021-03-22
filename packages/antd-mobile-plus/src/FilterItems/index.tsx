@@ -65,13 +65,16 @@ export const FilterItems: FC<FilterProps> = (props) => {
       <Popup
         awayRef={awayRef}
         show={drawOpen === 'down'}
+        closeOnClickOutside={true}
+        mode="dropdown"
+        type="relative"
         onClose={() => {
           updateDrawOpen('up');
           updateActiveIndex(-1);
           log('close');
         }}
       >
-        <div>
+        <div className={`${prefixCls}-popwrapper`}>
           {drawData.map((child) => {
             return (
               <div
