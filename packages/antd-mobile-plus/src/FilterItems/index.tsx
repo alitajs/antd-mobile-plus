@@ -11,7 +11,7 @@ const prefixCls = "alita-filter";
 export const FilterItems: FC<FilterProps> = (props) => {
   const {
     data = [],
-    defalutSelect = 0,
+    defaultSelect = 0,
     alias = { label: "label", id: "id" },
     onItemChange,
     scrollElement,
@@ -46,7 +46,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
               filterId={filterId}
               aliasObj={aliasObj}
               selectObj={activeObj}
-              initObj={item.data[defalutSelect]}
+              initObj={item.data[defaultSelect]}
               openFlag={index === activeIndex ? "down" : "up"}
               onClick={(options: string, selectObj) => {
                 log(options);

@@ -75,7 +75,7 @@ export interface FilterProps {
    * @description 默认选择下标
    * @default 0
    */
-  defalutSelect?: number;
+  defaultSelect?: number;
   /**
    * @description 字段别名
    * @default {id：'id',label:'label'}
