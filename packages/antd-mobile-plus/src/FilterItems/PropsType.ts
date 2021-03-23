@@ -1,3 +1,8 @@
+/*
+ * @Descripttion:
+ * @Author: wll
+ * @Date: 2021-03-23 10:11:23
+ */
 export interface FilterItemProps {
   /**
    * @description 筛选的数据
@@ -8,6 +13,12 @@ export interface FilterItemProps {
    * @description 每个Filter的id
    */
   filterId: string;
+
+  /**
+   * @description 初始的文字,一般在该值不在数据当中使用
+   * @default 数组中的第一个
+   */
+  defaluText?: string;
 }
 export interface AliasProps {
   /**
@@ -48,6 +59,11 @@ export interface FilterItemsProps {
    * @default {id：'id',label:'label'}
    */
   aliasObj: AliasProps;
+  /**
+  * @description 初始的文字,一般在该值不在数据当中使用
+  * @default 数组中的第一个
+  */
+  defaluText?: string;
 }
 
 export interface FilterProps {
@@ -69,4 +85,10 @@ export interface FilterProps {
    * @description 每个数据项的点击事件
    */
   onItemChange: (data: any) => void;
+  /**
+  * @description 页面区域滚动节点，一般用于`type`为relative时使用
+  * @default document.documentElement
+  */
+  scrollElement?: HTMLElement;
+
 }

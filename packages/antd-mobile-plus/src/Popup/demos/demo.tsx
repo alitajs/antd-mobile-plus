@@ -1,5 +1,6 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
-import { Popup } from '@alitajs/antd-mobile-plus';
+// import { Popup } from '@alitajs/antd-mobile-plus';
+import Popup from '../index';
 
 interface DemoProps {}
 
@@ -22,29 +23,24 @@ const Demo: FC<DemoProps> = (props) => {
             position: 'relative',
           }}
           onClick={() => {
-            setShow(!show);
+            console.log('show');
+            setShow(true);
           }}
         >
           打开动画
         </div>
         <Popup
-          // popMode=""
-          awayRef={awayRef}
-          show={show}
+          mode="alert"
           onClose={() => {
+            console.log(false);
             setShow(false);
           }}
-          scrollElement={ref.current}
-          direction="down"
+          show={show}
+          closeOnClickOverlay={false}
         >
           <div
-            onClick={() => {
-              setShow(false);
-            }}
-            style={{ height: '50vh', textAlign: 'center', lineHeight: '50vh' }}
-          >
-            弹出内容区域(滚动页面，再点击试试？)
-          </div>
+            style={{ height: '50vw', width: '70vw', backgroundColor: '#fff' }}
+          ></div>
         </Popup>
       </div>
     </div>

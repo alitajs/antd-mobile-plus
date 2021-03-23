@@ -35,9 +35,11 @@
     "classnames": "^2.2.6",
     "qrcode": "^1.4.1",
     "react-bmapgl": "^0.1.4",
-    "react-canvas-draw": "^1.1.1"
+    "react-canvas-draw": "^1.1.1",
+    "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
+    "@types/react-transition-group": "^4.4.1",
     "@types/react-canvas-draw": "^1.1.0"
   }
 }
