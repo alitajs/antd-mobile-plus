@@ -13,7 +13,7 @@ const Popup: FC<PopupType> = ({
   awayRef,
   show = false,
   onClose = () => {},
-  scrollElement = document.documentElement || document.body,
+  scrollElement = document.documentElement,
   mode = 'popup',
   children,
   closeOnClickOutside = false,
