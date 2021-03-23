@@ -30,5 +30,4 @@ export { default as RibbonColor } from './RibbonColor';
 export { default as TextGroup } from './TextGroup';
 export { default as Table } from './Table';
 export { default as Notification } from './Notification';
-
 export { default as LevelView } from './LevelView';
