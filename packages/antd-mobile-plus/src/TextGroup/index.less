@@ -1,0 +1,32 @@
+@import '~@alitajs/theme/es/index.less';
+// @import '~@alitajs/theme/es/mixins/icon.less';
+
+@prefixCls: alita-text-group;
+
+.@{prefixCls} {
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  ul li {
+    list-style: none;
+  }
+  &-list {
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+    .am-textgroup-list-item {
+      > span {
+        cursor: pointer;
+        font-size: @font-size-caption;
+        color: @brand-primary;
+        &:hover {
+          color: #ccc;
+        }
+      }
+    }
+  }
+  &-line {
+    height: 100%;
+    border-right: 1px solid #ccc;
+  }
+}
