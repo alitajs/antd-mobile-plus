@@ -15,7 +15,6 @@ export const FilterItems: FC<FilterProps> = (props) => {
     alias = { label: "label", id: "id" },
     onItemChange,
     scrollElement,
-    drawItemRender,
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
   const [drawOpen, updateDrawOpen] = useState("up");
@@ -38,10 +37,11 @@ export const FilterItems: FC<FilterProps> = (props) => {
     <div className={myFilter}>
       <div className={`${prefixCls}-content`} ref={awayRef}>
         {data.map((item: FilterItemProps, index: number) => {
-          const { filterId } = item;
+          const { filterId, defaluText } = item;
           return (
             <FilterItem
               key={filterId}
+              defaluText={defaluText}
               activeFilterId={acFilterId}
               filterId={filterId}
               aliasObj={aliasObj}
@@ -79,33 +79,29 @@ export const FilterItems: FC<FilterProps> = (props) => {
       >
         <div className={`${prefixCls}-popwrapper`}>
           {drawData.map((child: any) => {
-            if (drawItemRender) {
-              return drawItemRender(child);
-            } else {
-              return (
-                <div
-                  key={child[aliasObj.id]}
-                  className={classnames({
-                    [`${prefixCls}-drawer-item`]: true,
-                    [`${prefixCls}-drawer-item-active`]:
-                      selectObj[aliasObj.id] === child[aliasObj.id],
-                  })}
-                  onClick={() => {
-                    updateAcFilterId(data[activeIndex].filterId);
-                    updateActiveObj(child);
-                    onItemChange({
-                      data: child,
-                      filterId: data[activeIndex].filterId,
-                    });
-                    updateDrawOpen("up");
-                    updateActiveIndex(-1);
-                    log("onItemChange");
-                  }}
-                >
-                  {child[aliasObj.label]}
-                </div>
-              );
-            }
+            return (
+              <div
+                key={child[aliasObj.id]}
+                className={classnames({
+                  [`${prefixCls}-drawer-item`]: true,
+                  [`${prefixCls}-drawer-item-active`]:
+                    selectObj[aliasObj.id] === child[aliasObj.id],
+                })}
+                onClick={() => {
+                  updateAcFilterId(data[activeIndex].filterId);
+                  updateActiveObj(child);
+                  onItemChange({
+                    data: child,
+                    filterId: data[activeIndex].filterId,
+                  });
+                  updateDrawOpen("up");
+                  updateActiveIndex(-1);
+                  log("onItemChange");
+                }}
+              >
+                {child[aliasObj.label]}
+              </div>
+            );
           })}
         </div>
       </Popup>
