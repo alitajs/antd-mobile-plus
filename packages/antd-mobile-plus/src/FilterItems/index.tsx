@@ -37,11 +37,11 @@ export const FilterItems: FC<FilterProps> = (props) => {
     <div className={myFilter}>
       <div className={`${prefixCls}-content`} ref={awayRef}>
         {data.map((item: FilterItemProps, index: number) => {
-          const { filterId, defaluText } = item;
+          const { filterId, defaulText } = item;
           return (
             <FilterItem
               key={filterId}
-              defaluText={defaluText}
+              defaulText={defaulText}
               activeFilterId={acFilterId}
               filterId={filterId}
               aliasObj={aliasObj}

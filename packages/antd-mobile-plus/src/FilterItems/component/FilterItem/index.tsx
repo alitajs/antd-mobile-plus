@@ -19,11 +19,11 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
     activeFilterId,
     filterId,
     initObj = {},
-    defaluText,
+    defaulText,
   } = props;
   const [status, updateStatus] = React.useState(openFlag);
   const [currentObj, updateCurrentObj] = React.useState(initObj);
-  const [myDefaluText, updateText] = React.useState(defaluText);
+  const [myDefaulText, updateText] = React.useState(defaulText);
 
   React.useEffect(() => {
     updateStatus(openFlag);
@@ -50,7 +50,7 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
         }}
       >
         <div className={`${prefixCls}-active-text `}>
-          {myDefaluText || currentObj[(aliasObj as any).label]}
+          {myDefaulText || currentObj[(aliasObj as any).label]}
         </div>
         <i
           className={classnames({

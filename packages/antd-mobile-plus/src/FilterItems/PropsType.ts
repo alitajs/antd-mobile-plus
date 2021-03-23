@@ -18,7 +18,7 @@ export interface FilterItemProps {
    * @description 初始的文字,一般在该值不在数据当中使用
    * @default 数组中的第一个
    */
-  defaluText?: string;
+   defaulText?: string;
 }
 export interface AliasProps {
   /**
@@ -63,7 +63,7 @@ export interface FilterItemsProps {
   * @description 初始的文字,一般在该值不在数据当中使用
   * @default 数组中的第一个
   */
-  defaluText?: string;
+   defaulText?: string;
 }
 
 export interface FilterProps {
