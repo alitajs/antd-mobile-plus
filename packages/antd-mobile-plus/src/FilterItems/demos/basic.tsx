@@ -1,3 +1,8 @@
+/*
+ * @Descripttion:
+ * @Author: wll
+ * @Date: 2021-03-23 10:11:23
+ */
 import * as React from 'react';
 import { setTracker } from '@alitajs/tracker';
 import { FilterItems } from '@alitajs/antd-mobile-plus';
@@ -47,13 +52,17 @@ export default () => {
   ];
 
   return (
-    <div style={{ margin: '24px 0', height: '100vh' }}>
+    <div style={{ padding: '24px 0',}}>
       <FilterItems
         data={data}
+        // drawItemRender={(child)=>{
+        //   return <div>11</div>
+        // }}
         onItemChange={(data: any) => {
           console.log(data);
         }}
         alias={{ label: 'value' }}
+
       />
     </div>
   );

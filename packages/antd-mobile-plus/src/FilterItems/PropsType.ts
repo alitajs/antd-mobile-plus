@@ -1,3 +1,8 @@
+/*
+ * @Descripttion:
+ * @Author: wll
+ * @Date: 2021-03-23 10:11:23
+ */
 export interface FilterItemProps {
   /**
    * @description 筛选的数据
@@ -69,4 +74,10 @@ export interface FilterProps {
    * @description 每个数据项的点击事件
    */
   onItemChange: (data: any) => void;
+  /**
+  * @description 页面区域滚动节点，一般用于`type`为relative时使用
+  * @default document.documentElement
+  */
+  scrollElement?: HTMLElement;
+
 }

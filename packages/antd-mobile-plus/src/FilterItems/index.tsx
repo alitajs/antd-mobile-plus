@@ -1,35 +1,37 @@
-import React, { useState, FC, useRef } from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
-import classnames from 'classnames';
-import FilterItem from './component/FilterItem';
-import { FilterProps, FilterItemProps } from './PropsType';
-import Popup from '../Popup/index';
-import './index.less';
+import React, { useState, FC, useRef } from "react";
+import { withError, useTracker } from "@alitajs/tracker";
+import classnames from "classnames";
+import FilterItem from "./component/FilterItem";
+import { FilterProps, FilterItemProps } from "./PropsType";
+import Popup from "../Popup/index";
+import "./index.less";
 
-const prefixCls = 'alita-filter';
+const prefixCls = "alita-filter";
 
 export const FilterItems: FC<FilterProps> = (props) => {
   const {
     data = [],
     defalutSelect = 0,
-    alias = { label: 'label', id: 'id' },
+    alias = { label: "label", id: "id" },
     onItemChange,
+    scrollElement,
+    drawItemRender,
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
-  const [drawOpen, updateDrawOpen] = useState('up');
+  const [drawOpen, updateDrawOpen] = useState("up");
   const [drawData, updateDrawDate] = useState([]);
   const log = useTracker(FilterItems.displayName, {});
   const myFilter = classnames({
     [`${prefixCls}`]: true,
     [`${prefixCls}-single`]: data.length === 1,
   });
-  const aliasObj = { label: 'label', id: 'id' };
+  const aliasObj = { label: "label", id: "id" };
   Object.keys(alias).forEach((aliasItem) => {
     aliasObj[aliasItem] = alias[aliasItem];
   });
   const awayRef = useRef(null);
   const [activeObj, updateActiveObj] = useState({});
-  const [acFilterId, updateAcFilterId] = useState('');
+  const [acFilterId, updateAcFilterId] = useState("");
   const [selectObj, updateSelectObj] = useState({});
 
   return (
@@ -45,10 +47,10 @@ export const FilterItems: FC<FilterProps> = (props) => {
               aliasObj={aliasObj}
               selectObj={activeObj}
               initObj={item.data[defalutSelect]}
-              openFlag={index === activeIndex ? 'down' : 'up'}
+              openFlag={index === activeIndex ? "down" : "up"}
               onClick={(options: string, selectObj) => {
                 log(options);
-                if (options === 'down') {
+                if (options === "down") {
                   updateActiveIndex(index);
                 } else {
                   updateActiveIndex(-1);
@@ -63,44 +65,47 @@ export const FilterItems: FC<FilterProps> = (props) => {
       </div>
 
       <Popup
+        scrollElement={scrollElement}
         awayRef={awayRef}
-        show={drawOpen === 'down'}
+        show={drawOpen === "down"}
         closeOnClickOutside={true}
         mode="dropdown"
         type="relative"
         onClose={() => {
-          updateDrawOpen('up');
+          updateDrawOpen("up");
           updateActiveIndex(-1);
-          log('close');
+          log("close");
         }}
       >
         <div className={`${prefixCls}-popwrapper`}>
-          {drawData.map((child) => {
-            return (
-              <div
-                key={child[aliasObj.id]}
-                className={classnames({
-                  [`${prefixCls}-drawer-item`]: true,
-                  [`${prefixCls}-drawer-item-active`]:
-                    selectObj[aliasObj.id] === child[aliasObj.id],
-                })}
-                onClick={() => {
-                  updateAcFilterId(data[activeIndex].filterId);
-                  updateActiveObj(child);
-                  onItemChange({
-                    data: child,
-                    filterId: data[activeIndex].filterId,
-                  });
-                  updateDrawOpen('up');
-                  updateActiveIndex(-1);
-                  log('onItemChange');
-                  awayRef.current;
-                  console.log('22');
-                }}
-              >
-                {child[aliasObj.label]}
-              </div>
-            );
+          {drawData.map((child: any) => {
+            if (drawItemRender) {
+              return drawItemRender(child);
+            } else {
+              return (
+                <div
+                  key={child[aliasObj.id]}
+                  className={classnames({
+                    [`${prefixCls}-drawer-item`]: true,
+                    [`${prefixCls}-drawer-item-active`]:
+                      selectObj[aliasObj.id] === child[aliasObj.id],
+                  })}
+                  onClick={() => {
+                    updateAcFilterId(data[activeIndex].filterId);
+                    updateActiveObj(child);
+                    onItemChange({
+                      data: child,
+                      filterId: data[activeIndex].filterId,
+                    });
+                    updateDrawOpen("up");
+                    updateActiveIndex(-1);
+                    log("onItemChange");
+                  }}
+                >
+                  {child[aliasObj.label]}
+                </div>
+              );
+            }
           })}
         </div>
       </Popup>
@@ -108,5 +113,5 @@ export const FilterItems: FC<FilterProps> = (props) => {
   );
 };
 
-FilterItems.displayName = 'FilterItems';
+FilterItems.displayName = "FilterItems";
 export default withError(FilterItems);
