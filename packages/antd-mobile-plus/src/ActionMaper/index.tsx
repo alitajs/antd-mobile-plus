@@ -1,6 +1,6 @@
 import React, { FC, useRef, useState, useEffect } from 'react';
 import Map, { MapApiLoaderHOC } from 'react-bmapgl/Map';
-import { Marker } from 'react-bmapgl';
+import Marker from 'react-bmapgl/Overlay/Marker';
 import { withError } from '@alitajs/tracker';
 import { ActionMaperType, ActionMaperCoordinateType } from './PropsType';
 import MapHeader from './components/MapHeader';
