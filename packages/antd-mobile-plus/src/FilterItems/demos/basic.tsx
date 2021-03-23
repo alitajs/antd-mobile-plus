@@ -31,7 +31,7 @@ export default () => {
         { id: "3", value: "全部3" },
       ],
       filterId: "f_1",
-      defaluText: "地区",
+      defaultText: "地区",
     },
     {
       data: [
@@ -41,7 +41,7 @@ export default () => {
         { id: "24", value: "排序-不限2" },
       ],
       filterId: "f_2",
-      defaluText:'商区'
+      defaultText:'商区'
     },
     {
       data: [
