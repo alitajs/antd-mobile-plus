@@ -1,5 +1,5 @@
-import React, { FC, CSSProperties, useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React, { FC, CSSProperties, useState, useMemo } from 'react';
+import CSSTransition from 'react-transition-group/CSSTransition';
 import classnames from 'classnames';
 import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
@@ -81,20 +81,20 @@ const Transition: FC<TransitionProps> = ({
   className,
   contentSize = '80%',
 }) => {
-  const [style, setStyle] = useState<CSSProperties>({
-    position: 'fixed',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-  });
-
   const [display, setDisplay] = useState<CSSProperties['display']>('none');
-
+  useMemo(() => {
+    if (show) {
+      setDisplay('block');
+    }
+  }, [show]);
   return (
     <div
       style={{
-        ...style,
+        position: 'fixed',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
         ...overlayStyle,
         display,
         overflow: 'hidden',
@@ -107,7 +107,7 @@ const Transition: FC<TransitionProps> = ({
         classNames={`${prefixCls}-overlay`}
         unmountOnExit
       >
-        {(state) => {
+        {() => {
           return (
             <div
               className={`${prefixCls}-overlay-box`}
@@ -127,16 +127,15 @@ const Transition: FC<TransitionProps> = ({
         unmountOnExit
         onEnter={() => {
           onEnter && onEnter();
-          setDisplay('block');
         }}
         onEntered={onEntered}
         onExit={onExit}
         onExited={() => {
-          onExited && onExited();
           setDisplay('none');
+          onExited && onExited();
         }}
       >
-        {(state) => {
+        {() => {
           return (
             <div
               className={classnames(

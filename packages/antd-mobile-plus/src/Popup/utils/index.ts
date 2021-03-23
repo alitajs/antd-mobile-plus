@@ -1,6 +1,8 @@
 import { useMemo } from 'react';
 import { PopupType } from '../PropsType';
 import { TransitionProps } from '../components/Transition'
+import addClass from 'dom-helpers/addClass'
+import removeClass from 'dom-helpers/removeClass'
 
 export const overlayOrigin = (
   topEle: HTMLElement,
@@ -38,32 +40,11 @@ export const useLockScroll = (
   }, [show]);
 };
 
-const addClass = (targetEle: HTMLElement, className: string) => {
-  const classList = targetEle.classList;
-  if (classList.contains(className)) {
-    return;
-  }
-  classList.add(className);
-  targetEle.className = Array.from(classList).join(' ');
-};
-
-const removeClass = (targetEle: HTMLElement, className: string) => {
-  const classList = targetEle.classList;
-  if (!classList.contains(className)) {
-    return;
-  }
-  classList.remove(className);
-  targetEle.className = Array.from(classList).join(' ');
-};
-
 export const setClass = (
   targetEle: HTMLElement,
   className: string,
   type: 'add' | 'remove',
 ) => {
-  if (!targetEle || !className) {
-    return;
-  }
   if (type === 'add') {
     addClass(targetEle, className);
   }
