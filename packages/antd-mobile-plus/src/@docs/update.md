@@ -12,6 +12,13 @@ order: 0
 
 ## 更新日志
 
+### 0.6.5
+1. UploadFile组件增加以下功能
+  > 1. 最大上传张数。
+  > 2. 支持单张上传
+  > 3. 右侧按钮隐藏和展示
+2. YearMonthView组件点击年月错乱的bug
+3. 
 ### 0.6.4
 > 1. 增加Capsule、QRCode、SimpleCard、Watermark等组件
 > 2. FilterItems组件bug、以及自定义筛选项默认文字
