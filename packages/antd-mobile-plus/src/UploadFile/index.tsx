@@ -1,4 +1,4 @@
-import React, { FC, useImperativeHandle, useMemo } from 'react';
+import React, { FC, useImperativeHandle, forwardRef } from 'react';
 import SwipeAction from 'antd-mobile/lib/swipe-action';
 import { withError, useTracker } from '@alitajs/tracker';
 import classnames from 'classnames';
@@ -23,7 +23,7 @@ type UploadType<T> = T extends true
 
 const UploadFile: FC<UploadType<UploadFileType['disable']>> = (props) => {
   const {
-    data = [],
+    initialData = [],
     onDelete,
     onPreview,
     onClick,
@@ -33,15 +33,11 @@ const UploadFile: FC<UploadType<UploadFileType['disable']>> = (props) => {
     title,
     onRenderTips,
     forwardRef,
-    maxLength = Infinity,
-    hidePreview = false,
-    hideDelete = false,
-    onUploadFile,
   } = props as any;
   const [state, setState] = useSetState<{
     data: UploadFileDataType[];
   }>({
-    data,
+    data: initialData,
   });
   const lang = useCompleteLocale();
   const log = useTracker(UploadFile.displayName, {});
@@ -53,12 +49,6 @@ const UploadFile: FC<UploadType<UploadFileType['disable']>> = (props) => {
     };
   });
 
-  useMemo(() => {
-    setState({
-      data,
-    });
-  }, [JSON.stringify(data)]);
-
   const onDeletePress = (file: UploadFileDataType, index: number) => {
     const { data } = state;
     data.splice(index, 1);
@@ -68,65 +58,51 @@ const UploadFile: FC<UploadType<UploadFileType['disable']>> = (props) => {
     onDelete && onDelete(index, file);
   };
 
-  const rightActionButtons = (file: UploadFileDataType, index: number) => {
-    const deleteAction = {
-      text: '删除',
-      className: `${prefixCls}-action-delete`,
-      onPress: () => {
-        log('onDeletePress');
-        onDeletePress(file, index);
+  const rightAction = (file: UploadFileDataType, index: number) => {
+    return [
+      {
+        text: '删除',
+        className: `${prefixCls}-action-delete`,
+        onPress: () => {
+          log('onDeletePress');
+          onDeletePress(file, index);
+        },
       },
-    };
-    const previewAction = {
-      text: '预览',
-      className: `${prefixCls}-action-preview`,
-      onPress: () => {
-        log('onPreview');
-        onPreview && onPreview(index, file);
+      {
+        text: '预览',
+        className: `${prefixCls}-action-preview`,
+        onPress: () => {
+          log('onPreview');
+          onPreview && onPreview(index, file);
+        },
       },
-    };
-    const actions = [];
-    if (!hideDelete) {
-      actions.push(deleteAction);
-    }
-    if (!hidePreview) {
-      actions.push(previewAction);
-    }
-    return actions;
+    ];
   };
 
   const addFileToData = (e: any) => {
     const files: File[] = Array.from(e.target.files);
-    let data = files.map(
-      (item: File, index: number): UploadFileDataType => {
+    const data = files.map(
+      (item: File): UploadFileDataType => {
         return {
           type: getTypeWithFileName(item),
           name: item.name,
-          id: `${item.lastModified}-${index}`,
+          id: `${item.lastModified}`,
           file: item,
         };
       },
     );
-
-    const allLength = state.data.length + data.length;
-    if (allLength > maxLength) {
-      data.splice(data.length - (allLength - maxLength), allLength - maxLength);
-    }
-    const tempData = state.data.concat(data);
     setState({
-      data: [...tempData],
+      data: state.data.concat(data),
     });
-
-    log('onUploadFile');
-    onUploadFile && onUploadFile(data);
   };
 
   const UploadLoadButton = () => {
-    return disable || state.data.length >= maxLength ? (
+    return disable ? (
       <></>
     ) : (
       <div className={`${prefixCls}-extra`}>
         <input
+          id={'id'}
           type="file"
           accept={accept}
           onChange={addFileToData}
@@ -147,7 +123,7 @@ const UploadFile: FC<UploadType<UploadFileType['disable']>> = (props) => {
       <SwipeAction
         autoClose
         disabled={disable}
-        right={rightActionButtons(item, index)}
+        right={rightAction(item, index)}
       >
         <div className={`${prefixCls}-fileitem`} onClick={onClick}>
           <i

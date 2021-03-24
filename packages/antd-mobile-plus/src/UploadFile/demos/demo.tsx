@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useRef } from 'react';
 import { Button } from 'antd-mobile';
 // import { UploadFile } from '@alitajs/antd-mobile-plus';
 import UploadFile from '../index';
@@ -7,7 +7,6 @@ interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
   const ref = useRef(null);
-  const [data, setData] = useState([]);
   return (
     <div style={{ padding: '0.2rem' }}>
       <Button
@@ -33,11 +32,6 @@ const Demo: FC<DemoProps> = (props) => {
       </div>
       <UploadFile
         ref={ref}
-        maxLength={5}
-        onUploadFile={(data) => {
-          console.log(data);
-        }}
-        // hidePreview={fa'l's}
         onRenderTips={(d) => {
           return (
             <div
@@ -67,7 +61,7 @@ const Demo: FC<DemoProps> = (props) => {
         title="附件列表"
         accept=""
         onDelete={() => {}}
-        data={[
+        initialData={[
           {
             name: '附件1',
             id: '01',
