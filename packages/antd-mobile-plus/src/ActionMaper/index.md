@@ -22,7 +22,13 @@ nav:
 
 <code src="./demos/demo.tsx">
 
-<API/>
+### 参数
+
+### 参1
+<API></API>
+
+### 参数路径
+<API src="./index.tsx"></API>
 
 #### ActionMaperCoordinateType
 
