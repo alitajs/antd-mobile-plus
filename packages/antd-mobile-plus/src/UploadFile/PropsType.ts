@@ -1,7 +1,9 @@
+import {  CSSProperties } from 'react'
+import { SwipeActionPropsType } from 'antd-mobile/lib/swipe-action/PropsType'
+
 export type FileType = 'excel' | 'doc' | 'ppt' | 'pdf' | 'image' | 'other';
 export type FileClickFn = (index: number, file: UploadFileDataType) => void;
-
-
+export type RightAction = SwipeActionPropsType<CSSProperties>['right'];
 export interface UploadFileDataType {
   /**
    * @description 文件类型
@@ -54,7 +56,7 @@ export interface UploadFileDisabelType extends UploadFileType {
    * @description 数据源
    * @default []
    */
-  initialData: UploadFileDataType[];
+  data: UploadFileDataType[];
 
   /**
    * @description 点击事件回调
@@ -91,4 +93,29 @@ export interface UploadEditType extends UploadFileType {
    * @default true
    */
   multiple?: boolean;
+
+  /**
+   * @description 最大张数
+   * @default Infinity
+   */
+  maxLength?: number;
+
+  /**
+   * @description 文件上传
+   * @default
+   */
+  onUploadFile?: (files: UploadFileDataType[]) => void;
+
+  /**
+   * @description 隐藏删除按钮
+   * @default false
+   */
+  hideDelete?: boolean;
+
+  /**
+   * @description 隐藏预览按钮
+   * @default false
+   */
+   hidePreview?: boolean;
+
 }
