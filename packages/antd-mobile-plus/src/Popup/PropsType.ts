@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { BasicTarget } from 'ahooks/es/utils/dom';
 import { TransitionProps } from './components/Transition';
 
-export interface PopupType {
+export interface PopupProps {
   /**
    * @description 展示
    * @default false
@@ -61,7 +61,7 @@ export interface PopupType {
   type?: 'fullscreen' | 'relative';
 
   /**
-   * @description 容器区域的尺寸 
+   * @description 容器区域的尺寸
    * @default 80%
    */
   contentSize?: CSSProperties['maxWidth'];
@@ -75,12 +75,12 @@ export interface PopupType {
     * @description 动画已经进入
     */
    onEntered?: () => void;
- 
+
    /**
     * @description 动画即将退出
     */
    onExit?: () => void;
- 
+
    /**
     * @description 动画已经退出
     */
