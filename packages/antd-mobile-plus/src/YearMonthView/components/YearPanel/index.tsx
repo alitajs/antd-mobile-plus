@@ -62,7 +62,6 @@ const YearPanel: FC<YearPanelType> = ({
                 tDate.setFullYear(year);
                 tDate.setMonth(minMonth + index);
                 tDate.setDate(1);
-                console.log(index, minMonth);
                 onChange(tDate);
               }}
             />

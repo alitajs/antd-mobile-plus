@@ -56,7 +56,6 @@ const Popup: FC<PopupProps> = ({
   useUnmount(aClose);
   // 历史浏览器前进或者后退操作时关闭
   useEventListener('popstate', aClose);
-  console.log(aOverlayStyle);
   return (
     <div ref={topRef}>
       {ReactDOM.createPortal(
