@@ -1,7 +1,8 @@
 ---
 title: 新闻文本及点赞
 group: 
-  title: 新闻文本及点赞
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

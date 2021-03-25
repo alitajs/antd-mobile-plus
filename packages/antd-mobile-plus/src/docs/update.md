@@ -1,7 +1,8 @@
 ---
 title: 更新说明
 group: 
-  title: 介绍
+  title: 开发指南
+  path: /docs
   order: 999
 nav:
   title: 介绍

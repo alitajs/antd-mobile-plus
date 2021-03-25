@@ -1,10 +1,12 @@
 ---
 title: 卡片
 group:
-  title: 卡片
+  title: 基础组件
+  path: /basic
 nav:
   title: 组件
   path: /components
+order: 1
 ---
 
 # Card

@@ -1,7 +1,8 @@
 ---
 title: 国际化
 group: 
-  title: 介绍
+  title: 开发指南
+  path: /docs
   order: 3
 nav:
   title: 介绍

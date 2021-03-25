@@ -1,7 +1,8 @@
 ---
 title: 彩带
 group: 
-  title: 彩带
+  title: 基础组件
+  path: /basic
 nav:
   title: 组件
   path: /components

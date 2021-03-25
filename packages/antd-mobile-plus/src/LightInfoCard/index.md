@@ -1,7 +1,8 @@
 ---
 title: 信息卡片
 group: 
-  title: 信息卡片
+  title: 业务组件
+  path: /plus
 nav:
   title: 信息卡片
   path: /components

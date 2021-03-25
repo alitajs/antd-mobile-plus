@@ -1,7 +1,8 @@
 ---
 title: 公告栏
 group: 
-  title: 公告栏
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

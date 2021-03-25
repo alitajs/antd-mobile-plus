@@ -1,7 +1,8 @@
 ---
 title: 多语言
-group: 
-  title: 多语言
+group:
+  title: 基础组件
+  path: /basic
 nav:
   title: 组件
   path: /components

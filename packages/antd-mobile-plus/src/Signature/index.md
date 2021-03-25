@@ -1,7 +1,8 @@
 ---
 title: 电子签名
 group: 
-  title: 电子签名
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

@@ -1,10 +1,11 @@
 ---
 title: 介绍
 group: 
-  title: 介绍
-  order: 0
+  title: 开发指南
+  path: /docs
+  order: 1
 nav:
-  title: 介绍
+  title: 开发指南
   path: /components
 order: 0
 ---

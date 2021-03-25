@@ -1,7 +1,8 @@
 ---
 title: 选择面板
 group: 
-  title: 选择面板
+  title: 业务组件
+  path: /plus
 nav:
   title: 选择面板
   path: /components

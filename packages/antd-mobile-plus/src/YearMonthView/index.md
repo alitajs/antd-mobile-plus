@@ -1,7 +1,8 @@
 ---
 title: 年月
 group: 
-  title: 年月
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components
