@@ -13,6 +13,4 @@ nav:
 
 
 # CityPickerViewType
-<API/>
-
-
+<API />
