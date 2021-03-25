@@ -1,14 +1,7 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-19 15:21:12
- */
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
+import classnames from 'classnames';
 import { NewsStatisticType } from './PropsType';
-import likeSvg from './assets/like.svg';
-import likeActiveSvg from './assets/like-active.svg';
-
 import './index.less';
 
 const prefixCls = 'alita-news-statistic';
@@ -32,7 +25,7 @@ const NewsStatistic: FC<NewsStatisticType> = (props) => {
         <span>{readNum}</span>
       </div>
       <div className={`${prefixCls}-star`} onClick={() => {log('news-statistic-starClick');onClick && onClick(!active)}}>
-        {active ? <img src={likeActiveSvg} className={`${prefixCls}-icon-active`} /> : <img src={likeSvg} className={`${prefixCls}-icon`} />}
+        {active ? <i className={classnames(`${prefixCls}-icon`, `${prefixCls}-icon-active-like`)}></i> : <i className={classnames(`${prefixCls}-icon`, `${prefixCls}-icon-like`)}></i>}
         {showStarNum ? <span>{starNum}</span> : null}
       </div>
     </div>

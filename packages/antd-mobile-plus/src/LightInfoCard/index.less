@@ -1,5 +1,5 @@
 @import '~@alitajs/theme/es/index.less';
-// @import '~@alitajs/theme/es/mixins/icon.less';
+@import './assets/svg.less';
 
 @prefixCls: alita-light-info-card;
 
@@ -68,9 +68,27 @@
 .@{prefixCls}-extraItem {
   margin-right: 1.5rem;
 }
-.@{prefixCls}-no-img {
-  img {
-    width: 3rem;
-    height: 3rem;
+  &-icon {
+    width: 40 * @hd;
+    height: 40 * @hd;
+    margin-right: 12 * @hd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-user {
+      .svg-user-icon();
+    }
+  }
+.@{prefixCls} {
+    &-icon {
+    width: 40 * @hd;
+    height: 40 * @hd;
+    margin-right: 12 * @hd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-user {
+      .svg-user-icon();
+    }
   }
 }
