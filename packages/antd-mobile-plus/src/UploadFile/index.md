@@ -1,7 +1,8 @@
 ---
 title: 附件上传
 group: 
-  title: 附件上传
+  title: 业务组件
+  path: /plus
 nav:
   title: 附件上传
   path: /components

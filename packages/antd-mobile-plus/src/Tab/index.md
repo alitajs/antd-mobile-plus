@@ -1,7 +1,8 @@
 ---
 title: 功能页签
 group: 
-  title: 功能页签
+  title: 基础组件
+  path: /basic
 nav:
   title: 组件
   path: /components

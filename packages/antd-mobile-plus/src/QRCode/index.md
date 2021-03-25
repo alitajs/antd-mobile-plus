@@ -1,7 +1,8 @@
 ---
 title: 二维码
 group: 
-  title: 二维码
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

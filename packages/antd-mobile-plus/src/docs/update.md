@@ -1,12 +1,12 @@
 ---
 title: 更新说明
 group: 
-  title: 介绍
-  order: 999
+  title: 开发指南
+  path: /docs
 nav:
   title: 介绍
   path: /components
-order: 0
+order: 99
 ---
 
 

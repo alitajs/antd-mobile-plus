@@ -1,7 +1,8 @@
 ---
 title: 文本省略
 group: 
-  title: 文本省略
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

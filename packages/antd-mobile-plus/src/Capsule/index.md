@@ -1,7 +1,8 @@
 ---
 title: 胶囊按钮
 group:
-  title: 胶囊按钮
+  title: 基础组件
+  path: /basic
 nav:
   title: 胶囊按钮
   path: /components

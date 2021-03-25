@@ -1,7 +1,8 @@
 ---
 title: 日历
 group:
-  title: 日历
+  title: 基础组件
+  path: /basic
 nav:
   title: 日历
   path: /components

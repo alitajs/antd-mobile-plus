@@ -1,7 +1,8 @@
 ---
 title: 锚点
-group: 
-  title: 锚点
+group:
+  title: 基础组件
+  path: /basic
 nav:
   title: 锚点
   path: /components

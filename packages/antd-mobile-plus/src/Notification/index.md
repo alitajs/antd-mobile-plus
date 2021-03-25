@@ -1,7 +1,8 @@
 ---
 title: 消息通知
 group: 
-  title: 消息通知
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

@@ -1,7 +1,8 @@
 ---
 title: 表格
 group: 
-  title: 表格
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components
