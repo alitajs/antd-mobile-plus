@@ -1,13 +1,7 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-22 16:54:51
- */
 import React, { FC } from 'react';
 import { withError } from '@alitajs/tracker';
-// import Icon from 'antd-mobile/lib/icon';
+import classnames from 'classnames';
 import { LightInfoCardType } from './PropsType';
-import userSvg from './assets/user.svg';
 import './index.less';
 
 const prefixCls = 'alita-light-info-card';
@@ -63,8 +57,9 @@ const LightInfoCard: FC<LightInfoCardType> = (props) => {
                     )
                     : (
                       <div className={`${prefixCls}-no-img`}>
-                        {/* <Icon type="user" /> */}
-                        <img alt="" src={userSvg} />
+                        <i
+                          className={classnames(`${prefixCls}-icon`, `${prefixCls}-icon-user`)}
+                        ></i>
                       </div>
                     )
                   }

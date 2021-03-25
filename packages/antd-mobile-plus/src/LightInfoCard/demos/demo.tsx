@@ -8,7 +8,6 @@ import { LightInfoCard } from '@alitajs/antd-mobile-plus';
 import appleSvg from '../assets/apple.svg';
 import androidSvg from '../assets/android.svg';
 
-
 interface DemoProps {}
 
 const metaData = [{
