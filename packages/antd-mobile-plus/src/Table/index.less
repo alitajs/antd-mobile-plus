@@ -1,34 +1,30 @@
 @import '~@alitajs/theme/es/index.less';
-// @import "~antd-mobile/lib/table/style/index";
-// @import '~@alitajs/theme/es/mixins/icon.less';
 
 @prefixCls: alita-table;
-@border-color: #eeeeee;
-@table-header-bg: #f9f9f9;
 
 .@{prefixCls} {
   display: flex;
   flex-direction: column;
-  background: white;
-  border: 1px solid @border-color;
+  background: @fill-base;
+  border: 1 * @hd solid @tab-bar-fill;
   border-bottom: 0;
   > .@{prefixCls}-tr {
     display: flex;
     flex-direction: row;
     > div {
-      padding: 8px 12px;
+      padding: 8 * @hd 12 * @hd;
       display: flex;
-      border: 1px solid @border-color;
+      border: 1 * @hd solid @tab-bar-fill;
       box-sizing: border-box;
-      color: #333333;
-      border-width: 0 1px 1px 0;
+      color: @color-text-paragraph;
+      border-width: 0 1 * @hd 1 * @hd 0;
       &:last-child {
         border-right: 0;
       }
     }
   }
   &-th {
-    background: @table-header-bg;
+    background: @fill-grey;
   }
 }
 
@@ -38,27 +34,27 @@
   &:before {
     content: '';
     position: absolute;
-    width: 100px;
-    height: 1px;
+    width: 100 * @hd;
+    height: 1 * @hd;
     display: inline-block;
     transform: rotate(29deg);
-    background: @border-color;
-    top: 25px;
-    left: -5px;
+    background: @tab-bar-fill;
+    top: 25 * @hd;
+    left: -5 * @hd;
     z-index: 3;
   }
   .top,
   .bottom {
     position: absolute;
-    color: #969696;
+    color: @border-color-base;
     background: transparent;
   }
   .top {
-    top: 2px;
-    right: 5px;
+    top: 2 * @hd;
+    right: 5 * @hd;
   }
   .bottom {
-    left: 5px;
-    bottom: 2px;
+    left: 5 * @hd;
+    bottom: 2 * @hd;
   }
 }

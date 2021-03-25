@@ -27,8 +27,8 @@ const metaData = [{
   value: "44020199829191222"
 }]
 const metaImgs = [
-  <img alt="" src={appleSvg} style={{ width: "3rem", height: "3rem" }} />,
-  <img alt="" src={androidSvg} style={{ width: "3rem", height: "3rem" }} />
+  <img alt="" src={appleSvg} />,
+  <img alt="" src={androidSvg} />
 ]
 
 const Demo: FC<DemoProps> = (props) => {

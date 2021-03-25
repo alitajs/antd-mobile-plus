@@ -1,0 +1,38 @@
+@import '~@alitajs/theme/es/index.less';
+// @import '~@alitajs/theme/es/mixins/icon.less';
+
+@prefixCls: alita-loading;
+
+.@{prefixCls} {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.@{prefixCls}-icon-spin {
+  display: flex;
+  width: 58 * @hd;
+  height: 58 * @hd;
+}
+.@{prefixCls}-icon-spin img,
+.@{prefixCls}-icon-spin:before {
+  display: inline-block;
+  -webkit-animation: zteiconLoadingCircle 1.5s infinite linear;
+  animation: zteiconLoadingCircle 1.5s infinite linear;
+  fill: @fill-base;
+}
+@keyframes zteiconLoadingCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

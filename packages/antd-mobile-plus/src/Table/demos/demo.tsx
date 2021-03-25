@@ -6,7 +6,9 @@
 import React, { FC } from 'react';
 import { Progress, WhiteSpace } from 'antd-mobile';
 import { Table } from '@alitajs/antd-mobile-plus';
-import 'antd-mobile/lib/progress/style/index.css'
+import 'antd-mobile/lib/progress/style/index.css';
+import 'antd-mobile/lib/white-space/style/index.css';
+
 interface DemoProps {}
 
 const dataSourceBase = [

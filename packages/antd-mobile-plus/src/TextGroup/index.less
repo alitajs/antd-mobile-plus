@@ -5,8 +5,8 @@
 
 .@{prefixCls} {
   justify-content: space-between;
-  background-color: #fff;
-  padding: 1rem 1rem;
+  background-color: @fill-base;
+  padding: 50 * @hd 50 * @hd;
   ul li {
     list-style: none;
   }
@@ -20,13 +20,13 @@
         font-size: @font-size-caption;
         color: @brand-primary;
         &:hover {
-          color: #ccc;
+          color: @color-text-disabled;
         }
       }
     }
   }
   &-line {
     height: 100%;
-    border-right: 1px solid #ccc;
+    border-right: 1 * @hd solid @color-text-disabled;
   }
 }
