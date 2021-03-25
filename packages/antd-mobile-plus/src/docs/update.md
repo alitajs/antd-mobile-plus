@@ -18,7 +18,8 @@ order: 0
   > 2. 支持单张上传
   > 3. 右侧按钮隐藏和展示
 2. YearMonthView组件点击年月错乱的bug
-3. 
+3. 增加LevelView组件
+4. 去除无用的log日志
 ### 0.6.4
 > 1. 增加Capsule、QRCode、SimpleCard、Watermark等组件
 > 2. FilterItems组件bug、以及自定义筛选项默认文字

@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { BasicTarget } from 'ahooks/es/utils/dom';
 import { TransitionProps } from './components/Transition';
 
-export interface PopupProps {
+export interface PopupType {
   /**
    * @description 展示
    * @default false
