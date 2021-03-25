@@ -21,18 +21,7 @@ export interface LevelViewItemType {
     
 }
 
-
-export interface LevelViewType {
-    /**
-     * @description 文字标题
-     */
-    title?: string;
-
-    /**
-     * @description 底部文字按钮
-     */
-    btnText?: string;
-
+export interface LevelBodyProps {
     /**
      * @description 数据列表
      */
@@ -47,10 +36,27 @@ export interface LevelViewType {
      * @description 点击时间回调
      */
     onSelect?: (e: LevelViewItemType) => void;
+}
+
+export interface LevelViewType extends LevelBodyProps {
+    /**
+     * @description 文字标题
+     */
+    title?: string;
+
+    /**
+     * @description 底部文字按钮
+     */
+    btnText?: string;
 
     /**
      * @description 是否展示底部按钮
      * @default true
      */
     showFooter?: boolean;
+
+    /**
+     * @description 自定义右侧视图
+     */
+    rightExtra?: React.ReactNode;
 }

@@ -1,41 +1,23 @@
-import React, { FC, memo } from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
+import React, { FC } from 'react';
+import { withError } from '@alitajs/tracker';
 import Card from '../Card';
-import Item from './components/Item';
+import LevelBody from './components/LevelBody';
 import { LevelViewType } from './PropsType';
-import './index.less';
 
 const { Header, Body, Footer } = Card;
-const prefixCls = 'alita-levelview';
 
 const LevelView: FC<LevelViewType> = ({
   title = '',
   btnText = '',
-  data = [],
-  onSelect,
-  selectId,
   showFooter = true,
+  rightExtra,
+  ...otherProps
 }) => {
-  const LevelBody = () => (
-    <div className={prefixCls}>
-      {data.map((item) => {
-        return (
-          <Item
-            key={item.value}
-            item={item}
-            isActive={selectId === item.value}
-            onSelect={onSelect}
-          />
-        );
-      })}
-    </div>
-  );
-
   return (
     <Card>
-      <Header title={title}></Header>
+      <Header title={title} extra={rightExtra}></Header>
       <Body>
-        <LevelBody />
+        <LevelBody {...otherProps} />
       </Body>
       {showFooter ? <Footer type="single" btnText={btnText}></Footer> : <></>}
     </Card>
@@ -43,4 +25,4 @@ const LevelView: FC<LevelViewType> = ({
 };
 
 LevelView.displayName = 'LevelView';
-export default withError(memo(LevelView));
+export default withError(LevelView);
