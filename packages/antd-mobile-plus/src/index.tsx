@@ -30,3 +30,7 @@ export { default as RibbonColor } from './RibbonColor';
 export { default as TextGroup } from './TextGroup';
 export { default as Table } from './Table';
 export { default as Notification } from './Notification';
+export { default as CopyBtn } from './CopyBtn';
+export { default as FunctionalCard } from './FunctionalCard';
+export { default as GradientProgress } from './GradientProgress';
+export { default as Loading } from './Loading';

@@ -6,8 +6,8 @@
 .@{prefixCls} {
   position: relative;
   .am-tabs-tab-bar-wrap{
-    padding-right: 39px;
-    background: #fff;
+    padding-right: 39 * @hd;
+    background: @fill-base;
   }
   &-thumb {
     position: absolute;
@@ -18,12 +18,11 @@
     height: @tabs-height;
     text-align: center;
     line-height: @tabs-height;
-    background: #FFFFFF;
-    box-shadow: -2px 0px 8px 0px rgba(0,0,0,0.08);
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: #666;
+    background: @fill-base;
+    box-shadow: -2 * @hd 0 8* @hd 0 @color-tab-list-shadow;
+    img {
+      width: 20 * @hd;
+      height: 20 * @hd;
       vertical-align: middle;
     }
   }
@@ -33,26 +32,26 @@
     right: 0;
     top: 0;
     z-index: @modal-zindex + 1;
-    background-color: white;
+    background-color: @fill-base;
     transform: translateY(0);
     transition: transform 250ms;
-    padding-top: 10px;
+    padding-top: 10 * @hd;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     >span {
       float: left;
       display: block;
-      width: 60px;
+      width: 60 * @hd;
       text-align: center;
       margin: @v-spacing-lg @h-spacing-lg;
       color: fade(@color-text-base, 60%);
       >i {
         display: block;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        border-radius: 60px;
+        width: 60 * @hd;
+        height: 60 * @hd;
+        line-height: 60 * @hd;
+        border-radius: 60 * @hd;
         font-size: 18 * @hd;
         background-color: fade(@brand-primary, 20%);
         color: @brand-primary;
@@ -73,28 +72,28 @@
     background-color: @fill-mask;
   }
   &-item-icon {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 50 * @hd;
+    height: 50 * @hd;
+    line-height: 50 * @hd;
     text-align: center;
     border-radius: 50%;
-    background: #75bee5;
-    margin: 5px auto;
+    background: @tab-list-icon-bg;
+    margin: 5 * @hd auto;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     svg {
-      width: 15px;
-      height: 15px;
-      fill: #fff;
+      width: 15 * @hd ;
+      height: 15 * @hd;
+      fill: @fill-base;
       margin-left: auto;
       margin-right: auto;
     }
   }
   &-item {
-    width: 85px;
-    height: 92px;
+    width: 85 * @hd;
+    height: 92 * @hd;
     display: flex;
     flex-direction: column;
   }

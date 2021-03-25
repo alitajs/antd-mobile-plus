@@ -7,7 +7,7 @@ nav:
   path: /components
 ---
 
-# QRCode
+# TabList
 ### 展示
 
 <code src="./demos/demo.tsx" />

@@ -6,7 +6,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import AntdTabs from 'antd-mobile/lib/tabs';
-import Icon from 'antd-mobile/lib/icon';
+import menuSvg from './assets/menu.svg';
 import classnames from 'classnames';
 import { TabType, TabItemType, TabData } from './PropsType';
 import './index.less';
@@ -61,7 +61,7 @@ const TabList: FC<TabType> = (props) => {
     <div className={prefixCls}>
       <AntdTabs tabs={tabs} page={page} onTabClick={(o: TabData, i: number) => onTabClick(o, i, 'nav')}>{children}</AntdTabs>
       <span className={`${prefixCls}-thumb`} onClick={onThumbClicked}>
-        <Icon type="ellipsis" />
+        <img alt="" src={menuSvg} /> 
       </span>
       {detailContent}
       {expand ? (
