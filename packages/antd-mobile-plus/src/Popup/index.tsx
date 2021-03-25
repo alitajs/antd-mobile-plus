@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { withError, useTracker } from '@alitajs/tracker';
 import Transition, { TransitionProps } from './components/Transition';
 import { useClickAway, useUnmount, useEventListener } from 'ahooks';
-import { PopupProps } from './PropsType';
+import { PopupType } from './PropsType';
 import { overlayOrigin, useLockScroll } from './utils';
 import './index.less';
 
 const prefixCls = 'alita-popup';
 
-const Popup: FC<PopupProps> = ({
+const Popup: FC<PopupType> = ({
   awayRef,
   show = false,
   onClose = () => {},
