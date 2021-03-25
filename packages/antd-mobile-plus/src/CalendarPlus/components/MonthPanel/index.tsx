@@ -1,9 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-19 18:50:33
- */
-
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import DayPanel from '../DayPanel';

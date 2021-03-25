@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-03-01 17:13:41
- */
 import React, { FC, useState, useEffect } from 'react';
 import HeaderView from '../HeaderView';
 import { withError, useTracker } from '@alitajs/tracker';

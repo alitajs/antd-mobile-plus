@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-03-23 10:11:23
- */
 import * as React from "react";
 import classnames from "classnames";
 import { FilterItemsProps } from "../../PropsType";

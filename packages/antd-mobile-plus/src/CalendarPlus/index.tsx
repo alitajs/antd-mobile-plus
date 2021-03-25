@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-19 11:13:28
- */
 import React, { FC, useState, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import HeadPanel from './components/HeadPanel';

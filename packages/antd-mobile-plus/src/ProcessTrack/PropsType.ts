@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-02-20 15:50:29
- */
 /**
  * @description 每个流程块展示的字段内容
  */

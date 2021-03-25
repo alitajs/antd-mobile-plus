@@ -1,9 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-24 09:02:10
- */
-
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import { AliasPickerType } from '../../PropsType';

@@ -12,6 +12,4 @@ nav:
 
 <code src="./demos/basic.tsx" />
 
-### 参数
-
 <API/>

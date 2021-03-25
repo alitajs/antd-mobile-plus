@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-03-23 10:11:23
- */
 export interface FilterItemProps {
   /**
    * @description 筛选的数据
