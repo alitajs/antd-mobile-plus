@@ -23,13 +23,16 @@
         flex-wrap: wrap;
         box-sizing: border-box;
         flex: 1;
-        padding: 14 * @hd 30 * @hd;
+        padding: 14 * @hd 0 14 * @hd 30 * @hd;
     }
 
     &-item {
         flex: 1;
         flex-basis: 50%;
         height: 32 * @hd;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         color: @color-text-paragraph;
         font-size: @font-size-base;
     }
