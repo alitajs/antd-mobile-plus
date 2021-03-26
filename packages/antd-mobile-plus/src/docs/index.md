@@ -12,7 +12,7 @@ order: 0
 
 ## 介绍
 ### 组件说明
-<b>[antd-mobile-plus](https://github.com/alitajs/antd-mobile-plus)</b>是基于`antd-mobile`开发的一套开源UI业务组件库，目前里面涵盖了30+组件。其中的大部分组件是通过火麒麟项目分解得出，对火麒麟以及类似火麒麟风格的项目有更好的支持。
+<b>[antd-mobile-plus](https://github.com/alitajs/antd-mobile-plus)</b>是基于`antd-mobile`开发的一套开源UI业务组件库，目前里面涵盖了30+组件。其中的大部分组件是通过政企类项目分解得出，对政企类以及类似政企类风格的项目有更好的支持。
 
 ### 特性
 
