@@ -1,6 +1,6 @@
 ---
 title: 文本省略
-group: 
+group:
   title: 业务组件
   path: /plus
 nav:

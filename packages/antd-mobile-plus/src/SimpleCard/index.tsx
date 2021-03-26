@@ -1,11 +1,8 @@
 import React, { FC } from 'react';
 import { withError } from '@alitajs/tracker';
-// import classnames from 'classnames';
 import AntdCard from "antd-mobile/lib/card";
 import { SimpleCardType } from './PropsType';
 import './index.less';
-
-// const prefixCls = 'alita-simple-card';
 
 const SimpleCard: FC<SimpleCardType> = ({
   full,

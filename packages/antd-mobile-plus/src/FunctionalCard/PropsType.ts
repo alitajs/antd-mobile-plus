@@ -1,12 +1,17 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-24 11:05:08
- */
-
 export interface FootItemProps {
+  /**
+   * @description 名称
+   */
   name?: string;
+
+  /**
+   * @description 回调函数
+   */
   onClick?: (id: string | number, item: Omit<FootItemProps, 'onClick'>) => void;
+
+  /**
+   * @description 唯一索引
+   */
   key?: string|number;
 }
 
@@ -36,5 +41,8 @@ export interface FunctionalCardType {
    */
   id?: string | number;
 
+  /**
+   * @description 样式对象
+   */
   style: React.CSSProperties;
 }

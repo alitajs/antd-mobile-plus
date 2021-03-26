@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-23 14:07:00
- */
 import React, { FC } from 'react';
 import { TextGroup } from '@alitajs/antd-mobile-plus';
 

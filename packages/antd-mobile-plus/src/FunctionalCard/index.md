@@ -1,7 +1,8 @@
 ---
 title: 功能卡片
 group: 
-  title: 功能卡片
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

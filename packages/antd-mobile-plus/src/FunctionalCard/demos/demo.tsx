@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Autor: fish-qifutao
- * @Date: 2021-03-25 11:05:08
- */
 import React, { FC } from 'react';
 import { FunctionalCard } from '@alitajs/antd-mobile-plus';
 import homePng from '../assets/home.svg';

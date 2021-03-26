@@ -1,5 +1,4 @@
 @import '~@alitajs/theme/es/index.less';
-// @import '~@alitajs/theme/es/mixins/icon.less';
 
 @prefixCls: alita-functional-card;
 
@@ -37,7 +36,7 @@
   }
   .@{prefixCls}-foot {
     background: @fill-body;
-    border-top: 1 * @hd solid @border-color-base-alita;
+    border-top: @border-width-sm solid @border-color-base-alita;
     padding: 15 * @hd 0;
     display: flex;
   }
@@ -49,6 +48,6 @@
     cursor: pointer;
   }
   .@{prefixCls}-foottext + .@{prefixCls}-foottext {
-    border-left: 1 * @hd solid @border-color-base-alita;
+    border-left: @border-width-sm solid @border-color-base-alita;
   }
 }

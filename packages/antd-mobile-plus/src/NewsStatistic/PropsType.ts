@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-19 15:21:12
- */
 export interface NewsStatisticType {
   /**
    * @description 文本
@@ -44,8 +39,8 @@ export interface NewsStatisticType {
    */
   onClick: (active: boolean) => void;
 
-/**
- * @description 是否显示 Star 数量
- */
+  /**
+   * @description 是否显示 Star 数量
+   */
   showStarNum?: boolean;
 }

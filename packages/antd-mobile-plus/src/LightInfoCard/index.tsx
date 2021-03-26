@@ -55,13 +55,7 @@ const LightInfoCard: FC<LightInfoCardType> = (props) => {
                         <div className={`${prefixCls}-img-info`}>{`${imgsSize}张`}</div>
                       </React.Fragment>
                     )
-                    : (
-                      <div className={`${prefixCls}-no-img`}>
-                        <i
-                          className={classnames(`${prefixCls}-icon`, `${prefixCls}-icon-user`)}
-                        ></i>
-                      </div>
-                    )
+                    : <i className={classnames(`${prefixCls}-icon`, `${prefixCls}-icon-user`)}></i>
                   }
                 </div>
               )

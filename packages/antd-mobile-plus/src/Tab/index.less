@@ -1,16 +1,29 @@
 @import '~@alitajs/theme/es/index.less';
 @import "~antd-mobile/lib/tabs/style/index";
-// @import "~@alitajs/theme/es/mixins/icon.less";
+@import "./assets/svg.less";
+
 @prefixCls: alita-tab;
 
 .@{prefixCls} {
   position: relative;
+  &-icon {
+    width: 40 * @hd;
+    height: 40 * @hd;
+    margin-right: 6 * @hd;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: center;
+    &-menu {
+      .svg-menu-icon();
+    }
+  }
   .am-tabs-tab-bar-wrap{
     padding-right: 39 * @hd;
     background: @fill-base;
   }
   &-thumb {
     position: absolute;
+    display: flex;
     top: 0;
     right: 0;
     z-index: 1;
@@ -20,11 +33,6 @@
     line-height: @tabs-height;
     background: @fill-base;
     box-shadow: -2 * @hd 0 8* @hd 0 @color-tab-list-shadow;
-    img {
-      width: 20 * @hd;
-      height: 20 * @hd;
-      vertical-align: middle;
-    }
   }
   &-list {
     position: absolute;

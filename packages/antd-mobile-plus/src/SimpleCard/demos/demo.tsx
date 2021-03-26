@@ -1,9 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-19 10:24:04
- */
-
 import React, { FC } from 'react';
 import { Icon } from 'antd-mobile';
 import { SimpleCard } from '@alitajs/antd-mobile-plus';

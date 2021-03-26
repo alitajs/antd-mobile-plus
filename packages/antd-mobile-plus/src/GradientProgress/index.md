@@ -1,7 +1,8 @@
 ---
 title: 渐变进度条
 group: 
-  title: 渐变进度条
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

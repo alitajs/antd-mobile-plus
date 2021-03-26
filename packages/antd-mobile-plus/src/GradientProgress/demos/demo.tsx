@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-24 14:15:48
- */
 import React, { FC } from 'react';
 import { GradientProgress } from '@alitajs/antd-mobile-plus';
 

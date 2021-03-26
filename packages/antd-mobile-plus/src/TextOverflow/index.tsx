@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-19 15:21:12
- */
 import React, { FC } from 'react';
 import { withError } from '@alitajs/tracker';
 import { TextOverflowType } from './PropsType';

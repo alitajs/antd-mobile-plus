@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-19 15:21:12
- */
 export interface WatermarkType {
   /**
    * @description 显示水印的文本
@@ -39,7 +34,13 @@ export interface WatermarkType {
    */
   gap?: number;
 
+  /**
+   * @description children组件
+   */
   children: React.ReactChildren;
 
+  /**
+  * @description 样式对象
+  */
   style?: React.CSSProperties;
 }

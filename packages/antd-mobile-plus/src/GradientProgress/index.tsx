@@ -1,9 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-24 14:15:48
- */
-
 import React, { FC } from 'react';
 import { withError } from '@alitajs/tracker';
 import { GradientProgressType } from './PropsType';

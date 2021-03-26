@@ -1,6 +1,6 @@
 ---
 title: 功能页签
-group: 
+group:
   title: 基础组件
   path: /basic
 nav:

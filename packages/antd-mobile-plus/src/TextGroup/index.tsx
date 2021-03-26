@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-23 14:07:00
- */
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import { TextGroupType, dataItemType } from './PropsType';

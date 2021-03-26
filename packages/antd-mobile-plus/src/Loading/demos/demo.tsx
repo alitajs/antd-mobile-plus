@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-25 14:49:08
- */
 import React, { FC, useState, useEffect, useCallback } from 'react';
 import { Loading } from '@alitajs/antd-mobile-plus';
 import { Button } from 'antd-mobile';

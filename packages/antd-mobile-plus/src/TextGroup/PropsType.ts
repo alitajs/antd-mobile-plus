@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-23 14:07:00
- */
 export interface dataItemType {
   /** 
    * @description 唯一标识

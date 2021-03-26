@@ -1,9 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-24 14:15:48
- */
-
 export interface GradientProgressType {
   /**
    * @description 设置宽度

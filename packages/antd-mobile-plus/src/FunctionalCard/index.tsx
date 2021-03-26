@@ -1,9 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-24 11:05:08
- */
-
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import { FunctionalCardType, FootItemProps } from './PropsType';

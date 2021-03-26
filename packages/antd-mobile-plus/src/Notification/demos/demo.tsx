@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-23 16:39:51
- */
 import React, { FC } from 'react';
 import { Notification } from '@alitajs/antd-mobile-plus';
 import dingdingSvg from '../assets/dingding.svg';

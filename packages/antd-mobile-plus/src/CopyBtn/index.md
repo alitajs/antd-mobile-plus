@@ -1,7 +1,8 @@
 ---
 title: 复制按钮
 group: 
-  title: 复制按钮
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

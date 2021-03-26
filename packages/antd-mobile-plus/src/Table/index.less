@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   background: @fill-base;
-  border: 1 * @hd solid @tab-bar-fill;
+  border: @border-width-sm solid @tab-bar-fill;
   border-bottom: 0;
   > .@{prefixCls}-tr {
     display: flex;
@@ -14,10 +14,10 @@
     > div {
       padding: 8 * @hd 12 * @hd;
       display: flex;
-      border: 1 * @hd solid @tab-bar-fill;
+      border: @border-width-sm solid @tab-bar-fill;
       box-sizing: border-box;
       color: @color-text-paragraph;
-      border-width: 0 1 * @hd 1 * @hd 0;
+      border-width: 0 @border-width-sm @border-width-sm 0;
       &:last-child {
         border-right: 0;
       }
