@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-19 15:21:12
- */
 import React, { FC } from 'react';
 import { QRCode } from '@alitajs/antd-mobile-plus';
 

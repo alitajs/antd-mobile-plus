@@ -1,0 +1,53 @@
+@import '~@alitajs/theme/es/index.less';
+
+@prefixCls: alita-functional-card;
+
+.@{prefixCls} {
+  background: @fill-base;
+  box-shadow: 0 1 * @hd 4 * @hd 0 @color-box-shadow;
+  /* 自定义标签样式 */
+  .@{prefixCls}-content {
+    height: 158 * @hd;
+    display: flex;
+  }
+  .@{prefixCls}-img {
+    margin: 24 * @hd 10 * @hd 24 * @hd 12 * @hd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .@{prefixCls}-text {
+    flex: 1;
+  }
+  .@{prefixCls}-title {
+    margin-top: 24 * @hd;
+    margin-bottom: 12 * @hd;
+    font-weight: 800;
+  }
+  .@{prefixCls}-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // 控制多行的行数
+    -webkit-box-orient: vertical;
+    width: 280 * @hd;
+    color: @color-text-base;
+    word-wrap: break-word;
+  }
+  .@{prefixCls}-foot {
+    background: @fill-body;
+    border-top: @border-width-sm solid @border-color-base-alita;
+    padding: 15 * @hd 0;
+    display: flex;
+  }
+  .@{prefixCls}-foottext {
+    flex: 1;
+    text-align: center;
+    color: @color-text-base;
+    font-size: @font-size-caption;
+    cursor: pointer;
+  }
+  .@{prefixCls}-foottext + .@{prefixCls}-foottext {
+    border-left: @border-width-sm solid @border-color-base-alita;
+  }
+}

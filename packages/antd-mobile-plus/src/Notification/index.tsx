@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-23 16:39:51
- */
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import AntdList from "antd-mobile/lib/list";

@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-19 15:21:12
- */
 import React, { FC, useState } from 'react';
 import { NewsStatistic } from '@alitajs/antd-mobile-plus';
 

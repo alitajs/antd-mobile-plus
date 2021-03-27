@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-23 10:49:23
- */
 import React, { FC } from 'react';
 import { RibbonColor } from '@alitajs/antd-mobile-plus';
 

@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: fish-qifutao
- * @Date: 2021-03-22 16:54:51
- */
 import React, { FC } from 'react';
 import { LightInfoCard } from '@alitajs/antd-mobile-plus';
 import appleSvg from '../assets/apple.svg';
@@ -27,8 +22,8 @@ const metaData = [{
   value: "44020199829191222"
 }]
 const metaImgs = [
-  <img alt="" src={appleSvg} style={{ width: "3rem", height: "3rem" }} />,
-  <img alt="" src={androidSvg} style={{ width: "3rem", height: "3rem" }} />
+  <img alt="" src={appleSvg} style={{ width: '1.6rem', height: '1.6rem'}} />,
+  <img alt="" src={androidSvg} style={{ width: '1.6rem', height: '1.6rem' }}  />
 ]
 
 const Demo: FC<DemoProps> = (props) => {

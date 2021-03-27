@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-22 16:54:51
- */
 export interface DataItemProps {
   title?: string;
   value?: string;
@@ -44,8 +39,8 @@ export interface LightInfoCardType {
    */
   onClickImg?: () => void;
 
-/**
- * @description style样式
- */
+  /**
+   * @description style样式
+   */
   style?: React.CSSProperties;
 }

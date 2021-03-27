@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-23 14:07:00
- */
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import { TextGroupType, dataItemType } from './PropsType';
@@ -23,7 +18,8 @@ const TextGroup: FC<TextGroupType> = (props) => {
             <li
               className={`${prefixCls}-list-item`}
               onClick={() => {
-                item.onClick && item.onClick(item.key)
+                log('text-group-click');
+                item.onClick && item.onClick(item.key);
               }}
             >
               <span>{item.text}</span>
@@ -39,8 +35,8 @@ const TextGroup: FC<TextGroupType> = (props) => {
             key={item.key}
             className={`${prefixCls}-list-item`}
             onClick={() => {
-              log('text-group-click')
-              item.onClick && item.onClick(item.key)
+              log('text-group-click');
+              item.onClick && item.onClick(item.key);
             }}
           >
             <span>{item.text}</span>

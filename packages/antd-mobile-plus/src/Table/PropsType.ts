@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-23 14:39:53
- */
 export interface TableColumnType {
   /**
   * @description 标题

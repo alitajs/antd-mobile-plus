@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-23 16:39:51
- */
 import { ListItemPropsType } from 'antd-mobile/lib/list/PropsType';
 
 export interface NotificationListItemType extends  ListItemPropsType {
@@ -32,6 +27,4 @@ export interface NotificationType {
    * @description 样式对象
    */
   style?: React.CSSProperties;
-  
-
 }

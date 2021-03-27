@@ -1,6 +1,6 @@
 ---
 title: 彩带
-group: 
+group:
   title: 基础组件
   path: /basic
 nav:

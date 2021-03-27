@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Autor: qifutao
- * @Date: 2021-03-19 15:21:12
- */
 export interface RibbonColorType {
   /**
    * @description 彩带高度

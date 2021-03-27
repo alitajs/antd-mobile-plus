@@ -1,6 +1,6 @@
 ---
 title: 功能页签
-group: 
+group:
   title: 基础组件
   path: /basic
 nav:
@@ -8,7 +8,7 @@ nav:
   path: /components
 ---
 
-# QRCode
+# TabList
 ### 展示
 
 <code src="./demos/demo.tsx" />
