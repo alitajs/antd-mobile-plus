@@ -67,6 +67,11 @@ export interface PopupType {
   contentSize?: CSSProperties['maxWidth'];
 
   /**
+   * @description 层级
+   */
+  zIndex?: number;
+
+  /**
    * @description 动画即将进入
    */
    onEnter?: () => void;
