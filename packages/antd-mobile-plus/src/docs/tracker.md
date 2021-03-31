@@ -4,7 +4,7 @@ group:
   title: 开发指南
   path: /docs
 nav:
-  title: 介绍
+  title: 组件
   path: /components
 order: 3
 ---

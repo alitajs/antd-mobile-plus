@@ -5,7 +5,7 @@ group:
   path: /docs
   order: 1
 nav:
-  title: 介绍
+  title: 组件
   path: /components
 order: 0
 ---
