@@ -30,5 +30,5 @@ export interface CardFooterType {
   btnText?: string;
 }
 export interface CardType {
-  style: CSSProperties;
+  style?: CSSProperties;
 }
