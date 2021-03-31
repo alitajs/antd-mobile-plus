@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react'
 export interface CardHeaderType {
   /**
    * @description 卡片title
@@ -28,4 +29,6 @@ export interface CardFooterType {
    */
   btnText?: string;
 }
-export interface CardType {}
+export interface CardType {
+  style: CSSProperties;
+}
