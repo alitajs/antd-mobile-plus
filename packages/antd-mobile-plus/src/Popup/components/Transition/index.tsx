@@ -64,6 +64,11 @@ export interface TransitionProps {
    * @description 容器的尺寸
    */
   contentSize?: CSSProperties['maxHeight'];
+
+  /**
+   * @description 层级
+   */
+  zIndex?: number;
 }
 
 const prefixCls = 'alita-transition';
@@ -79,6 +84,7 @@ const Transition: FC<TransitionProps> = ({
   onExited,
   overlayStyle,
   className,
+  zIndex = 1,
   contentSize = '80%',
 }) => {
   const [display, setDisplay] = useState<CSSProperties['display']>('none');
@@ -95,6 +101,7 @@ const Transition: FC<TransitionProps> = ({
         right: 0,
         top: 0,
         bottom: 0,
+        zIndex,
         ...overlayStyle,
         display,
         overflow: 'hidden',
