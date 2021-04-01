@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-03-25 15:43:17
- */
 import * as React from "react";
 import { withError, useTracker } from "@alitajs/tracker";
 import { NoticeBarProps } from "./PropsType";
