@@ -6,7 +6,7 @@ import './index.less';
 const prefixCls = 'alita-card-footer';
 
 const CardFooter: FC<CardFooterType> = (props) => {
-  const { type = 'fill', onClick, children, btnText } = props;
+  const { type = 'fill', onClick, children, btnText, style } = props;
   const log = useTracker(CardFooter.displayName, {});
 
   const FooterView = () => {
@@ -42,7 +42,7 @@ const CardFooter: FC<CardFooterType> = (props) => {
     }
   };
 
-  return <div className={prefixCls}>{children ?? <FooterView />}</div>;
+  return <div className={prefixCls} style={style}>{children ?? <FooterView />}</div>;
 };
 
 CardFooter.displayName = 'CardFooter';

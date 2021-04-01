@@ -12,6 +12,11 @@ export interface CardHeaderType {
    * @description title 左侧内容，可定义图片
    */
   thumb?: React.ReactNode;
+
+  /**
+   * @description style
+   */
+  style?: CSSProperties;
 }
 export interface CardFooterType {
   /**
@@ -28,7 +33,15 @@ export interface CardFooterType {
    * @default
    */
   btnText?: string;
+
+  /**
+   * @description style
+   */
+  style?: CSSProperties;
 }
 export interface CardType {
+  /**
+   * @description style
+   */
   style?: CSSProperties;
 }
