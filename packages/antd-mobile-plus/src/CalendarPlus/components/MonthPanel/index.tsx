@@ -6,10 +6,6 @@ import './index.less';
 
 interface MonthPanelProps {
   /**
-   * @description 当前显示的年月日期
-   */
-  date?: Date;
-  /**
    * @description 点击某个日期的回调
    */
   onClick?: (e: Date) => void;
@@ -26,12 +22,11 @@ interface MonthPanelProps {
 const prefixCls = 'alita-calendar-month';
 const MonthPanel: FC<MonthPanelProps> = (props) => {
   const {
-    date,
     onClick = () => {},
     currentDate = new Date(),
     subTitles = [],
   } = props;
-
+console.log(formatDate(currentDate, 'yyyy-MM-dd'))
   const getStatus = (item: any): 'disable' | 'nomal' | 'selected' => {
     const itemDateText = formatDate(item.date, 'yyyy-MM-dd');
     const dateText = formatDate(currentDate, 'yyyy-MM-dd');
@@ -54,7 +49,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
 
   return (
     <div className={prefixCls}>
-      {daysOfMonth(date).map((item, index) => (
+      {daysOfMonth(currentDate).map((item, index) => (
         <DayPanel
           key={index}
           day={item.day}

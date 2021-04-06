@@ -5,13 +5,12 @@ import { nextMonthDate } from '../utils/date';
 interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(nextMonthDate(new Date()));
   return (
     <div>
       <CalendarPlus />
       <div style={{ height: '50px' }}></div>
       <CalendarPlus
-        date={nextMonthDate(new Date())}
         onSelectValue={(e) => {
           setCurrentDate(e);
         }}
