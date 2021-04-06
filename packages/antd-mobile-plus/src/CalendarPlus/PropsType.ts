@@ -24,11 +24,6 @@ export interface CalendarPlusType {
    */
   onSelectValue?: (d: Date) => void;
 
-  /**
-   *  @description 展示月份日历，默认值为new Date()
-   *  @default new Date()
-   */
-  date?: Date;
 
   /**
    * @description 设置子标题
