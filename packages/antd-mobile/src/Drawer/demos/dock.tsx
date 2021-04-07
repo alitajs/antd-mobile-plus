@@ -1,4 +1,5 @@
-import { Drawer, List, NavBar, Icon } from 'antd-mobile';
+import React from 'react';
+import { Drawer, List, NavBar, Icon } from '@alitajs/antd-mobile';
 
 class App extends React.Component {
   state = {

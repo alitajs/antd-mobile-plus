@@ -1,4 +1,5 @@
-import { Range, WingBlank, WhiteSpace } from 'antd-mobile';
+import React from 'react';
+import { Range, WingBlank, WhiteSpace } from '@alitajs/antd-mobile';
 
 const App = () => {
   const log = (name) => {

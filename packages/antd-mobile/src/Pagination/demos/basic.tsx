@@ -1,4 +1,5 @@
-import { Pagination, Icon } from 'antd-mobile';
+import React from 'react';
+import { Pagination, Icon } from '@alitajs/antd-mobile';
 
 const locale = {
   prevText: 'Prev',

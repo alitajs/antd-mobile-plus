@@ -4,7 +4,11 @@ import { withError, useTracker } from '@alitajs/tracker';
 import { AccordionPropsType } from './PropsType';
 import './index.less';
 
-export const Accordion: React.FC<AccordionPropsType> = (props) => {
+interface AccordionFC<T> extends React.FC<T> {
+  Panel?: any;
+}
+
+export const Accordion: AccordionFC<AccordionPropsType> = (props) => {
   const { onChange, ext, ...other } = props;
 
   const log = useTracker(Accordion.displayName, {
@@ -22,6 +26,7 @@ export const Accordion: React.FC<AccordionPropsType> = (props) => {
   );
 };
 
+Accordion.Panel = AAccordion.Panel;
 Accordion.displayName = 'Accordion';
 
 export default withError(Accordion);

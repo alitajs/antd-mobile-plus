@@ -1,4 +1,4 @@
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from '@alitajs/antd-mobile';
 
 const PlaceHolder = ({ className = '', ...restProps }) => (
   <div className={`${className} placeholder`} {...restProps}>

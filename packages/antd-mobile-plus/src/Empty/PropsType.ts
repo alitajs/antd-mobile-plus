@@ -8,7 +8,7 @@ export interface EmptyType {
   type?: 'nomal' | 'noMessage' | 'network' | 'denied' | 'empty';
 
   /**
-   * @description 图标尺寸
+   * @description 图标
    * @default -
    */
   icon?: string;

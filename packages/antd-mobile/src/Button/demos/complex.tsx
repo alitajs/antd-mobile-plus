@@ -1,4 +1,4 @@
-import { Button, List } from 'antd-mobile';
+import { Button, List } from '@alitajs/antd-mobile';
 
 const ComplexButtonDemo = () => (
   <List style={{ margin: '5px 0', backgroundColor: 'white' }}>

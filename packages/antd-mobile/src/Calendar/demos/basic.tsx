@@ -1,4 +1,5 @@
-import { List, Switch, Calendar } from 'antd-mobile';
+import React from 'react';
+import { List, Switch, Calendar } from '@alitajs/antd-mobile';
 import enUS from 'antd-mobile/lib/calendar/locale/en_US';
 import zhCN from 'antd-mobile/lib/calendar/locale/zh_CN';
 

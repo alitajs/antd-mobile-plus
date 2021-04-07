@@ -1,4 +1,5 @@
-import { Result, Icon, WhiteSpace } from 'antd-mobile';
+import React from 'react';
+import { Result, Icon, WhiteSpace } from '@alitajs/antd-mobile';
 
 const myImg = (src) => (
   <img src={src} className="spe am-icon am-icon-md" alt="" />

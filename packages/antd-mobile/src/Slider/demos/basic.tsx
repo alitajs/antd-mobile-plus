@@ -1,4 +1,5 @@
-import { Slider, WingBlank, WhiteSpace } from 'antd-mobile';
+import React from 'react';
+import { Slider, WingBlank, WhiteSpace } from '@alitajs/antd-mobile';
 
 class App extends React.Component {
   log = (name) => {

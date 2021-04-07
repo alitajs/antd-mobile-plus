@@ -1,4 +1,4 @@
-import { Tag } from 'antd-mobile';
+import { Tag } from '@alitajs/antd-mobile';
 
 function onChange(selected) {
   console.log(`tag selected: ${selected}`);

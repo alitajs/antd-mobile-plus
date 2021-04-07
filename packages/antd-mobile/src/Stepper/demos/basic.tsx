@@ -1,4 +1,5 @@
-import { List, Stepper } from 'antd-mobile';
+import React from 'react';
+import { List, Stepper } from '@alitajs/antd-mobile';
 
 class Demo extends React.Component {
   constructor(props) {

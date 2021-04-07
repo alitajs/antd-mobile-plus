@@ -1,4 +1,5 @@
-import { List, Switch } from 'antd-mobile';
+import React from 'react';
+import { List, Switch } from '@alitajs/antd-mobile';
 import { createForm } from 'rc-form';
 
 class SwitchExample extends React.Component {

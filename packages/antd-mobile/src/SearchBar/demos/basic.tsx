@@ -1,4 +1,5 @@
-import { SearchBar, Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import React from 'react';
+import { SearchBar, Button, WhiteSpace, WingBlank } from '@alitajs/antd-mobile';
 
 class SearchBarExample extends React.Component {
   state = {

@@ -1,4 +1,5 @@
-import { SegmentedControl, WingBlank } from 'antd-mobile';
+import React from 'react';
+import { SegmentedControl, WingBlank } from '@alitajs/antd-mobile';
 
 class SegmentedControlExample extends React.Component {
   onChange = (e) => {

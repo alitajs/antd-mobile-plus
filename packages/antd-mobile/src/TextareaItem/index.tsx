@@ -4,8 +4,12 @@ import { withError, useTracker } from '@alitajs/tracker';
 import { TextareaItemPropsType } from './PropsType';
 import './index.less';
 
-export const TextareaItem: React.FC<TextareaItemPropsType> = (props) => {
-  const { onChange, onBlur, onFocus, onErrorClick, ext, ...other } = props;
+interface TextareaItemProps extends TextareaItemPropsType {
+  forwardRef: any;
+}
+
+export const TextareaItem: React.FC<TextareaItemProps> = (props) => {
+  const { onChange, onBlur, onFocus, onErrorClick, forwardRef, ext, ...other } = props;
 
   const log = useTracker(TextareaItem.displayName, {
     ext,
@@ -14,6 +18,7 @@ export const TextareaItem: React.FC<TextareaItemPropsType> = (props) => {
   return (
     <ATextareaItem
       {...other}
+      ref={forwardRef}
       onChange={(e) => {
         onChange && onChange(e);
         log('onChange');
@@ -36,4 +41,4 @@ export const TextareaItem: React.FC<TextareaItemPropsType> = (props) => {
 
 TextareaItem.displayName = 'TextareaItem';
 
-export default withError(TextareaItem);
+export default withError(TextareaItem, { forwardRef: true });

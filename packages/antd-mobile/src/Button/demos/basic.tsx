@@ -1,4 +1,4 @@
-import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import { Button, WhiteSpace, WingBlank } from '@alitajs/antd-mobile';
 
 const ButtonExample = () => (
   <WingBlank>
