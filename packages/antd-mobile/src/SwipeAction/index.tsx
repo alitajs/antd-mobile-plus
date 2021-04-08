@@ -27,5 +27,4 @@ export const SwipeAction: React.FC<SwipeActionPropsType> = (props) => {
 };
 
 SwipeAction.displayName = 'SwipeAction';
-
 export default withError(SwipeAction);

@@ -1,4 +1,5 @@
-import { Tabs, WhiteSpace } from 'antd-mobile';
+import React from 'react';
+import { Tabs, WhiteSpace } from '@alitajs/antd-mobile';
 
 class Demo extends React.Component {
   renderContent = (tab) => (

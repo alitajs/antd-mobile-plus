@@ -1,7 +1,9 @@
-import { Accordion, List } from 'antd-mobile';
+import React from 'react';
+import { List } from '@alitajs/antd-mobile';
+import Accordion from '../index';
 
 class AccordionExmple extends React.Component {
-  onChange = (key) => {
+  onChange = (key:string) => {
     console.log(key);
   };
   render() {

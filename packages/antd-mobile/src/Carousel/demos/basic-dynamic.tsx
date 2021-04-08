@@ -1,4 +1,5 @@
-import { Carousel, Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import React from 'react';
+import { Carousel, Button, WhiteSpace, WingBlank } from '@alitajs/antd-mobile';
 
 class App extends React.Component {
   state = {

@@ -1,4 +1,5 @@
-import { List, TextareaItem } from 'antd-mobile';
+import React from 'react';
+import { List, TextareaItem } from '@alitajs/antd-mobile';
 import { createForm } from 'rc-form';
 
 class TextareaItemExample extends React.Component {

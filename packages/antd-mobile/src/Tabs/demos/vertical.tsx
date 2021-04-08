@@ -1,4 +1,4 @@
-import { Tabs, WhiteSpace } from 'antd-mobile';
+import { Tabs, WhiteSpace } from '@alitajs/antd-mobile';
 
 const tabs = [
   { title: '1 Tab', key: 't1' },

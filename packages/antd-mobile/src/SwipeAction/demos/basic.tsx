@@ -1,4 +1,4 @@
-import { SwipeAction, List } from 'antd-mobile';
+import { SwipeAction, List } from '@alitajs/antd-mobile';
 
 const SwipeActionExample = () => (
   <List>

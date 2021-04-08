@@ -1,4 +1,5 @@
-import { Carousel, WingBlank } from 'antd-mobile';
+import React from 'react';
+import { Carousel, WingBlank } from '@alitajs/antd-mobile';
 
 const LotteryDemo = () => (
   <WingBlank>

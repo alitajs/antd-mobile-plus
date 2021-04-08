@@ -1,4 +1,4 @@
-import { NavBar, Icon } from 'antd-mobile';
+import { NavBar, Icon } from '@alitajs/antd-mobile';
 
 const NavBarExample = () => (
   <div>

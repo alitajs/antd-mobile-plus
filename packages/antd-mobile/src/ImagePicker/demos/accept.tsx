@@ -1,4 +1,5 @@
-import { ImagePicker } from 'antd-mobile';
+import React from 'react';
+import { ImagePicker } from '@alitajs/antd-mobile';
 
 const data = [
   {
