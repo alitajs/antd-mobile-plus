@@ -29,7 +29,6 @@ export { default as Card } from './Card';
 
 export {
   ActionSheet,
-  DatePickerView,
   Flex,
   Icon,
   InputItem,
@@ -51,3 +50,4 @@ export {
 } from 'antd-mobile';
 export { default as DatePicker } from './DatePicker';
 export { default as Checkbox } from './Checkbox';
+export { default as DatePickerView } from './DatePickerView';
