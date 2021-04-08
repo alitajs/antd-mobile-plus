@@ -25,9 +25,10 @@ export { default as Tag } from './Tag';
 export { default as TextareaItem } from './TextareaItem';
 export { default as WhiteSpace } from './WhiteSpace';
 export { default as WingBlank } from './WingBlank';
+export { default as Card } from './Card';
+
 export {
   ActionSheet,
-  Card,
   Checkbox,
   DatePicker,
   DatePickerView,
