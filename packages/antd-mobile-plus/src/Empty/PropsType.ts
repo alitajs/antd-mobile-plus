@@ -5,7 +5,7 @@ export interface EmptyType {
    * @description type类型
    * @default nomal
    */
-  type?: 'nomal' | 'noMessage' | 'network' | 'denied' | 'empty';
+  type?: 'normal' | 'noMessage' | 'network' | 'denied' | 'empty';
 
   /**
    * @description 图标

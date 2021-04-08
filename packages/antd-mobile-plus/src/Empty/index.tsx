@@ -7,7 +7,7 @@ import './index.less';
 
 const prefixCls = 'alita-empty';
 const Empty: FC<EmptyType> = ({
-  type = 'nomal',
+  type = 'normal',
   icon,
   title,
   renderFooter,
