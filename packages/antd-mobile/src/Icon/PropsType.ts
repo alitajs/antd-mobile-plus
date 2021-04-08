@@ -3,19 +3,19 @@ import { IconProps } from 'antd-mobile/es/icon';
 export interface IconPropsType {
     /**
      * @description 内置 icon 名称 
-     * @description.en-US 
+     * @description.en-US string name of built-in icon 
      * @default 
      */
     type: IconProps['type'];
     /**
      * @description 图标大小
-     * @description.en-US 
+     * @description.en-US  icon size
      * @default md
      */
     size?: IconProps['size'];
     /**
      * @description 图标颜色
-     * @description.en-US 
+     * @description.en-US icon color
      * @default '#000'
      */
     color?: IconProps['color'];
