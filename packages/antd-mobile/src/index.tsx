@@ -29,7 +29,7 @@ export { default as Card } from './Card';
 
 export {
   ActionSheet,
-  Flex,
+  
   Icon,
   InputItem,
   List,
@@ -51,3 +51,4 @@ export {
 export { default as DatePicker } from './DatePicker';
 export { default as Checkbox } from './Checkbox';
 export { default as DatePickerView } from './DatePickerView';
+export { default as Flex } from './Flex';
