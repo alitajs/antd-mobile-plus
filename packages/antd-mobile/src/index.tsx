@@ -29,9 +29,6 @@ export { default as Card } from './Card';
 
 export {
   ActionSheet,
-  
-  
-  InputItem,
   List,
   ListView,
   LocaleProvider,
@@ -51,4 +48,6 @@ export {
 export { default as DatePicker } from './DatePicker';
 export { default as Checkbox } from './Checkbox';
 export { default as DatePickerView } from './DatePickerView';
-export { default as Flex } from './Flex';export { default as Icon } from './Icon';
+export { default as Flex } from './Flex';
+export { default as Icon } from './Icon';
+export { default as InputItem } from './InputItem';
