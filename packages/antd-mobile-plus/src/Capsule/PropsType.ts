@@ -1,4 +1,4 @@
-
+import { CSSProperties } from 'react'
 export interface CapsuleType {
     /**
      * @description 尺寸
@@ -32,4 +32,9 @@ export interface CapsuleType {
      * @description `class`
      */
     className?: string;
+
+    /**
+     * @description `style`
+     */
+    style?: CSSProperties;
 }
