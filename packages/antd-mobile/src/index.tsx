@@ -35,7 +35,7 @@ export { default as InputItem } from './InputItem';
 export { default as List } from './List';
 
 export {
-  ActionSheet,
+  
   Menu,
   Modal,
   NoticeBar,
@@ -51,3 +51,4 @@ export { default as View } from './View';
 export { default as Text } from './Text';
 export { default as LocaleProvider } from './LocaleProvider';
 export { default as Toast } from './Toast';
+export { default as ActionSheet } from './ActionSheet';
