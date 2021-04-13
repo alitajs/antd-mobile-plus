@@ -36,7 +36,7 @@ export { default as List } from './List';
 
 export {
   ActionSheet,
-  LocaleProvider,
+  
   Menu,
   Modal,
   NoticeBar,
@@ -52,3 +52,4 @@ export {
 export { default as ListView } from './ListView';
 export { default as View } from './View';
 export { default as Text } from './Text';
+export { default as LocaleProvider } from './LocaleProvider';
