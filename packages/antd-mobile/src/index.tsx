@@ -46,8 +46,9 @@ export {
   PullToRefresh,
   Radio,
   TabBar,
-  Text,
+  
   Toast,
 } from 'antd-mobile';
 export { default as ListView } from './ListView';
 export { default as View } from './View';
+export { default as Text } from './Text';

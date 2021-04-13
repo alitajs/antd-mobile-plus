@@ -4,10 +4,11 @@ import { withError } from '@alitajs/tracker';
 import { ViewPropsType } from './PropsType';
 import './index.less';
 
-export const View: React.FC<ViewPropsType> = (props) => {
-  const { ...reset } = props;
+export const View: React.FC<ViewPropsType<HTMLDivElement> & {forwardRef:any}> = (props) => {
+  const { forwardRef, ...reset } = props;
   return (
     <AView
+      ref={forwardRef}
       {...reset}
     ></AView>
   );
@@ -15,4 +16,4 @@ export const View: React.FC<ViewPropsType> = (props) => {
 
 View.displayName = 'View';
 
-export default withError(View);
+export default withError(View, { forwardRef: true });
