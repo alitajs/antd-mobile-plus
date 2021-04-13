@@ -8,7 +8,9 @@ interface ListViewFC<T> extends React.FC<T> {
   IndexedList?: IndexedListProps;
 }
 
-export const ListView: ListViewFC<ListViewProps & {forwardRef: any}> = (props) => {
+export const ListView: ListViewFC<ListViewProps & { forwardRef?: any }> = (
+  props,
+) => {
   const { ext, forwardRef, ...reset } = props;
   return <AListView ref={forwardRef} {...reset}></AListView>;
 };
