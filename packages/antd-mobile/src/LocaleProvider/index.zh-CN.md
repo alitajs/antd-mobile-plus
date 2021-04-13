@@ -1,5 +1,5 @@
 ---
-title: 文本
+title: 国际化
 nav:
   title: antd-mobile
   path: /antd
