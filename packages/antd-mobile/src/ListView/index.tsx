@@ -1,19 +1,19 @@
 import * as React from 'react';
 import AListView from 'antd-mobile/lib/list-view';
-import { withError, useTracker } from '@alitajs/tracker';
-import { ListViewProps } from './PropsType';
+import { withError } from '@alitajs/tracker';
+import { ListViewProps, IndexedListProps, DataSourceType } from './PropsType';
 import './index.less';
+interface ListViewFC<T> extends React.FC<T> {
+  DataSource?: DataSourceType;
+  IndexedList?: IndexedListProps;
+}
 
-export const ListView: React.FC<ListViewProps> = (props) => {
-  const { ext, ...reset } = props;
-
-  const log = useTracker(ListView.displayName, {
-    ext,
-  });
-
-  return <AListView {...reset}></AListView>;
+export const ListView: ListViewFC<ListViewProps & {forwardRef: any}> = (props) => {
+  const { ext, forwardRef, ...reset } = props;
+  return <AListView ref={forwardRef} {...reset}></AListView>;
 };
 
 ListView.displayName = 'ListView';
-
-export default withError(ListView);
+ListView.DataSource = AListView.DataSource;
+ListView.IndexedList = AListView.IndexedList;
+export default withError(ListView, { forwardRef: true });

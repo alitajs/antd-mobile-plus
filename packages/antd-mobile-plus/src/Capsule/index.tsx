@@ -12,10 +12,12 @@ const Capsule: FC<CapsuleType> = ({
   size,
   text,
   className,
+  style
 }) => {
   const log = useTracker(Capsule.displayName, {});
   return (
     <div
+      style={style}
       className={classnames(
         prefixCls,
         `${prefixCls}-${type}`,

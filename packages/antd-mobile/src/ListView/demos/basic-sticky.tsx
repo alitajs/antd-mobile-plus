@@ -1,17 +1,5 @@
-import React, { FC } from 'react'
-import ReactDOM from 'react-dom';
 import { ListView } from '@alitajs/antd-mobile';
-
-interface ListViewExmpleProps  {}
-
-function MyBody(props) {
-  return (
-    <div className="am-list-body my-body">
-      <span style={{ display: 'none' }}>you can custom body wrap element</span>
-      {props.children}
-    </div>
-  );
-}
+import { StickyContainer, Sticky } from 'react-sticky';
 
 const data = [
   {
@@ -35,8 +23,8 @@ const NUM_ROWS_PER_SECTION = 5;
 let pageIndex = 0;
 
 const dataBlobs = {};
-let sectionIDs: any[] = [];
-let rowIDs: any[] = [];
+let sectionIDs = [];
+let rowIDs = [];
 function genData(pIndex = 0) {
   for (let i = 0; i < NUM_SECTIONS; i++) {
     const ii = (pIndex * NUM_SECTIONS) + i;
@@ -54,7 +42,8 @@ function genData(pIndex = 0) {
   sectionIDs = [...sectionIDs];
   rowIDs = [...rowIDs];
 }
-class ListViewExmple extends React.Component {
+
+class Demo extends React.Component {
   constructor(props) {
     super(props);
     const getSectionData = (dataBlob, sectionID) => dataBlob[sectionID];
@@ -70,7 +59,6 @@ class ListViewExmple extends React.Component {
     this.state = {
       dataSource,
       isLoading: true,
-      height: document.documentElement.clientHeight * 3 / 4,
     };
   }
 
@@ -78,14 +66,12 @@ class ListViewExmple extends React.Component {
     // you can scroll to the specified position
     // setTimeout(() => this.lv.scrollTo(0, 120), 800);
 
-    const hei = document.documentElement.clientHeight - ReactDOM.findDOMNode(this.lv).parentNode.offsetTop;
     // simulate initial Ajax
     setTimeout(() => {
       genData();
       this.setState({
         dataSource: this.state.dataSource.cloneWithRowsAndSections(dataBlobs, sectionIDs, rowIDs),
         isLoading: false,
-        height: hei,
       });
     }, 600);
   }
@@ -159,23 +145,42 @@ class ListViewExmple extends React.Component {
       <ListView
         ref={el => this.lv = el}
         dataSource={this.state.dataSource}
+        className="am-list sticky-list"
+        useBodyScroll
+        renderSectionWrapper={sectionID => (
+          <StickyContainer
+            key={`s_${sectionID}_c`}
+            className="sticky-container"
+            style={{ zIndex: 4 }}
+          />
+        )}
+        renderSectionHeader={sectionData => (
+          <Sticky>
+            {({
+              style,
+            }) => (
+              <div
+                className="sticky"
+                style={{
+                  ...style,
+                  zIndex: 3,
+                  backgroundColor: parseInt(sectionData.replace('Section ', ''), 10) % 2 ?
+                    '#5890ff' : '#F8591A',
+                  color: 'white',
+                }}
+              >{`Task ${sectionData.split(' ')[1]}`}</div>
+            )}
+          </Sticky>
+        )}
         renderHeader={() => <span>header</span>}
         renderFooter={() => (<div style={{ padding: 30, textAlign: 'center' }}>
           {this.state.isLoading ? 'Loading...' : 'Loaded'}
         </div>)}
-        renderSectionHeader={sectionData => (
-          <div>{`Task ${sectionData.split(' ')[1]}`}</div>
-        )}
-        renderBodyComponent={() => <MyBody />}
         renderRow={row}
         renderSeparator={separator}
-        style={{
-          height: this.state.height,
-          overflow: 'auto',
-        }}
         pageSize={4}
         onScroll={() => { console.log('scroll'); }}
-        scrollRenderAheadDistance={500}
+        scrollEventThrottle={200}
         onEndReached={this.onEndReached}
         onEndReachedThreshold={10}
       />
@@ -183,4 +188,4 @@ class ListViewExmple extends React.Component {
   }
 }
 
-export default ListViewExmple;
+export default Demo;
