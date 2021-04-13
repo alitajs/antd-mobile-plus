@@ -35,8 +35,6 @@ export { default as InputItem } from './InputItem';
 export { default as List } from './List';
 
 export {
-  
-  Menu,
   Modal,
   NoticeBar,
   Picker,
@@ -52,3 +50,4 @@ export { default as Text } from './Text';
 export { default as LocaleProvider } from './LocaleProvider';
 export { default as Toast } from './Toast';
 export { default as ActionSheet } from './ActionSheet';
+export { default as Menu } from './Menu';
