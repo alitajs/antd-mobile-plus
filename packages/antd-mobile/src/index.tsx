@@ -26,6 +26,13 @@ export { default as TextareaItem } from './TextareaItem';
 export { default as WhiteSpace } from './WhiteSpace';
 export { default as WingBlank } from './WingBlank';
 export { default as Card } from './Card';
+export { default as DatePicker } from './DatePicker';
+export { default as Checkbox } from './Checkbox';
+export { default as DatePickerView } from './DatePickerView';
+export { default as Flex } from './Flex';
+export { default as Icon } from './Icon';
+export { default as InputItem } from './InputItem';
+export { default as List } from './List';
 
 export {
   ActionSheet,
@@ -41,13 +48,6 @@ export {
   TabBar,
   Text,
   Toast,
-  View,
 } from 'antd-mobile';
-export { default as DatePicker } from './DatePicker';
-export { default as Checkbox } from './Checkbox';
-export { default as DatePickerView } from './DatePickerView';
-export { default as Flex } from './Flex';
-export { default as Icon } from './Icon';
-export { default as InputItem } from './InputItem';
-export { default as List } from './List';
 export { default as ListView } from './ListView';
+export { default as View } from './View';
