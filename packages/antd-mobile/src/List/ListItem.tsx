@@ -3,11 +3,11 @@ import AListItem, { ListItemProps, Brief } from 'antd-mobile/lib/list/ListItem';
 import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
 
-interface ListItemFC<T> extends React.FC<T> {
+export interface ListItemFC<T> extends React.FC<T> {
   Brief?: typeof Brief;
 }
 
-interface ListItemType extends ListItemProps {
+export interface ListItemType extends ListItemProps {
   /**
    * @description       埋点自定义数据
    * @description.en-US tracker

@@ -36,8 +36,6 @@ export { default as List } from './List';
 
 export {
   
-  Menu,
-  Modal,
   NoticeBar,
   Picker,
   PickerView,
@@ -52,3 +50,5 @@ export { default as Text } from './Text';
 export { default as LocaleProvider } from './LocaleProvider';
 export { default as Toast } from './Toast';
 export { default as ActionSheet } from './ActionSheet';
+export { default as Menu } from './Menu';
+export { default as Modal } from './Modal';

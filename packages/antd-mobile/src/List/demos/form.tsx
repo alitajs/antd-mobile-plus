@@ -1,16 +1,16 @@
 import React, { FC } from 'react';
 import {
-  List,
+  // List,
   InputItem,
   Switch,
   Stepper,
   Range,
   Button,
 } from '@alitajs/antd-mobile';
+import List from '../index';
 import { createForm } from 'rc-form';
 
 const Item = List.Item;
-
 class BasicInput extends React.Component {
   state = {
     value: 1,
