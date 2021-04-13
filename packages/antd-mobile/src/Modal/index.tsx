@@ -10,7 +10,7 @@ interface ModalFC<T> extends React.FC<T> {
   operation?: typeof AModal.operation;
 }
 
-export const Modal: ModalFC<ModalPropsType<React.CSSProperties>> = (props) => {
+export const Modal: ModalFC<ModalPropsType> = (props) => {
   const { ext, onClose, onAnimationEnd, ...reset } = props;
   const log = useTracker(Modal.displayName, {
     ext,
