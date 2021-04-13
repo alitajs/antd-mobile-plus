@@ -36,7 +36,6 @@ export { default as List } from './List';
 
 export {
   ActionSheet,
-  
   Menu,
   Modal,
   NoticeBar,
@@ -46,10 +45,9 @@ export {
   PullToRefresh,
   Radio,
   TabBar,
-  
-  Toast,
 } from 'antd-mobile';
 export { default as ListView } from './ListView';
 export { default as View } from './View';
 export { default as Text } from './Text';
 export { default as LocaleProvider } from './LocaleProvider';
+export { default as Toast } from './Toast';
