@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Menu, ActivityIndicator, NavBar } from '@alitajs/antd-mobile';
 import { useSetState } from 'ahooks';
 import { data } from './data';
-import './index.less';
+import './multiSelect.less';
 
 interface MenuExmpleProps {}
 

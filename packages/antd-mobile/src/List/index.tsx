@@ -1,7 +1,7 @@
 import * as React from 'react';
 import AList from 'antd-mobile/lib/list';
 import { withError, useTracker } from '@alitajs/tracker';
-import ListItem from './ListItem';
+import ListItem, { ListItemType, ListItemFC } from './ListItem';
 import { ListPropsType } from './PropsType';
 import './index.less';
 
