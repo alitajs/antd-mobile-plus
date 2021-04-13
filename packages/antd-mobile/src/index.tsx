@@ -35,8 +35,6 @@ export { default as InputItem } from './InputItem';
 export { default as List } from './List';
 
 export {
-  
-  NoticeBar,
   Picker,
   PickerView,
   Popover,
@@ -52,3 +50,4 @@ export { default as Toast } from './Toast';
 export { default as ActionSheet } from './ActionSheet';
 export { default as Menu } from './Menu';
 export { default as Modal } from './Modal';
+export { default as NoticeBar } from './NoticeBar';
