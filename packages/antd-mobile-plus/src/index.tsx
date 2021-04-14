@@ -35,3 +35,5 @@ export { default as CopyBtn } from './CopyBtn';
 export { default as FunctionalCard } from './FunctionalCard';
 export { default as GradientProgress } from './GradientProgress';
 export { default as Loading } from './Loading';
+
+export { default as LazyImage } from './LazyImage';
