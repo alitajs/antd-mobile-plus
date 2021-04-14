@@ -8,7 +8,14 @@ interface AutoHeightImageProps extends Omit<LazyImageType, 'mode' | 'useImg'> {}
 
 const prefixCls = 'alita-autoheightimage';
 const AutoHeightImage: FC<AutoHeightImageProps> = (props) => {
-  const { src, className, onClick, lazy = true, placeholder, ...reset } = props;
+  const {
+    src = '',
+    lazy = true,
+    placeholder = '',
+    className,
+    onClick,
+    ...reset
+  } = props;
   const ref = useRef(null);
   const imgSrc = useLazy(ref, src, placeholder);
   const log = useTracker(AutoHeightImage.displayName, {});

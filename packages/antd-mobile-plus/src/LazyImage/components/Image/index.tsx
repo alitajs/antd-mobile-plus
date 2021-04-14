@@ -10,12 +10,12 @@ interface ImageProps extends Omit<LazyImageType, 'useImg'> {}
 const prefixCls = 'alita-image';
 const Image: FC<ImageProps> = (props) => {
   const {
-    src,
+    src = '',
     className,
     lazy = true,
     mode = 'scaleAspectFill',
     style,
-    placeholder,
+    placeholder = '',
     onClick,
     ...reset
   } = props;
