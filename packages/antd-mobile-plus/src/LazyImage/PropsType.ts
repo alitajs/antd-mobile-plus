@@ -36,7 +36,7 @@ export interface LazyImageType {
 
     /**
      * @description 当图片未加载时的占位图
-     * @default ---
+     * @default --- the placeholder of image
      */
     placeholder?: string;
 
