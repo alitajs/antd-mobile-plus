@@ -3,6 +3,7 @@ import { withError } from '@alitajs/tracker';
 import classnames from 'classnames';
 import AnchorViewItem from '../AnchorViewItem';
 import { AnchorItemType } from '../../PropsType';
+import { useMouseMoveAway } from '../../Utils/Scroll';
 
 export interface AnchorViewType {
   /**
@@ -35,6 +36,7 @@ const AnchorView: FC<AnchorViewType> = ({
   onTouchStart,
   idPrefix,
 }: any) => {
+  useMouseMoveAway(onTouchStart);
   return (
     <div
       style={style}
@@ -42,7 +44,6 @@ const AnchorView: FC<AnchorViewType> = ({
         [`${className}`]: !!className,
       })}
       onTouchStart={onTouchStart}
-      onMouseMove={onTouchStart}
     >
       {data.map((item: AnchorItemType, index: number) => {
         return onRenderItem ? (

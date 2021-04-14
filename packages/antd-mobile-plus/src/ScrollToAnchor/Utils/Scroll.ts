@@ -1,5 +1,17 @@
-import { useDebounceEffect, useUnmount, useScroll, usePersistFn } from 'ahooks';
-import { useRef } from 'react';
+import { useDebounceEffect, useUnmount, useScroll, usePersistFn, useClickAway } from 'ahooks';
+import { useRef, useEffect } from 'react';
+
+
+export const useMouseMoveAway = function (fn: () => void) {
+  const persistFn = usePersistFn(fn);
+  useEffect(() => {
+    document.addEventListener('mousewheel', persistFn);
+    return () => {
+      document.removeEventListener('mousewheel', persistFn);
+    }
+  }, [fn]);
+}
+
 
 export const useScrollEnd = function (
   fn: (p: { top: number; left: number }) => void,
