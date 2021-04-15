@@ -5,7 +5,7 @@ import { ListViewProps, IndexedListProps, DataSourceType } from './PropsType';
 import './index.less';
 interface ListViewFC<T> extends React.FC<T> {
   DataSource?: DataSourceType;
-  IndexedList?: IndexedListProps;
+  IndexedList: IndexedListProps;
 }
 
 export const ListView: ListViewFC<ListViewProps & { forwardRef?: any }> = (

@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import { province } from './index';
 import { StickyContainer, Sticky } from 'react-sticky';
-import { ListView, List, SearchBar } from '@alitajs/antd-mobile';
-
+import { ListView, SearchBar } from '@alitajs/antd-mobile';
+import List from '../index';
 const { Item } = List;
 
 function genData(ds, provinceData) {
@@ -55,7 +55,9 @@ class Demo extends React.Component {
   onSearch = (val) => {
     const pd = { ...province };
     Object.keys(pd).forEach((item) => {
-      const arr = pd[item].filter(jj => jj.spell.toLocaleLowerCase().indexOf(val) > -1);
+      const arr = pd[item].filter(
+        (jj) => jj.spell.toLocaleLowerCase().indexOf(val) > -1,
+      );
       if (!arr.length) {
         delete pd[item];
       } else {
@@ -66,57 +68,66 @@ class Demo extends React.Component {
       inputValue: val,
       dataSource: genData(this.state.dataSource, pd),
     });
-  }
+  };
 
   render() {
-    return (<div style={{ paddingTop: '44px', position: 'relative' }}>
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-        <SearchBar
-          value={this.state.inputValue}
-          placeholder="Search"
-          onChange={this.onSearch}
-          onClear={() => { console.log('onClear'); }}
-          onCancel={() => { console.log('onCancel'); }}
+    return (
+      <div style={{ paddingTop: '44px', position: 'relative' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
+          <SearchBar
+            value={this.state.inputValue}
+            placeholder="Search"
+            onChange={this.onSearch}
+            onClear={() => {
+              console.log('onClear');
+            }}
+            onCancel={() => {
+              console.log('onCancel');
+            }}
+          />
+        </div>
+        <ListView.IndexedList
+          dataSource={this.state.dataSource}
+          className="am-list sticky-list"
+          useBodyScroll
+          renderSectionWrapper={(sectionID) => (
+            <StickyContainer
+              key={`s_${sectionID}_c`}
+              className="sticky-container"
+              style={{ zIndex: 4 }}
+            />
+          )}
+          renderSectionHeader={(sectionData) => (
+            <Sticky>
+              {({ style }) => (
+                <div
+                  className="sticky"
+                  style={{
+                    ...style,
+                    zIndex: 3,
+                    backgroundColor:
+                      sectionData.charCodeAt(0) % 2 ? '#5890ff' : '#F8591A',
+                    color: 'white',
+                  }}
+                >
+                  {sectionData}
+                </div>
+              )}
+            </Sticky>
+          )}
+          renderHeader={() => <span>custom header</span>}
+          renderFooter={() => <span>custom footer</span>}
+          renderRow={(rowData) => <Item>{rowData}</Item>}
+          quickSearchBarStyle={{
+            top: 85,
+          }}
+          delayTime={10}
+          delayActivityIndicator={
+            <div style={{ padding: 25, textAlign: 'center' }}>rendering...</div>
+          }
         />
       </div>
-      <ListView.IndexedList
-        dataSource={this.state.dataSource}
-        className="am-list sticky-list"
-        useBodyScroll
-        renderSectionWrapper={sectionID => (
-          <StickyContainer
-            key={`s_${sectionID}_c`}
-            className="sticky-container"
-            style={{ zIndex: 4 }}
-          />
-        )}
-        renderSectionHeader={sectionData => (
-          <Sticky>
-            {({
-              style,
-            }) => (
-              <div
-                className="sticky"
-                style={{
-                  ...style,
-                  zIndex: 3,
-                  backgroundColor: sectionData.charCodeAt(0) % 2 ? '#5890ff' : '#F8591A',
-                  color: 'white',
-                }}
-              >{sectionData}</div>
-            )}
-          </Sticky>
-        )}
-        renderHeader={() => <span>custom header</span>}
-        renderFooter={() => <span>custom footer</span>}
-        renderRow={rowData => (<Item>{rowData}</Item>)}
-        quickSearchBarStyle={{
-          top: 85,
-        }}
-        delayTime={10}
-        delayActivityIndicator={<div style={{ padding: 25, textAlign: 'center' }}>rendering...</div>}
-      />
-    </div>);
+    );
   }
 }
 
