@@ -1,5 +1,9 @@
 ---
-title: 拉动刷新
+title: PullToRefresh 拉动刷新
+group:
+  title: 手势
+  path: /gesture
+  order: 5
 nav:
   title: antd-mobile
   path: /antd

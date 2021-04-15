@@ -1,5 +1,9 @@
 ---
-title: 轻提示
+title: Toast 轻提示
+group:
+  title: Feedback
+  path: /feedback
+  order: 4
 nav:
   title: antd-mobile
   path: /antd

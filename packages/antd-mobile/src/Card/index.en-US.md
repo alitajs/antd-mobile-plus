@@ -1,5 +1,9 @@
 ---
-title: Card
+title: Card 卡片
+group:
+  title: Data Display
+  path: /data-display
+  order: 3
 nav:
   title: antd-mobile
   path: /antd

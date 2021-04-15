@@ -1,5 +1,9 @@
 ---
-title: 两翼留白
+title: WingBlank 两翼留白
+group:
+  title: 布局
+  path: /layout
+  order: 0
 nav:
   title: antd-mobile
   path: /antd

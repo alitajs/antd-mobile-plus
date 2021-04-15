@@ -1,5 +1,9 @@
 ---
-title: 多行输入
+title: TextareaItem 多行输入
+group:
+  title: 数据录入
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

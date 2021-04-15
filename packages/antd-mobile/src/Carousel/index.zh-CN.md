@@ -1,5 +1,9 @@
 ---
-title: 走马灯
+title: Carousel 走马灯
+group:
+  title: 数据展示
+  path: /data-display
+  order: 3
 nav:
   title: antd-mobile
   path: /antd

@@ -1,5 +1,9 @@
 ---
-title: Progress
+title: Progress 进度条
+group:
+  title: Feedback
+  path: /feedback
+  order: 4
 nav:
   title: antd-mobile
   path: /antd

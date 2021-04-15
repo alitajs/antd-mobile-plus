@@ -1,5 +1,9 @@
 ---
-title: 滑动操作
+title: SwipeAction 滑动操作
+group:
+  title: 手势
+  path: /gesture
+  order: 5
 nav:
   title: antd-mobile
   path: /antd

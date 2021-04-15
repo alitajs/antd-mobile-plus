@@ -1,5 +1,9 @@
 ---
-title: 动作面板
+title: ActionSheet 动作面板
+group:
+  title: Feedback
+  path: /feedback
+  order: 4
 nav:
   title: antd-mobile
   path: /antd

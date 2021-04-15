@@ -1,5 +1,9 @@
 ---
-title: Result
+title: Result 结果页
+group:
+  title: Combination
+  path: /combination
+  order: 6
 nav:
   title: antd-mobile
   path: /antd

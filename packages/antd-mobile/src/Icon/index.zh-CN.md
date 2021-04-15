@@ -1,5 +1,9 @@
 ---
-title: 图标
+title: Icon 图标
+group:
+  title: 数据展示
+  path: /data-display
+  order: 3
 nav:
   title: antd-mobile
   path: /antd

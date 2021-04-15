@@ -1,5 +1,9 @@
 ---
-title: 
+title: PickerView 选择器
+group:
+  title: Data Entry
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

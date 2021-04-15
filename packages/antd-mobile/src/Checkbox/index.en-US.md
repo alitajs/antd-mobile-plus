@@ -1,5 +1,9 @@
 ---
-title: 复选框
+title: Checkbox 复选框
+group:
+  title: 数据录入
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

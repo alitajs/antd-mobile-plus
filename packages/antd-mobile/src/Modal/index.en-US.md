@@ -1,5 +1,9 @@
 ---
-title: 对话框
+title: Modal 对话框
+group:
+  title: Feedback
+  path: /feedback
+  order: 4
 nav:
   title: antd-mobile
   path: /antd

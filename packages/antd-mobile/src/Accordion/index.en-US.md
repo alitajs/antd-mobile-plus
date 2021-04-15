@@ -1,5 +1,9 @@
 ---
-title: Accordion
+title: Accordion 手风琴
+group:
+  title: Data Display
+  path: /data-display
+  order: 3
 nav:
   title: antd-mobile
   path: /antd

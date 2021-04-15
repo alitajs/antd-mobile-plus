@@ -1,5 +1,9 @@
 ---
-title: 单选框
+title: Radio 单选框
+group:
+  title: Data Entry
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

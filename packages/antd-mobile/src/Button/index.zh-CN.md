@@ -1,5 +1,9 @@
 ---
-title: 按钮
+title: Button 按钮
+group:
+  title: 数据录入
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

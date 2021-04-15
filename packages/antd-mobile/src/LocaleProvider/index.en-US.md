@@ -1,5 +1,9 @@
 ---
-title: 国际化
+title: LocaleProvider 国际化
+group:
+  title: Other
+  path: /other
+  order: 7
 nav:
   title: antd-mobile
   path: /antd
