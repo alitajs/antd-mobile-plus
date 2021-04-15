@@ -14,13 +14,12 @@ const Demo: FC<DemoProps> = (props) => {
         columnNum={3}
         renderItem={(item) => {
           return (
-            <div style={{ height: '5rem' }} key={item?.text}>
-              <LazyImage
-                mode="scaleAspectFill"
-                placeholder={placeholder}
-                src={item?.icon}
-              />
-            </div>
+            <LazyImage
+              key={item?.text}
+              mode="scaleAspectFill"
+              placeholder={placeholder}
+              src={item?.icon}
+            />
           );
         }}
       />

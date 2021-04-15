@@ -36,6 +36,7 @@ const AnchorView: FC<AnchorViewType> = ({
   onTouchStart,
   idPrefix,
 }: any) => {
+  // 其实ahooks中已经实现了该方法，后续替换掉:`import { useMouse } from 'ahooks';`
   useMouseMoveAway(onTouchStart);
   return (
     <div
