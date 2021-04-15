@@ -4,7 +4,7 @@ import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
 
 export interface ListItemFC<T> extends React.FC<T> {
-  Brief?: typeof Brief;
+  Brief: typeof Brief;
 }
 
 export interface ListItemType extends ListItemProps {
@@ -78,7 +78,7 @@ export interface ListItemType extends ListItemProps {
   platform?: any;
 }
 
-export const ListItem: ListItemFC<ListItemType & { ext: any }> = (props) => {
+export const ListItem: ListItemFC<ListItemType & { ext?: any }> = (props) => {
   const { ext, onClick, ...reset } = props;
   const log = useTracker(ListItem.displayName, {
     ext,
