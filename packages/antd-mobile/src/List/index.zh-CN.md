@@ -1,5 +1,8 @@
 ---
-title: 列表
+title: List 列表
+group:
+  title: 数据展示
+  path: /data-display
 nav:
   title: antd-mobile
   path: /antd

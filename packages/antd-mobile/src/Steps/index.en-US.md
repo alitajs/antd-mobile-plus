@@ -1,5 +1,8 @@
 ---
-title: Steps
+title: Steps 步骤条
+group:
+  title: 数据展示
+  path: /data-display
 nav:
   title: antd-mobile
   path: /antd

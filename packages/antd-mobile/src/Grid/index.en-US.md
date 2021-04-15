@@ -1,5 +1,8 @@
 ---
-title: Grid
+title: Grid 九宫格
+group:
+  title: Data Display
+  path: /data-display
 nav:
   title: antd-mobile
   path: /antd

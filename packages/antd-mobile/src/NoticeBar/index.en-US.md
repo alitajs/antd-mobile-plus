@@ -1,5 +1,8 @@
 ---
-title: 通告栏
+title: NoticeBar 通告栏
+group:
+  title: Data Display
+  path: /data-display
 nav:
   title: antd-mobile
   path: /antd

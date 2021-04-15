@@ -1,5 +1,8 @@
 ---
-title: Badge
+title: Badge 徽标数
+group:
+  title: Data Display
+  path: /data-display
 nav:
   title: antd-mobile
   path: /antd

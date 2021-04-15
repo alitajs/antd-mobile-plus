@@ -1,5 +1,8 @@
 ---
-title: Tag
+title: Tag 标签
+group:
+  title: Data Display
+  path: /data-display
 nav:
   title: antd-mobile
   path: /antd
