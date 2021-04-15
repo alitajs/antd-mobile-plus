@@ -1,8 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-02-20 15:50:29
- */
 import * as React from 'react';
 import { setTracker } from '@alitajs/tracker';
 import { ProcessTrack } from '@alitajs/antd-mobile-plus';
@@ -23,7 +18,7 @@ export default () => {
     },
   });
   return (
-    <div style={{ marginTop: '24px' ,display: 'flex'}}>
+    <div style={{ marginTop: '24px', display: 'flex' }}>
       <ProcessTrack
         data={[
           {

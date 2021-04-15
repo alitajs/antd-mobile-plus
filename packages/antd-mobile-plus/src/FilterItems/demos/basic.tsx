@@ -26,6 +26,7 @@ export default () => {
         { id: "3", value: "全部3" },
       ],
       filterId: "f_1",
+      defaultText: "地区",
     },
     {
       data: [
@@ -35,6 +36,7 @@ export default () => {
         { id: "24", value: "排序-不限2" },
       ],
       filterId: "f_2",
+      defaultText:'商区'
     },
     {
       data: [
@@ -47,9 +49,12 @@ export default () => {
   ];
 
   return (
-    <div style={{ margin: "24px 0", height: "100vh" }}>
+    <div style={{ padding: "24px 0" }}>
       <FilterItems
         data={data}
+        // drawItemRender={(child)=>{
+        //   return <div>11</div>
+        // }}
         onItemChange={(data: any) => {
           console.log(data);
         }}

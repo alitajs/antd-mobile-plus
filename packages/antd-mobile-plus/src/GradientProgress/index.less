@@ -1,0 +1,38 @@
+@import '~@alitajs/theme/es/index.less';
+@prefixCls: alita-gradient-progress;
+
+.@{prefixCls} {
+  position: relative;
+}
+
+.@{prefixCls}-content {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  background-color: @color-gradient-progress-bg;
+}
+
+.@{prefixCls}-percent-item {
+  width: 100%;
+  background: linear-gradient(
+    @color-gradient-progress-first-bg,
+    @color-gradient-progress-second-bg,
+    @color-gradient-progress-third-bg
+  );
+}
+
+.@{prefixCls}-division-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.@{prefixCls}-division {
+  margin-top: 3 * @hd;
+  height: 1 * @hd;
+  background-color: @color-gradient-progress-division;
+}

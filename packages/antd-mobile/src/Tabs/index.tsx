@@ -4,7 +4,11 @@ import { withError, useTracker } from '@alitajs/tracker';
 import { TabsPropsType } from './PropsType';
 import './index.less';
 
-export const Tabs: React.FC<TabsPropsType> = (props) => {
+interface TabsFC<T> extends React.FC<T> {
+  DefaultTabBar?: any;
+}
+
+export const Tabs: TabsFC<TabsPropsType> = (props) => {
   const {
     onChange,
     onTabClick,
@@ -49,6 +53,7 @@ export const Tabs: React.FC<TabsPropsType> = (props) => {
   );
 };
 
+Tabs.DefaultTabBar = ATabs.DefaultTabBar;
 Tabs.displayName = 'Tabs';
 
 export default withError(Tabs);

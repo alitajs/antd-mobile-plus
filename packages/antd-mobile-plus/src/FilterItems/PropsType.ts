@@ -8,6 +8,12 @@ export interface FilterItemProps {
    * @description 每个Filter的id
    */
   filterId: string;
+
+  /**
+   * @description 初始的文字,一般在该值不在数据当中使用
+   * @default 数组中的第一个
+   */
+   defaultText?: string;
 }
 export interface AliasProps {
   /**
@@ -26,7 +32,7 @@ export interface FilterItemsProps {
   /**
    * @description 点击当前filter进行up和down切换，关闭其他的filter
    */
-  onClick: (status: string,selectObj:Object) => void;
+  onClick: (status: string, selectObj: Object) => void;
   /**
    * @description 当前选中的对象
    */
@@ -40,14 +46,19 @@ export interface FilterItemsProps {
    */
   filterId: string;
   /**
- * @description 每个筛选项选中的初始值
- */
+   * @description 每个筛选项选中的初始值
+   */
   initObj: Object;
   /**
- * @description 字段别名
- * @default {id：'id',label:'label'}
- */
+   * @description 字段别名
+   * @default {id：'id',label:'label'}
+   */
   aliasObj: AliasProps;
+  /**
+  * @description 初始的文字,一般在该值不在数据当中使用
+  * @default 数组中的第一个
+  */
+   defaultText?: string;
 }
 
 export interface FilterProps {
@@ -59,7 +70,7 @@ export interface FilterProps {
    * @description 默认选择下标
    * @default 0
    */
-  defalutSelect?: number;
+  defaultSelect?: number;
   /**
    * @description 字段别名
    * @default {id：'id',label:'label'}
@@ -69,4 +80,10 @@ export interface FilterProps {
    * @description 每个数据项的点击事件
    */
   onItemChange: (data: any) => void;
+  /**
+  * @description 页面区域滚动节点，一般用于`type`为relative时使用
+  * @default document.documentElement
+  */
+  scrollElement?: HTMLElement;
+
 }

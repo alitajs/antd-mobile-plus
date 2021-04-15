@@ -25,28 +25,27 @@ export { default as Tag } from './Tag';
 export { default as TextareaItem } from './TextareaItem';
 export { default as WhiteSpace } from './WhiteSpace';
 export { default as WingBlank } from './WingBlank';
-export {
-  ActionSheet,
-  Card,
-  Checkbox,
-  DatePicker,
-  DatePickerView,
-  Flex,
-  Icon,
-  InputItem,
-  List,
-  ListView,
-  LocaleProvider,
-  Menu,
-  Modal,
-  NoticeBar,
-  Picker,
-  PickerView,
-  Popover,
-  PullToRefresh,
-  Radio,
-  TabBar,
-  Text,
-  Toast,
-  View,
-} from 'antd-mobile';
+export { default as Card } from './Card';
+export { default as DatePicker } from './DatePicker';
+export { default as Checkbox } from './Checkbox';
+export { default as DatePickerView } from './DatePickerView';
+export { default as Flex } from './Flex';
+export { default as Icon } from './Icon';
+export { default as InputItem } from './InputItem';
+export { default as List } from './List';
+
+export { default as ListView } from './ListView';
+export { default as View } from './View';
+export { default as Text } from './Text';
+export { default as LocaleProvider } from './LocaleProvider';
+export { default as Toast } from './Toast';
+export { default as ActionSheet } from './ActionSheet';
+export { default as Menu } from './Menu';
+export { default as Modal } from './Modal';
+export { default as NoticeBar } from './NoticeBar';
+export { default as PullToRefresh } from './PullToRefresh';
+export { default as Radio } from './Radio';
+export { default as PickerView } from './PickerView';
+export { default as TabBar } from './TabBar';
+export { default as Popover } from './Popover';
+export { default as Picker } from './Picker';

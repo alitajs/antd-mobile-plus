@@ -1,9 +1,3 @@
-/*
- * @Descripttion:
- * @Author: wll
- * @Date: 2021-02-22 10:52:55
- */
-
 export const IMGSTR = {
   /**
    * @description 最新图标

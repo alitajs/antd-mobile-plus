@@ -24,13 +24,13 @@ const Demo: FC<DemoProps> = (props) => {
       >
         <Nav
           className="scrollToAnchor-nav"
-          onRenderItem={(item: { label: React.ReactNode; id: string }) => {
+          onRenderItem={(item) => {
             return <NavBar item={item} isActive={item.id === aId} />;
           }}
         />
         <Container
           className="scrollToAnchor-view"
-          onRenderItem={(item: { label: React.ReactNode }) => {
+          onRenderItem={(item) => {
             return <Section item={item} />;
           }}
         >

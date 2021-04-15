@@ -1,12 +1,12 @@
 ---
 title: 锚点
-group: 
-  title: 锚点
+group:
+  title: 基础组件
+  path: /basic
 nav:
   title: 锚点
   path: /components
 ---
-
 # ScrollToAnchor
 
 ### 基础用法
@@ -30,7 +30,7 @@ nav:
 | onRenderItem   | 渲染item | (item: AnchorItemType) => React.ReactNode; | \- |
 
 
-#### AnchorNavType
+#### AnchorViewType
 
 | 属性名 | 描述 | 类型 | 默认值
 | ----- |----- |----- |----- |

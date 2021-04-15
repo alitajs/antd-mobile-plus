@@ -1,4 +1,5 @@
-import { Progress, Button, WingBlank, WhiteSpace } from 'antd-mobile';
+import React from 'react';
+import { Progress, Button, WingBlank, WhiteSpace } from '@alitajs/antd-mobile';
 
 class MyProgress extends React.Component {
   state = {

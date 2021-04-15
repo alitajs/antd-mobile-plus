@@ -1,7 +1,7 @@
 import React, { FC, useMemo, useState, useRef } from 'react';
+import ReactDOM from 'react-dom';
 import { withError, useTracker } from '@alitajs/tracker';
-import Transition from '../Transition';
-import classnames from 'classnames';
+import Transition, { TransitionProps } from './components/Transition';
 import { useClickAway, useUnmount, useEventListener } from 'ahooks';
 import { PopupType } from './PropsType';
 import { overlayOrigin, useLockScroll } from './utils';
@@ -13,32 +13,27 @@ const Popup: FC<PopupType> = ({
   awayRef,
   show = false,
   onClose = () => {},
-  scrollElement = document.documentElement || document.body,
-  overlayStyle = {},
-  direction = 'down',
+  scrollElement = document.documentElement,
+  mode = 'popup',
   children,
-  closeOnClickOutside = true,
+  closeOnClickOutside = false,
   closeOnClickOverlay = true,
   offset = 0,
-  popMode = 'relative',
-  onClosed = () => {},
-  ...transitionProps
+  contentSize,
+  type = 'fullscreen',
+  ...otherProps
 }) => {
   const log = useTracker(Popup.displayName, {});
   const topRef = useRef(null);
-  const overlayRef = useRef(null);
-  const [overlayShow, setOverlayShow] = useState(show);
-  const [aOverlayStyle, setAOverlayStyle] = useState({
-    top: 0,
-    bottom: 0,
-  });
+  const [aOverlayStyle, setAOverlayStyle] = useState<
+    TransitionProps['overlayStyle']
+  >();
   useMemo(() => {
     if (show) {
       const topEle: HTMLElement | null = topRef.current;
       if (topEle) {
-        setAOverlayStyle(
-          overlayOrigin(scrollElement, topEle, direction, offset || 0, popMode),
-        );
+        const style = overlayOrigin(topEle, mode, offset || 0, type);
+        setAOverlayStyle(style);
       }
     }
     return () => {};
@@ -50,12 +45,7 @@ const Popup: FC<PopupType> = ({
   };
   // 点击awayRef之外的区域关闭弹出框
   useClickAway((e) => {
-    const isOverlay = e.target === overlayRef.current;
-    if (
-      (closeOnClickOutside && closeOnClickOverlay) ||
-      (isOverlay && closeOnClickOverlay) ||
-      (!isOverlay && closeOnClickOutside)
-    ) {
+    if (closeOnClickOutside) {
       aClose();
     }
   }, awayRef ?? []);
@@ -67,39 +57,22 @@ const Popup: FC<PopupType> = ({
   // 历史浏览器前进或者后退操作时关闭
   useEventListener('popstate', aClose);
   return (
-    <>
-      <div ref={topRef} className="topref"></div>
-      <div
-        style={{ ...aOverlayStyle }}
-        className={classnames(prefixCls, {
-          [`${prefixCls}-show`]: show,
-        })}
-      >
-        <div
-          ref={overlayRef}
-          hidden={!overlayShow}
-          className={classnames(`${prefixCls}-overlay`, {
-            [`${prefixCls}-overlay-show`]: show,
-          })}
-          onClick={(e) => e.stopPropagation()}
-        ></div>
+    <div ref={topRef}>
+      {ReactDOM.createPortal(
         <Transition
-          {...transitionProps}
-          style={{ position: 'absolute' }}
+          mode={mode}
+          onClose={aClose}
           show={show}
-          mode={direction === 'down' ? 'dropdown' : 'popup'}
-          onWillOpen={() => {
-            setOverlayShow(true);
-          }}
-          onClosed={() => {
-            setOverlayShow(false);
-            onClosed();
-          }}
+          contentSize={contentSize}
+          closeOnClickOverlay={closeOnClickOverlay}
+          overlayStyle={aOverlayStyle}
+          {...otherProps}
         >
           {children}
-        </Transition>
-      </div>
-    </>
+        </Transition>,
+        document.body,
+      )}
+    </div>
   );
 };
 

@@ -1,9 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-18 16:50:07
- */
-
 import React, { FC, useState } from 'react';
 import { Star } from '@alitajs/antd-mobile-plus';
 

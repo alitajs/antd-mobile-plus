@@ -1,0 +1,111 @@
+@import '~@alitajs/theme/es/index.less';
+@import "~antd-mobile/lib/tabs/style/index";
+@import "./assets/svg.less";
+
+@prefixCls: alita-tab;
+
+.@{prefixCls} {
+  position: relative;
+  &-icon {
+    width: 40 * @hd;
+    height: 40 * @hd;
+    margin-right: 6 * @hd;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: center;
+    &-menu {
+      .svg-menu-icon();
+    }
+  }
+  .am-tabs-tab-bar-wrap{
+    padding-right: 39 * @hd;
+    background: @fill-base;
+  }
+  &-thumb {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: @tabs-height;
+    height: @tabs-height;
+    text-align: center;
+    line-height: @tabs-height;
+    background: @fill-base;
+    box-shadow: -2 * @hd 0 8* @hd 0 @color-tab-list-shadow;
+  }
+  &-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: @modal-zindex + 1;
+    background-color: @fill-base;
+    transform: translateY(0);
+    transition: transform 250ms;
+    padding-top: 10 * @hd;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    >span {
+      float: left;
+      display: block;
+      width: 60 * @hd;
+      text-align: center;
+      margin: @v-spacing-lg @h-spacing-lg;
+      color: fade(@color-text-base, 60%);
+      >i {
+        display: block;
+        width: 60 * @hd;
+        height: 60 * @hd;
+        line-height: 60 * @hd;
+        border-radius: 60 * @hd;
+        font-size: 18 * @hd;
+        background-color: fade(@brand-primary, 20%);
+        color: @brand-primary;
+        margin-bottom: 10 * @hd;
+      }
+    }
+    &-list-visible {
+      transform: translateY(0);
+    }
+  }
+  &-modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: @modal-zindex;
+    background-color: @fill-mask;
+  }
+  &-item-icon {
+    width: 50 * @hd;
+    height: 50 * @hd;
+    line-height: 50 * @hd;
+    text-align: center;
+    border-radius: 50%;
+    background: @tab-list-icon-bg;
+    margin: 5 * @hd auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    svg {
+      width: 15 * @hd ;
+      height: 15 * @hd;
+      fill: @fill-base;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &-item {
+    width: 85 * @hd;
+    height: 92 * @hd;
+    display: flex;
+    flex-direction: column;
+  }
+  &-item-title {
+    text-align: center;
+  }
+}

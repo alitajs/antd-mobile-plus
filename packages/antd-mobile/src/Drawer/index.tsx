@@ -6,7 +6,7 @@ import './index.less';
 
 export const Drawer: React.FC<DrawerPropsType> = (props) => {
   const { onOpenChange, ext, ...other } = props;
-
+  console.log(props);
   const log = useTracker(Drawer.displayName, {
     ext,
   });

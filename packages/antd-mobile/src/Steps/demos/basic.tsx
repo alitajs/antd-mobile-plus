@@ -1,4 +1,5 @@
-import { Steps, WingBlank, WhiteSpace } from 'antd-mobile';
+import React from 'react';
+import { Steps, WingBlank, WhiteSpace } from '@alitajs/antd-mobile';
 
 const Step = Steps.Step;
 

@@ -3,18 +3,18 @@ import { withError } from '@alitajs/tracker';
 import { ScrollToAnchorType, AnchorItemType } from '../../PropsType';
 import classnames from 'classnames';
 
-interface AnchorNavProps {
-  /**
-   * @description 数据源
-   */
-  data: ScrollToAnchorType['data'];
-  /**
-   * @description 事件点击
-   */
-  onClick?: (item: AnchorItemType, index: number) => void;
-}
+// interface AnchorNavProps {
+//   /**
+//    * @description 数据源
+//    */
+//   data: ScrollToAnchorType['data'];
+//   /**
+//    * @description 事件点击
+//    */
+//   onClick?: (item: AnchorItemType, index: number) => void;
+// }
 
-export interface AnchorNavType extends AnchorNavProps {
+export interface AnchorNavType {
   /**
    * @description 锚点容器className
    */
@@ -36,7 +36,7 @@ const AnchorNav: FC<AnchorNavType> = ({
   style,
   onRenderItem,
   onClick,
-}) => {
+}: any) => {
   const scrollIndex = (index: number, item: AnchorItemType) => {
     onClick && onClick(item, index);
   };
@@ -48,7 +48,7 @@ const AnchorNav: FC<AnchorNavType> = ({
         [`${className}`]: !!className,
       })}
     >
-      {data.map((item, index) => {
+      {data.map((item: AnchorItemType, index: number) => {
         return onRenderItem ? (
           <div
             key={item.id}

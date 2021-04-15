@@ -36,17 +36,12 @@ const CityPicker: FC<CityPickerType> = ({
   return (
     <Popup
       show={show}
-      style={{
-        maxHeight: '70vh',
-        zIndex: 1000,
-      }}
       onClose={onCloseView}
-      closeOnClickOutside={false}
       scrollElement={scrollElement}
-      direction="up"
-      popMode="fullscreen"
+      mode="popup"
+      type="fullscreen"
       className={`${prefixCls}-pop`}
-      onClosed={() => {
+      onExited={() => {
         setVisiable(false);
       }}
     >

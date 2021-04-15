@@ -16,6 +16,10 @@
     "format": "prettier packages/**/*.{ts,tsx} --write && stylelint packages/**/*.less --fix",
     "test": "umi-test --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alitajs/antd-mobile-plus"
+  },
   "gitHooks": {
     "pre-commit": "npm run ci",
     "commit-msg": "node scripts/verifyCommit.js"
@@ -32,8 +36,8 @@
     "@umijs/utils": "^3.2.25",
     "babel-plugin-version": "^0.2.3",
     "cnpm": "6.1.1",
-    "dumi": "^1.1.7",
-    "dumi-theme-mobile": "^1.0.0",
+    "dumi": "1.1.7",
+    "dumi-theme-mobile": "^1.0.10",
     "father-build": "^1.18.5",
     "husky": "^3.1.0",
     "lerna": "2.11.0",

@@ -1,0 +1,49 @@
+@import '~@alitajs/theme/es/index.less';
+@import './assets/svg.less';
+
+@prefixCls: alita-loading;
+
+.@{prefixCls} {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-icon {
+    width: 50 * @hd;
+    height: 50 * @hd;
+    margin-right: 12 * @hd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-loading {
+      .svg-loading-icon();
+    }
+  }
+}
+.@{prefixCls}-icon-spin {
+  display: flex;
+  width: 58 * @hd;
+  height: 58 * @hd;
+}
+.@{prefixCls}-icon-spin i,
+.@{prefixCls}-icon-spin:before {
+  display: inline-block;
+  -webkit-animation: zteiconLoadingCircle 1.5s infinite linear;
+  animation: zteiconLoadingCircle 1.5s infinite linear;
+  fill: @fill-base;
+}
+@keyframes zteiconLoadingCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

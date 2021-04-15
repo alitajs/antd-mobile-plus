@@ -1,0 +1,52 @@
+@import '~@alitajs/theme/es/index.less';
+@import './assets/svg';
+
+@prefixCls: alita-news-statistic;
+
+.@{prefixCls} {
+  display: flex;
+  justify-content: space-between;
+  background-color: @fill-base;
+  padding: 10 * @hd;
+  &-read {
+    color: @color-text-secondary;
+    span {
+      margin-left: 25 * @hd;
+    }
+  }
+  &-star {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: @color-text-secondary;
+    span {
+      margin-left: 25 * @hd;
+    }
+  }
+  &-icon {
+    width: 20 * @hd;
+    height: 20 * @hd;
+    margin-right: 12 * @hd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-like {
+      .svg-like-icon();
+    }
+    &-active-like {
+      .svg-active-like-icon();
+    }
+  }
+}
+
+.@{prefixCls}-icon,
+.@{prefixCls}-icon-active {
+  width: @font-size-base - 4;
+  height: @font-size-base - 4;
+}
+.@{prefixCls}-icon {
+  fill: @color-text-secondary;
+}
+.@{prefixCls}-icon-active {
+  fill: @brand-primary;
+}

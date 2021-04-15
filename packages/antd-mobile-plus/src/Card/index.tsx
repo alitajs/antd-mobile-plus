@@ -16,11 +16,11 @@ export interface CarrdFC<T> extends FC<T> {
 const prefixCls = 'alita-card';
 
 const Card: CarrdFC<CardType> = (props) => {
-  const { children } = props;
+  const { children, style } = props;
   const log = useTracker(Card.displayName, {});
   const childs = React.Children.toArray(children);
   return (
-    <div className={prefixCls}>
+    <div className={prefixCls} style={style}>
       {childs.map((child) => {
         if (!React.isValidElement(child)) return;
         const props = {
@@ -31,6 +31,7 @@ const Card: CarrdFC<CardType> = (props) => {
     </div>
   );
 };
+
 Card.Header = CardHeader;
 Card.Body = CardBody;
 Card.Footer = CardFooter;

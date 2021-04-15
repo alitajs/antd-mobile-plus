@@ -1,4 +1,4 @@
-import { List, Badge } from 'antd-mobile';
+import { List, Badge } from '@alitajs/antd-mobile';
 
 const BadgeDemo = () => (
   <List>

@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-19 11:13:28
- */
 import React, { FC, useState, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import HeadPanel from './components/HeadPanel';
@@ -22,7 +17,6 @@ const prefixCls = 'alita-calendarplus';
 
 const CalendarPlus: FC<CalendarPlusType> = (props) => {
   const {
-    date = new Date(),
     currentDate = new Date(),
     subTitles = [],
     onChange = () => {},
@@ -37,7 +31,7 @@ const CalendarPlus: FC<CalendarPlusType> = (props) => {
       />
     ),
   } = props;
-  const [monthPanelDate, setMonthPanelDate] = useState(date);
+  const [monthPanelDate, setMonthPanelDate] = useState(currentDate);
 
   const onNextMonth = () => {
     const nextMonth = nextMonthDate(monthPanelDate);
@@ -61,15 +55,14 @@ const CalendarPlus: FC<CalendarPlusType> = (props) => {
   };
 
   useEffect(() => {
-    setMonthPanelDate(date);
+    setMonthPanelDate(currentDate);
     return () => {};
-  }, []);
+  }, [currentDate]);
   return (
     <div className={prefixCls}>
       {renderHeader()}
       <WeekPanel />
       <MonthPanel
-        date={monthPanelDate}
         onClick={onSelectValue}
         subTitles={subTitles}
         currentDate={currentDate}

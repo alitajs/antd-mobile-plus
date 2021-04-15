@@ -1,9 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-20 08:52:33
- */
-
 /**
  * 获取某个时间月份的总天数
  * @param date 某个月份的date

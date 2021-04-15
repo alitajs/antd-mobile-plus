@@ -1,8 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-19 11:14:00
- */
 import React, { FC, useState } from 'react';
 import { CalendarPlus } from '@alitajs/antd-mobile-plus';
 import { nextMonthDate } from '../utils/date';
@@ -10,13 +5,12 @@ import { nextMonthDate } from '../utils/date';
 interface DemoProps {}
 
 const Demo: FC<DemoProps> = (props) => {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(nextMonthDate(new Date()));
   return (
     <div>
       <CalendarPlus />
       <div style={{ height: '50px' }}></div>
       <CalendarPlus
-        date={nextMonthDate(new Date())}
         onSelectValue={(e) => {
           setCurrentDate(e);
         }}
@@ -28,9 +22,9 @@ const Demo: FC<DemoProps> = (props) => {
         renderHeader={() => (
           <div
             style={{
-              padding: '40px 20px',
+              padding: '0.2rem',
               textAlign: 'center',
-              fontSize: '55px',
+              fontSize: '0.32rem',
             }}
           >
             我是自定义header

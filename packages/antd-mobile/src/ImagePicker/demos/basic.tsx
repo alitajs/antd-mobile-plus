@@ -1,4 +1,5 @@
-import { ImagePicker, WingBlank, SegmentedControl } from 'antd-mobile';
+import React from 'react';
+import { ImagePicker, WingBlank, SegmentedControl } from '@alitajs/antd-mobile';
 
 const data = [
   {

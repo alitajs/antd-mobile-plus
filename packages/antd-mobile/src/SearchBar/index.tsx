@@ -1,10 +1,14 @@
-import * as React from 'react';
+import React, { ClassAttributes } from 'react';
 import ASearchBar from 'antd-mobile/lib/search-bar';
 import { withError, useTracker } from '@alitajs/tracker';
 import { SearchBarPropsType } from './PropsType';
 import './index.less';
 
-export const SearchBar: React.FC<SearchBarPropsType> = (props) => {
+interface SearchBarProps extends SearchBarPropsType {
+  forwardRef: any;
+}
+
+export const SearchBar: React.FC<SearchBarProps> = (props) => {
   const {
     onChange,
     onSubmit,
@@ -12,6 +16,7 @@ export const SearchBar: React.FC<SearchBarPropsType> = (props) => {
     onCancel,
     onClear,
     onFocus,
+    forwardRef,
     ext,
     ...other
   } = props;
@@ -23,6 +28,7 @@ export const SearchBar: React.FC<SearchBarPropsType> = (props) => {
   return (
     <ASearchBar
       {...other}
+      ref={forwardRef}
       onChange={(e) => {
         onChange && onChange(e);
         log('onChange');
@@ -53,4 +59,4 @@ export const SearchBar: React.FC<SearchBarPropsType> = (props) => {
 
 SearchBar.displayName = 'SearchBar';
 
-export default withError(SearchBar);
+export default withError(SearchBar, { forwardRef: true });

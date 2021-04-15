@@ -14,14 +14,17 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
     activeFilterId,
     filterId,
     initObj = {},
+    defaultText,
   } = props;
   const [status, updateStatus] = React.useState(openFlag);
   const [currentObj, updateCurrentObj] = React.useState(initObj);
+  const [myDefaultText, updateText] = React.useState(defaultText);
 
   React.useEffect(() => {
     updateStatus(openFlag);
     if (activeFilterId === filterId) {
       if (JSON.stringify(selectObj) !== "{}") {
+        updateText("");
         updateCurrentObj(selectObj);
       }
     }
@@ -42,7 +45,7 @@ export const FilterItem: React.FC<FilterItemsProps> = (props) => {
         }}
       >
         <div className={`${prefixCls}-active-text `}>
-          {currentObj[(aliasObj as any).label]}
+          {myDefaultText || currentObj[(aliasObj as any).label]}
         </div>
         <i
           className={classnames({

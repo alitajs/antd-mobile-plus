@@ -1,7 +1,8 @@
 ---
 title: 流程轨迹
 group: 
-  title: 流程轨迹
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components

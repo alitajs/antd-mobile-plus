@@ -1,7 +1,8 @@
 ---
 title: 定位地图块
 group:
-  title: 定位地图块
+  title: 业务组件
+  path: /plus
 nav:
   title: 组件
   path: /components
@@ -22,7 +23,13 @@ nav:
 
 <code src="./demos/demo.tsx">
 
-<API/>
+### 参数
+
+### 参1
+<API></API>
+
+### 参数路径
+<API src="./index.tsx"></API>
 
 #### ActionMaperCoordinateType
 

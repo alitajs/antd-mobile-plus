@@ -75,11 +75,12 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
       {children}
       <Popup
         awayRef={awayRef}
+        mode="dropdown"
+        type="relative"
         show={visiable}
         scrollElement={scrollElement}
-        style={{
-          maxHeight,
-        }}
+        contentSize={maxHeight}
+        closeOnClickOutside={true}
         onClose={() => {
           onHide();
         }}

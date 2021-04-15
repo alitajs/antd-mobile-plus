@@ -8,8 +8,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80 * @hd;
-    padding: 0 10 * @hd;
+    max-width: 100 * @hd;
+    padding-right:10 * @hd;
     &-text {
         flex: 1;
         overflow: hidden;
@@ -29,11 +29,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        transform: rotate(-180deg);
         transition: transform 0.3s ease-in;
         .svg-arrow-bottom();
         &-open {
-            transform: rotate(0);
+            transform: rotate(-180deg);
         }
     }
 }

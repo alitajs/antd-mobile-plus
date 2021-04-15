@@ -1,0 +1,85 @@
+@import '~@alitajs/theme/es/index.less';
+@import './assets/svg.less';
+
+@prefixCls: alita-light-info-card;
+
+.@{prefixCls} {
+  background: @fill-base;
+  border-radius: 5 * @hd;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+.@{prefixCls}-content {
+  padding: 18 * @hd;
+  display: flex;
+  flex-direction: column;
+  &-left {
+    flex-direction: row-reverse;
+    &-info {
+      margin-left: 1 * @hd;
+    }
+  }
+  &-right {
+    flex-direction: row;
+    &-info {
+      margin-right: 1 * @hd;
+    }
+  }
+}
+.@{prefixCls}-title {
+  display: block;
+  margin-bottom: 10 * @hd;
+  overflow: hidden;
+}
+.@{prefixCls}-info {
+  li {
+    padding: 2 * @hd 0;
+    color: @color-text-secondary;
+    font-size: @font-size-base;
+  }
+}
+.@{prefixCls}-img-container {
+  display: flex;
+  flex: 3 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1 * @hd;
+
+}
+.@{prefixCls}-img-info {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  background-color: @color-text-base;
+  padding: 0.2 * @hd;
+  color:  @fill-base;
+}
+.@{prefixCls}-extra {
+  color: @color-text-base;
+  font-size: @font-size-caption-sm;
+  margin-top: 0.7 * @hd;
+  display: inline-block;
+  padding: 10 * @hd;
+}
+.@{prefixCls}-extraItem {
+  margin-right: 1.5 * @hd;
+}
+
+.@{prefixCls} {
+    &-icon {
+    width: 80 * @hd;
+    height: 95 * @hd;
+    margin-right: 12 * @hd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-user {
+      .svg-user-icon();
+    }
+  }
+}

@@ -106,8 +106,8 @@ export interface SearchViewType {
   maxHeight?: string;
 
   /**
-   * @description 遮罩层所在区域滚动节点, 如果滚动区域不在body上 需要手动设置
+   * @description 遮罩层所在区域滚动节点, 如果滚动区域不在`html`节点上 需要手动设置
    * @default document.documentElement
    */
-  scrollElement?: HTMLElement
+  scrollElement?: HTMLElement;
 }

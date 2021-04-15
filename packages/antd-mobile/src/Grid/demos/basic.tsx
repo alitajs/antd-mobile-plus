@@ -1,4 +1,5 @@
-import { Grid } from 'antd-mobile';
+import React from 'react';
+import { Grid } from '@alitajs/antd-mobile';
 
 const data = Array.from(new Array(9)).map((_val, i) => ({
   icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',

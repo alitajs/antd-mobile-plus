@@ -1,0 +1,31 @@
+@import '~@alitajs/theme/es/index.less';
+
+@prefixCls: alita-text-group;
+
+.@{prefixCls} {
+  justify-content: space-between;
+  background-color: @fill-base;
+  padding: 50 * @hd 50 * @hd;
+  ul li {
+    list-style: none;
+  }
+  &-list {
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+    .am-textgroup-list-item {
+      > span {
+        cursor: pointer;
+        font-size: @font-size-caption;
+        color: @brand-primary;
+        &:hover {
+          color: @color-text-disabled;
+        }
+      }
+    }
+  }
+  &-line {
+    height: 100%;
+    border-right: @border-width-sm solid @color-text-disabled;
+  }
+}

@@ -1,19 +1,20 @@
-import React, { useState, FC, useRef } from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
-import classnames from 'classnames';
-import FilterItem from './component/FilterItem';
-import { FilterProps, FilterItemProps } from './PropsType';
-import Popup from '../Popup/index';
-import './index.less';
+import React, { useState, FC, useRef } from "react";
+import { withError, useTracker } from "@alitajs/tracker";
+import classnames from "classnames";
+import FilterItem from "./component/FilterItem";
+import { FilterProps, FilterItemProps } from "./PropsType";
+import Popup from "../Popup/index";
+import "./index.less";
 
-const prefixCls = 'alita-filter';
+const prefixCls = "alita-filter";
 
 export const FilterItems: FC<FilterProps> = (props) => {
   const {
     data = [],
-    defalutSelect = 0,
-    alias = { label: 'label', id: 'id' },
+    defaultSelect = 0,
+    alias = { label: "label", id: "id" },
     onItemChange,
+    scrollElement,
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
   const [drawOpen, updateDrawOpen] = useState("up");
@@ -23,32 +24,33 @@ export const FilterItems: FC<FilterProps> = (props) => {
     [`${prefixCls}`]: true,
     [`${prefixCls}-single`]: data.length === 1,
   });
-  const aliasObj = { label: 'label', id: 'id' };
+  const aliasObj = { label: "label", id: "id" };
   Object.keys(alias).forEach((aliasItem) => {
     aliasObj[aliasItem] = alias[aliasItem];
   });
   const awayRef = useRef(null);
   const [activeObj, updateActiveObj] = useState({});
   const [acFilterId, updateAcFilterId] = useState("");
-  const [selectObj, updateSelectObj] = useState({});;
+  const [selectObj, updateSelectObj] = useState({});
 
   return (
-    <div className={myFilter} >
+    <div className={myFilter}>
       <div className={`${prefixCls}-content`} ref={awayRef}>
         {data.map((item: FilterItemProps, index: number) => {
-          const { filterId } = item;
+          const { filterId, defaultText } = item;
           return (
             <FilterItem
               key={filterId}
+              defaultText={defaultText}
               activeFilterId={acFilterId}
               filterId={filterId}
               aliasObj={aliasObj}
               selectObj={activeObj}
-              initObj={item.data[defalutSelect]}
-              openFlag={index === activeIndex ? 'down' : 'up'}
+              initObj={item.data[defaultSelect]}
+              openFlag={index === activeIndex ? "down" : "up"}
               onClick={(options: string, selectObj) => {
                 log(options);
-                if (options === 'down') {
+                if (options === "down") {
                   updateActiveIndex(index);
                 } else {
                   updateActiveIndex(-1);
@@ -63,16 +65,20 @@ export const FilterItems: FC<FilterProps> = (props) => {
       </div>
 
       <Popup
+        scrollElement={scrollElement}
         awayRef={awayRef}
-        show={drawOpen === 'down'}
+        show={drawOpen === "down"}
+        closeOnClickOutside={true}
+        mode="dropdown"
+        type="relative"
         onClose={() => {
-          updateDrawOpen('up');
+          updateDrawOpen("up");
           updateActiveIndex(-1);
-          log('close');
+          log("close");
         }}
       >
-        <div>
-          {drawData.map((child) => {
+        <div className={`${prefixCls}-popwrapper`}>
+          {drawData.map((child: any) => {
             return (
               <div
                 key={child[aliasObj.id]}
@@ -91,8 +97,6 @@ export const FilterItems: FC<FilterProps> = (props) => {
                   updateDrawOpen("up");
                   updateActiveIndex(-1);
                   log("onItemChange");
-                  awayRef.current;
-                  console.log('22');
                 }}
               >
                 {child[aliasObj.label]}
@@ -105,5 +109,5 @@ export const FilterItems: FC<FilterProps> = (props) => {
   );
 };
 
-FilterItems.displayName = 'FilterItems';
+FilterItems.displayName = "FilterItems";
 export default withError(FilterItems);

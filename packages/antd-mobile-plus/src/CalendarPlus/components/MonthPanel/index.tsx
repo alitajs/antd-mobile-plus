@@ -1,9 +1,3 @@
-/*
- * @Description:
- * @Author: qclong
- * @Date: 2021-02-19 18:50:33
- */
-
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import DayPanel from '../DayPanel';
@@ -11,10 +5,6 @@ import { daysOfMonth, formatDate } from '../../utils/date';
 import './index.less';
 
 interface MonthPanelProps {
-  /**
-   * @description 当前显示的年月日期
-   */
-  date?: Date;
   /**
    * @description 点击某个日期的回调
    */
@@ -32,12 +22,11 @@ interface MonthPanelProps {
 const prefixCls = 'alita-calendar-month';
 const MonthPanel: FC<MonthPanelProps> = (props) => {
   const {
-    date,
     onClick = () => {},
     currentDate = new Date(),
     subTitles = [],
   } = props;
-
+console.log(formatDate(currentDate, 'yyyy-MM-dd'))
   const getStatus = (item: any): 'disable' | 'nomal' | 'selected' => {
     const itemDateText = formatDate(item.date, 'yyyy-MM-dd');
     const dateText = formatDate(currentDate, 'yyyy-MM-dd');
@@ -60,7 +49,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
 
   return (
     <div className={prefixCls}>
-      {daysOfMonth(date).map((item, index) => (
+      {daysOfMonth(currentDate).map((item, index) => (
         <DayPanel
           key={index}
           day={item.day}
