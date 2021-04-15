@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { province } from './index';
 import { StickyContainer, Sticky } from 'react-sticky';
-import { ListView, SearchBar } from '@alitajs/antd-mobile';
-import List from '../index';
+import { ListView, List, SearchBar } from '@alitajs/antd-mobile';
+
 const { Item } = List;
 
 function genData(ds, provinceData) {
