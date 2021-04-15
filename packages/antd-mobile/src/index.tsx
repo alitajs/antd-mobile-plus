@@ -34,7 +34,7 @@ export { default as Icon } from './Icon';
 export { default as InputItem } from './InputItem';
 export { default as List } from './List';
 
-export { Picker, PickerView, Popover, TabBar } from 'antd-mobile';
+export { Picker, PickerView, Popover } from 'antd-mobile';
 export { default as ListView } from './ListView';
 export { default as View } from './View';
 export { default as Text } from './Text';
@@ -46,3 +46,4 @@ export { default as Modal } from './Modal';
 export { default as NoticeBar } from './NoticeBar';
 export { default as PullToRefresh } from './PullToRefresh';
 export { default as Radio } from './Radio';
+export { default as TabBar } from './TabBar';

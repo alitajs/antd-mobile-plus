@@ -1,12 +1,12 @@
 import * as React from 'react';
 import AList from 'antd-mobile/lib/list';
 import { withError, useTracker } from '@alitajs/tracker';
-import ListItem, { ListItemType, ListItemFC } from './ListItem';
+import ListItem from './ListItem';
 import { ListPropsType } from './PropsType';
 import './index.less';
 
 interface ListFC<T> extends React.FC<T> {
-  Item?: typeof ListItem;
+  Item: typeof ListItem;
 }
 
 export const List: ListFC<ListPropsType> = (props) => {
