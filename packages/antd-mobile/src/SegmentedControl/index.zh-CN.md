@@ -1,5 +1,9 @@
 ---
-title: 分段器
+title: SegmentedControl 分段器
+group:
+  title: 导航
+  path: /navigation
+  order: 1
 nav:
   title: antd-mobile
   path: /antd

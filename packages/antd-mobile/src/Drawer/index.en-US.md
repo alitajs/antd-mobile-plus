@@ -1,5 +1,9 @@
 ---
-title: Drawer
+title: Drawer 抽屉
+group:
+  title: Navigation
+  path: /navigation
+  order: 1
 nav:
   title: antd-mobile
   path: /antd

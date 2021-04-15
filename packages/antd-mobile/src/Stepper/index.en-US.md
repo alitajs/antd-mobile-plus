@@ -1,5 +1,9 @@
 ---
-title: Stepper
+title: Stepper 步进器
+group:
+  title: Data Entry
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

@@ -1,5 +1,9 @@
 ---
-title: Pagination
+title: Pagination 分页器
+group:
+  title: Navigation
+  path: /navigation
+  order: 1
 nav:
   title: antd-mobile
   path: /antd

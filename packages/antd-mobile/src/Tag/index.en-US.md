@@ -3,6 +3,7 @@ title: Tag 标签
 group:
   title: Data Display
   path: /data-display
+  order: 3
 nav:
   title: antd-mobile
   path: /antd

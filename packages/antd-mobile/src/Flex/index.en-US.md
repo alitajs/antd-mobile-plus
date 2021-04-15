@@ -1,5 +1,9 @@
 ---
-title: Flex Layout
+title: Flex Flex布局
+group:
+  title: Layout
+  path: /layout
+  order: 0
 nav:
   title: antd-mobile
   path: /antd

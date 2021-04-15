@@ -1,5 +1,9 @@
 ---
-title: 菜单
+title: Menu 菜单
+group:
+  title: 导航
+  path: /navigation
+  order: 1
 nav:
   title: antd-mobile
   path: /antd

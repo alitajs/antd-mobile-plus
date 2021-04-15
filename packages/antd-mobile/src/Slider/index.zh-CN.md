@@ -1,5 +1,9 @@
 ---
-title: 滑动输入条
+title: Slider 滑动输入条
+group:
+  title: 数据录入
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

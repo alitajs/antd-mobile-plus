@@ -1,5 +1,9 @@
 ---
-title: 区域选择
+title: Range 区域选择
+group:
+  title: 数据录入
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

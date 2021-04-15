@@ -1,5 +1,9 @@
 ---
-title: ActivityIndicator
+title: ActivityIndicator 活动指示器
+group:
+  title: Feedback
+  path: /feedback
+  order: 4
 nav:
   title: antd-mobile
   path: /antd

@@ -1,5 +1,9 @@
 ---
-title: Components
+title: SearchBar 搜索栏
+group:
+  title: Data Entry
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd

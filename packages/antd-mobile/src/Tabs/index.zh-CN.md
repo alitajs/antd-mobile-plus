@@ -1,5 +1,9 @@
 ---
-title: 标签页
+title: Tabs 标签页
+group:
+  title: 导航
+  path: /navigation
+  order: 1
 nav:
   title: antd-mobile
   path: /antd

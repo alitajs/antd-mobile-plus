@@ -1,5 +1,9 @@
 ---
-title: 导航栏
+title: NavBar 导航栏
+group:
+  title: 导航
+  path: /navigation
+  order: 1
 nav:
   title: antd-mobile
   path: /antd

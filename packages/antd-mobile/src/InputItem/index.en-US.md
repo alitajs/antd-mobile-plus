@@ -1,5 +1,9 @@
 ---
-title: 文本输入
+title: InputItem 文本输入
+group:
+  title: 数据录入
+  path: /data-entry
+  order: 2
 nav:
   title: antd-mobile
   path: /antd
