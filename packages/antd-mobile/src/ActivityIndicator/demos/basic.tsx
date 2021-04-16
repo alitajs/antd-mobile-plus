@@ -1,7 +1,11 @@
-
 import React from 'react';
-import { ActivityIndicator, WingBlank, WhiteSpace, Button } from '@alitajs/antd-mobile';
-
+import {
+  ActivityIndicator,
+  WingBlank,
+  WhiteSpace,
+  Button,
+} from '@alitajs/antd-mobile';
+import './index.less';
 class App extends React.Component {
   constructor(props) {
     super(props);
