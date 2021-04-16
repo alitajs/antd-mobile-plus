@@ -6,13 +6,16 @@ import './index.less';
 
 const APopoverItem = APopover.Item;
 
-export const PopoverItem: React.FC<PopoverItemPropsType> = (props) => {
+interface PopoverItemFC<T> extends React.FC<T> {
+  myName?: string;
+}
+
+export const PopoverItem: PopoverItemFC<PopoverItemPropsType> = (props) => {
   const { ext, ...reset } = props;
-  const log = useTracker(PopoverItem.displayName, {
-    ext,
-  });
   return <APopoverItem {...reset}></APopoverItem>;
 };
 
 PopoverItem.displayName = 'PopoverItem';
+// popoverItem 组件判断MyName是PopoverItem才响应点击事件  fix: can not fire when the event of onSelect
+PopoverItem.myName = 'PopoverItem';
 export default withError(PopoverItem);
