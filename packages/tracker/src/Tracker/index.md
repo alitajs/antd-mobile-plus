@@ -1,5 +1,5 @@
 ---
-title: 数据
+title: 埋点
 nav:
   title: 埋点
   path: /tracker
