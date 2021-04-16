@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ACarousel from 'antd-mobile/lib/carousel';
+import { Carousel as ACarousel } from 'antd-mobile';
 import { withError, useTracker } from '@alitajs/tracker';
 import { CarouselPropsType } from './PropsType';
 import './index.less';
