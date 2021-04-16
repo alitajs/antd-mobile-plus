@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pagination, Icon } from '@alitajs/antd-mobile';
-
+import './index.less';
 const locale = {
   prevText: 'Prev',
   nextText: 'Next',

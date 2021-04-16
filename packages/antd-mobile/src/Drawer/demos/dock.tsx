@@ -1,6 +1,6 @@
 import React from 'react';
 import { Drawer, List, NavBar, Icon } from '@alitajs/antd-mobile';
-
+import './index.less';
 class App extends React.Component {
   state = {
     docked: false,
@@ -40,27 +40,28 @@ class App extends React.Component {
     );
 
     return (
-      <div style={{ height: '100%' }}>
+      <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
         <NavBar
           icon={<Icon type="ellipsis" />}
           onLeftClick={() => this.onDock('docked')}
         >
           Docked in document
         </NavBar>
-        <Drawer
-          className="my-drawer"
-          style={{ minHeight: document.documentElement.clientHeight }}
-          contentStyle={{
-            color: '#A6A6A6',
-            textAlign: 'center',
-            paddingTop: 42,
-          }}
-          sidebarStyle={{ border: '1px solid #ddd' }}
-          sidebar={sidebar}
-          docked={this.state.docked}
-        >
-          Click upper-left corner
-        </Drawer>
+        <div style={{ position: 'relative' }}>
+          <Drawer
+            className="my-drawer"
+            style={{ minHeight: document.documentElement.clientHeight }}
+            contentStyle={{
+              color: '#A6A6A6',
+              textAlign: 'center',
+            }}
+            sidebarStyle={{ border: '1px solid #ddd' }}
+            sidebar={sidebar}
+            docked={this.state.docked}
+          >
+            Click upper-left corner
+          </Drawer>
+        </div>
       </div>
     );
   }

@@ -1,34 +1,36 @@
+@import '~@alitajs/theme/es/index.less';
+
 .flex-container {
-    margin: 0 15px;
-  }
-  .flex-container .inline {
-    width: 80px!important;
-    margin: 9px 9px 9px 0;
-  }
-  .flex-container .small {
-    height: 20px!important;
-    line-height: 20px!important;
-  }
-  .sub-title {
-    color: #888;
-    font-size: 14px;
-    padding: 30px 0 18px 0;
-  }
-  .placeholder {
-    background-color: #ebebef;
-    color: #bbb;
-    text-align: center;
-    height: 30px;
-    line-height: 30px;
-    width: 100%;
-  }
+  margin: 0 15 * @hd;
+}
+.flex-container .inline {
+  width: 80 * @hd!important;
+  margin: 9 * @hd 9 * @hd 9 * @hd 0;
+}
+.flex-container .small {
+  height: 20 * @hd!important;
+  line-height: 20 * @hd!important;
+}
+.sub-title {
+  color: #888;
+  font-size: 14 * @hd;
+  padding: 30 * @hd 0 18 * @hd 0;
+}
+.placeholder {
+  background-color: #ebebef;
+  color: #bbb;
+  text-align: center;
+  height: 30 * @hd;
+  line-height: 30 * @hd;
+  width: 100%;
+}
 
-  .sub-title {
-      font-size: 32px;
-      padding: 20px;
-  }
+.sub-title {
+  font-size: 16 * @hd;
+  padding: 10 * @hd;
+}
 
-  .flex-container {
-      background-color: #f5f5f9;
-      min-height: 100vh;
-  }
+.flex-container {
+  background-color: #f5f5f9;
+  min-height: 100vh;
+}

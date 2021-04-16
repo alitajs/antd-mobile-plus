@@ -10,13 +10,14 @@ interface PopoverFC<T> extends React.FC<T> {
 }
 
 export const Popover: PopoverFC<PopoverPropsType> = (props) => {
-  const { ext, onSelect, onVisibleChange, ...reset } = props;
+  const { ext, onSelect, onVisibleChange, children, ...reset } = props;
   const log = useTracker(Popover.displayName, {
     ext,
   });
   return (
     <APopover
       onSelect={(...e) => {
+        console.log('eeee', e);
         onSelect && onSelect(...e);
         log('onSelect');
       }}
@@ -25,7 +26,9 @@ export const Popover: PopoverFC<PopoverPropsType> = (props) => {
         log('onVisibleChange');
       }}
       {...reset}
-    ></APopover>
+    >
+      {children}
+    </APopover>
   );
 };
 

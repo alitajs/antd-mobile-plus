@@ -83,7 +83,9 @@ const MenuExmple: FC<MenuExmpleProps> = (props) => {
         </NavBar>
       </div>
       {show ? (initData ? menuEl : loadingEl) : null}
-      {show ? <div className="menu-mask" onClick={onMaskClick} /> : null}
+      {show ? (
+        <div className="singleMultimenu-mask" onClick={onMaskClick} />
+      ) : null}
     </div>
   );
 };

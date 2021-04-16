@@ -33,7 +33,6 @@ export { default as Flex } from './Flex';
 export { default as Icon } from './Icon';
 export { default as InputItem } from './InputItem';
 export { default as List } from './List';
-
 export { default as ListView } from './ListView';
 export { default as View } from './View';
 export { default as Text } from './Text';

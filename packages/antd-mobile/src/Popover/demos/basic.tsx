@@ -19,6 +19,8 @@ const PopoverExmple: FC<PopoverExmpleProps> = (props) => {
     selected: '',
   });
   const onSelect = (opt) => {
+    console.log(opt);
+
     // console.log(opt.props.value);
     setState({
       visible: false,
