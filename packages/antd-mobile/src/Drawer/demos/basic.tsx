@@ -1,12 +1,13 @@
 import React from 'react';
 import { Drawer, List, NavBar, Icon } from '@alitajs/antd-mobile';
+import './index.less';
 
 class App1 extends React.Component {
   state = {
-    open: true,
+    open: false,
   };
   onOpenChange = (...args) => {
-    console.log(args);
+    console.log(this.state.open);
     this.setState({ open: !this.state.open });
   };
   render() {
