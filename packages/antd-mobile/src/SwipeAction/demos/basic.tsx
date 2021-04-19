@@ -1,7 +1,10 @@
-import { SwipeAction, List } from '@alitajs/antd-mobile';
+import { SwipeAction, List, NoticeBar } from '@alitajs/antd-mobile';
 
 const SwipeActionExample = () => (
   <List>
+    <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
+      该组件只支持Touch事件，请使用移动模式/设备打开此页
+    </NoticeBar>
     <SwipeAction
       style={{ backgroundColor: 'gray' }}
       autoClose
