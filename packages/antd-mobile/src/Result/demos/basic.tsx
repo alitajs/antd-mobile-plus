@@ -1,5 +1,6 @@
 import React from 'react';
 import { Result, Icon, WhiteSpace } from '@alitajs/antd-mobile';
+import './result.less';
 
 const myImg = (src) => (
   <img src={src} className="spe am-icon am-icon-md" alt="" />
