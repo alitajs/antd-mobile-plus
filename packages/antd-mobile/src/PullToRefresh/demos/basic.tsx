@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { PullToRefresh, Button } from '@alitajs/antd-mobile';
+import { PullToRefresh, Button, NoticeBar } from '@alitajs/antd-mobile';
 import { useSetState } from 'ahooks';
 
 interface PullToRefreshExmpleProps {}
@@ -35,6 +35,9 @@ const PullToRefreshExmple: FC<PullToRefreshExmpleProps> = (props) => {
   }, []);
   return (
     <div>
+      <NoticeBar marqueeProps={{ loop: true, style: { padding: '0 7.5px' } }}>
+        该组件只支持Touch事件，请使用移动模式/设备打开此页
+      </NoticeBar>
       <Button
         style={{ marginBottom: 15 }}
         onClick={() => setState({ down: !state.down })}
