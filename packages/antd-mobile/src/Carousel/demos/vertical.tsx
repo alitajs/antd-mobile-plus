@@ -1,5 +1,6 @@
 import React from 'react';
 import { WingBlank, Carousel } from '@alitajs/antd-mobile';
+// import { Carousel } from 'antd-mobile';
 import './carousel.less';
 const VerticalDemo = () => (
   <WingBlank>
