@@ -1,5 +1,5 @@
 import { Tag } from '@alitajs/antd-mobile';
-
+import './index.less';
 function onChange(selected) {
   console.log(`tag selected: ${selected}`);
 }

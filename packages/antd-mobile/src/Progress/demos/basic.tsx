@@ -1,6 +1,6 @@
 import React from 'react';
 import { Progress, Button, WingBlank, WhiteSpace } from '@alitajs/antd-mobile';
-
+import './index.less';
 class MyProgress extends React.Component {
   state = {
     percent: 50,
