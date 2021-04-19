@@ -13,7 +13,6 @@ export const SwipeAction: React.FC<SwipeActionPropsType> = (props) => {
 
   return (
     <ASwipeAction
-      {...other}
       onOpen={() => {
         onOpen && onOpen();
         log('onOpen');
@@ -22,6 +21,7 @@ export const SwipeAction: React.FC<SwipeActionPropsType> = (props) => {
         onClose && onClose();
         log('onClose');
       }}
+      {...other}
     ></ASwipeAction>
   );
 };
