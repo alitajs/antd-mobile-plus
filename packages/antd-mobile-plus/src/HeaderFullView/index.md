@@ -13,4 +13,4 @@ nav:
 ### 展示
 
 <code src="./demos/demo.tsx" />
-<API exports='["default"]'/>
+<API />
