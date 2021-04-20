@@ -1,0 +1,38 @@
+@import '~@alitajs/theme/es/index.less';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-accordioncard;
+
+.@{prefixCls} {
+  &-body {
+    display: none;
+    background-color: #f40;
+    &-enter {
+      max-height: 0;
+      display: block;
+      &-active {
+        max-height: 100vh;
+        display: block;
+        transition: max-height 1000ms linear;
+      }
+      &-done {
+        max-height: 100vh;
+        display: block;
+      }
+    }
+
+    &-exit {
+      max-height: 100vh;
+      display: block;
+      &-active {
+        max-height: 1px;
+        display: block;
+        transition: max-height 1000ms linear;
+      }
+      &-done {
+        max-height: 0;
+        display: none;
+      }
+    }
+  }
+}

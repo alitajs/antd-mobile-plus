@@ -38,3 +38,5 @@ export { default as Loading } from './Loading';
 export { default as LazyImage } from './LazyImage';
 
 export { default as HeaderFullView } from './HeaderFullView';
+
+export { default as AccordionCard } from './AccordionCard';
