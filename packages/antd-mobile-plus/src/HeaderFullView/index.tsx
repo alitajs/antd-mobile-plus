@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import Flex from 'antd-mobile/lib/flex';
 import { HeaderFullViewToolItemType, HeaderFullViewType } from './PropsType';
-import Card from '../Card';
 import './index.less';
 
 const prefixCls = 'alita-headerfullview';
@@ -74,13 +73,13 @@ const HeaderFullView: FC<HeaderFullViewType> = (props) => {
 
   return (
     <div className={prefixCls}>
-      <Card>
-        <Card.Body>
-          <Flex justify="end">{extra}</Flex>
-          {MainView}
-          {FooterView}
-        </Card.Body>
-      </Card>
+      <Flex className={`${prefixCls}-extra`} justify="end">
+        {extra}
+      </Flex>
+      <div className={`${prefixCls}-body`}>
+        {MainView}
+        {FooterView}
+      </div>
     </div>
   );
 };

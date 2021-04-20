@@ -5,6 +5,12 @@
 @prefixCls: alita-headerfullview;
 
 .@{prefixCls} {
+  background-color: @fill-base;
+  border-radius: 6 * @hd;
+  overflow: hidden;
+  &-body {
+    padding: 8 * @hd 16 * @hd 16 * @hd;
+  }
   &-icon {
     width: 48 * @hd;
     height: 48 * @hd;
@@ -71,5 +77,8 @@
       color: @color-text-caption;
       line-height: 17 * @hd;
     }
+  }
+  &-extra {
+    min-height: 8 * @hd;
   }
 }

@@ -1,7 +1,8 @@
 ---
-title: 组件
+title: 全视图
 group:
-  title: 组件
+  title: 全视图
+  path: /plus
 nav:
   title: 组件
   path: /components
