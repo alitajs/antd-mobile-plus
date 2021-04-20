@@ -36,3 +36,5 @@ export { default as FunctionalCard } from './FunctionalCard';
 export { default as GradientProgress } from './GradientProgress';
 export { default as Loading } from './Loading';
 export { default as LazyImage } from './LazyImage';
+
+export { default as HeaderFullView } from './HeaderFullView';
