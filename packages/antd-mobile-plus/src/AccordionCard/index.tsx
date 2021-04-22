@@ -45,7 +45,7 @@ const AccordionCard: FC<AccordionCardType> = (props) => {
                 </div>
                 <ExpandView
                   isExtand={isExtand}
-                  onChange={(e) => {
+                  onChange={(e: boolean) => {
                     onChange && onChange(e);
                     log('onChange');
                   }}

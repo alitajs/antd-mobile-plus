@@ -9,9 +9,8 @@
     "build": "dumi build",
     "ci": "npm run lint && npm run compile && npm run test",
     "entry":"node ./scripts/entry.js",
-    "newc": "node ./scripts/createPlusTemplate.js",
     "compile": "father-build",
-    "pub": "lerna publish --force-publish=*",
+    "pub": "npm run compile && lerna publish --force-publish=*",
     "lint": "prettier packages/**/*.{ts,tsx} --check && stylelint packages/**/*.less",
     "format": "prettier packages/**/*.{ts,tsx} --write && stylelint packages/**/*.less --fix",
     "test": "umi-test --coverage"

@@ -12,6 +12,10 @@ order: 99
 
 ## 更新日志
 
+### 0.7.1
+1. 增加`AccordionCard`组件
+2. 增加`HeaderFullView`组件
+
 ### 0.7.0
 1. 增加`LazyImage`组件
 2. `Card`组件增加`style`属性
