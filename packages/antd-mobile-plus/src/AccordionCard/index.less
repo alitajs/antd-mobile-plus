@@ -4,34 +4,66 @@
 @prefixCls: alita-accordioncard;
 
 .@{prefixCls} {
-  &-body {
+  background-color: @fill-base;
+  border-radius: 6 * @hd;
+  &-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16 * @hd 16 * @hd 0;
+    &-title {
+      flex: 1;
+      font-size: 17 * @hd;
+      font-weight: 600;
+      color: @color-text-base;
+    }
+  }
+  &-animation {
     display: none;
-    background-color: #f40;
+  }
+  &-entered {
+    display: block;
+  }
+  &-body {
+    margin-top: 12 * @hd;
     &-enter {
-      max-height: 0;
-      display: block;
-      &-active {
-        max-height: 100vh;
+      .@{prefixCls}-animation {
+        max-height: 0;
         display: block;
-        transition: max-height 1000ms linear;
+      }
+      &-active {
+        .@{prefixCls}-animation {
+          max-height: 100vh;
+          display: block;
+          transition: max-height 200ms linear;
+        }
       }
       &-done {
-        max-height: 100vh;
-        display: block;
+        .@{prefixCls}-animation {
+          max-height: 100vh;
+          display: block;
+        }
       }
     }
 
     &-exit {
-      max-height: 100vh;
-      display: block;
-      &-active {
-        max-height: 1px;
+      .@{prefixCls}-animation {
+        max-height: 100vh;
         display: block;
-        transition: max-height 1000ms linear;
+      }
+      &-active {
+        .@{prefixCls}-animation {
+          max-height: 1px;
+          display: block;
+          transition: max-height 200ms linear;
+        }
       }
       &-done {
-        max-height: 0;
-        display: none;
+        .@{prefixCls}-animation {
+          max-height: 0;
+          display: none;
+        }
       }
     }
   }
