@@ -1,0 +1,70 @@
+@import '~@alitajs/theme/es/index.less';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-accordioncard;
+
+.@{prefixCls} {
+  background-color: @fill-base;
+  border-radius: 6 * @hd;
+  &-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16 * @hd 16 * @hd 0;
+    &-title {
+      flex: 1;
+      font-size: 17 * @hd;
+      font-weight: 600;
+      color: @color-text-base;
+    }
+  }
+  &-animation {
+    display: none;
+  }
+  &-entered {
+    display: block;
+  }
+  &-body {
+    margin-top: 12 * @hd;
+    &-enter {
+      .@{prefixCls}-animation {
+        max-height: 0;
+        display: block;
+      }
+      &-active {
+        .@{prefixCls}-animation {
+          max-height: 100vh;
+          display: block;
+          transition: max-height 200ms linear;
+        }
+      }
+      &-done {
+        .@{prefixCls}-animation {
+          max-height: 100vh;
+          display: block;
+        }
+      }
+    }
+
+    &-exit {
+      .@{prefixCls}-animation {
+        max-height: 100vh;
+        display: block;
+      }
+      &-active {
+        .@{prefixCls}-animation {
+          max-height: 1px;
+          display: block;
+          transition: max-height 200ms linear;
+        }
+      }
+      &-done {
+        .@{prefixCls}-animation {
+          max-height: 0;
+          display: none;
+        }
+      }
+    }
+  }
+}
