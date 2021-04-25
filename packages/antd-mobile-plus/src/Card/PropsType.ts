@@ -39,6 +39,15 @@ export interface CardFooterType {
    */
   style?: CSSProperties;
 }
+
+
+export interface CardBodyType {
+  /**
+   * @description style
+   */
+  style?: CSSProperties;
+}
+
 export interface CardType {
   /**
    * @description style
