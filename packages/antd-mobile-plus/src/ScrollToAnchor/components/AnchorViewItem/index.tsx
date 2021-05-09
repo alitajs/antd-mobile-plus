@@ -35,6 +35,11 @@ interface AnchorViewItemType {
    * @default `anchor-id`
    */
   idPrefix?: ScrollToAnchorType['idPrefix'];
+
+  /**
+   * @description 偏移量  nav为绝对定位时使用
+   */
+   offset?: number;
 }
 
 const prefixCls = 'alita-anchor-view-item';
@@ -47,6 +52,7 @@ const AnchorViewItem: FC<AnchorViewItemType> = ({
   onScrollIndex,
   scrollElement,
   idPrefix,
+  offset = 0
 }) => {
   const ref = useRef(null);
 
@@ -65,7 +71,7 @@ const AnchorViewItem: FC<AnchorViewItemType> = ({
     const scrollRectTop: number = (scrollElement ??
       (document.documentElement || document.body))!.offsetTop;
     const rect: DOMRect = ele.getBoundingClientRect();
-    const rectTop: number = rect.top - scrollRectTop;
+    const rectTop: number = rect.top - scrollRectTop + offset;
 
     if (length === index + 1) {
       // 最后一个

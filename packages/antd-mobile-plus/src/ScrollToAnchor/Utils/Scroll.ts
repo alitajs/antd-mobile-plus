@@ -48,7 +48,7 @@ export const useScrollTo = function () {
         scrollTop += split;
         distance -= Math.abs(split);
         if (0 >= distance) {
-          scrollTarget.scrollTo(0, position);
+          scrollTarget.scrollTo(0, position - 10);
           _timeout.current && clearInterval(_timeout.current);
           _timeout.current = null;
         } else {
