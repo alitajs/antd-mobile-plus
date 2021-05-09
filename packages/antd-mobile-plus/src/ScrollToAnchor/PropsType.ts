@@ -43,4 +43,9 @@ export interface ScrollToAnchorType {
    * @description 容器`class`样式
    */
   className?: string;
+
+  /**
+   * @description 偏移量  nav为绝对定位时使用
+   */
+  offset?: number;
 }

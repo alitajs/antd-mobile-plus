@@ -35,6 +35,7 @@ const AnchorView: FC<AnchorViewType> = ({
   children,
   onTouchStart,
   idPrefix,
+  offset = 0,
 }: any) => {
   // 其实ahooks中已经实现了该方法，后续替换掉:`import { useMouse } from 'ahooks';`
   useMouseMoveAway(onTouchStart);
@@ -54,6 +55,7 @@ const AnchorView: FC<AnchorViewType> = ({
             key={item.id}
             index={index}
             data={data}
+            offset={offset}
             scrollElement={scrollElement}
             onScrollIndex={() => {
               onScrollIndex && onScrollIndex(index, item);

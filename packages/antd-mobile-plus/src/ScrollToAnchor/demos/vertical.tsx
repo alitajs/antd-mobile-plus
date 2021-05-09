@@ -25,6 +25,7 @@ const Demo: FC<DemoProps> = (props) => {
         data={data}
         className="vertical"
         scrollElement={scrollEle}
+        // offset={-138}
         onScrollIndex={(index: number, item: any) => {
           setAId(item.id);
         }}

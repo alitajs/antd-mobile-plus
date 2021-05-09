@@ -20,6 +20,7 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
   data = [],
   style,
   className,
+  offset = 0,
   onScrollIndex = () => {},
   idPrefix = 'anchor-id',
 }) => {
@@ -31,14 +32,14 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
     onScrollIndex(index, item);
     log('onScrollIndex');
     const scrollRectTop: number = (scrollElement ??
-      (document.documentElement || document.body))!.offsetTop;
+      (document.documentElement || document.body))!.scrollTop;
     const idEle: HTMLElement | null = document.querySelector(
       `#${idPrefix}${item.id}`,
     );
     if (idEle) {
       run(
         scrollElement ?? document.documentElement ?? document.body,
-        idEle.offsetTop - scrollRectTop,
+        idEle.getBoundingClientRect().top + scrollRectTop - scrollElement!.offsetTop + offset,
         TIME_OUT,
       );
     }
@@ -79,6 +80,7 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
           props.onScrollIndex = scrollToIndex;
           props.scrollElement = scrollElement;
           props.onTouchStart = onTouchStart;
+          props.offset = offset;
         }
         return React.cloneElement(child, props);
       })}
