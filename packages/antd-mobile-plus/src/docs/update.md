@@ -12,6 +12,9 @@ order: 99
 
 ## 更新日志
 
+### 0.7.4
+修复`ScrollToAnchor`组件定位不准确，增加`offset`参数
+
 ### 0.7.1
 1. 增加`AccordionCard`组件
 2. 增加`HeaderFullView`组件
