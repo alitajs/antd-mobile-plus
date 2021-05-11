@@ -9,7 +9,7 @@ const Section: FC<SectionProps> = ({ item }) => {
   return (
     <div
       style={{
-        height: '60vh',
+        height: '130vh',
         marginTop: '0.2rem',
         backgroundColor: '#fff',
         padding: '0.2rem',

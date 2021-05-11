@@ -20,6 +20,7 @@ const Demo: FC<DemoProps> = (props) => {
         className="scrollToAnchor"
         onScrollIndex={(index: number, item: any) => {
           setAId(item.id);
+          console.log(index, item);
         }}
       >
         <Nav

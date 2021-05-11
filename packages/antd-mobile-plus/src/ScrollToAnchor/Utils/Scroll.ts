@@ -36,7 +36,7 @@ export const useScrollTo = function () {
     _timeout.current = null;
   });
 
-  function run(scrollTarget: HTMLElement, position: number, timeout: number) {
+  function run(scrollTarget: HTMLElement, position: number, timeout: number, end = () => { }) {
     let scrollTop = scrollTarget.scrollTop;
     let direction = position - scrollTop > 0 ? 1 : -1;
     let distance = Math.abs(position - scrollTop);
@@ -51,6 +51,7 @@ export const useScrollTo = function () {
           scrollTarget.scrollTo(0, position - 10);
           _timeout.current && clearInterval(_timeout.current);
           _timeout.current = null;
+          setTimeout(end, timeout / 2);
         } else {
           scrollTarget.scrollTo(0, scrollTop);
         }
