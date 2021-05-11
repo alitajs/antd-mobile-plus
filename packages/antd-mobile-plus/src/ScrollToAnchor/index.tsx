@@ -57,7 +57,6 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
   };
 
   const scrollToIndex = (index: number, item: any) => {
-    console.log(stopListener.current);
     if (!stopListener.current) {
       onScrollIndex(index, item);
       log('onScrollIndex');
