@@ -55,7 +55,6 @@ const AnchorViewItem: FC<AnchorViewItemType> = ({
   offset = 0
 }) => {
   const ref = useRef(null);
-
   const didScrollToIndex = (scIndex?: number) => {
     onScrollIndex && onScrollIndex(scIndex ?? index, data[index]);
   };

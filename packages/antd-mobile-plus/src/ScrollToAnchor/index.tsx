@@ -32,14 +32,14 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
     onScrollIndex(index, item);
     log('onScrollIndex');
     const scrollRectTop: number = (scrollElement ??
-      (document.documentElement || document.body))!.scrollTop;
+      (document.documentElement || document.body))?.scrollTop;
     const idEle: HTMLElement | null = document.querySelector(
       `#${idPrefix}${item.id}`,
     );
     if (idEle) {
       run(
         scrollElement ?? document.documentElement ?? document.body,
-        idEle.getBoundingClientRect().top + scrollRectTop - scrollElement!.offsetTop + offset,
+        idEle.getBoundingClientRect().top + scrollRectTop - (scrollElement || document.documentElement)?.offsetTop + offset,
         TIME_OUT,
       );
     }
