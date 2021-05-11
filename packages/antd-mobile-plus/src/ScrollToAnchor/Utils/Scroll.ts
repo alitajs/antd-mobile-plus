@@ -18,7 +18,7 @@ export const useScrollEnd = function (
   target?: HTMLElement,
   options?: any,
 ) {
-  const position = useScroll(target);
+  const position = useScroll(target || document);
   const persistFn = usePersistFn(fn);
   useDebounceEffect(
     () => {

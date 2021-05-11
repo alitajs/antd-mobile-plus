@@ -26,7 +26,6 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
     currentDate = new Date(),
     subTitles = [],
   } = props;
-console.log(formatDate(currentDate, 'yyyy-MM-dd'))
   const getStatus = (item: any): 'disable' | 'nomal' | 'selected' => {
     const itemDateText = formatDate(item.date, 'yyyy-MM-dd');
     const dateText = formatDate(currentDate, 'yyyy-MM-dd');

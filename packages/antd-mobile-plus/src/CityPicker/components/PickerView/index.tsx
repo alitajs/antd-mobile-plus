@@ -54,7 +54,6 @@ const PickerView: FC<PickerViewType> = ({
       [`${trueAlias.id}`]: item[trueAlias.id],
       [`${trueAlias.label}`]: item[trueAlias.label],
     }));
-    console.log(values, trueAlias, d);
     return d;
   });
 
