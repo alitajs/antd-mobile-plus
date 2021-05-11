@@ -29,7 +29,10 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
   const { run } = useScrollTo();
 
   const onNavClick = (item: AnchorItemType, index: number) => {
-    onScrollIndex(index, item);
+    if (stopListener.current) {
+      return;
+    }
+    onScrollIndex(index, data[index]);
     log('onScrollIndex');
     const scrollRectTop: number = (scrollElement ??
       (document.documentElement || document.body))?.scrollTop;
@@ -41,6 +44,9 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
         scrollElement ?? document.documentElement ?? document.body,
         idEle.getBoundingClientRect().top + scrollRectTop - (scrollElement || document.documentElement)?.offsetTop + offset,
         TIME_OUT,
+        () => {
+          stopListener.current = false;
+        }
       );
     }
     stopListener.current = true;
@@ -51,6 +57,7 @@ const ScrollToAnchor: AnchorFC<ScrollToAnchorType> = ({
   };
 
   const scrollToIndex = (index: number, item: any) => {
+    console.log(stopListener.current);
     if (!stopListener.current) {
       onScrollIndex(index, item);
       log('onScrollIndex');

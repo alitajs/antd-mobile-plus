@@ -60,6 +60,7 @@ const AnchorViewItem: FC<AnchorViewItemType> = ({
   };
 
   const binaryIndex = () => {
+    console.log('gundong');
     const ele: HTMLDivElement = ref.current!;
     const { length } = data;
     if (length <= 1) {
