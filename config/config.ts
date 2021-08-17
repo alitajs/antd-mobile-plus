@@ -1,3 +1,5 @@
+import { join } from 'path';
+
 export default {
   title: 'Antd Mobile Plus',
   mode: 'site',
@@ -12,6 +14,8 @@ export default {
   targets: {
     ios: 8,
   },
+  plugins: [join(__dirname, './plugin')],
+
   sitemap: {
     hostname: 'https://ui.alitajs.com',
   },
