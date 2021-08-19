@@ -14,7 +14,7 @@ export default {
   targets: {
     ios: 8,
   },
-  plugins: [join(__dirname, './plugin')],
+  plugins: [join(__dirname, './plugin'), join(__dirname, './getRoutes')],
 
   sitemap: {
     hostname: 'https://ui.alitajs.com',
