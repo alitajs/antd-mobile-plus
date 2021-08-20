@@ -1,3 +1,6 @@
+import React from 'react';
+import Map from 'react-bmapgl/Map';
+
 export interface ActionMaperCoordinateType {
   /**
    * @description 纬度 采用bd09，请自行转化
@@ -46,4 +49,9 @@ export interface ActionMaperType {
    * @default false
    */
   hideZoomControl?: boolean;
+
+  /**
+   * @description 返回Map的ref
+   */
+  mapRefCallback?: (ref: any) => void;
 }
