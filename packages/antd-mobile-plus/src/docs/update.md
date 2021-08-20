@@ -12,6 +12,9 @@ order: 99
 
 ## 更新日志
 
+### 0.7.7
+修复`ActionMaper`支持传入`children`
+
 ### 0.7.6
 修复`ScrollToAnchor`组件定位不准确，增加`offset`参数
 
