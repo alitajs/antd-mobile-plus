@@ -21,8 +21,10 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
     onLocation = () => {},
     initialzeZoom = 12,
     rightExt,
+    children,
+    mapRefCallback = () => {},
   } = props;
-  const mapRef = useRef(null);
+  let mapRef = useRef<any>(null);
   const [mapScale, setMapScale] = useState(1);
   const [address, setAddress] = useState(detailAddress);
   const [zoom, setZoom] = useState(initialzeZoom);
@@ -110,12 +112,16 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
       <div className={`${prefixCls}-sub-title`}>{address}</div>
       <div className={`${prefixCls}-map-wrapper`}>
         <Map
-          ref={mapRef}
+          ref={(ref) => {
+            mapRef.current = ref;
+            mapRefCallback(mapRef);
+          }}
           className={`${prefixCls}-map`}
           style={{ transform: `scale(${mapScale},${mapScale})` }}
           center={new (window as any).BMapGL.Point(currentPosition)}
           zoom={zoom}
         >
+          {children}
           <Marker
             position={{
               lng: currentPosition.lng,
