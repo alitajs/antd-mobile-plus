@@ -12,6 +12,11 @@ order: 99
 
 ## 更新日志
 
+### 0.7.9
+`LevelView`组件暴露底部按钮点击事件
+### 0.7.8
+修复`CalendarPlus`组件切换年月陷入死循环
+
 ### 0.7.7
 修复`ActionMaper`支持传入`children`
 
