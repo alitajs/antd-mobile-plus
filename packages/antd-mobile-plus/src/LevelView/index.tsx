@@ -11,6 +11,7 @@ const LevelView: FC<LevelViewType> = ({
   btnText = '',
   showFooter = true,
   rightExtra,
+  onFooterClick,
   ...otherProps
 }) => {
   return (
@@ -19,7 +20,7 @@ const LevelView: FC<LevelViewType> = ({
       <Body>
         <LevelBody {...otherProps} />
       </Body>
-      {showFooter ? <Footer type="single" btnText={btnText}></Footer> : <></>}
+      {showFooter ? <Footer onClick={onFooterClick} type="single" btnText={btnText}></Footer> : <></>}
     </Card>
   );
 };

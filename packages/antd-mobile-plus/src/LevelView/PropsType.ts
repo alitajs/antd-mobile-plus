@@ -59,4 +59,9 @@ export interface LevelViewType extends LevelBodyProps {
      * @description 自定义右侧视图
      */
     rightExtra?: React.ReactNode;
+
+    /**
+     * @description 底部按钮被点击
+     */
+    onFooterClick?: () => void;
 }
