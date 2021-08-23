@@ -17,6 +17,10 @@ interface MonthPanelProps {
    * @description 子标题数组
    */
   subTitles?: any[];
+  /**
+   * 当前月份
+   */
+  monthPanelDate: Date;
 }
 
 const prefixCls = 'alita-calendar-month';
@@ -25,6 +29,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
     onClick = () => {},
     currentDate = new Date(),
     subTitles = [],
+    monthPanelDate
   } = props;
   const getStatus = (item: any): 'disable' | 'nomal' | 'selected' => {
     const itemDateText = formatDate(item.date, 'yyyy-MM-dd');
@@ -48,7 +53,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
 
   return (
     <div className={prefixCls}>
-      {daysOfMonth(currentDate).map((item, index) => (
+      {daysOfMonth(monthPanelDate).map((item, index) => (
         <DayPanel
           key={index}
           day={item.day}

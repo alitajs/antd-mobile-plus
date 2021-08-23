@@ -54,15 +54,16 @@ const CalendarPlus: FC<CalendarPlusType> = (props) => {
     onChange(preYear);
   };
 
-  useEffect(() => {
-    setMonthPanelDate(currentDate);
-    return () => {};
-  }, [currentDate]);
+  // useEffect(() => {
+  //   setMonthPanelDate(currentDate);
+  //   return () => {};
+  // }, [currentDate]);
   return (
     <div className={prefixCls}>
       {renderHeader()}
       <WeekPanel />
       <MonthPanel
+        monthPanelDate={monthPanelDate}
         onClick={onSelectValue}
         subTitles={subTitles}
         currentDate={currentDate}

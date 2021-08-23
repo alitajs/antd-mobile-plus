@@ -8,7 +8,15 @@ const Demo: FC<DemoProps> = (props) => {
   const [currentDate, setCurrentDate] = useState(nextMonthDate(new Date()));
   return (
     <div>
-      <CalendarPlus />
+      <CalendarPlus
+        currentDate={currentDate}
+        onSelectValue={(e) => {
+          setCurrentDate(e);
+        }}
+        onChange={(e) => {
+          console.log(e);
+        }}
+      />
       <div style={{ height: '50px' }}></div>
       <CalendarPlus
         onSelectValue={(e) => {
