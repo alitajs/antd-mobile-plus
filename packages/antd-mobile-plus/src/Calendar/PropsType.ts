@@ -95,7 +95,22 @@ export interface BaseCalendarType {
      * @description 设置周起始日	
      * @default 0
      */
-    firstDayOfWeek?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    firstDayOfWeek?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
+    /**
+     * @description 点击并选中任意日期时触发
+     */
+    onSelect?: (value: Date | Date[]) => void;
+
+    /**
+     * @description 日期选择完成后触发，若showConfirm为true，则点击确认按钮后触发
+     */
+    onConfirm?: (value: Date | Date[]) => void;
+
+    /**
+     * @description 当日历组件的 type 为 multiple 时，取消选中日期时触发
+     */
+    onUnselect?: (value: Date) => void;
 }
 
 export interface CalendarPoppableProps extends Omit<BaseCalendarType, 'poppable'> {
