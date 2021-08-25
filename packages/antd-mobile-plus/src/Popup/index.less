@@ -1,12 +1,34 @@
-@import '~@alitajs/theme/es/index.less';;
-// @import '~@alitajs/theme/es/mixins/icon';
+@import '~@alitajs/theme/es/index.less';
+@import '~antd-mobile/es/icon/style/index.less';
 
-
-@prefixCls:alita-popup;
+@prefixCls: alita-popup;
 
 .@{prefixCls} {
-    &-flow-hidden {
-        overflow: hidden!important;
+  &-flow-hidden {
+    overflow: hidden !important;
+  }
+  &-inview {
+    position: relative;
+    background-color: #fff;
+  }
+  &-close {
+    position: absolute;
+    cursor: pointer;
+    &-top-right {
+      right: 12 * @hd;
+      top: 12 * @hd;
     }
+    &-top-left {
+      left: 12 * @hd;
+      top: 12 * @hd;
+    }
+    &-bottom-left {
+      left: 12 * @hd;
+      bottom: 12 * @hd;
+    }
+    &-bottom-right {
+      right: 12 * @hd;
+      bottom: 12 * @hd;
+    }
+  }
 }
-      

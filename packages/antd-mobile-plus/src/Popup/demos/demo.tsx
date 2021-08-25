@@ -1,48 +1,84 @@
-import React, { FC, useState, useRef, useEffect } from 'react';
-// import { Popup } from '@alitajs/antd-mobile-plus';
-import Popup from '../index';
+import React, { FC, useState, useRef, useEffect, useMemo } from 'react';
+import { Popup } from '@alitajs/antd-mobile-plus';
+import { Icon } from 'antd-mobile';
+import { popupList } from './data';
+import './index.less';
+
+const prefixCls = 'popup-page';
 
 interface DemoProps {}
 
-const Demo: FC<DemoProps> = (props) => {
+const PopupItem = ({ title = '', mode, custom, ...restProps }) => {
   const [show, setShow] = useState(false);
-  const awayRef = useRef(null);
-  const ref = useRef(null);
+
+  const width = useMemo(() => {
+    switch (mode) {
+      case 'alert':
+      case 'sliderLeft':
+      case 'sliderRight':
+        return '50vw';
+    }
+    return 'auto';
+  }, [mode]);
+
+  const height = useMemo(() => {
+    switch (mode) {
+      case 'alert':
+      case 'popup':
+      case 'dropdown':
+        return '30vh';
+    }
+    return '100vh';
+  }, [mode]);
+
   return (
-    <div style={{ height: '100vh', overflow: 'auto' }} ref={ref}>
-      <div style={{ height: '30vh' }}></div>
-      <div style={{ height: '150vh' }}>
-        <div
-          ref={awayRef}
-          style={{
-            height: '0.8rem',
-            backgroundColor: 'red',
-            textAlign: 'center',
-            lineHeight: '0.8rem',
-            color: 'white',
-            position: 'relative',
-          }}
-          onClick={() => {
-            console.log('show');
-            setShow(true);
-          }}
-        >
-          打开动画
-        </div>
-        <Popup
-          mode="alert"
-          onClose={() => {
-            console.log(false);
-            setShow(false);
-          }}
-          show={show}
-          closeOnClickOverlay={false}
-        >
-          <div
-            style={{ height: '50vw', width: '70vw', backgroundColor: '#fff' }}
-          ></div>
-        </Popup>
+    <>
+      <div className={`${prefixCls}-cell`} onClick={() => setShow(true)}>
+        <div>{title}</div>
+        <Icon type="right" color="#969799" />
       </div>
+      <Popup
+        show={show}
+        onClose={() => {
+          setShow(false);
+        }}
+        mode={mode}
+        {...restProps}
+      >
+        {custom ? (
+          restProps.children
+        ) : (
+          <div
+            style={{
+              width,
+              height,
+            }}
+          ></div>
+        )}
+      </Popup>
+    </>
+  );
+};
+
+const GroupView = ({ popups = [], title = '' }) => {
+  return (
+    <div className={`${prefixCls}-group`}>
+      <div className={`${prefixCls}-group-title`}>{title}</div>
+      <div className={`${prefixCls}-list-view`}>
+        {popups.map((item) => (
+          <PopupItem {...item} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Demo: FC<DemoProps> = (props) => {
+  return (
+    <div className="popup-page">
+      {popupList.map((item: any) => (
+        <GroupView {...item} />
+      ))}
     </div>
   );
 };

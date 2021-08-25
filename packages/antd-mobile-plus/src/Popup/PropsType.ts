@@ -29,7 +29,7 @@ export interface PopupType {
    * @description 弹出框方向
    * @default popup
    */
-   mode?: TransitionProps['mode'];
+  mode?: TransitionProps['mode'];
 
   /**
    * @description 是否在点击遮罩层后关闭视图
@@ -74,20 +74,38 @@ export interface PopupType {
   /**
    * @description 动画即将进入
    */
-   onEnter?: () => void;
+  onEnter?: () => void;
 
-   /**
-    * @description 动画已经进入
-    */
-   onEntered?: () => void;
+  /**
+   * @description 动画已经进入
+   */
+  onEntered?: () => void;
 
-   /**
-    * @description 动画即将退出
-    */
-   onExit?: () => void;
+  /**
+   * @description 动画即将退出
+   */
+  onExit?: () => void;
 
-   /**
-    * @description 动画已经退出
-    */
-   onExited?: () => void;
+  /**
+   * @description 动画已经退出
+   */
+  onExited?: () => void;
+
+  /**
+   * @description 是否显示关闭图标	
+   * @default false
+   */
+  closeable?: boolean;
+
+  /**
+   * @description 是否显示圆角
+   * @default false
+   */
+  round?: boolean;
+
+  /**
+   * @description 自定义内容区域
+   * @default false
+   */
+  custom?: boolean;
 }

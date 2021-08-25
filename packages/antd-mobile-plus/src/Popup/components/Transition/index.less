@@ -1,208 +1,182 @@
-@import '~@alitajs/theme/es/index.less';;
+@import '~@alitajs/theme/es/index.less';
 
 @prefixCls: alita-transition;
 
 .@{prefixCls} {
-
-    &-wrapper {
-        overflow: scroll;
+  &-wrapper {
+    overflow: scroll;
+  }
+  // 向上
+  &-popup {
+    &-box {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateY(0%);
     }
-    // 向上
-    &-popup {
-        &-box {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            transform: translateY(100%);
-        }
-        &-enter {
-            transform: translateY(99%);
-            &-active {
-                transform: translateY(0%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateY(0%);
-            }
-        }
-        
-        &-exit {
-            transform: translateY(1%);
-            &-active {
-                transform: translateY(100%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateY(100%);
-            }
-        }
+    &-enter {
+      transform: translateY(100%);
+      &-active {
+        transform: translateY(0%);
+        transition: transform 200ms ease-in;
+      }
     }
 
-    &-dropdown {
-        &-box {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            transform: translateY(-100%);
-        }
-        &-enter {
-            transform: translateY(-99%);
-            &-active {
-                transform: translateY(0%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateY(0%);
-            }
-        }
-        
-        &-exit {
-            transform: translateY(-1%);
-            &-active {
-                transform: translateY(-100%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateY(-100%);
-            }
-        }
+    &-exit {
+      transform: translateY(0%);
+      &-active {
+        transform: translateY(100%);
+        transition: transform 200ms ease-in;
+      }
+    }
+  }
+
+  &-dropdown {
+    &-box {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      transform: translateY(0%);
+    }
+    &-enter {
+      transform: translateY(-100%);
+      &-active {
+        transform: translateY(0%);
+        transition: transform 200ms ease-in;
+      }
     }
 
-    &-sliderleft {
-        &-box {
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            transform: translateX(-100%);
-        }
-        &-enter {
-            transform: translateX(-99%);
-            &-active {
-                transform: translateX(0%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateX(0%);
-            }
-        }
-        
-        &-exit {
-            transform: translateX(-1%);
-            &-active {
-                transform: translateX(-100%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateX(-100%);
-            }
-        }
+    &-exit {
+      transform: translateY(0%);
+      &-active {
+        transform: translateY(-100%);
+        transition: transform 200ms ease-in;
+      }
+    }
+  }
+
+  &-sliderleft {
+    &-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      transform: translateX(0%);
+    }
+    &-enter {
+      transform: translateX(-100%);
+      &-active {
+        transform: translateX(0%);
+        transition: transform 200ms ease-in;
+      }
     }
 
-    &-sliderright {
-        &-box {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            transform: translateX(100%);
-        }
-        &-enter {
-            transform: translateX(99%);
-            &-active {
-                transform: translateX(0%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateX(0%);
-            }
-        }
-        
-        &-exit {
-            transform: translateX(1%);
-            &-active {
-                transform: translateX(100%);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                transform: translateX(100%);
-            }
-        }
+    &-exit {
+      transform: translateX(0%);
+      &-active {
+        transform: translateX(-100%);
+        transition: transform 200ms ease-in;
+      }
+      &-done {
+        // transform: translateX(-100%);
+      }
+    }
+  }
+
+  &-sliderright {
+    &-box {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(0%);
+    }
+    &-enter {
+      transform: translateX(100%);
+      &-active {
+        transform: translateX(0%);
+        transition: transform 200ms ease-in;
+      }
     }
 
-    &-alert {
-        &-box {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            opacity: 0.8;
-            transform: translate(-50%, -50%) scale(0.5, 0.5);
-        }
-        &-enter {
-            opacity: 0.8;
-            transform: translate(-50%, -50%) scale(0.5, 0.5);
-            &-active {
-                opacity: 0.8;
-                transform: translate(-50%, -50%) scale(1, 1);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1, 1);
-            }
-        }
-        
-        &-exit {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1, 1);
-            &-active {
-                opacity: 0.8;
-                transform: translate(-50%, -50%) scale(0.5, 0.5);
-                transition: transform 200ms ease-in;
-            }
-            &-done {
-                opacity: 0.8;
-                transform: translate(-50%, -50%) scale(0.5, 0.5);
-            }
-        }
+    &-exit {
+      transform: translateX(0%);
+      &-active {
+        transform: translateX(100%);
+        transition: transform 200ms ease-in;
+      }
+    }
+  }
+
+  &-alert {
+    &-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1, 1);
+    }
+    &-enter {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(0.5, 0.5);
+      &-active {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1, 1);
+        transition: transform 200ms ease-in;
+      }
     }
 
-    &-overlay {
-        &-box {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: #000;
-            opacity: 0;
-            display: none;
-        }
-        &-enter {
-            display: block;
-            &-active {
-                display: block;
-                opacity: 0.2;
-            }
-            &-done {
-                display: block;
-                opacity: 0.3;
-            }
-        }
-        
-        &-exit {
-            display: block;
-                opacity: 0.3;
-            &-active {
-                display: block;
-                opacity: 0.2;
-            }
-            &-done {
-                display: none;
-                opacity: 0;
-            }
-        }
+    &-exit {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1, 1);
+      //   opacity: 1;
+      //   transform: translate(-50%, -50%) scale(1, 1);
+      &-active {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(0.5, 0.5);
+        transition: transform 200ms ease-in;
+      }
+      &-done {
+      }
     }
+  }
+
+  &-overlay {
+    &-box {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0;
+      display: none;
+    }
+    &-enter {
+      display: block;
+      &-active {
+        display: block;
+        opacity: 0.2;
+      }
+      &-done {
+        display: block;
+        opacity: 0.3;
+      }
+    }
+
+    &-exit {
+      display: block;
+      opacity: 0.3;
+      &-active {
+        display: block;
+        opacity: 0.2;
+      }
+      &-done {
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
 }
