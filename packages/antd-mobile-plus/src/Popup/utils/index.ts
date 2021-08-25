@@ -9,7 +9,7 @@ export const overlayOrigin = (
   mode?: PopupType['mode'],
   offset = 0,
   popMode?: PopupType['type'],
-): TransitionProps['overlayStyle']|undefined => {
+): TransitionProps['overlayStyle'] | undefined => {
   if (mode === 'alert' || mode === 'sliderLeft' || mode === 'sliderRight') {
     return;
   }
@@ -51,4 +51,47 @@ export const setClass = (
   if (type === 'remove') {
     removeClass(targetEle, className);
   }
+};
+
+export const getRadiusStyle = (mode: PopupType['mode'], round: boolean, size: string): React.CSSProperties => {
+  if (!round) {
+    return {};
+  }
+  let style: React.CSSProperties = { overflow: 'hidden' };
+  switch (mode) {
+    case 'alert':
+      style.borderRadius = size;
+      break;
+    case 'dropdown':
+      style.borderBottomLeftRadius = size;
+      style.borderBottomRightRadius = size;
+      break;
+    case 'popup':
+      style.borderTopLeftRadius = size;
+      style.borderTopRightRadius = size;
+      break;
+    case 'sliderLeft':
+      style.borderTopRightRadius = size;
+      style.borderBottomRightRadius = size;
+      break;
+    case 'sliderRight':
+      style.borderTopLeftRadius = size;
+      style.borderBottomLeftRadius = size;
+      break;
+  }
+  return style;
+}
+
+export const getcloseIconPositionClass = (mode: PopupType['mode']) => {
+  switch (mode) {
+    case 'alert':
+    case 'popup':
+    case 'sliderLeft':
+      return 'top-right';
+    case 'dropdown':
+      return 'bottom-right';
+    case 'sliderRight':
+      return 'top-left';
+  }
+  return 'top-right';
 };
