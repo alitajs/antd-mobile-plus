@@ -42,7 +42,7 @@ const Empty: FC<EmptyType> = ({
       style={style}
     >
       <IconView />
-      <TitleView text={title ?? TypeList[type].text} />
+      <TitleView text={title ?? TypeList[type]?.text} />
       {renderFooter}
     </div>
   );

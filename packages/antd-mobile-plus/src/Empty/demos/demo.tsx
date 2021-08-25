@@ -7,7 +7,7 @@ const Demo: FC<DemoProps> = (props) => {
   return (
     <div>
       <div style={{ height: '3vh' }}></div>
-      <Empty type="nomal" style={{ height: '40vh' }} />
+      <Empty type="normal" style={{ height: '40vh' }} />
       <div style={{ height: '3vh' }}></div>
       <Empty type="noMessage" style={{ height: '40vh' }} />
       <div style={{ height: '3vh' }}></div>
@@ -18,7 +18,7 @@ const Demo: FC<DemoProps> = (props) => {
       <Empty type="empty" style={{ height: '40vh' }} />
       <div style={{ height: '3vh' }}></div>
       <Empty
-        type="nomal"
+        type="normal"
         style={{ height: '40vh' }}
         renderHeader={<div style={{ color: '#f40' }}>我是自定义头部</div>}
         renderFooter={<div style={{ color: '#f40' }}>我是自定义底部</div>}
