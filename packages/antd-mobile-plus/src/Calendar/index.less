@@ -1,0 +1,25 @@
+@import '~@alitajs/theme/es/index.less';
+@import '~@alitajs/theme/es/index.less';
+@import '~rmc-calendar/assets/index.css';
+
+@prefixCls: alita-calendar-panel;
+
+.@{prefixCls} {
+  .date-picker {
+    .week-panel {
+      display: none;
+    }
+    .wrapper {
+      .months {
+        .date {
+          .row {
+            .cell {
+              height: 64 * @hd;
+              font-size: 16 * @hd;
+            }
+          }
+        }
+      }
+    }
+  }
+}

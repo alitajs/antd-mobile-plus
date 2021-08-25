@@ -1,19 +1,16 @@
 ---
-title: 日历
+title: 日历 Calendar
 group:
   title: 基础组件
   path: /basic
 nav:
-  title: 日历 CalendarPlus
+  title: 日历
   path: /components
 ---
 
-# CalendarPlus
+# Calendar
 
 ### 展示
 
 <code src="./demos/demo.tsx" />
-
-### 参数
-
-<API />
+<API/>
