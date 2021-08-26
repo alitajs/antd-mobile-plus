@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { useMemo } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import {
   BaseCalendarType,
@@ -34,13 +34,32 @@ function Calendar(props: any): React.ReactElement<any, any> | null {
   const {
     poppable = true,
     show = false,
-    mode,
+    mode = 'popup',
     round = true,
     closeOnClickOverlay = true,
     onClose,
     onConfirm,
     ...restProps
   } = props;
+
+  const width = useMemo(() => {
+    if (mode === 'alert') {
+      return '80vw';
+    }
+    return '100vw';
+  }, [mode]);
+
+  const height = useMemo(() => {
+    switch (mode) {
+      case 'popup':
+      case 'dropdown':
+        return '80vh';
+      case 'alert':
+        return '100vw';
+    }
+    return '100vh';
+  }, [mode]);
+
   return (
     <>
       {poppable ? (
@@ -48,10 +67,12 @@ function Calendar(props: any): React.ReactElement<any, any> | null {
           show={show}
           mode={mode}
           round={round}
+          closeable
           onClose={onClose}
+          contentSize="100%"
           closeOnClickOverlay={closeOnClickOverlay}
         >
-          <div style={{ height: '80vh' }}>
+          <div style={{ height, width }}>
             <CalendarPanel
               {...props}
               onConfirm={(...e: any) => {

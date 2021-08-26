@@ -1,42 +1,51 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useMemo } from 'react';
+import { Icon } from 'antd-mobile';
 import Calendar from '../';
-import { getToday } from '../utils';
-import { Button } from 'antd-mobile';
+import { popupList } from './data';
+import './index.less';
 
+const prefixCls = 'calendar-page';
 interface DemoProps {}
 
-const Demo: FC<DemoProps> = (props) => {
-  const [visible, setVisible] = useState(false);
+const CalendarItem = ({ title = '', ...restProps }) => {
+  const [show, setShow] = useState(false);
   return (
-    <div style={{ height: '100vh' }}>
-      <Button
-        onClick={() => {
-          setVisible(true);
-        }}
-      >
-        打开日历
-      </Button>
+    <>
+      <div className={`${prefixCls}-cell`} onClick={() => setShow(true)}>
+        <div>{title}</div>
+        <Icon type="right" color="#969799" />
+      </div>
       <Calendar
-        show={visible}
-        type="multiple"
-        // poppable={false}
-        firstDayOfWeek={1}
-        title="日历标题"
-        onClose={() => setVisible(false)}
-        onSelect={(...a) => {
-          console.log(...a);
+        show={show}
+        onClose={() => {
+          setShow(false);
         }}
-        onConfirm={(...e) => {
-          console.log(...e);
-        }}
-        defaultDate={
-          new Date(
-            getToday().getFullYear(),
-            getToday().getMonth() + 3,
-            getToday().getDate(),
-          )
-        }
+        {...restProps}
       ></Calendar>
+    </>
+  );
+};
+
+const GroupView = ({ popups = [], title = '' }) => {
+  return (
+    <div className={`${prefixCls}-group`}>
+      <div className={`${prefixCls}-group-title`}>{title}</div>
+      <div className={`${prefixCls}-list-view`}>
+        {popups.map((item: any) => (
+          <CalendarItem key={item.title} {...item} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Demo: FC<DemoProps> = (props) => {
+  return (
+    <div className="popup-page">
+      {popupList.map((item: any) => (
+        <GroupView key={item.title} {...item} />
+      ))}
+      <Calendar poppable={false}></Calendar>
     </div>
   );
 };
