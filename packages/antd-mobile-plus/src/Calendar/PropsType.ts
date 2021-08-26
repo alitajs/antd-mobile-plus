@@ -1,5 +1,7 @@
 import { PopupType } from '../Popup/PropsType'
 
+export type CalendarType = 'single' | 'range' | 'multiple';
+
 export interface BaseCalendarType {
     /**
      * @description 选择类型: `single`表示选择单个日期，`multiple`表示选择多个日期，`range`表示选择日期区间
@@ -62,6 +64,12 @@ export interface BaseCalendarType {
     showTitle?: boolean;
 
     /**
+     * @description 是否展示范围提示框
+     * @default true
+     */
+    showRangePrompt?: boolean;
+
+    /**
      * @description 是否展示日历副标题（年月）
      * @default true
      */
@@ -96,6 +104,11 @@ export interface BaseCalendarType {
      * @default 0
      */
     firstDayOfWeek?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
+    /**
+     * @description 设置主题颜色
+     */
+    color?: React.CSSProperties['color'];
 
     /**
      * @description 点击并选中任意日期时触发
@@ -145,7 +158,7 @@ export interface CalendarRangeProps extends Omit<BaseCalendarType, 'type'> {
      * @description 日期区间最多可选天数
      * @default 无限制
      */
-    maxRang?: number | string;
+    maxRange?: number | string;
 
     /**
      * @description 范围选择超过最多可选天数时的提示文案
@@ -174,3 +187,24 @@ export interface CalendarMultipleProps extends Omit<BaseCalendarType, 'type'> {
      */
     rangePrompt?: string;
 }
+
+export type CalendarDayType =
+    | ''
+    | 'start'
+    | 'start-end'
+    | 'middle'
+    | 'end'
+    | 'selected'
+    | 'multiple-middle'
+    | 'multiple-selected'
+    | 'disabled'
+    | 'placeholder';
+
+export type CalendarDayItem = {
+    date?: Date;
+    text?: string | number;
+    type?: CalendarDayType;
+    topInfo?: string;
+    className?: unknown;
+    bottomInfo?: string;
+};

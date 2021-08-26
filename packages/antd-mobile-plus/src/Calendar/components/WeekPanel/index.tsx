@@ -23,7 +23,9 @@ const WeekPanel: FC<WeekPanelProps> = (props) => {
   return (
     <div className={prefixCls}>
       {renderWeekDays.map((text) => (
-        <span className={`${prefixCls}-weekday`}>{text}</span>
+        <span key={text} className={`${prefixCls}-weekday`}>
+          {text}
+        </span>
       ))}
     </div>
   );

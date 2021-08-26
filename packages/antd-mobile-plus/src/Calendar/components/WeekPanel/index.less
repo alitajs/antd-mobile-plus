@@ -1,6 +1,17 @@
-@import '~@alitajs/theme/es/index.less';;
+@import '~@alitajs/theme/es/index.less';
 // @import '~@alitajs/theme/mixins/icon';
 
 @prefixCls: alita-weekpanel;
 
-.@{prefixCls} {}
+.@{prefixCls} {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &-weekday {
+    flex: 1;
+    font-size: 12 * @hd;
+    line-height: 30 * @hd;
+    text-align: center;
+  }
+}

@@ -1,6 +1,17 @@
-@import '~@alitajs/theme/es/index.less';;
+@import '~@alitajs/theme/es/index.less';
 // @import '~@alitajs/theme/mixins/icon';
 
-@prefixCls: alita-header;
+@prefixCls: alita-calendar_header;
 
-.@{prefixCls} {}
+.@{prefixCls} {
+  flex-shrink: 0;
+  box-shadow: 0 2 * @hd 10 * @hd rgba(242, 243, 245, 0.8);
+  background-color: #fff;
+  &-header-title,
+  &-header-subtitle {
+    height: 44 * @hd;
+    font-weight: 500;
+    line-height: 44 * @hd;
+    text-align: center;
+  }
+}
