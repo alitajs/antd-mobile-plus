@@ -45,7 +45,9 @@ const Demo: FC<DemoProps> = (props) => {
       {popupList.map((item: any) => (
         <GroupView key={item.title} {...item} />
       ))}
-      <Calendar poppable={false}></Calendar>
+      <div style={{ height: '140vw' }}>
+        <Calendar poppable={false}></Calendar>
+      </div>
     </div>
   );
 };

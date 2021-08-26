@@ -80,6 +80,7 @@ function Calendar(props: any): React.ReactElement<any, any> | null {
                   onClose();
                 }
                 if (onConfirm) {
+                  log('onConfirm');
                   onConfirm(...e);
                 }
               }}
