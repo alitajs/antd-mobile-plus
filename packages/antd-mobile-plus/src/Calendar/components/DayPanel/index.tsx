@@ -46,7 +46,6 @@ const DayPanel: FC<DayPanelProps> = (props) => {
           break;
       }
     }
-
     return style;
   }, [rowHeight, index, item, color]);
 
@@ -58,14 +57,22 @@ const DayPanel: FC<DayPanelProps> = (props) => {
 
   const renderTopInfo = () => {
     if (topInfo) {
-      return <div className={`${prefixCls}-top-info`}>{topInfo}</div>;
+      return (
+        <div key="topInfo" className={`${prefixCls}-top-info`}>
+          {topInfo}
+        </div>
+      );
     }
     return null;
   };
 
   const renderBottomInfo = () => {
     if (bottomInfo) {
-      return <div className={`${prefixCls}-bottom-info`}>{bottomInfo}</div>;
+      return (
+        <div key="bottomInfo" className={`${prefixCls}-bottom-info`}>
+          {bottomInfo}
+        </div>
+      );
     }
     return null;
   };
@@ -96,11 +103,9 @@ const DayPanel: FC<DayPanelProps> = (props) => {
         <div className={prefixCls} style={style} />
       ) : (
         <div
-          className={classNames(
-            prefixCls,
-            `${prefixCls}-${item.type}`,
-            `${prefixCls}-${className}`,
-          )}
+          className={classNames(prefixCls, `${prefixCls}-${item.type}`, {
+            [`${prefixCls}-${className}`]: !!className,
+          })}
           style={style}
           onClick={onDayClick}
         >

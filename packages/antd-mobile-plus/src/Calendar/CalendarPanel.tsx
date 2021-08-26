@@ -1,4 +1,4 @@
-import React, { FC, useRef, useEffect, useMemo } from 'react';
+import React, { FC, useRef, useEffect, useMemo, useLayoutEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
 import moment from 'moment';
 import { CalendarDayItem } from './PropsType';
@@ -17,6 +17,7 @@ import {
   cloneDates,
   compareDay,
   compareMonth,
+  formatMonthTitle,
   getDayByOffset,
   getNextDay,
   getPrevDay,
@@ -107,9 +108,17 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
     return limitDateRange(defDate);
   };
 
+  const getSubTitle = () => {
+    const initialDate = getInitialDate();
+    if (Array.isArray(initialDate) && initialDate.length > 0) {
+      return formatMonthTitle(initialDate[0]);
+    }
+    return formatMonthTitle(initialDate || getToday());
+  };
+
   const [state, setState] = useSetState({
     currentDate: getInitialDate(),
-    subtitle: '',
+    subtitle: getSubTitle(),
   });
 
   const bodyRef = useRef(null);
@@ -125,6 +134,15 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
       scrollIntoView();
     }
   }, [size]);
+
+  // useLayoutEffect(() => {
+  //   raf(() => {
+  //     // add Math.floor to avoid decimal height issues
+  //     // https://github.com/youzan/vant/issues/5640
+  //     bodyHeightRef.current = Math.floor(size.height || 0);
+  //     scrollIntoView();
+  //   });
+  // }, []);
 
   const months = useMemo(() => {
     const months: Date[] = [];
@@ -178,9 +196,7 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
         index >= visibleRange[0] - 1 && index <= visibleRange[1] + 1;
       monthRefs.current[index].setVisible(visible);
     });
-    console.log('currentMonth: ', currentMonth);
     if (currentMonth) {
-      console.log('subtitle', currentMonth.getTitle());
       setState({
         subtitle: currentMonth.getTitle(),
       });
@@ -220,8 +236,6 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
   };
 
   const checkRange = (date: [Date, Date]) => {
-    // const { maxRange, rangePrompt, showRangePrompt } = props;
-
     if (maxRange && calcDateNum(date) > maxRange) {
       if (showRangePrompt) {
         Toast.info(rangePrompt || lang('rangePrompt', maxRange));
@@ -274,7 +288,6 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
     if (readonly || !item.date) {
       return;
     }
-
     const { date } = item;
     const { currentDate } = state;
 
@@ -347,7 +360,6 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
         minDate={minDate}
         maxDate={maxDate}
         showMark={showMark}
-        // rowHeight={rowHeight}
         lazyRender={lazyRender}
         showSubtitle={showSubtitle}
         allowSameDay={allowSameDay}
@@ -360,10 +372,10 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
     const { currentDate } = state;
 
     if (currentDate) {
-      if (props.type === 'range') {
+      if (type === 'range') {
         return !(currentDate as Date[])[0] || !(currentDate as Date[])[1];
       }
-      if (props.type === 'multiple') {
+      if (type === 'multiple') {
         return !(currentDate as Date[]).length;
       }
     }

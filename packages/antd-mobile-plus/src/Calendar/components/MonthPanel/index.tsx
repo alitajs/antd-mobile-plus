@@ -1,13 +1,6 @@
-import React, {
-  FC,
-  useMemo,
-  useRef,
-  forwardRef,
-  useImperativeHandle,
-} from 'react';
-import { withError, useTracker } from '@alitajs/tracker';
+import React, { FC, useMemo, useRef, useImperativeHandle } from 'react';
+import { withError } from '@alitajs/tracker';
 import {
-  BaseCalendarType,
   CalendarDayItem,
   CalendarDayType,
   CalendarType,
@@ -107,7 +100,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
   // 是否需要加载
   const shouldRender = useMemo(() => visible || !lazyRender, [
     visible,
-    !lazyRender,
+    lazyRender,
   ]);
 
   const getMultipleDayType = (day: Date) => {
@@ -239,7 +232,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
 
   const renderDay = (item: CalendarDayItem, index: number) => (
     <DayPanel
-      key={item.text}
+      key={item.text || index}
       item={item}
       index={index}
       color={color}

@@ -7,7 +7,7 @@ export interface BaseCalendarType {
      * @description 选择类型: `single`表示选择单个日期，`multiple`表示选择多个日期，`range`表示选择日期区间
      * @default single
      */
-    type?: 'single';
+    type?: CalendarType;
 
     /**
      * @description 日历标题
@@ -43,7 +43,7 @@ export interface BaseCalendarType {
      * @description 是否以弹层的形式展示日历
      * @default true
      */
-    poppable?: false;
+    poppable?: boolean;
 
     /**
      * @description 是否只渲染可视区域的内容
@@ -150,6 +150,11 @@ export interface CalendarPoppableProps extends Omit<BaseCalendarType, 'poppable'
      * @default true
      */
     closeOnClickOverlay?: PopupType['closeOnClickOverlay'];
+
+    /**
+     * @description 关闭时响应
+     */
+    onClose?: PopupType['onClose']
 }
 
 export interface CalendarRangeProps extends Omit<BaseCalendarType, 'type'> {
@@ -173,13 +178,14 @@ export interface CalendarRangeProps extends Omit<BaseCalendarType, 'type'> {
     allowSameDay?: boolean;
 }
 
+
 export interface CalendarMultipleProps extends Omit<BaseCalendarType, 'type'> {
     type: 'multiple';
     /**
      * @description 日期区间最多可选天数
      * @default 无限制
      */
-    maxRang?: number | string;
+    maxRange?: number | string;
 
     /**
      * @description 范围选择超过最多可选天数时的提示文案
