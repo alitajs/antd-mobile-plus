@@ -214,7 +214,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
       days.push(config);
     }
     return days;
-  }, [date, formatter]);
+  }, [date, formatter, currentDate]);
 
   const renderTitle = () => {
     if (showMonthTitle) {

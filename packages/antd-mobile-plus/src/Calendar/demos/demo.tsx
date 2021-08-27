@@ -1,11 +1,11 @@
 import React, { FC, useState, useMemo } from 'react';
 import { Icon } from 'antd-mobile';
 import moment from 'moment';
-import Calendar from '@alitajs/antd-mobile-plus';
+import { Calendar } from '@alitajs/antd-mobile-plus';
 import { popupList } from './data';
 import './index.less';
 
-const m = (d) => {
+const m = (d: any) => {
   if (!d) {
     return '';
   }
@@ -18,7 +18,6 @@ interface DemoProps {}
 
 const CalendarItem = ({ title = '', ...restProps }) => {
   const [show, setShow] = useState(false);
-
   const [subtitle, setSubtitle] = useState(m(restProps.defaultDate));
   return (
     <>
@@ -41,11 +40,12 @@ const CalendarItem = ({ title = '', ...restProps }) => {
         onClose={() => {
           setShow(false);
         }}
-        onConfirm={(d) => {
+        onConfirm={(d: any) => {
           console.log(d);
           setSubtitle(m(d));
         }}
         {...restProps}
+        onSelect={(e) => console.log(e)}
       ></Calendar>
     </>
   );
@@ -71,7 +71,13 @@ const Demo: FC<DemoProps> = (props) => {
         <GroupView key={item.title} {...item} />
       ))}
       <div style={{ height: '140vw' }}>
-        <Calendar poppable={false}></Calendar>
+        <Calendar
+          poppable={false}
+          type="range"
+          onConfirm={(d: any) => {
+            console.log(d);
+          }}
+        ></Calendar>
       </div>
     </div>
   );

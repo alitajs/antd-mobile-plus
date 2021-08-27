@@ -90,6 +90,12 @@ function Calendar(props: any): React.ReactElement<any, any> | null {
       ) : (
         <CalendarPanel
           {...restProps}
+          onConfirm={(...e: any) => {
+            if (onConfirm) {
+              log('onConfirm');
+              onConfirm(...e);
+            }
+          }}
           show={false}
           poppable={false}
         ></CalendarPanel>
