@@ -34,6 +34,7 @@ export const popupList = [
           new Date().getMonth() + 1,
           new Date().getDate(),
         ),
+        type: 'single',
       },
       {
         title: '自定义按钮文字',
@@ -41,6 +42,36 @@ export const popupList = [
       },
       {
         title: '自定义日期文案',
+        type: 'range',
+        defaultDate: [
+          new Date(),
+          new Date(
+            new Date().getFullYear(),
+            new Date().getMonth(),
+            new Date().getDate() + 5,
+          ),
+        ],
+        formatter: (day: any) => {
+          const month = day.date.getMonth() + 1;
+          const date = day.date.getDate();
+          if (month === 5) {
+            if (date === 1) {
+              day.topInfo = '劳动节';
+            } else if (date === 4) {
+              day.topInfo = '青年节';
+            } else if (date === 11) {
+              day.text = '今天';
+            }
+          }
+
+          if (day.type === 'start') {
+            day.bottomInfo = '入住';
+          } else if (day.type === 'end') {
+            day.bottomInfo = '离店';
+          }
+
+          return day;
+        },
       },
       {
         title: '自定义弹出位置',
@@ -49,6 +80,7 @@ export const popupList = [
       {
         title: '日期区间最大范围',
         type: 'range',
+        maxRange: 5,
       },
       {
         title: '自定义周起始日',

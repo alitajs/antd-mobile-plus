@@ -37,7 +37,7 @@ export interface BaseCalendarType {
      * @description 日期格式化函数
      * @default -
      */
-    formatter?: (day: string) => string;
+    formatter?: (day: CalendarDayItem) => CalendarDayItem;
 
     /**
      * @description 是否以弹层的形式展示日历

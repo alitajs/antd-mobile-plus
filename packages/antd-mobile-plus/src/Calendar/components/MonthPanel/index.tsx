@@ -208,15 +208,13 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
         text: day,
         bottomInfo: getBottomInfo(type),
       };
-
       if (formatter) {
         config = formatter(config);
       }
-
       days.push(config);
     }
     return days;
-  }, [date]);
+  }, [date, formatter]);
 
   const renderTitle = () => {
     if (showMonthTitle) {

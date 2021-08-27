@@ -10,13 +10,6 @@ nav:
 
 # Calendar
 
-## 示例
+<code src="./demos/demo.tsx">
 
-```javascript
-
-```
-
-### 展示
-
-<code src="./demos/demo.tsx" />
 <API/>

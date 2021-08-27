@@ -61,6 +61,7 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
     onUnselect = () => {},
     onMonthShow = () => {},
     onOverRang = () => {},
+    formatter,
   } = props;
 
   const limitDateRange = (date: Date, miDate = minDate, maDate = maxDate) => {
@@ -134,15 +135,6 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
       scrollIntoView();
     }
   }, [size]);
-
-  // useLayoutEffect(() => {
-  //   raf(() => {
-  //     // add Math.floor to avoid decimal height issues
-  //     // https://github.com/youzan/vant/issues/5640
-  //     bodyHeightRef.current = Math.floor(size.height || 0);
-  //     scrollIntoView();
-  //   });
-  // }, []);
 
   const months = useMemo(() => {
     const months: Date[] = [];
@@ -263,7 +255,6 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
 
     if (complete && type === 'range') {
       const valid = checkRange(date as [Date, Date]);
-
       if (!valid) {
         if (showConfirm) {
           setCurrentDate([
@@ -364,6 +355,7 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
         showSubtitle={showSubtitle}
         allowSameDay={allowSameDay}
         onClick={onClickDay}
+        formatter={formatter}
       />
     );
   };
