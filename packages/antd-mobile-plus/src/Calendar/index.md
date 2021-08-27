@@ -20,7 +20,7 @@ nav:
 
 ```js
 import React from 'react';
-import { Calendar } from 'vant';
+import { Calendar } from '@alitajs/antd-mobile-plus';
 ```
 
 ## 代码演示
