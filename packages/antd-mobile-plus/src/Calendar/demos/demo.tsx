@@ -1,7 +1,7 @@
 import React, { FC, useState, useMemo } from 'react';
 import { Icon } from 'antd-mobile';
 import moment from 'moment';
-import Calendar from '../';
+import Calendar from '@alitajs/antd-mobile-plus';
 import { popupList } from './data';
 import './index.less';
 
