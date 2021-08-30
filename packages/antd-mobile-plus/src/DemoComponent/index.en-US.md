@@ -3,13 +3,12 @@ title: 演示组件
 group:
   title: 基础组件
   path: /basic
-nav:
-  title: 组件
-  path: /components
+# nav:
+#   title: 组件
+#   path: /components
 ---
 
 这是一个按照规范编写的组件，每一个组件开发都要遵循一下规则。
-
 
 #### 样式
 
@@ -39,13 +38,12 @@ const prefixCls = 'alita-demo';
 
 如果在组件中使用到 antd-mobile 的组件，需要使用按需引入的方式来使用，如使用 button：
 
-`
-import Button from 'antd-mobile/lib/button';
-`
+`import Button from 'antd-mobile/lib/button';`
 
-需要在 less 文件中，额外引入样式 
+需要在 less 文件中，额外引入样式
 
 `@import '~antd-mobile/lib/button/style/index';`
+
 #### 埋点和异常
 
 异常信息收集，导出组件必须使用从 `@alitajs/tracker` 导出的 `withError` 包裹。这将会收集组件内部错误和组件渲染错误。
@@ -58,7 +56,7 @@ export const DemoComponent: React.FC<DemoPropsType> = (props) => {
   const { onClick } = props;
 
   const log = useTracker(DemoComponent.displayName, {
-    type:"primary",
+    type: 'primary',
   });
 
   return (
@@ -76,7 +74,6 @@ export const DemoComponent: React.FC<DemoPropsType> = (props) => {
 
 DemoComponent.displayName = 'DemoComponent';
 
-
 export default withError(DemoComponent);
 ```
 
@@ -88,13 +85,12 @@ export default withError(DemoComponent);
 
 有需要用到文字的地方，都需要支持多语言。组件中使用如下方式取到需要的值。
 
-在 `packages/languages/src` 文件夹下，新建和你组件同名的文件夹，在其中添加两个文件，`en_US.ts` 和 `zh_CN.ts`。
-编写你需要的变量，如
+在 `packages/languages/src` 文件夹下，新建和你组件同名的文件夹，在其中添加两个文件，`en_US.ts` 和 `zh_CN.ts`。编写你需要的变量，如
 
 ```ts
 export default {
   text: '世界，你好！',
-}
+};
 ```
 
 在主入口文件中引入自定义的多语言文件。如 `packages/languages/src/zh_CN.ts`
@@ -112,17 +108,15 @@ export default {
 
 ```
 
-这样在组件中，可以通过如下hooks方法取值。
+这样在组件中，可以通过如下 hooks 方法取值。
 
 ```ts
 import useCompleteLocale from '../LocaleProvider/useCompleteLocale';
 export const Demo: React.FC = (props) => {
-  const lang = useCompleteLocale()
+  const lang = useCompleteLocale();
 
   // 此处表示文件夹名称为 Demo
-  return (
-    <div>{lang.Demo.text}</div>
-  );
+  return <div>{lang.Demo.text}</div>;
 };
 ```
 
