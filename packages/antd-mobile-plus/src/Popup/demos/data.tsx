@@ -39,60 +39,14 @@ export const popupList = [
         closeable: true,
         closeOnClickOverlay: false,
       },
-      {
-        title: '底部弹出',
-        mode: 'popup',
-        closeable: true,
-        closeOnClickOverlay: false,
-      },
-      {
-        title: '左侧弹出',
-        mode: 'sliderLeft',
-        closeable: true,
-        closeOnClickOverlay: false,
-      },
-      {
-        title: '右侧弹出',
-        mode: 'sliderRight',
-        closeable: true,
-        closeOnClickOverlay: false,
-      },
-      {
-        title: '展示弹出层',
-        mode: 'alert',
-        closeable: true,
-        closeOnClickOverlay: false,
-      },
     ],
   },
   {
     title: '圆角弹窗',
     popups: [
       {
-        title: '顶部弹出',
-        mode: 'dropdown',
-        round: true,
-      },
-      {
         title: '底部弹出',
         mode: 'popup',
-        round: true,
-      },
-      {
-        title: '左侧弹出',
-        mode: 'sliderLeft',
-        closeable: true,
-        round: true,
-      },
-      {
-        title: '右侧弹出',
-        mode: 'sliderRight',
-        round: true,
-      },
-      {
-        title: '展示弹出层',
-        mode: 'alert',
-        closeable: true,
         round: true,
       },
     ],
