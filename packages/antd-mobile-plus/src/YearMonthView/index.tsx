@@ -55,7 +55,7 @@ const YearMonthView: FC<YearMonthViewType> = ({
               log('onActiveY');
               if (!isLoadedFn) {
                 setIsLoadedFn(true);
-                const wrapperDom: HTMLDivElement | null = wrapperRef.current;
+                const wrapperDom: any = wrapperRef.current;
                 if (wrapperDom) {
                   const height = wrapperDom!.getBoundingClientRect().height / 2;
                   wrapperDom!.scrollTo(0, y - height);

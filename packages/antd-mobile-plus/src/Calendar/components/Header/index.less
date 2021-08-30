@@ -1,0 +1,19 @@
+@import '~@alitajs/theme/es/index.less';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-calendar_header;
+
+.@{prefixCls} {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  box-shadow: 0 4 * @hd 16 * @hd rgba(226, 228, 238, 0.8);
+  background-color: #fff;
+  &-header-title,
+  &-header-subtitle {
+    height: 44 * @hd;
+    font-weight: 500;
+    line-height: 44 * @hd;
+    text-align: center;
+  }
+}

@@ -1,0 +1,39 @@
+@import '~@alitajs/theme/es/index.less';
+
+.calendar-page {
+  background-color: #f7f8fa;
+  &-group {
+    padding: 0 10 * @hd;
+    &-title {
+      padding: 20 * @hd 0 15 * @hd;
+      font-size: 14 * @hd;
+      line-height: 16 * @hd;
+      color: rgba(69, 90, 100, 0.6);
+    }
+  }
+  &-list-view {
+    background-color: #fff;
+    border-radius: 8 * @hd;
+  }
+
+  &-cell {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12 * @hd 16 * @hd;
+    font-size: 15 * @hd;
+    line-height: 24 * @hd;
+    color: #323233;
+    &::after {
+      position: absolute;
+      left: 20 * @hd;
+      right: 20 * @hd;
+      bottom: 0;
+      height: 1px;
+      background-color: #ebedf0;
+      content: '';
+    }
+  }
+}

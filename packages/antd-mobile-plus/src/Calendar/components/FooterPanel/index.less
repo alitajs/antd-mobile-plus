@@ -1,0 +1,25 @@
+@import '~@alitajs/theme/es/index.less';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-footerpanel;
+
+.@{prefixCls} {
+  padding: 0 16 * @hd;
+  padding-bottom: calc(constant(safe-area-inset-bottom) * @hd);
+  padding-bottom: calc(env(safe-area-inset-bottom) * @hd);
+  &-button {
+    height: 36 * @hd;
+    margin: 7 * @hd 0;
+    border-radius: 18 * @hd;
+    background-color: rgb(25, 137, 250);
+    line-height: 36 * @hd;
+    text-align: center;
+    color: #fff;
+    font-size: 14 * @hd;
+    cursor: pointer;
+  }
+  &-disabled {
+    opacity: 0.7;
+    cursor: crosshair;
+  }
+}

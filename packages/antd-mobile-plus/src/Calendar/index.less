@@ -1,0 +1,17 @@
+@import '~@alitajs/theme/es/index.less';
+
+@prefixCls: alita-calendar-panel;
+
+.@{prefixCls} {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &-months {
+    overflow: auto;
+    flex: 1;
+    -webkit-overflow-scrolling: touch;
+  }
+  &-footer {
+    background-color: #fff;
+  }
+}

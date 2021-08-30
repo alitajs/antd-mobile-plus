@@ -1,0 +1,93 @@
+@import '~@alitajs/theme/es/index.less';
+// @import '~@alitajs/theme/mixins/icon';
+
+@prefixCls: alita-daypanel;
+
+.@{prefixCls} {
+  position: relative;
+  width: 14.285%;
+  height: 64 * @hd;
+  font-size: 16 * @hd;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  &-selected-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &-end,
+  &-start,
+  &-start-end,
+  &-multiple-middle,
+  &-multiple-selected {
+    color: #fff;
+    background-color: rgb(25, 137, 250);
+  }
+  &-start {
+    border-radius: 4 * @hd 0 0 4 * @hd;
+  }
+
+  &-end {
+    border-radius: 0 4 * @hd 4 * @hd 0;
+  }
+
+  &-start-end,
+  &-multiple-selected {
+    border-radius: 4 * @hd;
+  }
+
+  &-middle {
+    color: rgb(25, 137, 250);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: currentColor;
+      opacity: 0.1;
+      content: '';
+    }
+  }
+
+  &-disabled {
+    color: #c8c9cc;
+    cursor: default;
+  }
+
+  &-top-info,
+  &-bottom-info {
+    position: absolute;
+    right: 0;
+    left: 0;
+    font-size: 10 * @hd;
+    line-height: 14 * @hd;
+
+    @media (max-width: 350 * @hd) {
+      font-size: 9 * @hd;
+    }
+  }
+
+  &-top-info {
+    top: 6 * @hd;
+  }
+
+  &-bottom-info {
+    bottom: 6 * @hd;
+  }
+
+  &-selected-day {
+    width: 54 * @hd;
+    height: 54 * @hd;
+    color: #fff;
+    background-color: rgb(25, 137, 250);
+    border-radius: 4 * @hd;
+  }
+}

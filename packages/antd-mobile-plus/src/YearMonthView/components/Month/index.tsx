@@ -34,7 +34,7 @@ const Month: FC<MonthType> = ({
 }) => {
   const monthRef = useRef(null);
   useEffect(() => {
-    const dom: HTMLDivElement | null = monthRef.current;
+    const dom: any = monthRef.current;
     if (active && dom) {
       const y = dom!.getBoundingClientRect().y;
       onActiveY(y);
