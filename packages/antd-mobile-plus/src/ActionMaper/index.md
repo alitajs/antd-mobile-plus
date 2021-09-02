@@ -37,3 +37,7 @@ nav:
 | ----- |----- |----- |----- |
 | lat   | 纬度 | number |  \- |
 | lng   | 精度 | number | \- |
+| province   | 省份 | string | \- |
+| city   | 城市 | string | \- |
+| district   | 地县 | string | \- |
+| street   | 街道 | string | \- |

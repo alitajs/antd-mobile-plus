@@ -79,7 +79,7 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
           district = '',
           street = '',
         } = address;
-        onLocation({ lat: lat, lng: lng });
+        onLocation({ ...address, lat: lat, lng: lng });
         setCurrentPosition({ lat: lat, lng: lng });
         setAddress(`${province}${city}${district}${street}`);
       }
