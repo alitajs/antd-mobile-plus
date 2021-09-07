@@ -5,10 +5,7 @@ import Label from 'react-bmapgl/Overlay/Label';
 
 const Demo: FC = (props) => {
   const mapRef = useRef(null);
-  const [location, setLocation] = useState({
-    lat: 33.914889,
-    lng: 114.404449,
-  });
+  const [location, setLocation] = useState({});
   setTracker({
     log(component, params, ext) {
       console.log(component, params, ext); // 组件名
@@ -17,10 +14,10 @@ const Demo: FC = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setLocation({
-        lat: 34.9148,
+        lat: 30.48,
         lng: 114.4044,
       });
-    }, 2000);
+    }, 5000);
   }, []);
   return (
     <div style={{ padding: '20px' }}>
@@ -47,7 +44,7 @@ const Demo: FC = (props) => {
             console.log('onLocation:', t);
           }}
           onLocationBefore={() => {}}
-          // rightExt={() => <div style={{ color: 'red' }}>自定义按钮</div>}
+          rightExt={() => <div style={{ color: 'red' }}>自定义按钮</div>}
         ></ActionMaper>
       </div>
     </div>
