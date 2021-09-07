@@ -37,12 +37,15 @@ const Demo: FC = (props) => {
           onLocation={(t) => {
             console.log('onLocation:', t);
           }}
-          rightExt={() => <div style={{ color: 'red' }}>自定义按钮</div>}
+          onLocationBefore={() => {
+            console.log('触发定位');
+          }}
+          // rightExt={() => <div style={{ color: 'red' }}>自定义按钮</div>}
         ></ActionMaper>
       </div>
     </div>
   );
 };
 export default ActionMaper.MapApiLoaderHOC({
-  ak: 't9A84QM5lt6a3SMumuQOQtvM2spIQQ2A',
+  ak: 'YqLjyHLyywp2A1EP9lWh0HfSCGeIWOYr',
 })(Demo);

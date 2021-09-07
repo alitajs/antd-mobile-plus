@@ -22,7 +22,8 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
     initialzeZoom = 12,
     rightExt,
     children,
-    mapRefCallback = () => {},
+    mapRefCallback = () => { },
+    onLocationBefore = () => { }
   } = props;
   let mapRef = useRef<any>(null);
   const [mapScale, setMapScale] = useState(1);
@@ -63,8 +64,12 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
 
   const startGeolocation = () => {
     if (coordinate) {
+      if (mapRef.current) {
+        (mapRef.current as any).map.setCenter(coordinate);
+      }
       return;
     }
+    onLocationBefore();
     const BMapGL = (window as any).BMapGL;
     const geolocation = new BMapGL.Geolocation();
     geolocation.getCurrentPosition((result: any) => {
@@ -79,9 +84,12 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
           district = '',
           street = '',
         } = address;
-        onLocation({ ...address, lat: lat, lng: lng });
-        setCurrentPosition({ lat: lat, lng: lng });
+        onLocation({ ...address, lat, lng });
+        setCurrentPosition({ lat, lng });
         setAddress(`${province}${city}${district}${street}`);
+        if (mapRef.current) {
+          (mapRef.current as any).map.setCenter({ lat, lng });
+        }
       }
     });
   };
@@ -89,7 +97,6 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
   useEffect(() => {
     initialMapScale();
     startGeolocation();
-    return () => {};
   }, []);
 
   return (
@@ -101,9 +108,10 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
           (() => (
             <RightExt
               onClick={() => {
-                if (mapRef.current) {
-                  (mapRef.current as any).map.setCenter(currentPosition);
-                }
+                // if (mapRef.current) {
+                //   (mapRef.current as any).map.setCenter(currentPosition);
+                // }
+                startGeolocation();
               }}
             />
           ))
