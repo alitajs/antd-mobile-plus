@@ -1,15 +1,27 @@
-import React, { FC, useRef } from 'react';
+import React, { FC, useRef, useEffect, useState } from 'react';
 import { ActionMaper } from '@alitajs/antd-mobile-plus';
 import { setTracker } from '@alitajs/tracker';
 import Label from 'react-bmapgl/Overlay/Label';
 
 const Demo: FC = (props) => {
   const mapRef = useRef(null);
+  const [location, setLocation] = useState({
+    lat: 33.914889,
+    lng: 114.404449,
+  });
   setTracker({
     log(component, params, ext) {
       console.log(component, params, ext); // 组件名
     },
   });
+  useEffect(() => {
+    setTimeout(() => {
+      setLocation({
+        lat: 34.9148,
+        lng: 114.4044,
+      });
+    }, 2000);
+  }, []);
   return (
     <div style={{ padding: '20px' }}>
       <ActionMaper
@@ -18,10 +30,7 @@ const Demo: FC = (props) => {
         }}
         title="执行位置"
         detailAddress="四川省成都市金牛区马鞍东路11号马鞍东路小区附近45米"
-        coordinate={{
-          lat: 33.914889,
-          lng: 114.404449,
-        }}
+        coordinate={location}
         initialzeZoom={8}
       >
         <Label
@@ -37,9 +46,7 @@ const Demo: FC = (props) => {
           onLocation={(t) => {
             console.log('onLocation:', t);
           }}
-          onLocationBefore={() => {
-            console.log('触发定位');
-          }}
+          onLocationBefore={() => {}}
           // rightExt={() => <div style={{ color: 'red' }}>自定义按钮</div>}
         ></ActionMaper>
       </div>
