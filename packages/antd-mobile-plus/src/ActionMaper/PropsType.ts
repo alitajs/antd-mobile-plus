@@ -29,6 +29,11 @@ export interface ActionMaperType {
   detailAddress?: string;
 
   /**
+   * @description 开始定位
+   */
+  onLocationBefore?: () => void;
+
+  /**
    * @description 定位后的回调
    */
   onLocation?: (c: ActionMaperCoordinateType) => void;
