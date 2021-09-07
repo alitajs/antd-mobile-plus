@@ -22,26 +22,42 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
     initialzeZoom = 12,
     rightExt,
     children,
-    mapRefCallback = () => { },
-    onLocationBefore = () => { }
+    mapRefCallback = () => {},
+    onLocationBefore = () => {},
   } = props;
   let mapRef = useRef<any>(null);
   const [mapScale, setMapScale] = useState(1);
   const [address, setAddress] = useState(detailAddress);
   const [zoom, setZoom] = useState(initialzeZoom);
-  const [
-    currentPosition,
-    setCurrentPosition,
-  ] = useState<ActionMaperCoordinateType>(() => {
-    if (!coordinate) {
-      return {
-        // 默认展示北京天安门位置，否则会显示一片海洋
-        lat: 39.914889,
-        lng: 116.404449,
-      };
+  const [currentPosition, setCurrentPosition] =
+    useState<ActionMaperCoordinateType>(() => {
+      if (!coordinate) {
+        return {
+          // 默认展示北京天安门位置，否则会显示一片海洋
+          lat: 39.914889,
+          lng: 116.404449,
+        };
+      }
+      return coordinate;
+    });
+
+  useEffect(() => {
+    if (coordinate) {
+      setCurrentPosition(coordinate);
     }
-    return coordinate;
-  });
+  }, [coordinate]);
+
+  useEffect(() => {
+    if (detailAddress) {
+      setAddress(detailAddress);
+    }
+  }, [detailAddress]);
+
+  useEffect(() => {
+    if (initialzeZoom) {
+      setZoom(initialzeZoom);
+    }
+  }, [initialzeZoom]);
 
   const onZoom = (type: ZoomType) => {
     if (type === 'plus') {
