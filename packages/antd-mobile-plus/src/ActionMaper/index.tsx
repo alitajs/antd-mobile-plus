@@ -31,19 +31,22 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
   const [zoom, setZoom] = useState(initialzeZoom);
   const [currentPosition, setCurrentPosition] =
     useState<ActionMaperCoordinateType>(() => {
-      if (!coordinate) {
-        return {
-          // 默认展示北京天安门位置，否则会显示一片海洋
-          lat: 39.914889,
-          lng: 116.404449,
-        };
+      // fix: coordinate = {} 时传入setCenter报错
+      if (coordinate && JSON.stringify(coordinate) !== '{}') {
+        return coordinate;
       }
-      return coordinate;
+      return {
+        // 默认展示北京天安门位置，否则会显示一片海洋
+        lat: 39.914889,
+        lng: 116.404449,
+      };
     });
 
   useEffect(() => {
-    if (coordinate) {
+    // fix: coordinate = {} 时传入setCenter报错
+    if (coordinate && JSON.stringify(coordinate) !== '{}') {
       setCurrentPosition(coordinate);
+      setCenter(coordinate);
     }
   }, [coordinate]);
 
@@ -78,11 +81,17 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
     setMapScale(scale * 1.5);
   };
 
+  const setCenter = (coord: ActionMaperCoordinateType) => {
+    if (mapRef.current) {
+      if (JSON.stringify(coord) !== '{}') {
+        (mapRef.current as any).map.setCenter(coord);
+      }
+    }
+  };
+
   const startGeolocation = () => {
     if (coordinate) {
-      if (mapRef.current) {
-        (mapRef.current as any).map.setCenter(coordinate);
-      }
+      setCenter(coordinate);
       return;
     }
     onLocationBefore();
@@ -100,11 +109,15 @@ const ActionMaper: FCMap<ActionMaperType> = (props) => {
           district = '',
           street = '',
         } = address;
+        if (coordinate) {
+          setCenter(coordinate);
+          return;
+        }
         onLocation({ ...address, lat, lng });
         setCurrentPosition({ lat, lng });
         setAddress(`${province}${city}${district}${street}`);
         if (mapRef.current) {
-          (mapRef.current as any).map.setCenter({ lat, lng });
+          setCenter({ lat, lng });
         }
       }
     });
