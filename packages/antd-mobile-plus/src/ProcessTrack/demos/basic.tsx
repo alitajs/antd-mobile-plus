@@ -52,6 +52,7 @@ export default () => {
         keyFieldName="linkId"
         tNameKey="linkName"
         cTimeKey="startTime"
+        call={(e) => console.log(e)}
         linkMap={[
           { label: '处理人', key: 'pepple' },
           { label: '联系电话', key: 'phone', isPhone: true },
