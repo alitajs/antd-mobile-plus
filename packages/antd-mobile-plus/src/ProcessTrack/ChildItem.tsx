@@ -34,7 +34,7 @@ interface ChildItem {
   /**
    *@description 拨打电话，和原生交互
    */
-  call: () => void;
+  call: (item: any) => void;
 }
 const prefixCls = 'alita-track';
 const ChildItem: React.FC<ChildItem> = (props) => {
@@ -46,17 +46,10 @@ const ChildItem: React.FC<ChildItem> = (props) => {
     item,
     down,
     log,
-    call = () => {},
+    call = (item) => {},
   } = props;
-  const {
-    lastIcon,
-    callIcon,
-    downIcon,
-    upIcon,
-    firstIcon,
-    normalIcon,
-  } = IMGSTR;
-
+  const { lastIcon, callIcon, downIcon, upIcon, firstIcon, normalIcon } =
+    IMGSTR;
   const [openFlag, updateFlag] = useState(down);
 
   return (
@@ -102,7 +95,7 @@ const ChildItem: React.FC<ChildItem> = (props) => {
                         ? `${prefixCls}-child-value`
                         : `${prefixCls}-hide`
                     }
-                    onClick={isPhone ? call : () => {}}
+                    onClick={isPhone ? () => call(item) : () => {}}
                   >
                     {item[key]}
                     <img
