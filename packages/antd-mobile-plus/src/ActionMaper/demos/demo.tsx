@@ -44,7 +44,7 @@ const Demo: FC = (props) => {
             console.log('onLocation:', t);
           }}
           onLocationBefore={() => {}}
-          rightExt={() => <div style={{ color: 'red' }}>自定义按钮</div>}
+          // rightExt={() => <div style={{ color: 'red' }}>自定义按钮</div>}
         ></ActionMaper>
       </div>
     </div>

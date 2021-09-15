@@ -88,11 +88,13 @@ const Transition: FC<TransitionProps> = ({
   contentSize = '80%',
 }) => {
   const [display, setDisplay] = useState<CSSProperties['display']>('none');
+
   useMemo(() => {
     if (show) {
       setDisplay('block');
     }
   }, [show]);
+  
   return (
     <div
       style={{
@@ -114,7 +116,7 @@ const Transition: FC<TransitionProps> = ({
         classNames={`${prefixCls}-overlay`}
         unmountOnExit
       >
-        {() => {
+        {(state) => {
           return (
             <div
               className={`${prefixCls}-overlay-box`}
