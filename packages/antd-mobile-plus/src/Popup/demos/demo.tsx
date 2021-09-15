@@ -8,8 +8,8 @@ const prefixCls = 'popup-page';
 
 interface DemoProps {}
 
-const PopupItem = ({ title = '', mode, custom, ...restProps }) => {
-  const [show, setShow] = useState(false);
+const PopupItem = ({ title = '', mode = 'alert', custom = false, ...restProps }) => {
+  const [show, setShow] = useState(restProps.show);
 
   const width = useMemo(() => {
     switch (mode) {
@@ -38,12 +38,12 @@ const PopupItem = ({ title = '', mode, custom, ...restProps }) => {
         <Icon type="right" color="#969799" />
       </div>
       <Popup
+        {...restProps}
         show={show}
         onClose={() => {
           setShow(false);
         }}
         mode={mode}
-        {...restProps}
       >
         {custom ? (
           restProps.children
