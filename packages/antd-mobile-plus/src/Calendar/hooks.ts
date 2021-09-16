@@ -16,7 +16,7 @@ export function useRefs<T = Element>() {
 
 export const inBrowser = typeof window !== 'undefined';
 
-const root = (inBrowser ? window : global) as Window;
+const root = (inBrowser ? window : global) as unknown as Window;
 
 let prev = Date.now();
 
