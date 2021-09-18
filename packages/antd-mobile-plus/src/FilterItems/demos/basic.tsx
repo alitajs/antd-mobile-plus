@@ -1,6 +1,7 @@
-import * as React from "react";
-import { setTracker } from "@alitajs/tracker";
-import { FilterItems } from "@alitajs/antd-mobile-plus";
+import * as React from 'react';
+import { setTracker } from '@alitajs/tracker';
+import { FilterItems } from '@alitajs/antd-mobile-plus';
+import styles from './basic.less';
 
 export default () => {
   // 这个方法应该统一添加
@@ -17,48 +18,64 @@ export default () => {
       console.log(ext);
     },
   });
+  const singleData = [
+    {
+      data: [
+        { id: '1', label: '单个使用' },
+        { id: '2', label: '任务来源2' },
+        { id: '3', label: '全部3' },
+      ],
+      filterId: 'f_1',
+      defaultText: '地区',
+    },
+  ];
 
-  const data = [
+  const mutilData = [
     {
       data: [
-        { id: "1", value: "排序不限1" },
-        { id: "2", value: "任务来源2" },
-        { id: "3", value: "全部3" },
+        { id: '1', value: '排序不限1' },
+        { id: '2', value: '任务来源2' },
+        { id: '3', value: '全部3' },
       ],
-      filterId: "f_1",
-      defaultText: "地区",
+      filterId: 'f_1',
+      defaultText: '地区',
     },
     {
       data: [
-        { id: "21", value: "全部2" },
-        { id: "22", value: "任务来源2" },
-        { id: "23", value: "全部" },
-        { id: "24", value: "排序-不限2" },
+        { id: '21', value: '全部2' },
+        { id: '22', value: '任务来源2' },
+        { id: '23', value: '全部' },
+        { id: '24', value: '排序-不限2' },
       ],
-      filterId: "f_2",
-      defaultText:'商区'
+      filterId: 'f_2',
+      defaultText: '商区',
     },
     {
       data: [
-        { id: "31", value: "这个名字很长这个名字很长3" },
-        { id: "32", value: "任务来源3" },
-        { id: "33", value: "全部3" },
+        { id: '31', value: '这个名字很长这个名字很长3' },
+        { id: '32', value: '任务来源3' },
+        { id: '33', value: '全部3' },
       ],
-      filterId: "f_3",
+      filterId: 'f_3',
     },
   ];
 
   return (
-    <div style={{ padding: "24px 0" }}>
+    <div style={{ padding: '24px' }}>
+      <div className={styles.titles}>单个使用</div>
       <FilterItems
-        data={data}
-        // drawItemRender={(child)=>{
-        //   return <div>11</div>
-        // }}
+        data={singleData}
         onItemChange={(data: any) => {
           console.log(data);
         }}
-        alias={{ label: "value" }}
+      />
+      <div className={styles.titles}>多个使用</div>
+      <FilterItems
+        data={mutilData}
+        onItemChange={(data: any) => {
+          console.log(data);
+        }}
+        alias={{ label: 'value' }}
       />
     </div>
   );
