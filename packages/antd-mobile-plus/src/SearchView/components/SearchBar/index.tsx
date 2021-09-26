@@ -1,5 +1,7 @@
-import React, { FC, useState, useRef } from 'react';
+import React, { FC, useState, useRef, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
+import CSSTransition from 'react-transition-group/CSSTransition';
+import classNames from 'classnames';
 import './index.less';
 
 interface SearchBarProps {
@@ -43,12 +45,37 @@ interface SearchBarProps {
    * @default `text`
    */
   type?: string;
+
+  /**
+   * @description 是否展示取消按钮
+   * @default false
+   */
+  showCancel?: boolean;
+
+  /**
+   * @description 取消按钮文字
+   * @default 取消
+   */
+  cancelText?: string;
+
+  /**
+   * @description 取消按钮回调
+   * @default -
+   */
+  onCancel?: () => void;
+
+  /**
+   * @description 输入框内容
+   * @default 
+   */
+  value?: string;
 }
 
 const prefixCls = 'alita-search-bar';
 
 const SearchBar: FC<SearchBarProps> = ({
   initalzeValue = '',
+  value: uValue,
   onSearch = () => {},
   onFocus = () => {},
   onBlur = () => {},
@@ -56,8 +83,14 @@ const SearchBar: FC<SearchBarProps> = ({
   maxLength = 0,
   placeholder,
   type = 'text',
+  showCancel = false,
+  cancelText = '取消',
+  onCancel = () => {},
+  ...restProps
 }) => {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [display, setDisplay] = useState('none');
+  const [showCancelBtn, setShowCancelBtn] = useState(false);
   const [value, setValue] = useState(() => {
     if (maxLength === 0 || maxLength >= initalzeValue.length) {
       return initalzeValue;
@@ -67,53 +100,104 @@ const SearchBar: FC<SearchBarProps> = ({
     return '';
   });
 
+  useEffect(() => {
+    if (showCancelBtn) {
+      setDisplay('block');
+    }
+  }, [showCancelBtn]);
+
+  useEffect(() => {
+    setValue(uValue || '');
+  }, [uValue])
+
   const log = useTracker(SearchBar.displayName, {});
   const otherProps = {
     enterkeyhint: 'search',
   };
+
+  const Cancel = () => {
+    return (
+      <CSSTransition
+        timeout={200}
+        classNames={`${prefixCls}-cancel`}
+        in={showCancelBtn && showCancel}
+        unmountOnExit
+        onExited={() => {
+          setTimeout(() => {
+            setDisplay('none');
+          }, 2000);
+        }}
+      >
+        {(state) => {
+          return (
+            <div
+              className={`${prefixCls}-cancel-box`}
+              onClick={() => {
+                setShowCancelBtn(false);
+                if (onCancel) {
+                  onCancel();
+                }
+              }}
+            >
+              {cancelText}
+            </div>
+          );
+        }}
+      </CSSTransition>
+    );
+  };
   return (
     <div className={prefixCls}>
-      <i className={`${prefixCls}-search`}></i>
-      <input
-        ref={inputRef}
-        type={type}
-        {...otherProps}
-        className={`${prefixCls}-input`}
-        value={value}
-        onFocus={(e) => {
-          log('onFocus');
-          onFocus(e.currentTarget.value);
-        }}
-        onBlur={(e) => {
-          log('onBlur');
-          onBlur(e.currentTarget.value);
-        }}
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') {
-            log(`onSearch`);
-            onSearch(value);
-            const inputDOM: HTMLInputElement = inputRef.current!;
-            if (inputDOM) {
-              inputDOM.blur();
+      <div className={`${prefixCls}-searchview`}>
+        <i className={`${prefixCls}-search`}></i>
+        <input
+          ref={inputRef}
+          type={type}
+          {...otherProps}
+          className={`${prefixCls}-input`}
+          value={value}
+          onFocus={(e) => {
+            log('onFocus');
+            onFocus(e.currentTarget.value);
+            setShowCancelBtn(true);
+          }}
+          onBlur={(e) => {
+            log('onBlur');
+            onBlur(e.currentTarget.value);
+            // setShowCancelBtn(false);
+          }}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              log(`onSearch`);
+              onSearch(value);
+              const inputDOM: HTMLInputElement = inputRef.current!;
+              if (inputDOM) {
+                inputDOM.blur();
+              }
+              if (!value) {
+                setShowCancelBtn(false);
+              }
             }
-          }
-        }}
-        maxLength={maxLength || 9999999999999}
-        onChange={(e) => {
-          log('onChange');
-          const inputValue = e.currentTarget.value;
-          if (maxLength === 0) {
-            onChange(inputValue);
-            setValue(inputValue);
-            return;
-          }
-          if (inputValue.length <= maxLength) {
-            onChange(inputValue);
-            setValue(inputValue);
-          }
-        }}
-        placeholder={placeholder}
-      />
+          }}
+          maxLength={maxLength || Number.MAX_VALUE}
+          onChange={(e) => {
+            log('onChange');
+            const inputValue = e.currentTarget.value;
+            if (maxLength === 0) {
+              onChange(inputValue);
+              setValue(inputValue);
+              return;
+            }
+            if (inputValue.length <= maxLength) {
+              onChange(inputValue);
+              setValue(inputValue);
+            }
+          }}
+          placeholder={placeholder}
+          {...restProps}
+        />
+      </div>
+      <Cancel />
     </div>
   );
 };
