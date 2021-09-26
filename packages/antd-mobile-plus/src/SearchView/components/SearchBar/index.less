@@ -6,6 +6,16 @@
 .@{prefixCls} {
     position: relative;
     flex: 1;
+    display: flex;
+    align-items: center;
+    &-searchview {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        flex-direction: row;
+        overflow: hidden;
+    }
     &-search {
         position: absolute;
         top: 50%;
@@ -27,5 +37,29 @@
         border-radius: 18 * @hd;
         font-size: 14 * @hd;
         box-sizing: border-box;
+        transition: width 0.3s ease-in;
+    }
+    &-cancel {
+        &-box {
+            overflow: hidden;
+            padding-left: 8 * @hd;
+            padding-right: 8 * @hd;
+            color: @color-active;
+            transform: translateX(0%);
+        }
+        &-enter {
+            transform: translateX(100%);
+            &-active {
+              transform: translateX(0%);
+              transition: transform 200ms ease-in;
+            }
+        }
+        &-exit {
+            transform: translateY(0%);
+            &-active {
+              transform: translateY(100%);
+              transition: transform 200ms ease-in;
+            }
+        }
     }
 }

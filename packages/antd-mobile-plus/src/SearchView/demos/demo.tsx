@@ -12,6 +12,7 @@ const Demo: FC<DemoProps> = (props) => {
       console.log(a, b, c);
     },
   });
+  const [value, setValue] = useState("393");
   const [filterValue, setFilterValue] = useState('02');
   const [filterValue01, setFilterValue01] = useState();
   const scrollElement = useRef<HTMLDivElement>(null);
@@ -46,6 +47,7 @@ const Demo: FC<DemoProps> = (props) => {
           scrollElement={scrollEle}
           maxHeight="70vh"
           placeholder="请输入文字"
+          value={value}
           filterData={[
             { label: '竣工', value: '01' },
             { label: '测试02测试02', value: '02' },
@@ -61,6 +63,10 @@ const Demo: FC<DemoProps> = (props) => {
           ]}
           filterValue={filterValue01}
           showLeft={true}
+          onChange={(v) => {
+            console.log(v);
+            setValue(v);
+          }}
           onFilterChange={(e) => {
             console.log('onFilterChange：', e);
             setFilterValue01(e.value);
@@ -78,6 +84,7 @@ const Demo: FC<DemoProps> = (props) => {
             console.log('onBlur:', v);
           }}
           type="number"
+          showCancel={true}
         />
 
         <div className={'search-view-demo'}></div>

@@ -11,6 +11,30 @@ export interface SearchFilterDataType {
 
 export interface SearchViewType {
   /**
+   * @description 输入框内容
+   * @default 
+   */
+  value?: string;
+
+  /**
+   * @description 是否展示取消按钮
+   * @default false
+   */
+  showCancel?: boolean
+
+  /**
+   * @description 取消按钮文字
+   * @default 取消
+   */
+  cancelText?: string;
+
+  /**
+   * @description 取消按钮回调
+   * @default -
+   */
+  onCancel?: () => void;
+
+  /**
    * @description 展示左侧筛选框
    * @default false
    */
