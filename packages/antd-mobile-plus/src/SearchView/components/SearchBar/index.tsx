@@ -179,7 +179,7 @@ const SearchBar: FC<SearchBarProps> = ({
               }
             }
           }}
-          maxLength={maxLength || Number.MAX_VALUE}
+          maxLength={maxLength || Number.POSITIVE_INFINITY}
           onChange={(e) => {
             log('onChange');
             const inputValue = e.currentTarget.value;
