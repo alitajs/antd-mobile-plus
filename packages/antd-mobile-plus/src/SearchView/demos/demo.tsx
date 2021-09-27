@@ -89,6 +89,7 @@ const Demo: FC<DemoProps> = (props) => {
 
         <div className={'search-view-demo'}></div>
         <SearchView
+          showCancel
           scrollElement={scrollEle}
           placeholder="自定义面板"
           showLeft={true}
