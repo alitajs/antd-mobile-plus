@@ -56,4 +56,9 @@ export interface ProTrackProps {
    * @default id
    */
   keyFieldName?: string;
+
+  /**
+   * @description 自定义每个item的底部
+   */
+  renderItemFooter: (item: any) => React.ReactNode;
 }

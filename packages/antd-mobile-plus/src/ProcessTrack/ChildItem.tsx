@@ -35,6 +35,10 @@ interface ChildItem {
    *@description 拨打电话，和原生交互
    */
   call: (item: any) => void;
+  /**
+   * @description 自定义底部
+   */
+  renderFooter: (item: any) => React.ReactNode;
 }
 const prefixCls = 'alita-track';
 const ChildItem: React.FC<ChildItem> = (props) => {
@@ -47,6 +51,7 @@ const ChildItem: React.FC<ChildItem> = (props) => {
     down,
     log,
     call = (item) => {},
+    renderFooter,
   } = props;
   const { lastIcon, callIcon, downIcon, upIcon, firstIcon, normalIcon } =
     IMGSTR;
@@ -108,6 +113,7 @@ const ChildItem: React.FC<ChildItem> = (props) => {
                 </div>
               );
             })}
+            {renderFooter && renderFooter(item)}
           </>
         ) : (
           ''

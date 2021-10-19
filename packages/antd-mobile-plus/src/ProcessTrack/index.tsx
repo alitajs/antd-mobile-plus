@@ -16,6 +16,7 @@ export const ProcessTrack: React.FC<ProTrackProps> = (props) => {
     empty,
     call = () => {},
     keyFieldName = 'id',
+    renderItemFooter,
   } = props;
 
   const log = useTracker(ProcessTrack.displayName, {});
@@ -35,6 +36,7 @@ export const ProcessTrack: React.FC<ProTrackProps> = (props) => {
                 down={down}
                 log={log}
                 call={call}
+                renderFooter={renderItemFooter}
               />
             );
           })
