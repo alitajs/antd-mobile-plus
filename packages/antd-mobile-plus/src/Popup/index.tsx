@@ -16,6 +16,36 @@ import classNames from 'classnames';
 
 const prefixCls = 'alita-popup';
 
+const PopupInView = (p: any) => {
+  if (p.custom) {
+    return <>{p.children}</>;
+  }
+  return (
+    <div
+      className={classNames({
+        [`${prefixCls}-inview`]: true,
+        [`${prefixCls}-closeable`]: p.closeable,
+      })}
+      style={{
+        ...getRadiusStyle(p.mode, p.round, '0.16rem'),
+      }}
+    >
+      {p.children}
+      {p.closeable && (
+        <div
+          className={classNames(`${prefixCls}-close`, {
+            [`${prefixCls}-close-${getcloseIconPositionClass(p.mode)}`]: true,
+          })}
+          onClick={p.aClose}
+        >
+          <Icon type="cross" size="md" color="#999" />
+        </div>
+      )}
+    </div>
+  );
+};
+
+
 const Popup: FC<PopupType> = ({
   awayRef,
   show = false,
@@ -67,34 +97,6 @@ const Popup: FC<PopupType> = ({
   // 历史浏览器前进或者后退操作时关闭
   useEventListener('popstate', aClose);
 
-  const PopupInView = () => {
-    if (custom) {
-      return <>{children}</>;
-    }
-    return (
-      <div
-        className={classNames({
-          [`${prefixCls}-inview`]: true,
-          [`${prefixCls}-closeable`]: closeable,
-        })}
-        style={{
-          ...getRadiusStyle(mode, round, '0.16rem'),
-        }}
-      >
-        {children}
-        {closeable && (
-          <div
-            className={classNames(`${prefixCls}-close`, {
-              [`${prefixCls}-close-${getcloseIconPositionClass(mode)}`]: true,
-            })}
-            onClick={aClose}
-          >
-            <Icon type="cross" size="md" color="#999" />
-          </div>
-        )}
-      </div>
-    );
-  };
 
   return (
     <div ref={topRef}>
@@ -108,7 +110,15 @@ const Popup: FC<PopupType> = ({
           overlayStyle={aOverlayStyle}
           {...otherProps}
         >
-          <PopupInView />
+          <PopupInView
+            closeable={closeable}
+            mode={mode}
+            round={round}
+            aClose={aClose}
+            custom={custom}
+          >
+            {children}
+          </PopupInView>
         </Transition>,
         document.body,
       )}
