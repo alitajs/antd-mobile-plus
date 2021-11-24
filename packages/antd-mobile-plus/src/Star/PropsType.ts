@@ -16,4 +16,10 @@ export interface StarProps {
    * @description.en-US tracker
    */
   ext?: any;
+
+  /**
+   * @description 设置禁用
+   * @default false
+   */
+  disabled?: boolean;
 }
