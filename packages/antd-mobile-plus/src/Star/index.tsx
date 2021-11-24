@@ -3,14 +3,25 @@ import classnames from 'classnames';
 import { withError, useTracker } from '@alitajs/tracker';
 import { StarProps } from './PropsType';
 import './index.less';
+import classNames from 'classnames';
 
 const prefixCls = 'alita-star';
 
 const Star: FC<StarProps> = (props) => {
-  const { score = 0, maxScore = 5, onChange = () => {}, ext } = props;
+  const {
+    score = 0,
+    disabled = false,
+    maxScore = 5,
+    onChange = () => {},
+    ext,
+  } = props;
   const log = useTracker(Star.displayName, { ext });
   return (
-    <div className={prefixCls}>
+    <div
+      className={classNames(prefixCls, {
+        [`${prefixCls}-disabled`]: disabled,
+      })}
+    >
       {[
         maxScore / 5,
         (maxScore / 5) * 2,
@@ -22,7 +33,9 @@ const Star: FC<StarProps> = (props) => {
           key={i}
           onClick={() => {
             log(`onClick:${i}`);
-            onChange(i);
+            if (!disabled) {
+              onChange(i);
+            }
           }}
           className={classnames({
             [`${prefixCls}-${
