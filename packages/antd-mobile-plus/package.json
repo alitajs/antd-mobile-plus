@@ -30,17 +30,17 @@
     "@alitajs/languages": "0.8.14",
     "@alitajs/theme": "0.8.14",
     "@alitajs/tracker": "0.8.14",
-    "ahooks": "^2.9.6",
+    "ahooks": "2.9.6",
     "antd-mobile": "2.3.3",
-    "classnames": "^2.2.6",
-    "qrcode": "^1.4.1",
-    "react-bmapgl": "^0.1.4",
-    "react-canvas-draw": "^1.1.1",
-    "react-transition-group": "^4.4.1"
+    "classnames": "2.2.6",
+    "qrcode": "1.4.1",
+    "react-bmapgl": "0.1.4",
+    "react-canvas-draw": "1.1.1",
+    "react-transition-group": "4.4.1"
   },
   "devDependencies": {
-    "@types/qrcode": "^1.4.0",
-    "@types/react-canvas-draw": "^1.1.0",
-    "@types/react-transition-group": "^4.4.1"
+    "@types/qrcode": "1.4.0",
+    "@types/react-canvas-draw": "1.1.0",
+    "@types/react-transition-group": "4.4.1"
   }
 }
