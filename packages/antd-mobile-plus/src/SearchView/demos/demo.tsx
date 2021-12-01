@@ -48,6 +48,7 @@ const Demo: FC<DemoProps> = (props) => {
           maxHeight="70vh"
           placeholder="请输入文字"
           value={value}
+          zIndex={110}
           filterData={[
             { label: '竣工', value: '01' },
             { label: '测试02测试02', value: '02' },

@@ -53,6 +53,11 @@ interface SearchPopViewProps {
    * @default document.documentElement
    */
   scrollElement?: HTMLElement;
+
+  /**
+   * @description 层级
+   */
+  zIndex?: number;
 }
 
 const SearchPopView: FC<SearchPopViewProps> = (props) => {
@@ -68,6 +73,7 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
     children,
     awayRef,
     scrollElement,
+    zIndex = 999
   } = props;
 
   return (
@@ -81,6 +87,7 @@ const SearchPopView: FC<SearchPopViewProps> = (props) => {
         scrollElement={scrollElement}
         contentSize={maxHeight}
         closeOnClickOutside={true}
+        zIndex={zIndex}
         onClose={() => {
           onHide();
         }}

@@ -21,6 +21,7 @@ const SearchView: FC<SearchViewType> = (props) => {
     leftText,
     maxHeight = '50vh',
     scrollElement,
+    zIndex,
     ...searchBarProps
   } = props;
   const awayRef = useRef(null);
@@ -48,6 +49,7 @@ const SearchView: FC<SearchViewType> = (props) => {
         onRenderPanel={PopViewPanel}
         maxHeight={maxHeight}
         scrollElement={scrollElement}
+        zIndex={zIndex}
         onHide={() => {
           log('onHide');
           setVisiable(false);
