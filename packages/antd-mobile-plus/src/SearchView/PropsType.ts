@@ -134,4 +134,10 @@ export interface SearchViewType {
    * @default document.documentElement
    */
   scrollElement?: HTMLElement;
+
+  /**
+   * @description 层级 
+   * @default 99
+   */
+  zIndex?: number;
 }
