@@ -3,7 +3,7 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import classnames from 'classnames';
 import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
-import { getRadiusStyle } from '../../../../es/Popup/utils';
+import { getRadiusStyle } from '../../utils';
 
 export interface TransitionProps {
   /**
