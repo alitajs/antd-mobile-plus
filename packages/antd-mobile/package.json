@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/antd-mobile",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
