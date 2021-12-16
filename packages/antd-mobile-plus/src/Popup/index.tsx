@@ -26,9 +26,7 @@ const PopupInView = (p: any) => {
         [`${prefixCls}-inview`]: true,
         [`${prefixCls}-closeable`]: p.closeable,
       })}
-      style={{
-        ...getRadiusStyle(p.mode, p.round, '0.16rem'),
-      }}
+      // style={{  }}
     >
       {p.children}
       {p.closeable && (
@@ -108,6 +106,7 @@ const Popup: FC<PopupType> = ({
           contentSize={contentSize}
           closeOnClickOverlay={closeOnClickOverlay}
           overlayStyle={aOverlayStyle}
+          round={round}
           {...otherProps}
         >
           <PopupInView

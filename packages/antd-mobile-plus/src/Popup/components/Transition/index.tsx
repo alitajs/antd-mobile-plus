@@ -3,6 +3,7 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import classnames from 'classnames';
 import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
+import { getRadiusStyle } from '../../../../es/Popup/utils';
 
 export interface TransitionProps {
   /**
@@ -69,6 +70,12 @@ export interface TransitionProps {
    * @description 层级
    */
   zIndex?: number;
+
+  /**
+   * @description 是否显示圆角
+   * @default false
+   */
+  round?: boolean;
 }
 
 const prefixCls = 'alita-transition';
@@ -86,8 +93,11 @@ const Transition: FC<TransitionProps> = ({
   className,
   zIndex = 1,
   contentSize = '80%',
+  round = false
 }) => {
   const [display, setDisplay] = useState<CSSProperties['display']>('none');
+
+  const wrapperStyle = useMemo(() => getRadiusStyle(mode, round, '0.16rem'), [mode, round]);
 
   useMemo(() => {
     if (show) {
@@ -156,8 +166,8 @@ const Transition: FC<TransitionProps> = ({
               )}
               style={
                 mode === 'sliderLeft' || mode === 'sliderRight'
-                  ? { maxWidth: contentSize }
-                  : { maxHeight: contentSize }
+                  ? { maxWidth: contentSize, ...wrapperStyle, overflow: 'auto' }
+                  : { maxHeight: contentSize, ...wrapperStyle, overflow: 'auto' }
               }
             >
               {children}
