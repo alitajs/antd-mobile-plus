@@ -5,8 +5,8 @@
 
 .@{prefixCls} {
   padding: 0 16 * @hd;
-  padding-bottom: calc(constant(safe-area-inset-bottom) * @hd);
-  padding-bottom: calc(env(safe-area-inset-bottom) * @hd);
+  padding-bottom: calc(~"constant(safe-area-inset-bottom) * @{hd}");
+  padding-bottom: calc(~"env(safe-area-inset-bottom) * @{hd}");
   &-button {
     height: 36 * @hd;
     margin: 7 * @hd 0;
