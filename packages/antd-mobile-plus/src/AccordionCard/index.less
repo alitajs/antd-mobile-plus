@@ -9,14 +9,16 @@
   &-header {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     padding: 16 * @hd 16 * @hd 0;
     &-title {
       flex: 1;
-      font-size: 17 * @hd;
-      font-weight: 600;
+      margin-right: 10 * @hd;
       color: @color-text-base;
+      font-weight: 600;
+      font-size: 17 * @hd;
+    }
+    &-icon {
+      padding-left: 10 * @hd;
     }
   }
   &-animation {
@@ -29,40 +31,40 @@
     margin-top: 12 * @hd;
     &-enter {
       .@{prefixCls}-animation {
-        max-height: 0;
         display: block;
+        max-height: 0;
       }
       &-active {
         .@{prefixCls}-animation {
-          max-height: 100vh;
           display: block;
+          max-height: 100vh;
           transition: max-height 200ms linear;
         }
       }
       &-done {
         .@{prefixCls}-animation {
-          max-height: 100vh;
           display: block;
+          max-height: 100vh;
         }
       }
     }
 
     &-exit {
       .@{prefixCls}-animation {
-        max-height: 100vh;
         display: block;
+        max-height: 100vh;
       }
       &-active {
         .@{prefixCls}-animation {
-          max-height: 1px;
           display: block;
+          max-height: 1px;
           transition: max-height 200ms linear;
         }
       }
       &-done {
         .@{prefixCls}-animation {
-          max-height: 0;
           display: none;
+          max-height: 0;
         }
       }
     }

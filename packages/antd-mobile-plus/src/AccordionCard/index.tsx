@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import classnames from 'classnames';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import { withError, useTracker } from '@alitajs/tracker';
+import Icon from 'antd-mobile/lib/icon';
 import { AccordionCardType } from './PropsType';
 import ExpandView from './components/ExpandView';
 import './index.less';
@@ -10,21 +11,35 @@ const prefixCls = 'alita-accordioncard';
 const AccordionCard: FC<AccordionCardType> = (props) => {
   const {
     children,
-    isExtand,
+    isExtand = true,
     onChange,
     title,
     extra,
     onExited,
     onEntered,
+    extandPostion = 'top',
   } = props;
 
   const log = useTracker(AccordionCard.displayName, {});
   return (
     <div className={prefixCls}>
-      <div className={`${prefixCls}-header`}>
-        <div className={`${prefixCls}-header-title`}>{title}</div>
-        {extra}
-      </div>
+      {(title || extra || extandPostion === 'top') && (
+        <div className={`${prefixCls}-header`}>
+          <div className={`${prefixCls}-header-title`}>{title}</div>
+          {extra}
+          {extandPostion === 'top' && (
+            <div
+              className={`${prefixCls}-header-icon`}
+              onClick={() => {
+                onChange && onChange(!isExtand);
+                log('onChange');
+              }}
+            >
+              <Icon size="xxs" type={isExtand ? 'up' : 'down'} />
+            </div>
+          )}
+        </div>
+      )}
       <div style={{ overflow: 'hidden' }}>
         <CSSTransition
           in={isExtand}
@@ -43,13 +58,15 @@ const AccordionCard: FC<AccordionCardType> = (props) => {
                 >
                   {children}
                 </div>
-                <ExpandView
-                  isExtand={isExtand}
-                  onChange={(e: boolean) => {
-                    onChange && onChange(e);
-                    log('onChange');
-                  }}
-                />
+                {extandPostion === 'bottom' && (
+                  <ExpandView
+                    isExtand={isExtand}
+                    onChange={(e: boolean) => {
+                      onChange && onChange(e);
+                      log('onChange');
+                    }}
+                  />
+                )}
               </div>
             );
           }}
