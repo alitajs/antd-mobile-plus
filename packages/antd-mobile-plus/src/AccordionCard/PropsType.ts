@@ -9,13 +9,13 @@ export interface AccordionCardType {
   /**
    * @description 展开回调
    */
-  onChange: (isExtand: boolean) => void;
+  onChange?: (isExtand: boolean) => void;
 
   /**
    * @description 标题
    * @default ''
    */
-  title: string;
+  title?: string;
 
   /**
    * @description 扩展
@@ -26,16 +26,21 @@ export interface AccordionCardType {
   /**
    * @description 组件已经收起
    */
-  onExited: CSSTransitionProps['onExited'];
+  onExited?: CSSTransitionProps['onExited'];
 
   /**
    * @description 组件已经展开
    */
-  onEntered: CSSTransitionProps['onEntered'];
+  onEntered?: CSSTransitionProps['onEntered'];
 
   /**
    * @description 展开按钮位置
    * @default 'top'
    */
   extandPostion?: string;
+
+  /**
+   * @description 卡片样式
+   */
+  classname?: string;
 }
