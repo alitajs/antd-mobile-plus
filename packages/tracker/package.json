@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/tracker",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "antd-mobile@3 中错误和事件上报",
   "main": "lib/index.js",
   "module": "es/index.js",

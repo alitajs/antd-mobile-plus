@@ -12,6 +12,7 @@ const Demo: FC<DemoProps> = (props) => {
         currentDate={currentDate}
         onSelectValue={(e) => {
           setCurrentDate(e);
+          console.log(e);
         }}
         onChange={(e) => {
           console.log(e);

@@ -16,6 +16,12 @@ interface DayPanelProps {
    * @description 点击事件
    */
   onClick: () => void;
+  
+  /**
+   * @description 改变事件
+   */
+   onChange: () => void;
+  
   /**
    * @description 子标题
    */
@@ -28,16 +34,18 @@ const DayPanel: FC<DayPanelProps> = (props) => {
     day = '',
     subTitle = '',
     status = 'nomal',
-    onClick = () => {},
+    onClick = () => { },
+    onChange = () => { }
   } = props;
   const log = useTracker(DayPanel.displayName);
   return (
     <div className={prefixCls}>
       <div
         onClick={() => {
+          log(`onClick:${day}`);
+          onClick();
           if (status === 'nomal') {
-            log(`onClick:${day}`);
-            onClick();
+            onChange();
           }
         }}
         className={classnames({

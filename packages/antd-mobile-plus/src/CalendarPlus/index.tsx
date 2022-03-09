@@ -64,7 +64,14 @@ const CalendarPlus: FC<CalendarPlusType> = (props) => {
       <WeekPanel />
       <MonthPanel
         monthPanelDate={monthPanelDate}
-        onClick={onSelectValue}
+        onClick={(date: Date) => { 
+          onSelectValue(date);
+        }}
+        onChange={ 
+          (date: Date) => { 
+            onChange(date);
+          }
+        }
         subTitles={subTitles}
         currentDate={currentDate}
       />

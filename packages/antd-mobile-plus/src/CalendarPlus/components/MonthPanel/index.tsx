@@ -10,6 +10,10 @@ interface MonthPanelProps {
    */
   onClick?: (e: Date) => void;
   /**
+   * @description 点击某个日期的回调
+   */
+   onChange?: (e: Date) => void;
+  /**
    * @description 选中的日期
    */
   currentDate?: Date;
@@ -29,7 +33,8 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
     onClick = () => {},
     currentDate = new Date(),
     subTitles = [],
-    monthPanelDate
+    monthPanelDate,
+    onChange = () => {},
   } = props;
   const getStatus = (item: any): 'disable' | 'nomal' | 'selected' => {
     const itemDateText = formatDate(item.date, 'yyyy-MM-dd');
@@ -61,6 +66,9 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
           subTitle={getSubTitles(item.date)}
           onClick={() => {
             onClick(item.date);
+          }}
+          onChange={() => { 
+            onChange(item.date);
           }}
         />
       ))}
