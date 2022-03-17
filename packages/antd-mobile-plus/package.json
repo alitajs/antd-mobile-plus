@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/antd-mobile-plus",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -27,9 +27,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@alitajs/languages": "1.0.7",
-    "@alitajs/theme": "1.0.7",
-    "@alitajs/tracker": "1.0.7",
+    "@alitajs/languages": "1.0.8",
+    "@alitajs/theme": "1.0.8",
+    "@alitajs/tracker": "1.0.8",
     "ahooks": "3.1.13",
     "antd-mobile": "2.3.3",
     "classnames": "2.2.6",
