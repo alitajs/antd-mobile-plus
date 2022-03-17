@@ -1,4 +1,4 @@
-import { useDebounceEffect, useUnmount, useScroll, usePersistFn, useClickAway } from 'ahooks';
+import { useDebounceEffect, useUnmount, useScroll, useMemoizedFn as usePersistFn, useClickAway } from 'ahooks';
 import { useRef, useEffect } from 'react';
 
 
@@ -18,7 +18,7 @@ export const useScrollEnd = function (
   target?: HTMLElement,
   options?: any,
 ) {
-  const position = useScroll(target || document);
+  const position = useScroll(target || document) || { top: 0, left: 0 };
   const persistFn = usePersistFn(fn);
   useDebounceEffect(
     () => {

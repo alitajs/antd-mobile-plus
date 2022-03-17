@@ -58,7 +58,7 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
   const [visible, { toggle }] = useToggle(true);
   const monthRef = useRef(null);
   const daysRef = useRef(null);
-  const { height } = useSize(monthRef);
+  const { height = 0 } = useSize(monthRef) || {};
 
   useImperativeHandle((props as any).forwardRef, () => ({
     getTitle,
@@ -98,10 +98,10 @@ const MonthPanel: FC<MonthPanelProps> = (props) => {
   );
 
   // 是否需要加载
-  const shouldRender = useMemo(() => visible || !lazyRender, [
-    visible,
-    lazyRender,
-  ]);
+  const shouldRender = useMemo(
+    () => visible || !lazyRender,
+    [visible, lazyRender],
+  );
 
   const getMultipleDayType = (day: Date) => {
     const isSelected = (date: Date) =>

@@ -46,7 +46,7 @@ const NavView: FC<NavViewType> = ({
   useMemo(() => {
     const dom = navRef.current;
     if (dom) {
-      dom.parentElement?.scrollTo(0, size.height || 0);
+      dom.parentElement?.scrollTo(0, size?.height || 0);
     }
   }, [size]);
 

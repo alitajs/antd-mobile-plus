@@ -130,8 +130,8 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
   const dayOffset = (firstDayOfWeek ? +firstDayOfWeek % 7 : 0) as any;
 
   useEffect(() => {
-    if (size.width && size.height) {
-      bodyHeightRef.current = Math.floor(size.height!);
+    if (size?.width && size?.height) {
+      bodyHeightRef.current = Math.floor(size?.height!);
       scrollIntoView();
     }
   }, [size]);
@@ -148,12 +148,13 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
     return months;
   }, [minDate]);
 
-  const onScroll = () => {
+  const onScroll = React.useCallback(() => {
     const top = getScrollTop(bodyRef.current!);
     const bottom = top + bodyHeightRef.current;
     const heights = months.map((item, index) =>
       monthRefs.current[index].getHeight(),
     );
+
     const heightSum = heights.reduce((a, b) => a + b, 0);
     // iOS scroll bounce may exceed the range
     if (bottom > heightSum && top > 0) {
@@ -171,29 +172,15 @@ function CalendarPanel(props: any): React.ReactElement<any, any> | null {
           currentMonth = month;
           visibleRange[0] = i;
         }
-        if (!monthRefs.current[i].showed) {
-          monthRefs.current[i].showed = true;
-          if (onMonthShow) {
-            onMonthShow({
-              date: month.date,
-              title: month.getTitle(),
-            });
-          }
-        }
       }
       height += heights[i];
     }
-    months.forEach((month, index) => {
-      const visible =
-        index >= visibleRange[0] - 1 && index <= visibleRange[1] + 1;
-      monthRefs.current[index].setVisible(visible);
-    });
     if (currentMonth) {
       setState({
         subtitle: currentMonth.getTitle(),
       });
     }
-  };
+  }, []);
 
   const scrollToDate = (targetDate: Date) => {
     raf(() => {

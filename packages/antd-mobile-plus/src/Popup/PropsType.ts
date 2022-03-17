@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { BasicTarget } from 'ahooks/es/utils/dom';
+import { BasicTarget } from 'ahooks/es/utils/domTarget';
 import { TransitionProps } from './components/Transition';
 
 export interface PopupType {

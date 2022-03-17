@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useInViewport, useSetState } from 'ahooks';
-import { BasicTarget } from 'ahooks/lib/utils/dom';
+import { BasicTarget } from 'ahooks/lib/utils/domTarget';
 
 export const useLazy = (ref: BasicTarget<HTMLElement>, src: string, placeholder?: string) => {
     const inViewPort = useInViewport(ref);

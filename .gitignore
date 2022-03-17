@@ -13,4 +13,3 @@
 **/fixtures/**/dist
 /demo
 dist
-*.lock
