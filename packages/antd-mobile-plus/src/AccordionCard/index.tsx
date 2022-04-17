@@ -6,6 +6,7 @@ import Icon from 'antd-mobile/lib/icon';
 import { AccordionCardType } from './PropsType';
 import ExpandView from './components/ExpandView';
 import './index.less';
+//
 
 const prefixCls = 'alita-accordioncard';
 const AccordionCard: FC<AccordionCardType> = (props) => {
