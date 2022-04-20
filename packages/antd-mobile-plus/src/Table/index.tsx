@@ -11,7 +11,6 @@ const Table: FC<TableType> = (props) => {
   const [trWidth, setTrWidth] = useState<string>('');
 
   useEffect(() => {
-    console.log('title:', titleBackground, titleColor)
     let width = 0;
     if(Array.isArray(columns)) {
       columns.map((item) => {
