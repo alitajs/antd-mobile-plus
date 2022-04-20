@@ -7,10 +7,11 @@ import './index.less';
 const prefixCls = 'alita-table';
 
 const Table: FC<TableType> = (props) => {
-  const { dataSource = [], columns = [], twoDimension = false } = props;
+  const { dataSource = [], columns = [], twoDimension = false, titleBackground = '#f7f7f7', titleColor = '#333' } = props;
   const [trWidth, setTrWidth] = useState<string>('');
 
   useEffect(() => {
+    console.log('title:', titleBackground, titleColor)
     let width = 0;
     if(Array.isArray(columns)) {
       columns.map((item) => {
@@ -27,13 +28,13 @@ const Table: FC<TableType> = (props) => {
           columns && columns.map((v, index) => {
             if (twoDimension && index === 0 && Array.isArray(v.title)) {
               return (
-                <div className={classnames(`${prefixCls}-th`, `${prefixCls}-th-complex`)} key={index} style={{ width: `${v.width}rem` }}>
+                <div className={classnames(`${prefixCls}-th`, `${prefixCls}-th-complex`)} key={index} style={{ width: `${v.width}rem`, background: `${titleBackground}`, color: `${titleColor}` }}>
                   <span className="top">{v.title[0]}</span>
                   <span className="bottom">{v.title[1]}</span>
                 </div>
               )
             }
-            return <div className={`${prefixCls}-th`} key={index} style={{ width: `${v.width}rem` }}>{v.title}</div>
+            return <div className={`${prefixCls}-th`} key={index} style={{ width: `${v.width}rem`, background: `${titleBackground}`, color: `${titleColor}`}}>{v.title}</div>
           })
         }
       </div>

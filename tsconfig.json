@@ -11,7 +11,9 @@
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
     "declaration": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types/"]
   },
   "exclude": [
     "node_modules",

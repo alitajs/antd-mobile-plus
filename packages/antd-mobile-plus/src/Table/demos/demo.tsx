@@ -6,6 +6,9 @@ import 'antd-mobile/lib/white-space/style/index.css';
 
 interface DemoProps {}
 
+const titleBackground = '#329ED9';
+const titleColor = '#fff';
+
 const dataSourceBase = [
   {
     key: '1',
@@ -100,7 +103,7 @@ const columns = [
 const Demo: FC<DemoProps> = (props) => {
   return (
     <div>
-      <Table dataSource={dataSourceBase} columns={columnsBase} />
+      <Table dataSource={dataSourceBase} columns={columnsBase} titleBackground={titleBackground} titleColor={titleColor} />
       <WhiteSpace size="lg" />
       <WhiteSpace size="lg" />
       <Table dataSource={dataSource} columns={columns} twoDimension />
