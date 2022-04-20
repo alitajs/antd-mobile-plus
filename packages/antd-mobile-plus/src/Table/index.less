@@ -8,12 +8,15 @@
   background: @fill-base;
   border: @border-width-sm solid @tab-bar-fill;
   border-bottom: 0;
+  overflow: scroll;
   > .@{prefixCls}-tr {
     display: flex;
     flex-direction: row;
     > div {
-      padding: 8 * @hd 12 * @hd;
       display: flex;
+      align-items: center;
+      max-width: 600px;
+      padding: 8 * @hd 12 * @hd;
       border: @border-width-sm solid @tab-bar-fill;
       box-sizing: border-box;
       color: @color-text-paragraph;
@@ -26,6 +29,11 @@
   &-th {
     background: @fill-grey;
   }
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    display: none !important;
+  }
+
 }
 
 .@{prefixCls}-th-complex {
