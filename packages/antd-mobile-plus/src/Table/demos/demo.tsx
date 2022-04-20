@@ -26,21 +26,19 @@ const columnsBase = [
     title: '姓名',
     dataIndex: 'name',
     key: 'name',
-    width: 20,
-    align: 'center'
+    width: 2,
   },
   {
     title: '年龄',
     dataIndex: 'age',
     key: 'age',
-    width: 20,
-    align: 'center'
+    width: 2,
   },
   {
     title: '地址',
     dataIndex: 'address',
     key: 'address',
-    width: 60,
+    width: 4,
   },
 ];
 
@@ -65,21 +63,21 @@ const columns = [
     title: ['工作', '姓名'],
     dataIndex: 'name',
     key: 'name',
-    width: 20,
+    width: 2,
     align: 'center'
   },
   {
     title: '工时',
     dataIndex: 'time',
     key: 'time',
-    width: 20,
+    width: 2,
     align: 'center'
   },
   {
     title: '项目进度',
     dataIndex: 'projectProgress',
     key: 'projectProgress',
-    width: 60,
+    width: 6,
     render: (text: number) => {
       return (
         <div
