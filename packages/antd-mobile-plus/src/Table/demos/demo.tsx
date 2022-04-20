@@ -20,7 +20,7 @@ const dataSourceBase = [
     key: '2',
     name: '胡彦祖',
     age: 42,
-    address: '南京江宁南京江宁南京江宁南京江宁南京江宁南京江宁',
+    address: '南京江宁',
   },
 ];
 
@@ -29,19 +29,19 @@ const columnsBase = [
     title: '姓名',
     dataIndex: 'name',
     key: 'name',
-    width: 2,
+    width: 200,
   },
   {
     title: '年龄',
     dataIndex: 'age',
     key: 'age',
-    width: 2,
+    width: 200,
   },
   {
     title: '地址',
     dataIndex: 'address',
     key: 'address',
-    width: 4,
+    width: 400,
   },
 ];
 
