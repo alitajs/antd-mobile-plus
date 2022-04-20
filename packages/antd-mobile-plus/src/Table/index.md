@@ -22,11 +22,13 @@ nav:
 
 属性说明：
 
-| 属性         | 说明           | 类型          | 默认值 |
-| ------------ | -------------- | ------------- | ------ |
-| dataSource   | 数据数组       | any[]         | -      |
-| columns      | 表格列的配置   | ColumnProps[] | -      |
-| twoDimension | 是否是二维表格 | boolean       | false  |
+| 属性            | 说明             | 类型          | 默认值    |
+| --------------- | ---------------- | ------------- | --------- |
+| dataSource      | 数据数组         | any[]         | -         |
+| columns         | 表格列的配置     | ColumnProps[] | -         |
+| twoDimension    | 是否是二维表格   | boolean       | false     |
+| titleBackground | 表头的背景颜色   | string        | '#f7f7f7' |
+| titleColor      | 表头文字背景颜色 | string        | '#333'    |
 
 Column 属性说明:
 

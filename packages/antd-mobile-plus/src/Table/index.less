@@ -15,11 +15,10 @@
     > div {
       display: flex;
       align-items: center;
-      max-width: 600px;
+      max-width: 600 * @hd;
       padding: 8 * @hd 12 * @hd;
       border: @border-width-sm solid @tab-bar-fill;
       box-sizing: border-box;
-      color: @color-text-paragraph;
       border-width: 0 @border-width-sm @border-width-sm 0;
       &:last-child {
         border-right: 0;
@@ -28,6 +27,10 @@
   }
   &-th {
     background: @fill-grey;
+    color: @color-text-paragraph;
+  }
+  &-td {
+    color: @color-text-paragraph;
   }
   &::-webkit-scrollbar {
     width: 0 !important;

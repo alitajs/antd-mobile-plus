@@ -45,4 +45,14 @@ export interface TableType {
    * @description 是否是二维表格
    */
   twoDimension?: boolean;
+
+  /**
+   * @description 表头背景颜色
+   */
+  titleBackground?: string;
+
+  /**
+   * @description 表头文字颜色
+   */ 
+  titleColor?: string;
 }
