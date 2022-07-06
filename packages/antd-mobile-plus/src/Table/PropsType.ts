@@ -47,6 +47,16 @@ export interface TableType {
   twoDimension?: boolean;
 
   /**
+   * @description 表头背景颜色
+   */
+   titleBackground?: string;
+
+   /**
+    * @description 表头文字颜色
+    */ 
+   titleColor?: string;
+
+  /**
    * @description 首列是否固定
    */
    fixedLeft?: boolean;

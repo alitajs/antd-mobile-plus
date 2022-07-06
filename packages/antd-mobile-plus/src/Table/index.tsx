@@ -1,37 +1,59 @@
-import React, { FC, Fragment, useState, useEffect } from 'react';
+import React, { FC, Fragment, useState, useEffect, useRef } from 'react';
 // import { withError, useTracker } from '@alitajs/tracker';
 import classnames from 'classnames';
 import { TableType } from './PropsType';
 import './index.less';
 
 const prefixCls = 'alita-table';
-let fixedLeftMargin = 0; 
 
 const Table: FC<TableType> = (props) => {
-  const { dataSource = [], columns = [], twoDimension = false, fixedLeft = false, firstLeftStyle={} } = props;
+  const {
+    dataSource = [],
+    columns = [],
+    twoDimension = false,
+    titleBackground = '#f7f7f7',
+    titleColor = '#333',
+    fixedLeft = false, 
+    firstLeftStyle={}
+  } = props;
+  const container = useRef<any>(null);
   const [trWidth, setTrWidth] = useState<string>('');
+  const [pxRatio, setPxRatio] = useState(1);
 
   useEffect(() => {
+    let clientWidth = 0;
+    if (container.current) {
+      clientWidth = container.current.clientWidth;
+    }
     let width = 0;
-    if(Array.isArray(columns)) {
+    if (Array.isArray(columns)) {
       columns.map((item) => {
-        width += item.width || 0;
+        width += parseFloat(`${item.width}`);
       });
     }
-    setTrWidth(`${width}rem`);
-  },[columns]);
+    if (width < clientWidth) {
+      setPxRatio(clientWidth / width);
+      width = clientWidth;
+    }
+    setTrWidth(`${width}px`);
+  }, [columns]);
 
   const fixedLeftStyle = (v: any, index: number, align: any, isData: boolean) => {
     let object: any = {};
-    object.width = `${v.width}rem`;
+    object.width = `${(v.width || 100) * pxRatio}px`;
     if (fixedLeft) {
       if (index === 0) {
-        fixedLeftMargin = v.width;
         object.position = `sticky`;
         object.top = 0;
         object.left = 0;
       } 
     } 
+    //表头添加样式
+    if (!isData) {
+      object.background =`${titleBackground}`;
+      object.color =`${titleColor}`;
+    }
+    //左侧首列添加样式
     if (firstLeftStyle && typeof firstLeftStyle === 'object' && index === 0 && isData) {
       for (const key in firstLeftStyle) {
         object[key] = firstLeftStyle[key];
@@ -45,7 +67,7 @@ const Table: FC<TableType> = (props) => {
   };
 
   return (
-    <div className={prefixCls}>
+    <div className={prefixCls} ref={container}>
       <div className={`${prefixCls}-tr`} style={{ width: `${trWidth}`}}>
         {
           columns && columns.map((v, index) => {
