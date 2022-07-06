@@ -12,25 +12,26 @@
   > .@{prefixCls}-tr {
     display: flex;
     flex-direction: row;
+    background: #fff;
     > div {
       display: flex;
       align-items: center;
-      max-width: 600 * @hd;
+      max-width: 600px;
       padding: 8 * @hd 12 * @hd;
       border: @border-width-sm solid @tab-bar-fill;
       box-sizing: border-box;
+      color: @color-text-paragraph;
       border-width: 0 @border-width-sm @border-width-sm 0;
       &:last-child {
         border-right: 0;
       }
     }
   }
+  &-td {
+    background-color: #fff;
+  }
   &-th {
     background: @fill-grey;
-    color: @color-text-paragraph;
-  }
-  &-td {
-    color: @color-text-paragraph;
   }
   &::-webkit-scrollbar {
     width: 0 !important;

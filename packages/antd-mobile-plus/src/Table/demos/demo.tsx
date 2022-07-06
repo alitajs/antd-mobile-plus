@@ -6,9 +6,6 @@ import 'antd-mobile/lib/white-space/style/index.css';
 
 interface DemoProps {}
 
-const titleBackground = '#329ED9';
-const titleColor = '#fff';
-
 const dataSourceBase = [
   {
     key: '1',
@@ -20,7 +17,7 @@ const dataSourceBase = [
     key: '2',
     name: '胡彦祖',
     age: 42,
-    address: '南京江宁',
+    address: '南京江宁南京江宁南京江宁南京江宁南京江宁南京江宁',
   },
 ];
 
@@ -29,19 +26,19 @@ const columnsBase = [
     title: '姓名',
     dataIndex: 'name',
     key: 'name',
-    width: 200,
+    width: 2,
   },
   {
     title: '年龄',
     dataIndex: 'age',
     key: 'age',
-    width: 200,
+    width: 2,
   },
   {
     title: '地址',
     dataIndex: 'address',
     key: 'address',
-    width: 400,
+    width: 4,
   },
 ];
 
@@ -103,7 +100,7 @@ const columns = [
 const Demo: FC<DemoProps> = (props) => {
   return (
     <div>
-      <Table dataSource={dataSourceBase} columns={columnsBase} titleBackground={titleBackground} titleColor={titleColor} />
+      <Table dataSource={dataSourceBase} columns={columnsBase} />
       <WhiteSpace size="lg" />
       <WhiteSpace size="lg" />
       <Table dataSource={dataSource} columns={columns} twoDimension />
