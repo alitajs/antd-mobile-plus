@@ -1,0 +1,49 @@
+@import '~@alitajs/theme/es/index.less';
+
+@prefixCls: alita-badge;
+
+.@{prefixCls}-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.@{prefixCls} {
+  display: inline-flex;
+  vertical-align: middle;
+  box-sizing: content-box;
+  border-radius: 100 * @hd;
+  background-color: var(--color);
+  --right: 0;
+  --top: 0;
+  --color: #ff411c;
+
+  &-content {
+    color: #fff;
+    box-sizing: border-box;
+    min-width: 8 * @hd;
+    padding: 1 * @hd 4 * @hd;
+    font-size: 9 * @hd;
+    line-height: 12 * @hd;
+    white-space: nowrap;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  &-fixed {
+    position: absolute;
+    right: var(--right);
+    top: var(--top);
+    transform: translate(50%, -50%);
+  }
+
+  &-dot {
+    min-width: 10 * @hd;
+    width: 10 * @hd;
+    height: 10 * @hd;
+    border-radius: 5 * @hd;
+  }
+
+  &-bordered {
+    border: solid 1 * @hd #fff;
+  }
+}

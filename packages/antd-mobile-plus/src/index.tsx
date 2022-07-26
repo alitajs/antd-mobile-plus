@@ -42,3 +42,6 @@ export { default as HeaderFullView } from './HeaderFullView';
 export { default as AccordionCard } from './AccordionCard';
 
 export { default as Calendar } from './Calendar';
+export { default as SafeArea } from './SafeArea';
+export { default as Badge } from './Badge';
+export { default as TabBar } from './TabBar';

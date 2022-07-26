@@ -1,0 +1,59 @@
+@import '~@alitajs/theme/es/index.less';
+
+@prefixCls: alita-tab-bar;
+
+.@{prefixCls} {
+  &-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+    min-height: 48 * @hd;
+  }
+
+  &-item {
+    flex: 1;
+    color: @color-text-caption-xs;
+    white-space: nowrap;
+    padding: 4 * @hd 8 * @hd;
+    width: min-content;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &-item-icon {
+    font-size: 24 * @hd;
+    height: 24 * @hd;
+    line-height: 1;
+  }
+
+  &-item-title {
+    font-size: @font-size-icontext;
+    line-height: 15 * @hd;
+    &-with-icon {
+      margin-top: 2 * @hd;
+    }
+  }
+
+  &-item-active {
+    color: @color-active;
+    svg {
+      fill: @color-active;
+    }
+  }
+
+  &-icon-badge {
+    --top: 15%;
+    --right: -10%;
+  }
+  &-title-badge {
+    --right: -2%;
+    --top: -2%;
+  }
+}
+
