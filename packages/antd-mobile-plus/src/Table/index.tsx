@@ -31,7 +31,7 @@ const Table: FC<TableType> = (props) => {
         width += parseFloat(`${item.width}`);
       });
     }
-    if (width < clientWidth) {
+    if (width > 0 && width < clientWidth) {
       setPxRatio(clientWidth / width);
       width = clientWidth;
     }

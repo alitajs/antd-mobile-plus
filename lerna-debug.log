@@ -1,0 +1,1018 @@
+0 silly input [ 'publish' ]
+1 silly flags {
+1 silly flags   _: [ 'publish' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   'force-publish': '*',
+1 silly flags   forcePublish: '*'
+1 silly flags }
+2 verbose rootPath /Users/qinchuanlong/Desktop/alita/antd-mobile-plus
+3 info version 2.11.0
+4 silly isInitialized
+5 silly isInitialized true
+6 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/VERSION
+7 silly initialize attempt
+8 info current version 1.1.6
+9 silly isDetachedHead
+10 silly getCurrentBranch
+11 verbose getCurrentBranch master
+12 verbose isDetachedHead false
+13 silly getCurrentBranch
+14 verbose getCurrentBranch master
+15 silly getUpdates
+16 info Checking for updated packages...
+17 silly hasTags
+18 verbose hasTags true
+19 silly getLastTag
+20 verbose getLastTag v1.1.6
+21 info Comparing with v1.1.6.
+22 verbose updated @alitajs/antd-mobile-plus
+23 verbose updated @alitajs/antd-mobile
+24 verbose updated @alitajs/languages
+25 verbose updated @alitajs/theme
+26 verbose updated @alitajs/tracker
+27 info Checking for prereleased packages...
+28 silly collectDependents
+29 silly isPackageDependentOf @alitajs/antd-mobile-plus @alitajs/antd-mobile-plus
+30 silly isPackageDependentOf @alitajs/languages @alitajs/antd-mobile-plus
+31 silly isPackageDependentOf @alitajs/theme @alitajs/antd-mobile-plus
+32 silly isPackageDependentOf @alitajs/tracker @alitajs/antd-mobile-plus
+33 silly isPackageDependentOf @alitajs/antd-mobile-plus @alitajs/antd-mobile
+34 silly isPackageDependentOf @alitajs/languages @alitajs/antd-mobile
+35 silly isPackageDependentOf @alitajs/theme @alitajs/antd-mobile
+36 silly isPackageDependentOf @alitajs/tracker @alitajs/antd-mobile
+37 silly isPackageDependentOf @alitajs/antd-mobile-plus @alitajs/languages
+38 verbose dependent @alitajs/antd-mobile-plus depends on @alitajs/languages
+39 silly isPackageDependentOf @alitajs/antd-mobile-plus @alitajs/theme
+40 verbose dependent @alitajs/antd-mobile-plus depends on @alitajs/theme
+41 silly isPackageDependentOf @alitajs/antd-mobile-plus @alitajs/tracker
+42 verbose dependent @alitajs/antd-mobile-plus depends on @alitajs/tracker
+43 silly isPackageDependentOf @alitajs/antd-mobile @alitajs/antd-mobile-plus
+44 silly isPackageDependentOf @alitajs/antd-mobile @alitajs/antd-mobile
+45 silly isPackageDependentOf @alitajs/antd-mobile @alitajs/languages
+46 silly isPackageDependentOf @alitajs/antd-mobile @alitajs/theme
+47 silly isPackageDependentOf @alitajs/antd-mobile @alitajs/tracker
+48 silly isPackageDependentOf @alitajs/languages @alitajs/antd-mobile-plus
+49 silly isPackageDependentOf @alitajs/languages @alitajs/antd-mobile
+50 silly isPackageDependentOf @alitajs/languages @alitajs/languages
+51 silly isPackageDependentOf @alitajs/languages @alitajs/theme
+52 silly isPackageDependentOf @alitajs/languages @alitajs/tracker
+53 silly isPackageDependentOf @alitajs/theme @alitajs/antd-mobile-plus
+54 silly isPackageDependentOf @alitajs/theme @alitajs/antd-mobile
+55 silly isPackageDependentOf @alitajs/theme @alitajs/languages
+56 silly isPackageDependentOf @alitajs/theme @alitajs/theme
+57 silly isPackageDependentOf @alitajs/theme @alitajs/tracker
+58 silly isPackageDependentOf @alitajs/tracker @alitajs/antd-mobile-plus
+59 silly isPackageDependentOf @alitajs/tracker @alitajs/antd-mobile
+60 silly isPackageDependentOf @alitajs/tracker @alitajs/languages
+61 silly isPackageDependentOf @alitajs/tracker @alitajs/theme
+62 silly isPackageDependentOf @alitajs/tracker @alitajs/tracker
+63 silly collectUpdates
+64 verbose has filtered update @alitajs/antd-mobile-plus
+65 verbose has filtered update @alitajs/antd-mobile
+66 verbose has filtered update @alitajs/languages
+67 verbose has filtered update @alitajs/theme
+68 verbose has filtered update @alitajs/tracker
+69 silly initialize success
+70 silly execute attempt
+71 silly addFile /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/lerna.json
+72 silly runScriptSync preversion undefined
+73 silly runScriptSync preversion @alitajs/antd-mobile-plus
+74 silly runScriptSync version @alitajs/antd-mobile-plus
+75 silly runScriptSync preversion @alitajs/antd-mobile
+76 silly runScriptSync version @alitajs/antd-mobile
+77 silly runScriptSync preversion @alitajs/languages
+78 silly runScriptSync version @alitajs/languages
+79 silly runScriptSync preversion @alitajs/theme
+80 silly runScriptSync version @alitajs/theme
+81 silly runScriptSync preversion @alitajs/tracker
+82 silly runScriptSync version @alitajs/tracker
+83 silly runScriptSync version undefined
+84 silly addFile /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile-plus/package.json
+85 silly addFile /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile/package.json
+86 silly addFile /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/languages/package.json
+87 silly addFile /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme/package.json
+88 silly addFile /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/tracker/package.json
+89 silly commit v1.1.7
+90 verbose commit [ 'commit', '--no-verify', '-m', 'v1.1.7' ]
+91 silly addTag v1.1.7
+92 silly runScriptSync postversion @alitajs/antd-mobile-plus
+93 silly runScriptSync postversion @alitajs/antd-mobile
+94 silly runScriptSync postversion @alitajs/languages
+95 silly runScriptSync postversion @alitajs/theme
+96 silly runScriptSync postversion @alitajs/tracker
+97 silly runScriptSync postversion undefined
+98 info publish Publishing packages to npm...
+99 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile-plus/scripts/prepublish.js
+100 verbose execScript No prepublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile-plus/scripts/prepublish.js
+101 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile/scripts/prepublish.js
+102 verbose execScript No prepublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile/scripts/prepublish.js
+103 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/languages/scripts/prepublish.js
+104 verbose execScript No prepublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/languages/scripts/prepublish.js
+105 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme/scripts/prepublish.js
+106 verbose execScript No prepublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme/scripts/prepublish.js
+107 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/tracker/scripts/prepublish.js
+108 verbose execScript No prepublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/tracker/scripts/prepublish.js
+109 verbose publishing @alitajs/antd-mobile
+110 silly publishTaggedInDir latest antd-mobile
+111 silly getExecOpts {
+111 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile',
+111 silly getExecOpts   env: {
+111 silly getExecOpts     TERM_PROGRAM: 'vscode',
+111 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+111 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+111 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+111 silly getExecOpts     NVM_CD_FLAGS: '-q',
+111 silly getExecOpts     TERM: 'xterm-256color',
+111 silly getExecOpts     SHELL: '/bin/zsh',
+111 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+111 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+111 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+111 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+111 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+111 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+111 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+111 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+111 silly getExecOpts     COLOR: '1',
+111 silly getExecOpts     npm_config_noproxy: '',
+111 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+111 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+111 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+111 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+111 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+111 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+111 silly getExecOpts     USER: 'qinchuanlong',
+111 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+111 silly getExecOpts     COMMAND_MODE: 'unix2003',
+111 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+111 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+111 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+111 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+111 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+111 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+111 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+111 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+111 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+111 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+111 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+111 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+111 silly getExecOpts     npm_command: 'run-script',
+111 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+111 silly getExecOpts     npm_lifecycle_event: 'pub',
+111 silly getExecOpts     EDITOR: 'vi',
+111 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+111 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+111 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+111 silly getExecOpts     XPC_FLAGS: '0x0',
+111 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+111 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+111 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+111 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+111 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+111 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+111 silly getExecOpts     XPC_SERVICE_NAME: '0',
+111 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+111 silly getExecOpts     SHLVL: '2',
+111 silly getExecOpts     HOME: '/Users/qinchuanlong',
+111 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+111 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+111 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+111 silly getExecOpts     LOGNAME: 'qinchuanlong',
+111 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+111 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+111 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+111 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+111 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+111 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+111 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+111 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+111 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+111 silly getExecOpts     COLORTERM: 'truecolor',
+111 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+111 silly getExecOpts   }
+111 silly getExecOpts }
+112 verbose publishing @alitajs/languages
+113 silly publishTaggedInDir latest languages
+114 silly getExecOpts {
+114 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/languages',
+114 silly getExecOpts   env: {
+114 silly getExecOpts     TERM_PROGRAM: 'vscode',
+114 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+114 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+114 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+114 silly getExecOpts     NVM_CD_FLAGS: '-q',
+114 silly getExecOpts     TERM: 'xterm-256color',
+114 silly getExecOpts     SHELL: '/bin/zsh',
+114 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+114 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+114 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+114 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+114 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+114 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+114 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+114 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+114 silly getExecOpts     COLOR: '1',
+114 silly getExecOpts     npm_config_noproxy: '',
+114 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+114 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+114 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+114 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+114 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+114 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+114 silly getExecOpts     USER: 'qinchuanlong',
+114 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+114 silly getExecOpts     COMMAND_MODE: 'unix2003',
+114 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+114 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+114 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+114 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+114 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+114 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+114 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+114 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+114 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+114 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+114 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+114 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+114 silly getExecOpts     npm_command: 'run-script',
+114 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+114 silly getExecOpts     npm_lifecycle_event: 'pub',
+114 silly getExecOpts     EDITOR: 'vi',
+114 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+114 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+114 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+114 silly getExecOpts     XPC_FLAGS: '0x0',
+114 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+114 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+114 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+114 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+114 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+114 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+114 silly getExecOpts     XPC_SERVICE_NAME: '0',
+114 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+114 silly getExecOpts     SHLVL: '2',
+114 silly getExecOpts     HOME: '/Users/qinchuanlong',
+114 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+114 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+114 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+114 silly getExecOpts     LOGNAME: 'qinchuanlong',
+114 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+114 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+114 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+114 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+114 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+114 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+114 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+114 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+114 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+114 silly getExecOpts     COLORTERM: 'truecolor',
+114 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+114 silly getExecOpts   }
+114 silly getExecOpts }
+115 verbose publishing @alitajs/theme
+116 silly publishTaggedInDir latest theme
+117 silly getExecOpts {
+117 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme',
+117 silly getExecOpts   env: {
+117 silly getExecOpts     TERM_PROGRAM: 'vscode',
+117 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+117 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+117 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+117 silly getExecOpts     NVM_CD_FLAGS: '-q',
+117 silly getExecOpts     TERM: 'xterm-256color',
+117 silly getExecOpts     SHELL: '/bin/zsh',
+117 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+117 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+117 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+117 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+117 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+117 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+117 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+117 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+117 silly getExecOpts     COLOR: '1',
+117 silly getExecOpts     npm_config_noproxy: '',
+117 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+117 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+117 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+117 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+117 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+117 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+117 silly getExecOpts     USER: 'qinchuanlong',
+117 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+117 silly getExecOpts     COMMAND_MODE: 'unix2003',
+117 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+117 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+117 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+117 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+117 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+117 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+117 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+117 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+117 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+117 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+117 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+117 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+117 silly getExecOpts     npm_command: 'run-script',
+117 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+117 silly getExecOpts     npm_lifecycle_event: 'pub',
+117 silly getExecOpts     EDITOR: 'vi',
+117 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+117 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+117 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+117 silly getExecOpts     XPC_FLAGS: '0x0',
+117 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+117 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+117 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+117 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+117 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+117 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+117 silly getExecOpts     XPC_SERVICE_NAME: '0',
+117 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+117 silly getExecOpts     SHLVL: '2',
+117 silly getExecOpts     HOME: '/Users/qinchuanlong',
+117 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+117 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+117 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+117 silly getExecOpts     LOGNAME: 'qinchuanlong',
+117 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+117 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+117 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+117 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+117 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+117 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+117 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+117 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+117 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+117 silly getExecOpts     COLORTERM: 'truecolor',
+117 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+117 silly getExecOpts   }
+117 silly getExecOpts }
+118 verbose publishing @alitajs/tracker
+119 silly publishTaggedInDir latest tracker
+120 silly getExecOpts {
+120 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/tracker',
+120 silly getExecOpts   env: {
+120 silly getExecOpts     TERM_PROGRAM: 'vscode',
+120 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+120 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+120 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+120 silly getExecOpts     NVM_CD_FLAGS: '-q',
+120 silly getExecOpts     TERM: 'xterm-256color',
+120 silly getExecOpts     SHELL: '/bin/zsh',
+120 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+120 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+120 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+120 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+120 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+120 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+120 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+120 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+120 silly getExecOpts     COLOR: '1',
+120 silly getExecOpts     npm_config_noproxy: '',
+120 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+120 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+120 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+120 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+120 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+120 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+120 silly getExecOpts     USER: 'qinchuanlong',
+120 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+120 silly getExecOpts     COMMAND_MODE: 'unix2003',
+120 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+120 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+120 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+120 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+120 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+120 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+120 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+120 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+120 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+120 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+120 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+120 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+120 silly getExecOpts     npm_command: 'run-script',
+120 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+120 silly getExecOpts     npm_lifecycle_event: 'pub',
+120 silly getExecOpts     EDITOR: 'vi',
+120 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+120 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+120 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+120 silly getExecOpts     XPC_FLAGS: '0x0',
+120 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+120 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+120 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+120 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+120 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+120 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+120 silly getExecOpts     XPC_SERVICE_NAME: '0',
+120 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+120 silly getExecOpts     SHLVL: '2',
+120 silly getExecOpts     HOME: '/Users/qinchuanlong',
+120 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+120 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+120 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+120 silly getExecOpts     LOGNAME: 'qinchuanlong',
+120 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+120 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+120 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+120 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+120 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+120 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+120 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+120 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+120 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+120 silly getExecOpts     COLORTERM: 'truecolor',
+120 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+120 silly getExecOpts   }
+120 silly getExecOpts }
+121 info published @alitajs/tracker
+122 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/tracker/scripts/postpublish.js
+123 verbose execScript No postpublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/tracker/scripts/postpublish.js
+124 info published @alitajs/languages
+125 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/languages/scripts/postpublish.js
+126 verbose execScript No postpublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/languages/scripts/postpublish.js
+127 error publish Retrying failed publish: @alitajs/theme
+128 verbose publish error undefined
+129 verbose publishing @alitajs/theme
+130 silly publishTaggedInDir latest theme
+131 silly getExecOpts {
+131 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme',
+131 silly getExecOpts   env: {
+131 silly getExecOpts     TERM_PROGRAM: 'vscode',
+131 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+131 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+131 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+131 silly getExecOpts     NVM_CD_FLAGS: '-q',
+131 silly getExecOpts     TERM: 'xterm-256color',
+131 silly getExecOpts     SHELL: '/bin/zsh',
+131 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+131 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+131 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+131 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+131 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+131 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+131 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+131 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+131 silly getExecOpts     COLOR: '1',
+131 silly getExecOpts     npm_config_noproxy: '',
+131 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+131 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+131 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+131 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+131 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+131 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+131 silly getExecOpts     USER: 'qinchuanlong',
+131 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+131 silly getExecOpts     COMMAND_MODE: 'unix2003',
+131 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+131 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+131 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+131 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+131 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+131 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+131 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+131 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+131 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+131 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+131 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+131 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+131 silly getExecOpts     npm_command: 'run-script',
+131 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+131 silly getExecOpts     npm_lifecycle_event: 'pub',
+131 silly getExecOpts     EDITOR: 'vi',
+131 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+131 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+131 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+131 silly getExecOpts     XPC_FLAGS: '0x0',
+131 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+131 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+131 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+131 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+131 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+131 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+131 silly getExecOpts     XPC_SERVICE_NAME: '0',
+131 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+131 silly getExecOpts     SHLVL: '2',
+131 silly getExecOpts     HOME: '/Users/qinchuanlong',
+131 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+131 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+131 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+131 silly getExecOpts     LOGNAME: 'qinchuanlong',
+131 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+131 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+131 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+131 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+131 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+131 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+131 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+131 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+131 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+131 silly getExecOpts     COLORTERM: 'truecolor',
+131 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+131 silly getExecOpts   }
+131 silly getExecOpts }
+132 error publish Retrying failed publish: @alitajs/antd-mobile
+133 verbose publish error undefined
+134 verbose publishing @alitajs/antd-mobile
+135 silly publishTaggedInDir latest antd-mobile
+136 silly getExecOpts {
+136 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile',
+136 silly getExecOpts   env: {
+136 silly getExecOpts     TERM_PROGRAM: 'vscode',
+136 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+136 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+136 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+136 silly getExecOpts     NVM_CD_FLAGS: '-q',
+136 silly getExecOpts     TERM: 'xterm-256color',
+136 silly getExecOpts     SHELL: '/bin/zsh',
+136 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+136 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+136 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+136 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+136 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+136 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+136 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+136 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+136 silly getExecOpts     COLOR: '1',
+136 silly getExecOpts     npm_config_noproxy: '',
+136 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+136 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+136 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+136 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+136 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+136 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+136 silly getExecOpts     USER: 'qinchuanlong',
+136 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+136 silly getExecOpts     COMMAND_MODE: 'unix2003',
+136 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+136 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+136 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+136 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+136 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+136 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+136 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+136 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+136 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+136 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+136 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+136 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+136 silly getExecOpts     npm_command: 'run-script',
+136 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+136 silly getExecOpts     npm_lifecycle_event: 'pub',
+136 silly getExecOpts     EDITOR: 'vi',
+136 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+136 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+136 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+136 silly getExecOpts     XPC_FLAGS: '0x0',
+136 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+136 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+136 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+136 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+136 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+136 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+136 silly getExecOpts     XPC_SERVICE_NAME: '0',
+136 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+136 silly getExecOpts     SHLVL: '2',
+136 silly getExecOpts     HOME: '/Users/qinchuanlong',
+136 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+136 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+136 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+136 silly getExecOpts     LOGNAME: 'qinchuanlong',
+136 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+136 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+136 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+136 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+136 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+136 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+136 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+136 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+136 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+136 silly getExecOpts     COLORTERM: 'truecolor',
+136 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+136 silly getExecOpts   }
+136 silly getExecOpts }
+137 error publish Retrying failed publish: @alitajs/theme
+138 verbose publish error undefined
+139 verbose publishing @alitajs/theme
+140 silly publishTaggedInDir latest theme
+141 silly getExecOpts {
+141 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme',
+141 silly getExecOpts   env: {
+141 silly getExecOpts     TERM_PROGRAM: 'vscode',
+141 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+141 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+141 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+141 silly getExecOpts     NVM_CD_FLAGS: '-q',
+141 silly getExecOpts     TERM: 'xterm-256color',
+141 silly getExecOpts     SHELL: '/bin/zsh',
+141 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+141 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+141 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+141 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+141 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+141 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+141 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+141 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+141 silly getExecOpts     COLOR: '1',
+141 silly getExecOpts     npm_config_noproxy: '',
+141 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+141 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+141 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+141 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+141 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+141 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+141 silly getExecOpts     USER: 'qinchuanlong',
+141 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+141 silly getExecOpts     COMMAND_MODE: 'unix2003',
+141 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+141 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+141 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+141 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+141 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+141 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+141 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+141 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+141 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+141 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+141 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+141 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+141 silly getExecOpts     npm_command: 'run-script',
+141 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+141 silly getExecOpts     npm_lifecycle_event: 'pub',
+141 silly getExecOpts     EDITOR: 'vi',
+141 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+141 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+141 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+141 silly getExecOpts     XPC_FLAGS: '0x0',
+141 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+141 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+141 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+141 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+141 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+141 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+141 silly getExecOpts     XPC_SERVICE_NAME: '0',
+141 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+141 silly getExecOpts     SHLVL: '2',
+141 silly getExecOpts     HOME: '/Users/qinchuanlong',
+141 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+141 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+141 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+141 silly getExecOpts     LOGNAME: 'qinchuanlong',
+141 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+141 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+141 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+141 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+141 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+141 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+141 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+141 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+141 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+141 silly getExecOpts     COLORTERM: 'truecolor',
+141 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+141 silly getExecOpts   }
+141 silly getExecOpts }
+142 error publish Retrying failed publish: @alitajs/antd-mobile
+143 verbose publish error undefined
+144 verbose publishing @alitajs/antd-mobile
+145 silly publishTaggedInDir latest antd-mobile
+146 silly getExecOpts {
+146 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile',
+146 silly getExecOpts   env: {
+146 silly getExecOpts     TERM_PROGRAM: 'vscode',
+146 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+146 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+146 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+146 silly getExecOpts     NVM_CD_FLAGS: '-q',
+146 silly getExecOpts     TERM: 'xterm-256color',
+146 silly getExecOpts     SHELL: '/bin/zsh',
+146 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+146 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+146 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+146 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+146 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+146 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+146 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+146 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+146 silly getExecOpts     COLOR: '1',
+146 silly getExecOpts     npm_config_noproxy: '',
+146 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+146 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+146 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+146 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+146 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+146 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+146 silly getExecOpts     USER: 'qinchuanlong',
+146 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+146 silly getExecOpts     COMMAND_MODE: 'unix2003',
+146 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+146 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+146 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+146 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+146 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+146 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+146 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+146 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+146 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+146 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+146 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+146 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+146 silly getExecOpts     npm_command: 'run-script',
+146 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+146 silly getExecOpts     npm_lifecycle_event: 'pub',
+146 silly getExecOpts     EDITOR: 'vi',
+146 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+146 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+146 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+146 silly getExecOpts     XPC_FLAGS: '0x0',
+146 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+146 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+146 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+146 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+146 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+146 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+146 silly getExecOpts     XPC_SERVICE_NAME: '0',
+146 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+146 silly getExecOpts     SHLVL: '2',
+146 silly getExecOpts     HOME: '/Users/qinchuanlong',
+146 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+146 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+146 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+146 silly getExecOpts     LOGNAME: 'qinchuanlong',
+146 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+146 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+146 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+146 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+146 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+146 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+146 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+146 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+146 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+146 silly getExecOpts     COLORTERM: 'truecolor',
+146 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+146 silly getExecOpts   }
+146 silly getExecOpts }
+147 error publish Retrying failed publish: @alitajs/theme
+148 verbose publish error undefined
+149 verbose publishing @alitajs/theme
+150 silly publishTaggedInDir latest theme
+151 silly getExecOpts {
+151 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme',
+151 silly getExecOpts   env: {
+151 silly getExecOpts     TERM_PROGRAM: 'vscode',
+151 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+151 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+151 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+151 silly getExecOpts     NVM_CD_FLAGS: '-q',
+151 silly getExecOpts     TERM: 'xterm-256color',
+151 silly getExecOpts     SHELL: '/bin/zsh',
+151 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+151 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+151 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+151 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+151 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+151 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+151 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+151 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+151 silly getExecOpts     COLOR: '1',
+151 silly getExecOpts     npm_config_noproxy: '',
+151 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+151 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+151 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+151 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+151 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+151 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+151 silly getExecOpts     USER: 'qinchuanlong',
+151 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+151 silly getExecOpts     COMMAND_MODE: 'unix2003',
+151 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+151 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+151 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+151 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+151 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+151 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+151 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+151 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+151 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+151 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+151 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+151 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+151 silly getExecOpts     npm_command: 'run-script',
+151 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+151 silly getExecOpts     npm_lifecycle_event: 'pub',
+151 silly getExecOpts     EDITOR: 'vi',
+151 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+151 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+151 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+151 silly getExecOpts     XPC_FLAGS: '0x0',
+151 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+151 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+151 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+151 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+151 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+151 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+151 silly getExecOpts     XPC_SERVICE_NAME: '0',
+151 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+151 silly getExecOpts     SHLVL: '2',
+151 silly getExecOpts     HOME: '/Users/qinchuanlong',
+151 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+151 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+151 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+151 silly getExecOpts     LOGNAME: 'qinchuanlong',
+151 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+151 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+151 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+151 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+151 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+151 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+151 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+151 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+151 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+151 silly getExecOpts     COLORTERM: 'truecolor',
+151 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+151 silly getExecOpts   }
+151 silly getExecOpts }
+152 info published @alitajs/theme
+153 silly existsSync /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme/scripts/postpublish.js
+154 verbose execScript No postpublish script found at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/theme/scripts/postpublish.js
+155 error publish Retrying failed publish: @alitajs/antd-mobile
+156 verbose publish error undefined
+157 verbose publishing @alitajs/antd-mobile
+158 silly publishTaggedInDir latest antd-mobile
+159 silly getExecOpts {
+159 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile',
+159 silly getExecOpts   env: {
+159 silly getExecOpts     TERM_PROGRAM: 'vscode',
+159 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+159 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+159 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+159 silly getExecOpts     NVM_CD_FLAGS: '-q',
+159 silly getExecOpts     TERM: 'xterm-256color',
+159 silly getExecOpts     SHELL: '/bin/zsh',
+159 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+159 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+159 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+159 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+159 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+159 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+159 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+159 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+159 silly getExecOpts     COLOR: '1',
+159 silly getExecOpts     npm_config_noproxy: '',
+159 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+159 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+159 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+159 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+159 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+159 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+159 silly getExecOpts     USER: 'qinchuanlong',
+159 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+159 silly getExecOpts     COMMAND_MODE: 'unix2003',
+159 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+159 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+159 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+159 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+159 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+159 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+159 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+159 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+159 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+159 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+159 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+159 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+159 silly getExecOpts     npm_command: 'run-script',
+159 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+159 silly getExecOpts     npm_lifecycle_event: 'pub',
+159 silly getExecOpts     EDITOR: 'vi',
+159 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+159 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+159 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+159 silly getExecOpts     XPC_FLAGS: '0x0',
+159 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+159 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+159 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+159 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+159 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+159 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+159 silly getExecOpts     XPC_SERVICE_NAME: '0',
+159 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+159 silly getExecOpts     SHLVL: '2',
+159 silly getExecOpts     HOME: '/Users/qinchuanlong',
+159 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+159 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+159 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+159 silly getExecOpts     LOGNAME: 'qinchuanlong',
+159 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+159 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+159 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+159 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+159 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+159 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+159 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+159 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+159 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+159 silly getExecOpts     COLORTERM: 'truecolor',
+159 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+159 silly getExecOpts   }
+159 silly getExecOpts }
+160 error publish Retrying failed publish: @alitajs/antd-mobile
+161 verbose publish error undefined
+162 verbose publishing @alitajs/antd-mobile
+163 silly publishTaggedInDir latest antd-mobile
+164 silly getExecOpts {
+164 silly getExecOpts   cwd: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/packages/antd-mobile',
+164 silly getExecOpts   env: {
+164 silly getExecOpts     TERM_PROGRAM: 'vscode',
+164 silly getExecOpts     rvm_bin_path: '/Users/qinchuanlong/.rvm/bin',
+164 silly getExecOpts     NODE: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+164 silly getExecOpts     INIT_CWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+164 silly getExecOpts     NVM_CD_FLAGS: '-q',
+164 silly getExecOpts     TERM: 'xterm-256color',
+164 silly getExecOpts     SHELL: '/bin/zsh',
+164 silly getExecOpts     HOMEBREW_BOTTLE_DOMAIN: 'https://mirrors.aliyun.com/homebrew/homebrew-bottles',
+164 silly getExecOpts     npm_config_metrics_registry: 'https://registry.npm.taobao.org/',
+164 silly getExecOpts     TMPDIR: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/',
+164 silly getExecOpts     npm_config_global_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+164 silly getExecOpts     npm_config_email: '1270253618@qq.com',
+164 silly getExecOpts     npm_config_chromedriver_cdnurl: 'https://npm.taobao.org/mirrors/chromedriver',
+164 silly getExecOpts     TERM_PROGRAM_VERSION: '1.67.0',
+164 silly getExecOpts     ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+164 silly getExecOpts     COLOR: '1',
+164 silly getExecOpts     npm_config_noproxy: '',
+164 silly getExecOpts     npm_config_home: 'https://www.npmjs.org',
+164 silly getExecOpts     npm_config_registry: 'https://registry.npmjs.org',
+164 silly getExecOpts     npm_config_local_prefix: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+164 silly getExecOpts     ZSH: '/Users/qinchuanlong/.oh-my-zsh',
+164 silly getExecOpts     http_proxy: 'http://127.0.0.1:1087',
+164 silly getExecOpts     NVM_DIR: '/Users/qinchuanlong/.nvm',
+164 silly getExecOpts     USER: 'qinchuanlong',
+164 silly getExecOpts     npm_config_phantomjs_cdnurl: 'https://npm.taobao.org/dist/phantomjs',
+164 silly getExecOpts     COMMAND_MODE: 'unix2003',
+164 silly getExecOpts     npm_config_globalconfig: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/etc/npmrc',
+164 silly getExecOpts     rvm_path: '/Users/qinchuanlong/.rvm',
+164 silly getExecOpts     SSH_AUTH_SOCK: '/private/tmp/com.apple.launchd.AZtN9XqS6d/Listeners',
+164 silly getExecOpts     __CF_USER_TEXT_ENCODING: '0x1F5:0x19:0x34',
+164 silly getExecOpts     npm_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/npm-cli.js',
+164 silly getExecOpts     all_proxy: 'socks5://127.0.0.1:1086',
+164 silly getExecOpts     rvm_prefix: '/Users/qinchuanlong',
+164 silly getExecOpts     PATH: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin:/Users/qinchuanlong/Desktop/alita/node_modules/.bin:/Users/qinchuanlong/Desktop/node_modules/.bin:/Users/qinchuanlong/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/qinchuanlong/.nvm/versions/node/v12.18.3/bin:/usr/local/mysql/bin:/Users/qinchuanlong/.rvm/bin:/usr/local/mysql/bin',
+164 silly getExecOpts     npm_package_json: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/package.json',
+164 silly getExecOpts     npm_config_userconfig: '/Users/qinchuanlong/.npmrc',
+164 silly getExecOpts     npm_config_init_module: '/Users/qinchuanlong/.npm-init.js',
+164 silly getExecOpts     __CFBundleIdentifier: 'com.microsoft.VSCode',
+164 silly getExecOpts     npm_command: 'run-script',
+164 silly getExecOpts     PWD: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus',
+164 silly getExecOpts     npm_lifecycle_event: 'pub',
+164 silly getExecOpts     EDITOR: 'vi',
+164 silly getExecOpts     LANG: 'zh_CN.UTF-8',
+164 silly getExecOpts     npm_config_electron_builder_binaries_mirror: 'https://npm.taobao.org/mirrors/electron-builder-binaries/',
+164 silly getExecOpts     VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
+164 silly getExecOpts     XPC_FLAGS: '0x0',
+164 silly getExecOpts     npm_config_nvm_nodejs_org_mirror: 'https://npm.taobao.org/mirrors/node',
+164 silly getExecOpts     npm_config_electron_mirror: 'https://npm.taobao.org/mirrors/electron/',
+164 silly getExecOpts     npm_config_node_gyp: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+164 silly getExecOpts     npm_config_operadriver: 'https://npm.taobao.org/mirrors/operadriver',
+164 silly getExecOpts     https_proxy: 'http://127.0.0.1:1087',
+164 silly getExecOpts     npm_config_sass_binary_site: 'https://npm.taobao.org/mirrors/node-sass/',
+164 silly getExecOpts     XPC_SERVICE_NAME: '0',
+164 silly getExecOpts     rvm_version: '1.29.12 (latest)',
+164 silly getExecOpts     SHLVL: '2',
+164 silly getExecOpts     HOME: '/Users/qinchuanlong',
+164 silly getExecOpts     VSCODE_GIT_ASKPASS_MAIN: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js',
+164 silly getExecOpts     npm_config_disturl: 'https://npm.taobao.org/dist',
+164 silly getExecOpts     npm_config_cache: '/Users/qinchuanlong/.npm',
+164 silly getExecOpts     LOGNAME: 'qinchuanlong',
+164 silly getExecOpts     npm_lifecycle_script: 'npm run compile && lerna publish --force-publish=*',
+164 silly getExecOpts     VSCODE_GIT_IPC_HANDLE: '/var/folders/cj/hvz5ln45275f2d_hj3dmvxb40000gn/T/vscode-git-77fcda9945.sock',
+164 silly getExecOpts     NVM_BIN: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin',
+164 silly getExecOpts     npm_config_user_agent: 'npm/8.1.0 node/v16.13.0 darwin x64 workspaces/false',
+164 silly getExecOpts     GIT_ASKPASS: '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh',
+164 silly getExecOpts     VSCODE_GIT_ASKPASS_NODE: '/Applications/Visual Studio Code.app/Contents/MacOS/Electron',
+164 silly getExecOpts     npm_config_python_mirror: 'https://npm.taobao.org/mirrors/python',
+164 silly getExecOpts     npm_node_execpath: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0/bin/node',
+164 silly getExecOpts     npm_config_prefix: '/Users/qinchuanlong/.nvm/versions/node/v16.13.0',
+164 silly getExecOpts     COLORTERM: 'truecolor',
+164 silly getExecOpts     _: '/Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/.bin/lerna'
+164 silly getExecOpts   }
+164 silly getExecOpts }
+165 error publish Ran out of retries while publishing @alitajs/antd-mobile Error: Command failed: yarn publish --tag latest --new-version 1.1.7
+165 error publish error Couldn't publish package: "https://registry.npmjs.org/@alitajs%2fantd-mobile: read ECONNRESET"
+165 error publish yarn publish v1.22.17
+165 error publish [1/4] Bumping version...
+165 error publish info Current version: 1.1.7
+165 error publish [2/4] Logging in...
+165 error publish [3/4] Publishing...
+165 error publish info Visit https://yarnpkg.com/en/docs/cli/publish for documentation about this command.
+165 error publish
+165 error publish     at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/lerna/node_modules/execa/index.js:236:11
+165 error publish     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+166 error execute callback with error
+167 error Error: Command failed: yarn publish --tag latest --new-version 1.1.7
+167 error error Couldn't publish package: "https://registry.npmjs.org/@alitajs%2fantd-mobile: read ECONNRESET"
+167 error yarn publish v1.22.17
+167 error [1/4] Bumping version...
+167 error info Current version: 1.1.7
+167 error [2/4] Logging in...
+167 error [3/4] Publishing...
+167 error info Visit https://yarnpkg.com/en/docs/cli/publish for documentation about this command.
+167 error
+167 error     at /Users/qinchuanlong/Desktop/alita/antd-mobile-plus/node_modules/lerna/node_modules/execa/index.js:236:11
