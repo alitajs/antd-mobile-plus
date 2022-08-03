@@ -27,7 +27,7 @@ export type TabBarProps = {
   children?: React.ReactNode
 } & NativeProps
 
-const prefixCls = 'alita-tab-bar';
+const prefixCls = 'alita-tab-bar-plus';
 
 const TabBar: FC<TabBarProps> = p => {
   
