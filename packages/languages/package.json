@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/languages",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "repository": {
     "type": "git",
     "url": "https://github.com/alitajs/antd-mobile-plus"
@@ -10,6 +10,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "license": "MIT",
   "types": "es/index.d.ts",
   "main": "lib/index.js",
   "module": "es/index.js",
