@@ -5,7 +5,7 @@
 import { version } from 'react';
 
 export interface IBaseParam {
-  // antd-mobile 版本
+  // antd-mobile-v2 版本
   version: string;
   // react 版本
   reactVersion: string;

@@ -12,18 +12,18 @@ order: 2
 ## 定制主题
 
 ### 介绍
-`antd-mobile-plus` 提供了一套默认主题，`CSS`采用 `BEM` 命名，方便使用者覆盖样式。如果你想完全替换主题色或者其他样式，可以按照本文档进行主题定制。
+`antd-mobile-v2-plus` 提供了一套默认主题，`CSS`采用 `BEM` 命名，方便使用者覆盖样式。如果你想完全替换主题色或者其他样式，可以按照本文档进行主题定制。
 
 ### 示例工程
 我们提供了一个基于 `alita` 的示例工程，仓库地址为<del>[TODO: 待提供]</del> ，其中包含了定制主题的基本配置，可以作为参考。
 
 ### 样式变量
-`antd-mobile-plus` 沿用了`antd-mobile`的主题变量，并增加了自己的主题变量，组件使用了`Less` 对样式进行预处理，并内置了一些样式变量，通过替换样式变量即可定制你自己需要的主题。
+`antd-mobile-v2-plus` 沿用了`antd-mobile-v2`的主题变量，并增加了自己的主题变量，组件使用了`Less` 对样式进行预处理，并内置了一些样式变量，通过替换样式变量即可定制你自己需要的主题。
 
-下面是基础的样式变量，组件的颜色变量请参考各个组件的文档或配置文件。更多变量请参考[antd-mobile](https://github.com/ant-design/ant-design-mobile/blob/master/components/style/themes/default.less)和[antd-mobile-plus](https://github.com/alitajs/antd-mobile-plus/blob/master/packages/theme/src/themes/default.less)。
+下面是基础的样式变量，组件的颜色变量请参考各个组件的文档或配置文件。更多变量请参考[antd-mobile-v2](https://github.com/ant-design/ant-design-mobile/blob/master/components/style/themes/default.less)和[antd-mobile-v2-plus](https://github.com/alitajs/antd-mobile-v2-plus/blob/master/packages/theme/src/themes/default.less)。
 
 ```less
-// antd-mobile 主题变量
+// antd-mobile-v2 主题变量
 @hd: 1px; // 基本单位
 // 色彩
 // ---
@@ -215,7 +215,7 @@ order: 2
 @modal-zindex: 999; // modal.alert 应该最大，其他应该较小
 @tabs-pagination-zindex: 999;
 
-// 以下是antd-mobile-plus内置变量
+// 以下是antd-mobile-v2-plus内置变量
 // 背景色
 @color-box-shadow: rgba(0, 0, 0, 0.2); // 阴影颜色
 @color-background-gray: #eee; // 背景灰色

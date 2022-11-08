@@ -1,5 +1,5 @@
 import React, { FC, useRef, useState } from 'react';
-import { Button } from 'antd-mobile';
+import { Button } from 'antd-mobile-v2';
 // import { UploadFile } from '@alitajs/antd-mobile-plus';
 import UploadFile from '../index';
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Button from 'antd-mobile/lib/button';
+import Button from 'antd-mobile-v2/lib/button';
 import { withError, useTracker } from '@alitajs/tracker';
 import { DemoPropsType } from './PropsType';
 import useCompleteLocale from '../LocaleProvider/useCompleteLocale';

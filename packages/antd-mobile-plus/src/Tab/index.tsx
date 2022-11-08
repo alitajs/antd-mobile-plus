@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
-import AntdTabs from 'antd-mobile/lib/tabs';
+import AntdTabs from 'antd-mobile-v2/lib/tabs';
 import classnames from 'classnames';
 import { TabType, TabItemType, TabData } from './PropsType';
 import './index.less';

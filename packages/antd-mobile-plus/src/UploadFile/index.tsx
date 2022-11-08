@@ -1,5 +1,5 @@
 import React, { FC, useImperativeHandle, useMemo } from 'react';
-import SwipeAction from 'antd-mobile/lib/swipe-action';
+import SwipeAction from 'antd-mobile-v2/lib/swipe-action';
 import { withError, useTracker } from '@alitajs/tracker';
 import classnames from 'classnames';
 import { useSetState } from 'ahooks';

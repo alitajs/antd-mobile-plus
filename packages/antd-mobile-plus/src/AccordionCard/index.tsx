@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import classnames from 'classnames';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import { withError, useTracker } from '@alitajs/tracker';
-import Icon from 'antd-mobile/lib/icon';
+import Icon from 'antd-mobile-v2/lib/icon';
 import { AccordionCardType } from './PropsType';
 import ExpandView from './components/ExpandView';
 import './index.less';

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { WingBlank, WhiteSpace } from 'antd-mobile';
+import { WingBlank, WhiteSpace } from 'antd-mobile-v2';
 import { AccordionCard } from '@alitajs/antd-mobile-plus';
 
 interface DemoProps {}

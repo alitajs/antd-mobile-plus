@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
-import AntdList from "antd-mobile/lib/list";
+import AntdList from "antd-mobile-v2/lib/list";
 import { NotificationType } from './PropsType';
 import './index.less';
 

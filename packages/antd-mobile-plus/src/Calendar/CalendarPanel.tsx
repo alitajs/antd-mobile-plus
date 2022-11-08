@@ -5,12 +5,12 @@ import { CalendarDayItem } from './PropsType';
 import MonthPanel from './components/MonthPanel';
 import Header from './components/Header';
 import FooterPanel from './components/FooterPanel';
-import 'antd-mobile/es/button/style/index';
+import 'antd-mobile-v2/es/button/style/index';
 import './index.less';
 import { useSetState, useSize } from 'ahooks';
 import classNames from 'classnames';
-import Toast from 'antd-mobile/lib/toast';
-import 'antd-mobile/lib/toast/style';
+import Toast from 'antd-mobile-v2/lib/toast';
+import 'antd-mobile-v2/lib/toast/style';
 import {
   calcDateNum,
   cloneDate,

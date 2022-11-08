@@ -2,7 +2,7 @@ import * as React from "react";
 import { withError, useTracker } from "@alitajs/tracker";
 import { NoticeBarProps } from "./PropsType";
 import { IMGSTR } from "./img/index";
-import Carousel from "antd-mobile/lib/carousel";
+import Carousel from "antd-mobile-v2/lib/carousel";
 import "./index.less";
 
 const prefixCls = "alita-notice-bar";

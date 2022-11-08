@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect, useCallback } from 'react';
 import { Loading } from '@alitajs/antd-mobile-plus';
-import { Button } from 'antd-mobile';
+import { Button } from 'antd-mobile-v2';
 
 interface DemoProps {}
 

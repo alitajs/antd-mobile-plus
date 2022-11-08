@@ -12,10 +12,10 @@ order: 4
 ## 国际化
 
 ### 介绍
-`antd-mobile-plus` 采用中文作为默认语言，同时支持多语言切换，请按照下方教程进行国际化设置。
+`antd-mobile-v2-plus` 采用中文作为默认语言，同时支持多语言切换，请按照下方教程进行国际化设置。
 
 ### 使用方法
-`antd-mobile-plus` 通过 `LocaleProvider` 组件实现多语言支持，使用 `value` 属性可以切换当前使用的语言。
+`antd-mobile-v2-plus` 通过 `LocaleProvider` 组件实现多语言支持，使用 `value` 属性可以切换当前使用的语言。
 
 ```js 
 // 引入中英文语言包

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from 'antd-mobile';
+import { Button } from 'antd-mobile-v2';
 import { en_US, zh_CN } from '@alitajs/languages';
 import LocaleProvider from '..';
 import DemoComponent from '../../DemoComponent';

@@ -1,5 +1,5 @@
 import React, { FC, useState, useMemo } from 'react';
-import { Icon } from 'antd-mobile';
+import { Icon } from 'antd-mobile-v2';
 import moment from 'moment';
 import { Calendar } from '@alitajs/antd-mobile-plus';
 import { popupList } from './data';

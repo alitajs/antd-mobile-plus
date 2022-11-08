@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Icon from 'antd-mobile/lib/icon';
+import Icon from 'antd-mobile-v2/lib/icon';
 import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
 

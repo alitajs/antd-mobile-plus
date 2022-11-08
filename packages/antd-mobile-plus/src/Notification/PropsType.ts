@@ -1,4 +1,4 @@
-import { ListItemPropsType } from 'antd-mobile/lib/list/PropsType';
+import { ListItemPropsType } from 'antd-mobile-v2/lib/list/PropsType';
 
 export interface NotificationListItemType extends  ListItemPropsType {
   title?: string;

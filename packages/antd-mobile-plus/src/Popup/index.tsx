@@ -1,7 +1,7 @@
 import React, { FC, useMemo, useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { withError, useTracker } from '@alitajs/tracker';
-import Icon from 'antd-mobile/es/icon';
+import Icon from 'antd-mobile-v2/es/icon';
 import Transition, { TransitionProps } from './components/Transition';
 import { useClickAway, useUnmount, useEventListener } from 'ahooks';
 import { PopupType } from './PropsType';

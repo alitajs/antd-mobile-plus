@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
-import AntdButton from 'antd-mobile/lib/button';
-import AntdToast from 'antd-mobile/lib/toast';
+import AntdButton from 'antd-mobile-v2/lib/button';
+import AntdToast from 'antd-mobile-v2/lib/toast';
 import { CopyBtnType } from './PropsType';
 import './index.less';
 

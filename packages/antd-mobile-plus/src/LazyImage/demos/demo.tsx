@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Grid } from 'antd-mobile';
+import { Grid } from 'antd-mobile-v2';
 import { LazyImage } from '@alitajs/antd-mobile-plus';
 import placeholder from './assets/1.jpeg';
 import { linkData } from './assets/image';

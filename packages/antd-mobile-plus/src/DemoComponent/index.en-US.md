@@ -36,13 +36,13 @@ const prefixCls = 'alita-demo';
 }
 ```
 
-如果在组件中使用到 antd-mobile 的组件，需要使用按需引入的方式来使用，如使用 button：
+如果在组件中使用到 antd-mobile-v2 的组件，需要使用按需引入的方式来使用，如使用 button：
 
-`import Button from 'antd-mobile/lib/button';`
+`import Button from 'antd-mobile-v2/lib/button';`
 
 需要在 less 文件中，额外引入样式
 
-`@import '~antd-mobile/lib/button/style/index';`
+`@import '~antd-mobile-v2/lib/button/style/index';`
 
 #### 埋点和异常
 

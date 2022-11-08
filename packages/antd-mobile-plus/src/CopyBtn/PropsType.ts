@@ -1,4 +1,4 @@
-import ButtonProps from 'antd-mobile/lib/button';
+import ButtonProps from 'antd-mobile-v2/lib/button';
 
 export interface CopyBtnType {
   /**

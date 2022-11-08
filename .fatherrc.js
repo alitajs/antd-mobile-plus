@@ -7,7 +7,6 @@ export default {
     'theme',
     'languages',
     'tracker',
-    'antd-mobile',
     'antd-mobile-plus',
   ],
 }

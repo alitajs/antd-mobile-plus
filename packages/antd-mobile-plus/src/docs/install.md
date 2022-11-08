@@ -11,10 +11,10 @@ order: 0
 ---
 
 ## 介绍
-通过本章节你可以了解到 `antd-mobile-plus` 的安装方法和基本使用姿势。
+通过本章节你可以了解到 `antd-mobile-v2-plus` 的安装方法和基本使用姿势。
 
 ## 安装
-在现有项目中使用 `antd-mobile-plus` 时，可以通过 `npm` 或 `yarn` 进行安装：
+在现有项目中使用 `antd-mobile-v2-plus` 时，可以通过 `npm` 或 `yarn` 进行安装：
 
 ```javascript
 // 安装

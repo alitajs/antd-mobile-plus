@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { withError, useTracker } from '@alitajs/tracker';
-import Flex from 'antd-mobile/lib/flex';
+import Flex from 'antd-mobile-v2/lib/flex';
 import { HeaderFullViewToolItemType, HeaderFullViewType } from './PropsType';
 import './index.less';
 

@@ -1,4 +1,4 @@
-import { ButtonProps } from 'antd-mobile/es/button';
+import { ButtonProps } from 'antd-mobile-v2/es/button';
 
 export interface DemoPropsType extends ButtonProps {
   // 文档 https://github.com/styleguidist/react-docgen-typescript#example

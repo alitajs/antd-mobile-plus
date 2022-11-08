@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { withError } from '@alitajs/tracker';
-import AntdCard from "antd-mobile/lib/card";
+import AntdCard from "antd-mobile-v2/lib/card";
 import { SimpleCardType } from './PropsType';
 import './index.less';
 

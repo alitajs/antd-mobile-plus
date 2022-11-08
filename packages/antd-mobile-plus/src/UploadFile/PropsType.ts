@@ -1,5 +1,5 @@
 import {  CSSProperties } from 'react'
-import { SwipeActionPropsType } from 'antd-mobile/lib/swipe-action/PropsType'
+import { SwipeActionPropsType } from 'antd-mobile-v2/lib/swipe-action/PropsType'
 
 export type FileType = 'excel' | 'doc' | 'ppt' | 'pdf' | 'image' | 'other';
 export type FileClickFn = (index: number, file: UploadFileDataType) => void;

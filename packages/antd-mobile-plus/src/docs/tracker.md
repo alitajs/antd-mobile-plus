@@ -12,10 +12,10 @@ order: 3
 ## 埋点
 
 ### 介绍
-`antd-mobile-plus` 提供了埋点功能，根据项目需要可以直接在项目中使用，使用方式可参考一下文档。
+`antd-mobile-v2-plus` 提供了埋点功能，根据项目需要可以直接在项目中使用，使用方式可参考一下文档。
 
 ### 使用方法
-`antd-mobile-plus` 通过 `@alitajs/tracker`包实现内置组件埋点支持，可以使用 `setTracker` hooks函数来暴露埋点日志。
+`antd-mobile-v2-plus` 通过 `@alitajs/tracker`包实现内置组件埋点支持，可以使用 `setTracker` hooks函数来暴露埋点日志。
 
 ```typescript
 // 引入tracker  
@@ -27,7 +27,7 @@ export default () => {
   setTracker({
     log(component, params, ext) {
       console.log(component); // 组件名
-      console.log(params.version); // antd-mobile 版本号
+      console.log(params.version); // antd-mobile-v2 版本号
       console.log(params.reactVersion); // react 版本号
       console.log(params.type); // 内置类型，分为 RENDERED(渲染), CUSTOM(组件自定义的上报)
       // 可选，组件额外的参数，比如 Button 会额外传 params.c1={type: props.type}

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { Button } from 'antd-mobile';
+import { Button } from 'antd-mobile-v2';
 import { CityPicker } from '@alitajs/antd-mobile-plus';
 import { getData } from './data';
 

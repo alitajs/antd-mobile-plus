@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { PickerPanel } from '@alitajs/antd-mobile-plus';
-import { Button } from 'antd-mobile';
+import { Button } from 'antd-mobile-v2';
 import './demo01.less';
 
 interface DemoProps {}

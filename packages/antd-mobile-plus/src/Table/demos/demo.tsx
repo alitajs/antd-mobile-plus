@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Progress, WhiteSpace } from 'antd-mobile';
+import { Progress, WhiteSpace } from 'antd-mobile-v2';
 import { Table } from '@alitajs/antd-mobile-plus';
-import 'antd-mobile/lib/progress/style/index.css';
-import 'antd-mobile/lib/white-space/style/index.css';
+import 'antd-mobile-v2/lib/progress/style/index.css';
+import 'antd-mobile-v2/lib/white-space/style/index.css';
 
 interface DemoProps {}
 

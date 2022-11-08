@@ -12,7 +12,7 @@ order: 0
 
 ## 介绍
 ### 组件说明
-<b>[antd-mobile-plus](https://github.com/alitajs/antd-mobile-plus)</b>是基于`antd-mobile`开发的一套开源UI业务组件库，目前里面涵盖了30+组件。其中的大部分组件是通过B端项目分解得出，对B端以及类似B端风格的项目有更好的支持。
+<b>[antd-mobile-v2-plus](https://github.com/alitajs/antd-mobile-v2-plus)</b>是基于`antd-mobile-v2`开发的一套开源UI业务组件库，目前里面涵盖了30+组件。其中的大部分组件是通过B端项目分解得出，对B端以及类似B端风格的项目有更好的支持。
 
 ### 特性
 
@@ -31,7 +31,7 @@ order: 0
 现代浏览器以及 Android 5.0+, iOS 9.0+。
 
 ### 链接
-[意见反馈](https://github.com/alitajs/antd-mobile-plus/issues)
+[意见反馈](https://github.com/alitajs/antd-mobile-v2-plus/issues)
 
 [更新日志](/components/docs/update)
 

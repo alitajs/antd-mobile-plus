@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Icon } from 'antd-mobile';
+import { Icon } from 'antd-mobile-v2';
 import { SimpleCard } from '@alitajs/antd-mobile-plus';
 
 interface DemoProps { }
