@@ -3,6 +3,9 @@ import { Grid } from 'antd-mobile-v2';
 import { LazyImage } from '@alitajs/antd-mobile-plus';
 import placeholder from './assets/1.jpeg';
 import { linkData } from './assets/image';
+import 'antd-mobile-v2/es/grid/style/index.less';
+import 'antd-mobile-v2/es/flex/style/index.less';
+
 
 interface DemoProps {}
 

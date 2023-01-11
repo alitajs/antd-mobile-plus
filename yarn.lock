@@ -1701,6 +1701,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@lingxiteam/antd-mobile-v2-theme@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@lingxiteam/antd-mobile-v2-theme/-/antd-mobile-v2-theme-0.0.1.tgz#55fe0704c0f470e872dd269b33e63f1b76f8fb1e"
+  integrity sha512-IyUVxykLzDdyzUkfGXM3gAGUH7c8TfKW1tme79aBOyRBysVic8UL5+4DC4PQwajyyeS2037QMfBlhKa5F6fjGw==
+
 "@mapbox/hast-util-to-jsx@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@mapbox/hast-util-to-jsx/-/hast-util-to-jsx-1.0.0.tgz#90ce46b0d2dde42d5ea4d4a1e0b26b9ce2215013"
@@ -3023,35 +3028,6 @@ antd-mobile-v2@2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/antd-mobile-v2/-/antd-mobile-v2-2.3.4.tgz#0a8713c9520d9aa4be7b686fcee867519bd0039f"
   integrity sha512-GbRYdqh/5poQDplKcpK4aibqcS/Uy3/bqRRlDWGRt7FUuZbUBemOQ4ITeSiiH6DKPgPBa+S+iUHkTH3V5B/EiQ==
-  dependencies:
-    array-tree-filter "~2.1.0"
-    babel-runtime "6.x"
-    classnames "^2.2.1"
-    normalize.css "^7.0.0"
-    rc-checkbox "~2.0.0"
-    rc-collapse "~1.9.1"
-    rc-slider "~8.2.0"
-    rc-swipeout "~2.0.0"
-    rmc-calendar "^1.0.0"
-    rmc-cascader "~5.0.0"
-    rmc-date-picker "^6.0.8"
-    rmc-dialog "^1.0.1"
-    rmc-drawer "^0.4.11"
-    rmc-feedback "^2.0.0"
-    rmc-input-number "^1.0.0"
-    rmc-list-view "^0.11.0"
-    rmc-notification "~1.0.0"
-    rmc-nuka-carousel "~3.0.0"
-    rmc-picker "~5.0.0"
-    rmc-pull-to-refresh "~1.0.1"
-    rmc-steps "~1.0.0"
-    rmc-tabs "~1.2.0"
-    rmc-tooltip "~1.0.0"
-
-antd-mobile@2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-2.3.3.tgz#550591e4be91b52090c8b88156c457fbd99c6a2e"
-  integrity sha512-ZBnkWV+9F+CQA1pvt7zzFVTF1SlNQwJCJCnWafVvG5q8OCkOxm9uVHgsNI+v9yDpo03FABZk0Tgq6U8NaybLWw==
   dependencies:
     array-tree-filter "~2.1.0"
     babel-runtime "6.x"
