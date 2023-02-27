@@ -13,9 +13,9 @@ const SearchView: FC<SearchViewType> = (props) => {
     showLeft = false,
     filterData = [],
     filterValue = '',
-    onFilterChange = () => {},
-    onFilterSelected = () => {},
-    onToggoleHandle = () => {},
+    onFilterChange = () => { },
+    onFilterSelected = () => { },
+    onToggoleHandle = () => { },
     PopViewPanel,
     open = false,
     leftText,
@@ -36,7 +36,7 @@ const SearchView: FC<SearchViewType> = (props) => {
 
   useEffect(() => {
     setSelectItem(filterItemWithValue(filterData, filterValue));
-  }, [filterValue]);
+  }, [filterValue, JSON.stringify(filterData)]);
 
   const log = useTracker(SearchView.displayName, {});
   return (
