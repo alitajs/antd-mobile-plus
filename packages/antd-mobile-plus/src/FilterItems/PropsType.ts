@@ -55,10 +55,21 @@ export interface FilterItemsProps {
    */
   aliasObj: AliasProps;
   /**
-  * @description 初始的文字,一般在该值不在数据当中使用
-  * @default 数组中的第一个
-  */
-   defaultText?: string;
+   * @description 初始的文字,一般在该值不在数据当中使用
+   * @default 数组中的第一个
+   */
+  defaultText?: string;
+
+  /**
+   * 值
+   */
+  value?: string;
+
+  /**
+   * @description 筛选的数据
+   * @default []
+   */
+  data: any[];
 }
 
 export interface FilterProps {
@@ -81,9 +92,13 @@ export interface FilterProps {
    */
   onItemChange: (data: any) => void;
   /**
-  * @description 页面区域滚动节点，一般用于`type`为relative时使用
-  * @default document.documentElement
-  */
+   * @description 页面区域滚动节点，一般用于`type`为relative时使用
+   * @default document.documentElement
+   */
   scrollElement?: HTMLElement;
 
+  /**
+   * 每一项的值
+   */
+  value?: Record<string, string>;
 }

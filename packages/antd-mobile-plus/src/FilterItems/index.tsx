@@ -15,6 +15,7 @@ export const FilterItems: FC<FilterProps> = (props) => {
     alias = { label: "label", id: "id" },
     onItemChange,
     scrollElement,
+    value = {},
   } = props;
   const [activeIndex, updateActiveIndex] = useState(-1);
   const [drawOpen, updateDrawOpen] = useState("up");
@@ -46,7 +47,9 @@ export const FilterItems: FC<FilterProps> = (props) => {
               filterId={filterId}
               aliasObj={aliasObj}
               selectObj={activeObj}
-              initObj={item.data[defaultSelect]}
+              value={value[filterId]}
+              data={item.data}
+              initObj={item.data?.[defaultSelect]}
               openFlag={index === activeIndex ? "down" : "up"}
               onClick={(options: string, selectObj) => {
                 log(options);
