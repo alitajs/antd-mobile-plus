@@ -8,17 +8,17 @@ const textData = [
     key: "001",
     text: "Fish官网",
     onClick: () =>
-      window.open("https://fish.iwhalecloud.com/fish-show/", "_blank")
+      window.open("https://XX.xxx.com/fish-show/", "_blank")
   },
   {
     key: "002",
     text: "技术平台官网",
-    onClick: () => window.open("https://edu.iwhalecloud.com/", "_blank")
+    onClick: () => window.open("https://edu.XX.com/", "_blank")
   },
   {
     key: "003",
     text: "公司官网",
-    onClick: () => window.open("https://www.iwhalecloud.com/", "_blank")
+    onClick: () => window.open("https://www.XX.com/", "_blank")
   }
 ];
 
