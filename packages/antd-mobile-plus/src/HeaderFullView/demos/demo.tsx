@@ -12,7 +12,7 @@ const Demo: FC<DemoProps> = (props) => {
     <>
       <div style={{ margin: '0.2rem' }}>
         <HeaderFullView
-          title="浩鲸集团有限股份有限公司"
+          title="集团有限股份有限公司"
           src=""
           infos={[
             {
@@ -54,7 +54,7 @@ const Demo: FC<DemoProps> = (props) => {
       </div>
       <div style={{ margin: '0.2rem' }}>
         <HeaderFullView
-          title="浩鲸集团有限股份有限公司"
+          title="集团有限股份有限公司"
           src=""
           infos={[
             {
